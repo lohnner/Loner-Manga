@@ -96,6 +96,10 @@ const homeRecentSeries = [
   {
     seriesId: "fairy-tail-2006",
     coverComicId: "fairy-tail-1-2006"
+  },
+  {
+    seriesId: "naruto-1999",
+    coverComicId: "naruto-1-2000"
   }
 ];
 const smartSearchForm = document.querySelector("#smartSearchForm");
