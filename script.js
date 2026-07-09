@@ -190,7 +190,6 @@ function renderSharedSidebar() {
   const navItems = [
     { label: "HOME", section: "inicio", href: `${root}index.html` },
     { label: "Mangás", section: "universos", href: `${root}Universos/universos.html` },
-    { label: "Personagens", section: "personagens", href: `${root}Personagens/personagens.html` },
     { label: "Pesquisar", section: "pesquisar", href: `${root}pesquisar.html` },
     { label: "Ranking de Usuários", section: "ranking", href: `${root}ranking.html` }
   ];
@@ -256,14 +255,6 @@ function renderSharedSidebar() {
             <div>
               <dt>Mangás</dt>
               <dd>${acervoTotal("universos")}</dd>
-            </div>
-            <div>
-              <dt>Personagens</dt>
-              <dd>${acervoTotal("personagens")}</dd>
-            </div>
-            <div>
-              <dt>Séries</dt>
-              <dd>${acervoTotal("series")}</dd>
             </div>
             <div>
               <dt>Volumes</dt>
