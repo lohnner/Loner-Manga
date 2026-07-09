@@ -94,8 +94,8 @@ const articleContent = document.querySelector("#articleContent");
 const homeRecentHqs = document.querySelector("#homeRecentHqs");
 const homeRecentSeries = [
   {
-    seriesId: "naruto-1999",
-    coverComicId: "naruto-1-2000"
+    seriesId: "fairy-tail-2006",
+    coverComicId: "fairy-tail-1-2006"
   }
 ];
 const smartSearchForm = document.querySelector("#smartSearchForm");
@@ -127,7 +127,7 @@ startSiteUpdateWatcher();
 function rootPath() {
   const path = decodeURIComponent(window.location.pathname).replace(/\\/g, "/");
 
-  if (path.includes("/Universos/Naruto/")) {
+  if (path.includes("/Mangás/")) {
     return "../../";
   }
 
@@ -152,7 +152,7 @@ function sidebarSection() {
 
   const path = decodeURIComponent(window.location.pathname).replace(/\\/g, "/");
 
-  if (path.includes("/Universos/")) {
+  if (path.includes("/Universos/") || path.includes("/Mangás/")) {
     return "universos";
   }
 

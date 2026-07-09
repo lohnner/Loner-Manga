@@ -18,6 +18,24 @@ export const articles = [
       "Série de mangá criada por Masashi Kishimoto, publicada na revista Weekly Shōnen Jump entre 1999 e 2014, acompanhando o ninja Naruto Uzumaki em busca de reconhecimento e do título de Hokage."
   },
   {
+    id: "fairy-tail-1",
+    title: "Fairy Tail #1",
+    category: "Volume",
+    year: "2006",
+    tags: ["Kodansha", "Weekly Shōnen Magazine", "Hiro Mashima"],
+    summary:
+      "Primeiro volume de Fairy Tail, apresentando Lucy Heartfilia, Natsu Dragneel, Happy e a guilda de magos Fairy Tail."
+  },
+  {
+    id: "fairy-tail-serie",
+    title: "Fairy Tail (2006)",
+    category: "Série",
+    year: "2006",
+    tags: ["Kodansha", "Weekly Shōnen Magazine", "Hiro Mashima"],
+    summary:
+      "Série de mangá criada por Hiro Mashima sobre uma guilda de magos famosa por aventuras barulhentas, laços de amizade e batalhas mágicas."
+  },
+  {
     id: "universo-naruto",
     title: "Universo Naruto",
     category: "Universo",
@@ -25,6 +43,15 @@ export const articles = [
     tags: ["shōnen", "ninja", "Konoha"],
     summary:
       "Conjunto de histórias, personagens, vilas ninja e eras narrativas ligados a Naruto. O portal organiza volumes por linha temporal, editora, fase editorial e mídia de origem."
+  },
+  {
+    id: "universo-fairy-tail",
+    title: "Universo Fairy Tail",
+    category: "Universo",
+    year: "2006",
+    tags: ["magia", "guilda", "aventura"],
+    summary:
+      "Conjunto de histórias, magos, guildas e missões ligados a Fairy Tail, com os primeiros volumes catalogados na Loner Mangá."
   }
 ];
 
@@ -33,7 +60,7 @@ export const acervo = [
     tipo: "universo",
     id: "naruto",
     title: "Naruto",
-    href: "Universos/Naruto/naruto.html"
+    href: "Mangás/Naruto/naruto.html"
   },
   {
     tipo: "serie",
@@ -41,7 +68,21 @@ export const acervo = [
     title: "Naruto",
     year: "1999",
     universe: "Naruto",
-    href: "Universos/Naruto/naruto.html"
+    href: "Mangás/Naruto/naruto.html"
+  },
+  {
+    tipo: "universo",
+    id: "fairy-tail",
+    title: "Fairy Tail",
+    href: "Mangás/Fairy%20Tail/fairy-tail.html"
+  },
+  {
+    tipo: "serie",
+    id: "fairy-tail-2006",
+    title: "Fairy Tail",
+    year: "2006",
+    universe: "Fairy Tail",
+    href: "Mangás/Fairy%20Tail/fairy-tail.html"
   },
   {
     tipo: "hq",
@@ -50,12 +91,54 @@ export const acervo = [
     shortTitle: "Naruto #1",
     universe: "Naruto",
     series: "Naruto",
-    href: "Universos/Naruto/naruto-1-2000.html",
-    cover: "Universos/Naruto/Naruto%20%231.png",
+    href: "Mangás/Naruto/naruto-1-2000.html",
+    cover: "Mangás/Naruto/Naruto%20%231.png",
     pageCount: 187,
     xpReward: 187,
     fileName: "naruto-1-2000.html",
     keywords: ["Naruto", "Naruto Uzumaki", "Uzumaki Naruto!!", "Konoha", "Iruka", "Mizuki", "Raposa de Nove Caudas", "Kyuubi", "shōnen", "ninja"]
+  },
+  {
+    tipo: "hq",
+    id: "fairy-tail-1-2006",
+    title: "Fairy Tail #1 (2006)",
+    shortTitle: "Fairy Tail #1",
+    universe: "Fairy Tail",
+    series: "Fairy Tail",
+    href: "Mangás/Fairy%20Tail/fairy-tail-1-2006.html",
+    cover: "Mangás/Fairy%20Tail/fairytail%231.png",
+    pageCount: 192,
+    xpReward: 192,
+    fileName: "fairy-tail-1-2006.html",
+    keywords: ["Fairy Tail", "Lucy Heartfilia", "Natsu Dragneel", "Happy", "Hiro Mashima", "magia", "guilda"]
+  },
+  {
+    tipo: "hq",
+    id: "fairy-tail-2-2007",
+    title: "Fairy Tail #2 (2007)",
+    shortTitle: "Fairy Tail #2",
+    universe: "Fairy Tail",
+    series: "Fairy Tail",
+    href: "Mangás/Fairy%20Tail/fairy-tail-2-2007.html",
+    cover: "Mangás/Fairy%20Tail/fairytail%232.png",
+    pageCount: 192,
+    xpReward: 192,
+    fileName: "fairy-tail-2-2007.html",
+    keywords: ["Fairy Tail", "Lucy Heartfilia", "Natsu Dragneel", "Gray Fullbuster", "Erza Scarlet", "magia", "guilda"]
+  },
+  {
+    tipo: "hq",
+    id: "fairy-tail-3-2007",
+    title: "Fairy Tail #3 (2007)",
+    shortTitle: "Fairy Tail #3",
+    universe: "Fairy Tail",
+    series: "Fairy Tail",
+    href: "Mangás/Fairy%20Tail/fairy-tail-3-2007.html",
+    cover: "Mangás/Fairy%20Tail/fairytail%233.png",
+    pageCount: 192,
+    xpReward: 192,
+    fileName: "fairy-tail-3-2007.html",
+    keywords: ["Fairy Tail", "Lucy Heartfilia", "Natsu Dragneel", "Gray Fullbuster", "Erza Scarlet", "Hiro Mashima", "magia"]
   }
 ];
 
