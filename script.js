@@ -189,7 +189,7 @@ function renderSharedSidebar() {
   const activeSection = sidebarSection();
   const navItems = [
     { label: "HOME", section: "inicio", href: `${root}index.html` },
-    { label: "Universos", section: "universos", href: `${root}Universos/universos.html` },
+    { label: "Mangás", section: "universos", href: `${root}Universos/universos.html` },
     { label: "Personagens", section: "personagens", href: `${root}Personagens/personagens.html` },
     { label: "Pesquisar", section: "pesquisar", href: `${root}pesquisar.html` },
     { label: "Ranking de Usuários", section: "ranking", href: `${root}ranking.html` }
@@ -254,7 +254,7 @@ function renderSharedSidebar() {
           <h2 id="sideStats">Acervo</h2>
           <dl>
             <div>
-              <dt>Universos</dt>
+              <dt>Mangás</dt>
               <dd>${acervoTotal("universos")}</dd>
             </div>
             <div>
@@ -266,7 +266,7 @@ function renderSharedSidebar() {
               <dd>${acervoTotal("series")}</dd>
             </div>
             <div>
-              <dt>Mangás</dt>
+              <dt>Volumes</dt>
               <dd>${acervoTotal("hqs")}</dd>
             </div>
           </dl>
@@ -1559,7 +1559,7 @@ function filterUniverseCards(query) {
 
   if (universeSearchStatus) {
     universeSearchStatus.textContent =
-      visibleCount === 1 ? "1 universo" : `${visibleCount} universos`;
+      visibleCount === 1 ? "1 mangá" : `${visibleCount} mangás`;
   }
 }
 
