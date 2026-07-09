@@ -1,11 +1,11 @@
 export const firebaseConfig = {
-  apiKey: "COLE_AQUI_API_KEY",
-  authDomain: "COLE_AQUI_AUTH_DOMAIN",
-  projectId: "COLE_AQUI_PROJECT_ID",
-  storageBucket: "COLE_AQUI_STORAGE_BUCKET",
-  messagingSenderId: "COLE_AQUI_SENDER_ID",
-  appId: "COLE_AQUI_APP_ID",
-  measurementId: ""
+  apiKey: "AIzaSyAN-NEAzOzkXlhJ2p4OJ9WYMOtP_UF312U",
+  authDomain: "loner-manga.firebaseapp.com",
+  projectId: "loner-manga",
+  storageBucket: "loner-manga.firebasestorage.app",
+  messagingSenderId: "968632536467",
+  appId: "1:968632536467:web:f393b3a3a9b8d1d9462c66",
+  measurementId: "G-5P8RR1NGE6"
 };
 
 export const firebaseReady = Boolean(
