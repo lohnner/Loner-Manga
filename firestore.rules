@@ -1,0 +1,36 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return signedIn() && request.auth.uid == uid;
+    }
+
+    function keepsOwnUid(uid) {
+      return request.resource.data.uid == uid;
+    }
+
+    match /users/{uid} {
+      allow read: if true;
+      allow create: if isOwner(uid) && keepsOwnUid(uid);
+      allow update: if isOwner(uid) && keepsOwnUid(uid) && resource.data.uid == uid;
+      allow delete: if false;
+
+      match /comics/{comicId} {
+        allow read: if true;
+        allow create, update: if isOwner(uid) && keepsOwnUid(uid);
+        allow delete: if isOwner(uid);
+      }
+    }
+
+    match /comics/{comicId}/interactions/{uid} {
+      allow read: if true;
+      allow create, update: if isOwner(uid) && keepsOwnUid(uid);
+      allow delete: if isOwner(uid);
+    }
+  }
+}
