@@ -508,12 +508,9 @@ function renderHomeRecentHqs() {
             <img src="${imageAssetPath(series.cover)}" alt="Capa de ${escapeHtml(series.coverTitle)}" />
           </span>
           <span class="recent-hq-body">
-            <span class="recent-hq-kicker">${escapeHtml(series.universe || "Mangá")}</span>
             <strong>${escapeHtml(series.title)}</strong>
-            <small>${escapeHtml(series.character || series.universe || "Mangá")}</small>
             <span class="recent-hq-meta">
               <span>${escapeHtml(series.year || "Ano")}</span>
-              <span>Mangá</span>
             </span>
           </span>
         </a>
