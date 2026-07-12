@@ -2644,6 +2644,29 @@ function dataErrorMessage(error) {
   return "Login feito, mas não foi possível carregar seu perfil.";
 }
 
+function setupArcsDialogs() {
+  document.querySelectorAll("[data-arcs-dialog]").forEach((trigger) => {
+    const dialog = document.getElementById(trigger.dataset.arcsDialog);
+    if (!(dialog instanceof HTMLDialogElement)) return;
+
+    const closeButton = dialog.querySelector("[data-dialog-close]");
+    const closeDialog = () => {
+      dialog.close();
+      document.body.classList.remove("dialog-open");
+    };
+
+    trigger.addEventListener("click", () => {
+      dialog.showModal();
+      document.body.classList.add("dialog-open");
+    });
+    closeButton?.addEventListener("click", closeDialog);
+    dialog.addEventListener("cancel", () => document.body.classList.remove("dialog-open"));
+    dialog.addEventListener("click", (event) => {
+      if (event.target === dialog) closeDialog();
+    });
+  });
+}
+
 async function startAuth() {
   try {
     await loadFirebase();
@@ -2708,6 +2731,7 @@ normalizeAuthForms();
 renderHomeRecentHqs();
 renderCharacterIndex();
 setupSmartSearchPage();
+setupArcsDialogs();
 setupEvents();
 createVolumeActions();
 startAuth();
