@@ -45,6 +45,33 @@ export const articles = [
       "Primeiro volume de Fairy Tail, apresentando Lucy Heartfilia, Natsu Dragneel, Happy e a guilda de magos Fairy Tail."
   },
   {
+    id: "fairy-tail-4",
+    title: "Fairy Tail #4",
+    category: "Volume",
+    year: "2007",
+    tags: ["Kodansha", "Weekly Shōnen Magazine", "Hiro Mashima"],
+    summary:
+      "Quarto volume de Fairy Tail, iniciando a missão de Classe S na Ilha Galuna e trazendo o passado de Gray para o centro da história."
+  },
+  {
+    id: "fairy-tail-5",
+    title: "Fairy Tail #5",
+    category: "Volume",
+    year: "2007",
+    tags: ["Kodansha", "Weekly Shōnen Magazine", "Hiro Mashima"],
+    summary:
+      "Quinto volume de Fairy Tail, aprofundando o conflito entre Gray, Lyon e a lembrança de Ur durante a ameaça de Deliora."
+  },
+  {
+    id: "fairy-tail-6",
+    title: "Fairy Tail #6",
+    category: "Volume",
+    year: "2007",
+    tags: ["Kodansha", "Weekly Shōnen Magazine", "Hiro Mashima"],
+    summary:
+      "Sexto volume de Fairy Tail, concluindo a crise da Ilha Galuna e abrindo caminho para o confronto com Phantom Lord."
+  },
+  {
     id: "fairy-tail-serie",
     title: "Fairy Tail (2006)",
     category: "Série",
@@ -185,6 +212,48 @@ export const acervo = [
     xpReward: 192,
     fileName: "fairy-tail-3-2007.html",
     keywords: ["Fairy Tail", "Lucy Heartfilia", "Natsu Dragneel", "Gray Fullbuster", "Erza Scarlet", "Hiro Mashima", "magia"]
+  },
+  {
+    tipo: "hq",
+    id: "fairy-tail-4-2007",
+    title: "Fairy Tail #4 (2007)",
+    shortTitle: "Fairy Tail #4",
+    universe: "Fairy Tail",
+    series: "Fairy Tail",
+    href: "Mangás/Fairy%20Tail/fairy-tail-4-2007.html",
+    cover: "Mangás/Fairy%20Tail/fairytail%234.png",
+    pageCount: 208,
+    xpReward: 208,
+    fileName: "fairy-tail-4-2007.html",
+    keywords: ["Fairy Tail", "Natsu Dragneel", "Lucy Heartfilia", "Happy", "Gray Fullbuster", "Ilha Galuna", "Classe S", "Deliora", "magia"]
+  },
+  {
+    tipo: "hq",
+    id: "fairy-tail-5-2007",
+    title: "Fairy Tail #5 (2007)",
+    shortTitle: "Fairy Tail #5",
+    universe: "Fairy Tail",
+    series: "Fairy Tail",
+    href: "Mangás/Fairy%20Tail/fairy-tail-5-2007.html",
+    cover: "Mangás/Fairy%20Tail/fairytail%235.png",
+    pageCount: 208,
+    xpReward: 208,
+    fileName: "fairy-tail-5-2007.html",
+    keywords: ["Fairy Tail", "Gray Fullbuster", "Lyon Vastia", "Ur", "Deliora", "Taurus", "Ilha Galuna", "Natsu Dragneel", "magia"]
+  },
+  {
+    tipo: "hq",
+    id: "fairy-tail-6-2007",
+    title: "Fairy Tail #6 (2007)",
+    shortTitle: "Fairy Tail #6",
+    universe: "Fairy Tail",
+    series: "Fairy Tail",
+    href: "Mangás/Fairy%20Tail/fairy-tail-6-2007.html",
+    cover: "Mangás/Fairy%20Tail/fairytail%236.png",
+    pageCount: 208,
+    xpReward: 208,
+    fileName: "fairy-tail-6-2007.html",
+    keywords: ["Fairy Tail", "Natsu Dragneel", "Gray Fullbuster", "Lyon Vastia", "Zalty", "Deliora", "Phantom Lord", "Ilha Galuna", "magia"]
   }
 ];
 
