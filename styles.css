@@ -1565,18 +1565,6 @@ html.loner-page-leaving .sidebar {
   font-weight: 700;
 }
 
-.section-title-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.content-band .section-title-row h2 {
-  flex: 1;
-  margin: 0;
-}
-
 .text-action {
   flex: none;
   border: 0;
