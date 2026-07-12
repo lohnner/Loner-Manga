@@ -18,6 +18,15 @@ export const articles = [
       "Segundo volume do mangá Naruto, reunindo os capítulos 8 a 17 e avançando para a primeira missão de Naruto, Sasuke e Sakura como Time 7."
   },
   {
+    id: "naruto-3",
+    title: "Naruto #3",
+    category: "Volume",
+    year: "2000",
+    tags: ["Shueisha", "Weekly Shōnen Jump", "Masashi Kishimoto"],
+    summary:
+      "Terceiro volume do mangá Naruto, reunindo os capítulos 18 a 27 e continuando a missão do Time 7 no País das Ondas."
+  },
+  {
     id: "naruto-serie",
     title: "Naruto (1999)",
     category: "Série",
@@ -120,6 +129,20 @@ export const acervo = [
     xpReward: 200,
     fileName: "naruto-2-2000.html",
     keywords: ["Naruto", "Naruto Uzumaki", "Sasuke Uchiha", "Sakura Haruno", "Kakashi Hatake", "Tazuna", "Zabuza Momochi", "Time 7", "shōnen", "ninja"]
+  },
+  {
+    tipo: "hq",
+    id: "naruto-3-2000",
+    title: "Naruto #3 (2000)",
+    shortTitle: "Naruto #3",
+    universe: "Naruto",
+    series: "Naruto",
+    href: "Mangás/Naruto/naruto-3-2000.html",
+    cover: "Mangás/Naruto/Naruto%20%233.png",
+    pageCount: 208,
+    xpReward: 208,
+    fileName: "naruto-3-2000.html",
+    keywords: ["Naruto", "Naruto Uzumaki", "Sasuke Uchiha", "Sakura Haruno", "Kakashi Hatake", "Tazuna", "Zabuza Momochi", "Haku", "País das Ondas", "Time 7"]
   },
   {
     tipo: "hq",
