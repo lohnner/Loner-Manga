@@ -11,11 +11,23 @@ const profileAvatarRewards = [
     tabTitle: "Naruto",
     universe: "Naruto",
     comicId: "naruto-1-2000",
-    title: "Leia o primeiro volume de Naruto",
-    description: "Marque Naruto #1 como lido para desbloquear este avatar.",
+    title: "Volume 1",
+    description: "Leia o Volume 1",
     requiredReads: 1,
-    avatarPath: "Avatar/naruto-uzumaki.png",
-    avatarName: "Naruto Uzumaki"
+    avatarPath: "Avatar/Naruto/naruto1.png",
+    avatarName: "Naruto 1"
+  },
+  {
+    id: "naruto-2-volume",
+    tabId: "naruto",
+    tabTitle: "Naruto",
+    universe: "Naruto",
+    comicId: "naruto-2-2000",
+    title: "Volume 2",
+    description: "Leia o Volume 2",
+    requiredReads: 1,
+    avatarPath: "Avatar/Naruto/naruto2.png",
+    avatarName: "Naruto 2"
   }
 ];
 const profileCacheKey = "loner-manga:lastProfile";
