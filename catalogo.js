@@ -72,6 +72,24 @@ export const articles = [
       "Sexto volume de Fairy Tail, concluindo a crise da Ilha Galuna e abrindo caminho para o confronto com Phantom Lord."
   },
   {
+    id: "yu-gi-oh-1",
+    title: "Yu-Gi-Oh! #1",
+    category: "Volume",
+    year: "1997",
+    tags: ["Shueisha", "Weekly Shōnen Jump", "Kazuki Takahashi"],
+    summary:
+      "Primeiro volume de Yu-Gi-Oh!, apresentando Yugi Muto, o Enigma do Milênio e os primeiros Jogos das Sombras."
+  },
+  {
+    id: "yu-gi-oh-serie",
+    title: "Yu-Gi-Oh! (1996)",
+    category: "Série",
+    year: "1996",
+    tags: ["Shueisha", "Weekly Shōnen Jump", "Kazuki Takahashi"],
+    summary:
+      "Série de mangá criada por Kazuki Takahashi, publicada na Weekly Shōnen Jump, sobre jogos, amizade e disputas sobrenaturais ligadas ao Enigma do Milênio."
+  },
+  {
     id: "fairy-tail-serie",
     title: "Fairy Tail (2006)",
     category: "Série",
@@ -97,6 +115,15 @@ export const articles = [
     tags: ["magia", "guilda", "aventura"],
     summary:
       "Conjunto de histórias, magos, guildas e missões ligados a Fairy Tail, com os primeiros volumes catalogados na Loner Mangá."
+  },
+  {
+    id: "universo-yu-gi-oh",
+    title: "Universo Yu-Gi-Oh!",
+    category: "Universo",
+    year: "1996",
+    tags: ["jogos", "duelos", "Enigma do Milênio"],
+    summary:
+      "Conjunto de histórias, personagens, duelos e Jogos das Sombras ligados a Yu-Gi-Oh!, começando pelo primeiro volume do mangá original."
   }
 ];
 
@@ -128,6 +155,20 @@ export const acervo = [
     year: "2006",
     universe: "Fairy Tail",
     href: "Mangás/Fairy%20Tail/fairy-tail.html"
+  },
+  {
+    tipo: "universo",
+    id: "yu-gi-oh",
+    title: "Yu-Gi-Oh!",
+    href: "Mangás/Yu-Gi-Oh!/yu-gi-oh.html"
+  },
+  {
+    tipo: "serie",
+    id: "yu-gi-oh-1996",
+    title: "Yu-Gi-Oh!",
+    year: "1996",
+    universe: "Yu-Gi-Oh!",
+    href: "Mangás/Yu-Gi-Oh!/yu-gi-oh.html"
   },
   {
     tipo: "hq",
@@ -254,6 +295,20 @@ export const acervo = [
     xpReward: 208,
     fileName: "fairy-tail-6-2007.html",
     keywords: ["Fairy Tail", "Natsu Dragneel", "Gray Fullbuster", "Lyon Vastia", "Zalty", "Deliora", "Phantom Lord", "Ilha Galuna", "magia"]
+  },
+  {
+    tipo: "hq",
+    id: "yu-gi-oh-1-1997",
+    title: "Yu-Gi-Oh! #1 (1997)",
+    shortTitle: "Yu-Gi-Oh! #1",
+    universe: "Yu-Gi-Oh!",
+    series: "Yu-Gi-Oh!",
+    href: "Mangás/Yu-Gi-Oh!/yu-gi-oh-1-1997.html",
+    cover: "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%231.png",
+    pageCount: 200,
+    xpReward: 200,
+    fileName: "yu-gi-oh-1-1997.html",
+    keywords: ["Yu-Gi-Oh!", "Yugi Muto", "Yami Yugi", "Enigma do Milênio", "Millennium Puzzle", "Jogos das Sombras", "Kazuki Takahashi", "Shueisha"]
   }
 ];
 

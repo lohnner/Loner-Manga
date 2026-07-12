@@ -94,6 +94,10 @@ const articleContent = document.querySelector("#articleContent");
 const homeRecentHqs = document.querySelector("#homeRecentHqs");
 const homeRecentSeries = [
   {
+    seriesId: "yu-gi-oh-1996",
+    coverComicId: "yu-gi-oh-1-1997"
+  },
+  {
     seriesId: "fairy-tail-2006",
     coverComicId: "fairy-tail-1-2006"
   },
