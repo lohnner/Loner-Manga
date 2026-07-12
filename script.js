@@ -772,6 +772,28 @@ function currentComic() {
   return Object.values(comics).find((comic) => path.endsWith(`/${comic.fileName}`)) || null;
 }
 
+function currentSeriesFavorite() {
+  const fileName = pathFileName(window.location.pathname);
+  const series = catalogo.series.find((item) => pathFileName(item.href) === fileName);
+
+  if (!series) return null;
+
+  const firstVolume = Object.values(comics).find((comic) => comic.series === series.title);
+  if (!firstVolume) return null;
+
+  return {
+    ...firstVolume,
+    id: `favorite-${series.id}`,
+    title: series.title,
+    shortTitle: series.title,
+    href: series.href,
+    cover: firstVolume.cover,
+    pageCount: 0,
+    xpReward: 0,
+    seriesFavorite: true
+  };
+}
+
 function xpNeededForLevel(level) {
   return Math.pow(level - 1, 2) * 100;
 }
@@ -1639,11 +1661,26 @@ function createVolumeActions() {
   volumeActions.innerHTML = `
     <button class="button" type="button" data-comic-action="owned">Eu Tenho</button>
     <button class="button" type="button" data-comic-action="read">Eu Li</button>
-    <button class="button" type="button" data-comic-action="favorite">Favoritar</button>
     <button class="button ghost" type="button" id="readersButton">Já Leram (0)</button>
   `;
   article.insertBefore(volumeActions, header);
   readersButton = volumeActions.querySelector("#readersButton");
+  updateVolumeActionsUi();
+}
+
+function createSeriesFavoriteAction() {
+  if (!currentSeriesFavorite()) return;
+
+  const article = document.querySelector(".article");
+  const header = document.querySelector(".article-header");
+  if (!article || !header || document.querySelector("#volumeActions")) return;
+
+  volumeActions = document.createElement("div");
+  volumeActions.className = "interaction-toolbar";
+  volumeActions.id = "volumeActions";
+  volumeActions.setAttribute("aria-label", "Ações do mangá");
+  volumeActions.innerHTML = `<button class="button" type="button" data-comic-action="favorite">Favoritar</button>`;
+  article.insertBefore(volumeActions, header);
   updateVolumeActionsUi();
 }
 
@@ -1693,7 +1730,7 @@ async function toggleComicAction(action) {
     return;
   }
 
-  const comic = currentComic();
+  const comic = currentComic() || currentSeriesFavorite();
 
   if (!comic) {
     return;
@@ -1720,6 +1757,7 @@ async function toggleComicAction(action) {
     cover: comic.cover,
     pageCount: comic.pageCount,
     xpReward,
+    seriesFavorite: Boolean(comic.seriesFavorite),
     updatedAt: now,
     [firestoreField]: nextValue
   };
@@ -1767,7 +1805,7 @@ function stopInteractionWatchers() {
 }
 
 function watchVolumeData() {
-  const comic = currentComic();
+  const comic = currentComic() || currentSeriesFavorite();
 
   if (!firebaseServices || !comic) {
     return;
@@ -1777,15 +1815,15 @@ function watchVolumeData() {
     readersUnsubscribe();
   }
 
-  readersUnsubscribe = firebaseServices.onSnapshot(
-    firebaseServices.collection(firebaseServices.db, "comics", comic.id, "interactions"),
-    (snapshot) => {
-      const total = snapshot.docs.filter((item) => item.data().read).length;
-      if (readersButton) {
+  if (readersButton) {
+    readersUnsubscribe = firebaseServices.onSnapshot(
+      firebaseServices.collection(firebaseServices.db, "comics", comic.id, "interactions"),
+      (snapshot) => {
+        const total = snapshot.docs.filter((item) => item.data().read).length;
         readersButton.textContent = `Já Leram (${total})`;
       }
-    }
-  );
+    );
+  }
 
   if (interactionUnsubscribe) {
     interactionUnsubscribe();
@@ -1931,7 +1969,7 @@ function profileComicList(items, emptyText, dateField = "") {
     <div class="profile-comic-grid">
       ${items
         .map((item) => {
-          const comic = enrichedComicInteraction(item);
+          const comic = item.seriesFavorite ? item : enrichedComicInteraction(item);
           const date = formatShortDate(dateField ? comic[dateField] : comic.updatedAt);
           const meta = [comic.series || comic.universe, date].filter(Boolean).join(" - ");
           const cover = comic.cover ? imageAssetPath(comic.cover) : imageAssetPath("lonermangalogo.png");
@@ -2139,14 +2177,14 @@ async function renderProfilePage() {
     .sort((a, b) => timestampToMillis(b.readAt) - timestampToMillis(a.readAt))
     .slice(0, 6);
   const favorites = interactions
-    .filter((item) => item.favorite)
+    .filter((item) => item.favorite && item.seriesFavorite)
     .sort((a, b) => timestampToMillis(b.favoriteAt) - timestampToMillis(a.favoriteAt))
     .slice(0, 12);
   const progress = xpProgress(profile);
   const isOwnProfile = currentUser?.uid === uid && !currentProfile?.firestoreBlocked;
   const stats = {
     reads: interactions.filter((item) => item.read).length,
-    favorites: interactions.filter((item) => item.favorite).length,
+    favorites: interactions.filter((item) => item.favorite && item.seriesFavorite).length,
     owned: interactions.filter((item) => item.owned).length,
     pages: interactions.filter((item) => item.read).reduce((total, item) => total + Number(item.pageCount || 0), 0)
   };
@@ -2758,4 +2796,5 @@ setupSmartSearchPage();
 setupArcsDialogs();
 setupEvents();
 createVolumeActions();
+createSeriesFavoriteAction();
 startAuth();

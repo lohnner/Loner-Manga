@@ -1,7 +1,7 @@
 export const articles = [
   {
     id: "naruto-1",
-    title: "Naruto #1",
+    title: "Naruto / Volume 1",
     category: "Volume",
     year: "2000",
     tags: ["Shueisha", "shōnen", "ninja"],
@@ -10,7 +10,7 @@ export const articles = [
   },
   {
     id: "naruto-2",
-    title: "Naruto #2",
+    title: "Naruto / Volume 2",
     category: "Volume",
     year: "2000",
     tags: ["Shueisha", "Weekly Shōnen Jump", "Masashi Kishimoto"],
@@ -19,7 +19,7 @@ export const articles = [
   },
   {
     id: "naruto-3",
-    title: "Naruto #3",
+    title: "Naruto / Volume 3",
     category: "Volume",
     year: "2000",
     tags: ["Shueisha", "Weekly Shōnen Jump", "Masashi Kishimoto"],
@@ -37,7 +37,7 @@ export const articles = [
   },
   {
     id: "fairy-tail-1",
-    title: "Fairy Tail #1",
+    title: "Fairy Tail / Volume 1",
     category: "Volume",
     year: "2006",
     tags: ["Kodansha", "Weekly Shōnen Magazine", "Hiro Mashima"],
@@ -46,7 +46,7 @@ export const articles = [
   },
   {
     id: "fairy-tail-4",
-    title: "Fairy Tail #4",
+    title: "Fairy Tail / Volume 4",
     category: "Volume",
     year: "2007",
     tags: ["Kodansha", "Weekly Shōnen Magazine", "Hiro Mashima"],
@@ -55,7 +55,7 @@ export const articles = [
   },
   {
     id: "fairy-tail-5",
-    title: "Fairy Tail #5",
+    title: "Fairy Tail / Volume 5",
     category: "Volume",
     year: "2007",
     tags: ["Kodansha", "Weekly Shōnen Magazine", "Hiro Mashima"],
@@ -64,7 +64,7 @@ export const articles = [
   },
   {
     id: "fairy-tail-6",
-    title: "Fairy Tail #6",
+    title: "Fairy Tail / Volume 6",
     category: "Volume",
     year: "2007",
     tags: ["Kodansha", "Weekly Shōnen Magazine", "Hiro Mashima"],
@@ -73,7 +73,7 @@ export const articles = [
   },
   {
     id: "yu-gi-oh-1",
-    title: "Yu-Gi-Oh! #1",
+    title: "Yu-Gi-Oh! / Volume 1",
     category: "Volume",
     year: "1997",
     tags: ["Shueisha", "Weekly Shōnen Jump", "Kazuki Takahashi"],
@@ -173,8 +173,8 @@ export const acervo = [
   {
     tipo: "hq",
     id: "naruto-1-2000",
-    title: "Naruto #1 (2000)",
-    shortTitle: "Naruto #1",
+    title: "Naruto / Volume 1",
+    shortTitle: "Naruto / Volume 1",
     universe: "Naruto",
     series: "Naruto",
     href: "Mangás/Naruto/naruto-1-2000.html",
@@ -187,8 +187,8 @@ export const acervo = [
   {
     tipo: "hq",
     id: "naruto-2-2000",
-    title: "Naruto #2 (2000)",
-    shortTitle: "Naruto #2",
+    title: "Naruto / Volume 2",
+    shortTitle: "Naruto / Volume 2",
     universe: "Naruto",
     series: "Naruto",
     href: "Mangás/Naruto/naruto-2-2000.html",
@@ -201,8 +201,8 @@ export const acervo = [
   {
     tipo: "hq",
     id: "naruto-3-2000",
-    title: "Naruto #3 (2000)",
-    shortTitle: "Naruto #3",
+    title: "Naruto / Volume 3",
+    shortTitle: "Naruto / Volume 3",
     universe: "Naruto",
     series: "Naruto",
     href: "Mangás/Naruto/naruto-3-2000.html",
@@ -215,8 +215,8 @@ export const acervo = [
   {
     tipo: "hq",
     id: "fairy-tail-1-2006",
-    title: "Fairy Tail #1 (2006)",
-    shortTitle: "Fairy Tail #1",
+    title: "Fairy Tail / Volume 1",
+    shortTitle: "Fairy Tail / Volume 1",
     universe: "Fairy Tail",
     series: "Fairy Tail",
     href: "Mangás/Fairy%20Tail/fairy-tail-1-2006.html",
@@ -229,8 +229,8 @@ export const acervo = [
   {
     tipo: "hq",
     id: "fairy-tail-2-2007",
-    title: "Fairy Tail #2 (2007)",
-    shortTitle: "Fairy Tail #2",
+    title: "Fairy Tail / Volume 2",
+    shortTitle: "Fairy Tail / Volume 2",
     universe: "Fairy Tail",
     series: "Fairy Tail",
     href: "Mangás/Fairy%20Tail/fairy-tail-2-2007.html",
@@ -243,8 +243,8 @@ export const acervo = [
   {
     tipo: "hq",
     id: "fairy-tail-3-2007",
-    title: "Fairy Tail #3 (2007)",
-    shortTitle: "Fairy Tail #3",
+    title: "Fairy Tail / Volume 3",
+    shortTitle: "Fairy Tail / Volume 3",
     universe: "Fairy Tail",
     series: "Fairy Tail",
     href: "Mangás/Fairy%20Tail/fairy-tail-3-2007.html",
@@ -257,8 +257,8 @@ export const acervo = [
   {
     tipo: "hq",
     id: "fairy-tail-4-2007",
-    title: "Fairy Tail #4 (2007)",
-    shortTitle: "Fairy Tail #4",
+    title: "Fairy Tail / Volume 4",
+    shortTitle: "Fairy Tail / Volume 4",
     universe: "Fairy Tail",
     series: "Fairy Tail",
     href: "Mangás/Fairy%20Tail/fairy-tail-4-2007.html",
@@ -271,8 +271,8 @@ export const acervo = [
   {
     tipo: "hq",
     id: "fairy-tail-5-2007",
-    title: "Fairy Tail #5 (2007)",
-    shortTitle: "Fairy Tail #5",
+    title: "Fairy Tail / Volume 5",
+    shortTitle: "Fairy Tail / Volume 5",
     universe: "Fairy Tail",
     series: "Fairy Tail",
     href: "Mangás/Fairy%20Tail/fairy-tail-5-2007.html",
@@ -285,8 +285,8 @@ export const acervo = [
   {
     tipo: "hq",
     id: "fairy-tail-6-2007",
-    title: "Fairy Tail #6 (2007)",
-    shortTitle: "Fairy Tail #6",
+    title: "Fairy Tail / Volume 6",
+    shortTitle: "Fairy Tail / Volume 6",
     universe: "Fairy Tail",
     series: "Fairy Tail",
     href: "Mangás/Fairy%20Tail/fairy-tail-6-2007.html",
@@ -299,8 +299,8 @@ export const acervo = [
   {
     tipo: "hq",
     id: "fairy-tail-7-2007",
-    title: "Fairy Tail #7 (2007)",
-    shortTitle: "Fairy Tail #7",
+    title: "Fairy Tail / Volume 7",
+    shortTitle: "Fairy Tail / Volume 7",
     universe: "Fairy Tail",
     series: "Fairy Tail",
     href: "MangÃ¡s/Fairy%20Tail/fairy-tail-7-2007.html",
@@ -313,8 +313,8 @@ export const acervo = [
   {
     tipo: "hq",
     id: "fairy-tail-8-2008",
-    title: "Fairy Tail #8 (2008)",
-    shortTitle: "Fairy Tail #8",
+    title: "Fairy Tail / Volume 8",
+    shortTitle: "Fairy Tail / Volume 8",
     universe: "Fairy Tail",
     series: "Fairy Tail",
     href: "MangÃ¡s/Fairy%20Tail/fairy-tail-8-2008.html",
@@ -327,8 +327,8 @@ export const acervo = [
   {
     tipo: "hq",
     id: "fairy-tail-9-2008",
-    title: "Fairy Tail #9 (2008)",
-    shortTitle: "Fairy Tail #9",
+    title: "Fairy Tail / Volume 9",
+    shortTitle: "Fairy Tail / Volume 9",
     universe: "Fairy Tail",
     series: "Fairy Tail",
     href: "MangÃ¡s/Fairy%20Tail/fairy-tail-9-2008.html",
@@ -341,8 +341,8 @@ export const acervo = [
   {
     tipo: "hq",
     id: "yu-gi-oh-1-1997",
-    title: "Yu-Gi-Oh! #1 (1997)",
-    shortTitle: "Yu-Gi-Oh! #1",
+    title: "Yu-Gi-Oh! / Volume 1",
+    shortTitle: "Yu-Gi-Oh! / Volume 1",
     universe: "Yu-Gi-Oh!",
     series: "Yu-Gi-Oh!",
     href: "Mangás/Yu-Gi-Oh!/yu-gi-oh-1-1997.html",
