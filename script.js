@@ -28,6 +28,18 @@ const profileAvatarRewards = [
     requiredReads: 1,
     avatarPath: "Avatar/Naruto/naruto2.png",
     avatarName: "Naruto 2"
+  },
+  {
+    id: "naruto-3-volume",
+    tabId: "naruto",
+    tabTitle: "Naruto",
+    universe: "Naruto",
+    comicId: "naruto-3-2000",
+    title: "Volume 3",
+    description: "Leia o Volume 3",
+    requiredReads: 1,
+    avatarPath: "Avatar/Naruto/naruto3.png",
+    avatarName: "Naruto 3"
   }
 ];
 const profileCacheKey = "loner-manga:lastProfile";
