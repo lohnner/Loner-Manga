@@ -76,6 +76,18 @@ const profileAvatarRewards = [
     requiredReads: 1,
     avatarPath: "Avatar/Naruto/naruto6.png",
     avatarName: "Naruto 6"
+  },
+  {
+    id: "yu-gi-oh-1-volume",
+    tabId: "yu-gi-oh",
+    tabTitle: "Yu-Gi-Oh!",
+    universe: "Yu-Gi-Oh!",
+    comicId: "yu-gi-oh-1-1997",
+    title: "Volume 1",
+    description: "Leia o Volume 1",
+    requiredReads: 1,
+    avatarPath: "Avatar/Yu-Gi-Oh!/Yu-Gi-Oh!1.png",
+    avatarName: "Yu-Gi-Oh!1"
   }
 ];
 const profileCacheKey = "loner-manga:lastProfile";
