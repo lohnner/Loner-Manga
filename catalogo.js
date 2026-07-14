@@ -589,6 +589,34 @@ export const acervo = [
     xpReward: 200,
     fileName: "yu-gi-oh-1-1997.html",
     keywords: ["Yu-Gi-Oh!", "Yugi Muto", "Yami Yugi", "Enigma do Milênio", "Millennium Puzzle", "Jogos das Sombras", "Kazuki Takahashi", "Shueisha"]
+  },
+  {
+    tipo: "hq",
+    id: "yu-gi-oh-2-1997",
+    title: "Yu-Gi-Oh! / Volume 2",
+    shortTitle: "Yu-Gi-Oh! / Volume 2",
+    universe: "Yu-Gi-Oh!",
+    series: "Yu-Gi-Oh!",
+    href: "Mangás/Yu-Gi-Oh!/yu-gi-oh-2-1997.html",
+    cover: "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%232.png",
+    pageCount: 185,
+    xpReward: 185,
+    fileName: "yu-gi-oh-2-1997.html",
+    keywords: ["Yu-Gi-Oh!", "Yugi Muto", "Seto Kaiba", "Dragão Branco de Olhos Azuis", "Shadi", "Itens do Milênio", "Jogos das Sombras", "Kazuki Takahashi"]
+  },
+  {
+    tipo: "hq",
+    id: "yu-gi-oh-3-1997",
+    title: "Yu-Gi-Oh! / Volume 3",
+    shortTitle: "Yu-Gi-Oh! / Volume 3",
+    universe: "Yu-Gi-Oh!",
+    series: "Yu-Gi-Oh!",
+    href: "Mangás/Yu-Gi-Oh!/yu-gi-oh-3-1997.html",
+    cover: "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%233.png",
+    pageCount: 200,
+    xpReward: 200,
+    fileName: "yu-gi-oh-3-1997.html",
+    keywords: ["Yu-Gi-Oh!", "Yugi Muto", "Shadi", "Mokuba Kaiba", "Hanasaki", "Capsule Monster Chess", "Itens do Milênio", "Kazuki Takahashi"]
   }
 ];
 
