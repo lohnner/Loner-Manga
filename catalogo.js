@@ -99,6 +99,33 @@ export const articles = [
       "Sexto volume de Fairy Tail, concluindo a crise da Ilha Galuna e abrindo caminho para o confronto com Phantom Lord."
   },
   {
+    id: "fairy-tail-25",
+    title: "Fairy Tail / Volume 25",
+    category: "Volume",
+    year: "2011",
+    tags: ["Kodansha", "Weekly Shōnen Magazine", "Hiro Mashima"],
+    summary:
+      "Vigésimo quinto volume de Fairy Tail, com o exame Classe S interrompido pela chegada da Grimoire Heart à Ilha Tenrou."
+  },
+  {
+    id: "fairy-tail-26",
+    title: "Fairy Tail / Volume 26",
+    category: "Volume",
+    year: "2011",
+    tags: ["Kodansha", "Weekly Shōnen Magazine", "Hiro Mashima"],
+    summary:
+      "Vigésimo sexto volume de Fairy Tail, acompanhando Makarov contra Hades e Natsu contra Zancrow."
+  },
+  {
+    id: "fairy-tail-27",
+    title: "Fairy Tail / Volume 27",
+    category: "Volume",
+    year: "2011",
+    tags: ["Kodansha", "Weekly Shōnen Magazine", "Hiro Mashima"],
+    summary:
+      "Vigésimo sétimo volume de Fairy Tail, destacando Loke contra Capricorn e Juvia contra Merudy."
+  },
+  {
     id: "yu-gi-oh-1",
     title: "Yu-Gi-Oh! / Volume 1",
     category: "Volume",
@@ -144,6 +171,24 @@ export const articles = [
       "Série histórica criada por Yasuhisa Hara sobre Shin, Ei Sei e as guerras que conduzem à unificação da China."
   },
   {
+    id: "dorohedoro-1",
+    title: "Dorohedoro / Volume 1",
+    category: "Volume",
+    year: "2002",
+    tags: ["Shogakukan", "Monthly Ikki", "Q Hayashida"],
+    summary:
+      "Primeiro volume de Dorohedoro, apresentando Caiman, Nikaido e a busca pelo feiticeiro responsável pela transformação de Caiman."
+  },
+  {
+    id: "dorohedoro-serie",
+    title: "Dorohedoro (2000)",
+    category: "Série",
+    year: "2000",
+    tags: ["Shogakukan", "Monthly Ikki", "Q Hayashida"],
+    summary:
+      "Série de fantasia sombria criada por Q Hayashida sobre os mistérios e conflitos que conectam Hole ao mundo dos feiticeiros."
+  },
+  {
     id: "universo-naruto",
     title: "Universo Naruto",
     category: "Universo",
@@ -178,6 +223,15 @@ export const articles = [
     tags: ["histórico", "guerra", "China"],
     summary:
       "Conjunto de histórias, personagens, reinos e campanhas militares ligados a Kingdom e ao período dos Estados Combatentes."
+  },
+  {
+    id: "universo-dorohedoro",
+    title: "Universo Dorohedoro",
+    category: "Universo",
+    year: "2000",
+    tags: ["fantasia sombria", "magia", "Hole"],
+    summary:
+      "Conjunto de histórias, personagens e mistérios ligados a Hole, ao mundo dos feiticeiros e ao Inferno em Dorohedoro."
   }
 ];
 
@@ -237,6 +291,20 @@ export const acervo = [
     year: "2006",
     universe: "Kingdom",
     href: "Mangás/Kingdom/kingdom.html"
+  },
+  {
+    tipo: "universo",
+    id: "dorohedoro",
+    title: "Dorohedoro",
+    href: "Mangás/Dorohedoro/dorohedoro.html"
+  },
+  {
+    tipo: "serie",
+    id: "dorohedoro-2000",
+    title: "Dorohedoro",
+    year: "2000",
+    universe: "Dorohedoro",
+    href: "Mangás/Dorohedoro/dorohedoro.html"
   },
   {
     tipo: "hq",
@@ -741,6 +809,62 @@ export const acervo = [
     xpReward: 192,
     fileName: "fairy-tail-24-2010.html",
     keywords: ["Fairy Tail", "Natsu Dragneel", "Lucy Heartfilia", "Lisanna Strauss", "Ilha Tenrou", "Exame Classe S", "Makarov Dreyar", "Earthland", "magia"]
+  },
+  {
+    tipo: "hq",
+    id: "fairy-tail-25-2011",
+    title: "Fairy Tail / Volume 25",
+    shortTitle: "Fairy Tail / Volume 25",
+    universe: "Fairy Tail",
+    series: "Fairy Tail",
+    href: "Mangás/Fairy%20Tail/fairy-tail-25-2011.html",
+    cover: "Mangás/Fairy%20Tail/fairytail%2325.png",
+    pageCount: 192,
+    xpReward: 192,
+    fileName: "fairy-tail-25-2011.html",
+    keywords: ["Fairy Tail", "Natsu Dragneel", "Gildarts Clive", "Zeref", "Mest Gryder", "Grimoire Heart", "Ilha Tenrou", "Exame Classe S", "magia"]
+  },
+  {
+    tipo: "hq",
+    id: "fairy-tail-26-2011",
+    title: "Fairy Tail / Volume 26",
+    shortTitle: "Fairy Tail / Volume 26",
+    universe: "Fairy Tail",
+    series: "Fairy Tail",
+    href: "Mangás/Fairy%20Tail/fairy-tail-26-2011.html",
+    cover: "Mangás/Fairy%20Tail/fairytail%2326.png",
+    pageCount: 192,
+    xpReward: 192,
+    fileName: "fairy-tail-26-2011.html",
+    keywords: ["Fairy Tail", "Makarov Dreyar", "Hades", "Natsu Dragneel", "Zancrow", "Ultear Milkovich", "Grimoire Heart", "Ilha Tenrou", "magia"]
+  },
+  {
+    tipo: "hq",
+    id: "fairy-tail-27-2011",
+    title: "Fairy Tail / Volume 27",
+    shortTitle: "Fairy Tail / Volume 27",
+    universe: "Fairy Tail",
+    series: "Fairy Tail",
+    href: "Mangás/Fairy%20Tail/fairy-tail-27-2011.html",
+    cover: "Mangás/Fairy%20Tail/fairytail%2327.png",
+    pageCount: 192,
+    xpReward: 192,
+    fileName: "fairy-tail-27-2011.html",
+    keywords: ["Fairy Tail", "Loke", "Capricorn", "Lucy Heartfilia", "Natsu Dragneel", "Juvia Lockser", "Merudy", "Ilha Tenrou", "magia"]
+  },
+  {
+    tipo: "hq",
+    id: "dorohedoro-1-2002",
+    title: "Dorohedoro / Volume 1",
+    shortTitle: "Dorohedoro / Volume 1",
+    universe: "Dorohedoro",
+    series: "Dorohedoro",
+    href: "Mangás/Dorohedoro/dorohedoro-1-2002.html",
+    cover: "Mangás/Dorohedoro/Dorohedoro%20%231.png",
+    pageCount: 170,
+    xpReward: 170,
+    fileName: "dorohedoro-1-2002.html",
+    keywords: ["Dorohedoro", "Caiman", "Kaiman", "Nikaido", "Fujita", "Ebisu", "Shin", "Noi", "En", "Hole", "Q Hayashida", "fantasia sombria", "magia"]
   },
   {
     tipo: "hq",
