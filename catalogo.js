@@ -27,6 +27,33 @@ export const articles = [
       "Terceiro volume do mangá Naruto, reunindo os capítulos 18 a 27 e continuando a missão do Time 7 no País das Ondas."
   },
   {
+    id: "naruto-9",
+    title: "Naruto / Volume 9",
+    category: "Volume",
+    year: "2001",
+    tags: ["Shueisha", "Weekly Shōnen Jump", "Masashi Kishimoto"],
+    summary:
+      "Nono volume de Naruto, reunindo os capítulos 73 a 81 e destacando os confrontos de Naruto contra Kiba e de Hinata contra Neji nas preliminares dos Exames Chūnin."
+  },
+  {
+    id: "naruto-10",
+    title: "Naruto / Volume 10",
+    category: "Volume",
+    year: "2001",
+    tags: ["Shueisha", "Weekly Shōnen Jump", "Masashi Kishimoto"],
+    summary:
+      "Décimo volume de Naruto, reunindo os capítulos 82 a 90 e acompanhando o intenso confronto entre Rock Lee e Gaara."
+  },
+  {
+    id: "naruto-11",
+    title: "Naruto / Volume 11",
+    category: "Volume",
+    year: "2002",
+    tags: ["Shueisha", "Weekly Shōnen Jump", "Masashi Kishimoto"],
+    summary:
+      "Décimo primeiro volume de Naruto, reunindo os capítulos 91 a 99 e iniciando o treinamento de Naruto com Jiraiya."
+  },
+  {
     id: "naruto-serie",
     title: "Naruto (1999)",
     category: "Série",
@@ -99,6 +126,24 @@ export const articles = [
       "Série de mangá criada por Hiro Mashima sobre uma guilda de magos famosa por aventuras barulhentas, laços de amizade e batalhas mágicas."
   },
   {
+    id: "kingdom-1",
+    title: "Kingdom / Volume 1",
+    category: "Volume",
+    year: "2006",
+    tags: ["Shueisha", "Weekly Young Jump", "Yasuhisa Hara"],
+    summary:
+      "Primeiro volume de Kingdom, apresentando Shin, Hyou e Ei Sei no início de uma jornada pela unificação da China."
+  },
+  {
+    id: "kingdom-serie",
+    title: "Kingdom (2006)",
+    category: "Série",
+    year: "2006",
+    tags: ["Shueisha", "Weekly Young Jump", "Yasuhisa Hara"],
+    summary:
+      "Série histórica criada por Yasuhisa Hara sobre Shin, Ei Sei e as guerras que conduzem à unificação da China."
+  },
+  {
     id: "universo-naruto",
     title: "Universo Naruto",
     category: "Universo",
@@ -124,6 +169,15 @@ export const articles = [
     tags: ["jogos", "duelos", "Enigma do Milênio"],
     summary:
       "Conjunto de histórias, personagens, duelos e Jogos das Sombras ligados a Yu-Gi-Oh!, começando pelo primeiro volume do mangá original."
+  },
+  {
+    id: "universo-kingdom",
+    title: "Universo Kingdom",
+    category: "Universo",
+    year: "2006",
+    tags: ["histórico", "guerra", "China"],
+    summary:
+      "Conjunto de histórias, personagens, reinos e campanhas militares ligados a Kingdom e ao período dos Estados Combatentes."
   }
 ];
 
@@ -169,6 +223,20 @@ export const acervo = [
     year: "1996",
     universe: "Yu-Gi-Oh!",
     href: "Mangás/Yu-Gi-Oh!/yu-gi-oh.html"
+  },
+  {
+    tipo: "universo",
+    id: "kingdom",
+    title: "Kingdom",
+    href: "Mangás/Kingdom/kingdom.html"
+  },
+  {
+    tipo: "serie",
+    id: "kingdom-2006",
+    title: "Kingdom",
+    year: "2006",
+    universe: "Kingdom",
+    href: "Mangás/Kingdom/kingdom.html"
   },
   {
     tipo: "hq",
@@ -281,6 +349,62 @@ export const acervo = [
     xpReward: 184,
     fileName: "naruto-8-2001.html",
     keywords: ["Naruto", "Sasuke", "Hinata", "Neji", "Rock Lee", "Gaara", "Exames Chūnin", "preliminares"]
+  },
+  {
+    tipo: "hq",
+    id: "naruto-9-2001",
+    title: "Naruto / Volume 9",
+    shortTitle: "Naruto / Volume 9",
+    universe: "Naruto",
+    series: "Naruto",
+    href: "Mangás/Naruto/naruto-9-2001.html",
+    cover: "Mangás/Naruto/Naruto%20%239.png",
+    pageCount: 184,
+    xpReward: 184,
+    fileName: "naruto-9-2001.html",
+    keywords: ["Naruto", "Kiba", "Akamaru", "Hinata", "Neji", "Clã Hyūga", "Exames Chūnin", "preliminares"]
+  },
+  {
+    tipo: "hq",
+    id: "naruto-10-2001",
+    title: "Naruto / Volume 10",
+    shortTitle: "Naruto / Volume 10",
+    universe: "Naruto",
+    series: "Naruto",
+    href: "Mangás/Naruto/naruto-10-2001.html",
+    cover: "Mangás/Naruto/Naruto%20%2310.png",
+    pageCount: 184,
+    xpReward: 184,
+    fileName: "naruto-10-2001.html",
+    keywords: ["Naruto", "Rock Lee", "Gaara", "Might Guy", "taijutsu", "Lótus", "Exames Chūnin", "preliminares"]
+  },
+  {
+    tipo: "hq",
+    id: "naruto-11-2002",
+    title: "Naruto / Volume 11",
+    shortTitle: "Naruto / Volume 11",
+    universe: "Naruto",
+    series: "Naruto",
+    href: "Mangás/Naruto/naruto-11-2002.html",
+    cover: "Mangás/Naruto/Naruto%20%2311.png",
+    pageCount: 192,
+    xpReward: 192,
+    fileName: "naruto-11-2002.html",
+    keywords: ["Naruto", "Jiraiya", "Gaara", "Dosu", "Kabuto", "Baki", "Vila da Areia", "Exames Chūnin", "treinamento"]
+  },
+  {
+    tipo: "hq",
+    id: "kingdom-1-2006",
+    title: "Kingdom / Volume 1",
+    shortTitle: "Kingdom / Volume 1",
+    universe: "Kingdom",
+    series: "Kingdom",
+    href: "Mangás/Kingdom/kingdom-1-2006.html",
+    cover: "Mangás/Kingdom/Kingdom%20%231.png",
+    pageCount: 218,
+    xpReward: 218,
+    fileName: "kingdom-1-2006.html",
+    keywords: ["Kingdom", "Shin", "Hyou", "Ei Sei", "Qin", "China", "Estados Combatentes", "Yasuhisa Hara", "histórico", "guerra"]
   },
   {
     tipo: "hq",
