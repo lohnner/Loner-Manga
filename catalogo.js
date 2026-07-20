@@ -149,6 +149,9 @@ export const articles = [
     tags: ["Kodansha", "Weekly Shōnen Magazine", "Hiro Mashima"],
     summary: "Trigésimo volume de Fairy Tail, concluindo a batalha da Ilha Tenrou e iniciando o salto de sete anos."
   },
+  { id: "fairy-tail-31", title: "Fairy Tail / Volume 31", category: "Volume", year: "2012", tags: ["Kodansha", "Weekly Shōnen Magazine", "Hiro Mashima"], summary: "Trigésimo primeiro volume de Fairy Tail, com o retorno do grupo da Ilha Tenrou e os preparativos para os Grandes Jogos Mágicos." },
+  { id: "fairy-tail-32", title: "Fairy Tail / Volume 32", category: "Volume", year: "2012", tags: ["Kodansha", "Weekly Shōnen Magazine", "Hiro Mashima"], summary: "Trigésimo segundo volume de Fairy Tail, dando início aos Grandes Jogos Mágicos em Crocus." },
+  { id: "fairy-tail-33", title: "Fairy Tail / Volume 33", category: "Volume", year: "2012", tags: ["Kodansha", "Weekly Shōnen Magazine", "Hiro Mashima"], summary: "Trigésimo terceiro volume de Fairy Tail, acompanhando o segundo dia dos Grandes Jogos Mágicos." },
   {
     id: "yu-gi-oh-1",
     title: "Yu-Gi-Oh! / Volume 1",
@@ -1035,6 +1038,9 @@ export const acervo = [
     fileName: "fairy-tail-30-2011.html",
     keywords: ["Fairy Tail", "Hades", "Zeref", "Acnologia", "Natsu Dragneel", "Mavis Vermillion", "Fairy Sphere", "X791", "Ilha Tenrou", "magia"]
   },
+  { tipo: "hq", id: "fairy-tail-31-2012", title: "Fairy Tail / Volume 31", shortTitle: "Fairy Tail / Volume 31", universe: "Fairy Tail", series: "Fairy Tail", href: "Mangás/Fairy%20Tail/fairy-tail-31-2012.html", cover: "Mangás/Fairy%20Tail/fairytail%2331.png", pageCount: 200, xpReward: 200, fileName: "fairy-tail-31-2012.html", keywords: ["Fairy Tail", "Natsu Dragneel", "Lucy Heartfilia", "Jellal Fernandes", "Crime Sorcière", "Grandes Jogos Mágicos", "Crocus", "Sabertooth", "magia"] },
+  { tipo: "hq", id: "fairy-tail-32-2012", title: "Fairy Tail / Volume 32", shortTitle: "Fairy Tail / Volume 32", universe: "Fairy Tail", series: "Fairy Tail", href: "Mangás/Fairy%20Tail/fairy-tail-32-2012.html", cover: "Mangás/Fairy%20Tail/fairytail%2332.png", pageCount: 192, xpReward: 192, fileName: "fairy-tail-32-2012.html", keywords: ["Fairy Tail", "Lucy Heartfilia", "Flare Corona", "Gray Fullbuster", "Raven Tail", "Sabertooth", "Grandes Jogos Mágicos", "Crocus", "magia"] },
+  { tipo: "hq", id: "fairy-tail-33-2012", title: "Fairy Tail / Volume 33", shortTitle: "Fairy Tail / Volume 33", universe: "Fairy Tail", series: "Fairy Tail", href: "Mangás/Fairy%20Tail/fairy-tail-33-2012.html", cover: "Mangás/Fairy%20Tail/fairytail%2333.png", pageCount: 192, xpReward: 192, fileName: "fairy-tail-33-2012.html", keywords: ["Fairy Tail", "Elfman Strauss", "Bacchus", "Kagura Mikazuchi", "Yukino Agria", "Arcadios", "Grandes Jogos Mágicos", "Crocus", "magia"] },
   {
     tipo: "hq",
     id: "dorohedoro-1-2002",
