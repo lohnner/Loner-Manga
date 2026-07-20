@@ -189,6 +189,24 @@ export const articles = [
       "Série de fantasia sombria criada por Q Hayashida sobre os mistérios e conflitos que conectam Hole ao mundo dos feiticeiros."
   },
   {
+    id: "astra-lost-in-space-1",
+    title: "Astra Lost in Space / Volume 1",
+    category: "Volume",
+    year: "2016",
+    tags: ["Shueisha", "Shōnen Jump+", "Kenta Shinohara"],
+    summary:
+      "Primeiro volume de Astra Lost in Space, apresentando Kanata, Aries e os estudantes perdidos a 5.012 anos-luz de casa."
+  },
+  {
+    id: "astra-lost-in-space-serie",
+    title: "Astra Lost in Space (2016)",
+    category: "Série",
+    year: "2016",
+    tags: ["Shueisha", "Shōnen Jump+", "Kenta Shinohara"],
+    summary:
+      "Série de ficção científica criada por Kenta Shinohara sobre nove estudantes que precisam sobreviver no espaço e encontrar o caminho de volta para casa."
+  },
+  {
     id: "universo-naruto",
     title: "Universo Naruto",
     category: "Universo",
@@ -232,6 +250,15 @@ export const articles = [
     tags: ["fantasia sombria", "magia", "Hole"],
     summary:
       "Conjunto de histórias, personagens e mistérios ligados a Hole, ao mundo dos feiticeiros e ao Inferno em Dorohedoro."
+  },
+  {
+    id: "universo-astra-lost-in-space",
+    title: "Universo Astra Lost in Space",
+    category: "Universo",
+    year: "2016",
+    tags: ["ficção científica", "espaço", "sobrevivência"],
+    summary:
+      "Conjunto de histórias, personagens, planetas e mistérios ligados à viagem da tripulação da nave Astra."
   }
 ];
 
@@ -305,6 +332,20 @@ export const acervo = [
     year: "2000",
     universe: "Dorohedoro",
     href: "Mangás/Dorohedoro/dorohedoro.html"
+  },
+  {
+    tipo: "universo",
+    id: "astra-lost-in-space",
+    title: "Astra Lost in Space",
+    href: "Mangás/Astra%20Lost%20In%20Space/astra-lost-in-space.html"
+  },
+  {
+    tipo: "serie",
+    id: "astra-lost-in-space-2016",
+    title: "Astra Lost in Space",
+    year: "2016",
+    universe: "Astra Lost in Space",
+    href: "Mangás/Astra%20Lost%20In%20Space/astra-lost-in-space.html"
   },
   {
     tipo: "hq",
@@ -865,6 +906,20 @@ export const acervo = [
     xpReward: 170,
     fileName: "dorohedoro-1-2002.html",
     keywords: ["Dorohedoro", "Caiman", "Kaiman", "Nikaido", "Fujita", "Ebisu", "Shin", "Noi", "En", "Hole", "Q Hayashida", "fantasia sombria", "magia"]
+  },
+  {
+    tipo: "hq",
+    id: "astra-lost-in-space-1-2016",
+    title: "Astra Lost in Space / Volume 1",
+    shortTitle: "Astra Lost in Space / Volume 1",
+    universe: "Astra Lost in Space",
+    series: "Astra Lost in Space",
+    href: "Mangás/Astra%20Lost%20In%20Space/astra-lost-in-space-1-2016.html",
+    cover: "Mangás/Astra%20Lost%20In%20Space/Astra%20Lost%20In%20Space%20%231.png",
+    pageCount: 204,
+    xpReward: 204,
+    fileName: "astra-lost-in-space-1-2016.html",
+    keywords: ["Astra Lost in Space", "Kanata no Astra", "Kanata Hoshijima", "Aries Spring", "Zack Walker", "Quitterie Raffaëlli", "nave Astra", "McPa", "Kenta Shinohara", "ficção científica", "espaço", "sobrevivência"]
   },
   {
     tipo: "hq",
