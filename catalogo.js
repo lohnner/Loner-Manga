@@ -207,6 +207,24 @@ export const articles = [
       "Série de ficção científica criada por Kenta Shinohara sobre nove estudantes que precisam sobreviver no espaço e encontrar o caminho de volta para casa."
   },
   {
+    id: "one-piece-1",
+    title: "One Piece / Volume 1",
+    category: "Volume",
+    year: "1997",
+    tags: ["Shueisha", "Weekly Shōnen Jump", "Eiichiro Oda"],
+    summary:
+      "Primeiro volume de One Piece, apresentando Monkey D. Luffy, Koby e Roronoa Zoro no início da jornada pelo grande tesouro."
+  },
+  {
+    id: "one-piece-serie",
+    title: "One Piece (1997)",
+    category: "Série",
+    year: "1997",
+    tags: ["Shueisha", "Weekly Shōnen Jump", "Eiichiro Oda"],
+    summary:
+      "Série de aventura criada por Eiichiro Oda sobre Monkey D. Luffy e os Piratas do Chapéu de Palha em busca do lendário One Piece."
+  },
+  {
     id: "universo-naruto",
     title: "Universo Naruto",
     category: "Universo",
@@ -259,6 +277,15 @@ export const articles = [
     tags: ["ficção científica", "espaço", "sobrevivência"],
     summary:
       "Conjunto de histórias, personagens, planetas e mistérios ligados à viagem da tripulação da nave Astra."
+  },
+  {
+    id: "universo-one-piece",
+    title: "Universo One Piece",
+    category: "Universo",
+    year: "1997",
+    tags: ["piratas", "aventura", "Grand Line"],
+    summary:
+      "Conjunto de histórias, personagens, ilhas e mistérios ligados à jornada dos Piratas do Chapéu de Palha."
   }
 ];
 
@@ -346,6 +373,20 @@ export const acervo = [
     year: "2016",
     universe: "Astra Lost in Space",
     href: "Mangás/Astra%20Lost%20In%20Space/astra-lost-in-space.html"
+  },
+  {
+    tipo: "universo",
+    id: "one-piece",
+    title: "One Piece",
+    href: "Mangás/One%20Piece/one-piece.html"
+  },
+  {
+    tipo: "serie",
+    id: "one-piece-1997",
+    title: "One Piece",
+    year: "1997",
+    universe: "One Piece",
+    href: "Mangás/One%20Piece/one-piece.html"
   },
   {
     tipo: "hq",
@@ -920,6 +961,20 @@ export const acervo = [
     xpReward: 204,
     fileName: "astra-lost-in-space-1-2016.html",
     keywords: ["Astra Lost in Space", "Kanata no Astra", "Kanata Hoshijima", "Aries Spring", "Zack Walker", "Quitterie Raffaëlli", "nave Astra", "McPa", "Kenta Shinohara", "ficção científica", "espaço", "sobrevivência"]
+  },
+  {
+    tipo: "hq",
+    id: "one-piece-1-1997",
+    title: "One Piece / Volume 1",
+    shortTitle: "One Piece / Volume 1",
+    universe: "One Piece",
+    series: "One Piece",
+    href: "Mangás/One%20Piece/one-piece-1-1997.html",
+    cover: "Mangás/One%20Piece/One%20Piece%20%231.png",
+    pageCount: 208,
+    xpReward: 208,
+    fileName: "one-piece-1-1997.html",
+    keywords: ["One Piece", "Monkey D. Luffy", "Luffy", "Roronoa Zoro", "Koby", "Shanks", "Alvida", "Morgan", "Chap\u00e9u de Palha", "Eiichiro Oda", "piratas", "Grand Line", "Fruta do Diabo"]
   },
   {
     tipo: "hq",
