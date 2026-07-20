@@ -2754,6 +2754,70 @@ function dataErrorMessage(error) {
   return "Login feito, mas não foi possível carregar seu perfil.";
 }
 
+const mangaArcsByPage = {
+  "dragon-ball.html": {
+    id: "dragonBallArcsDialog",
+    title: "Dragon Ball",
+    arcs: [["Imperador Pilaf", 1, 23], ["21º Torneio", 24, 54], ["Exército Red Ribbon", 55, 112], ["22º Torneio", 113, 134], ["Rei Piccolo", 135, 165], ["Piccolo Jr.", 166, 194], ["Saiyajins", 195, 241], ["Freeza", 242, 329], ["Androides e Cell", 330, 420], ["Majin Boo", 421, 519]]
+  },
+  "bleach.html": {
+    id: "bleachArcsDialog",
+    title: "Bleach",
+    arcs: [["Ceifador de Almas Substituto", 1, 70], ["Sociedade das Almas", 71, 183], ["Arrancar", 184, 423], ["Agente Perdido", 424, 479], ["Guerra Sangrenta dos Mil Anos", 480, 686]]
+  },
+  "berserk.html": {
+    id: "berserkArcsDialog",
+    title: "Berserk",
+    arcs: [["Espadachim Negro", "Vol. 1", "Vol. 3"], ["Era de Ouro", "Vol. 3", "Vol. 14"], ["Condenação", "Vol. 14", "Vol. 21"], ["Falcão do Império Milenar", "Vol. 22", "Vol. 35"], ["Fantasia", "Vol. 35", "Em andamento"]]
+  },
+  "attack-on-titan.html": {
+    id: "attackOnTitanArcsDialog",
+    title: "Attack on Titan",
+    arcs: [["Queda de Shiganshina", 1, 2], ["Batalha de Trost", 3, 18], ["Titã Fêmea", 19, 34], ["Confronto dos Titãs", 35, 50], ["Insurreição", 51, 70], ["Retorno a Shiganshina", 71, 90], ["Marley", 91, 106], ["Guerra por Paradis", 107, 139]]
+  },
+  "death-note.html": {
+    id: "deathNoteArcsDialog",
+    title: "Death Note",
+    arcs: [["Kira", 1, 22], ["Segundo Kira", 23, 33], ["Yotsuba", 34, 59], ["Sucessores de L", 60, 74], ["Mello", 75, 83], ["Confronto Final", 84, 108]]
+  },
+  "jujutsu-kaisen.html": {
+    id: "jujutsuKaisenArcsDialog",
+    title: "Jujutsu Kaisen",
+    arcs: [["Ventre Amaldiçoado", 1, 18], ["Contra Mahito", 19, 31], ["Intercâmbio de Kyoto", 32, 54], ["Pinturas da Morte", 55, 64], ["Passado de Gojo", 65, 79], ["Incidente de Shibuya", 80, 136], ["Extermínio de Itadori", 137, 143], ["Preparação Perfeita", 144, 158], ["Jogo do Abate", 159, 221], ["Confronto em Shinjuku", 222, 271]]
+  },
+  "demon-slayer.html": {
+    id: "demonSlayerArcsDialog",
+    title: "Demon Slayer",
+    arcs: [["Seleção Final", 1, 9], ["Pântano do Sequestrador", 10, 13], ["Asakusa", 14, 19], ["Mansão Tsuzumi", 20, 27], ["Monte Natagumo", 28, 44], ["Treinamento de Recuperação", 45, 53], ["Trem Infinito", 54, 69], ["Distrito do Entretenimento", 70, 99], ["Vila dos Ferreiros", 100, 127], ["Treinamento dos Hashira", 128, 139], ["Castelo Infinito", 140, 183], ["Contagem Regressiva ao Amanhecer", 184, 205]]
+  }
+};
+
+function injectMangaArcsDialog() {
+  const pageName = decodeURIComponent(window.location.pathname.split("/").pop() || "").toLowerCase();
+  const config = mangaArcsByPage[pageName];
+  if (!config) return;
+
+  const infoTableBody = document.querySelector(".content-band .data-table tbody");
+  if (!infoTableBody) return;
+
+  if (!document.querySelector(`[data-arcs-dialog="${config.id}"]`)) {
+    const row = document.createElement("tr");
+    row.innerHTML = `<th scope="row">Arcos</th><td><button class="text-action" type="button" data-arcs-dialog="${config.id}">Ver Completo</button></td>`;
+    infoTableBody.append(row);
+  }
+
+  if (document.getElementById(config.id)) return;
+  const rows = config.arcs.map(([name, start, end], index) =>
+    `<tr><td>${index + 1}</td><td>${escapeHtml(name)}</td><td>${escapeHtml(String(start))}</td><td>${escapeHtml(String(end))}</td></tr>`
+  ).join("");
+  const dialog = document.createElement("dialog");
+  dialog.className = "arcs-dialog";
+  dialog.id = config.id;
+  dialog.setAttribute("aria-labelledby", `${config.id}Title`);
+  dialog.innerHTML = `<div class="arcs-dialog-header"><h2 id="${config.id}Title">Arcos de ${escapeHtml(config.title)}</h2><button class="dialog-close" type="button" data-dialog-close aria-label="Fechar">&times;</button></div><div class="arcs-table-wrap"><table class="data-table arcs-table"><thead><tr><th scope="col">Nº</th><th scope="col">Arco</th><th scope="col">Início</th><th scope="col">Fim</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+  document.querySelector(".article")?.append(dialog);
+}
+
 function setupArcsDialogs() {
   document.querySelectorAll("[data-arcs-dialog]").forEach((trigger) => {
     const dialog = document.getElementById(trigger.dataset.arcsDialog);
@@ -2841,6 +2905,7 @@ normalizeAuthForms();
 renderHomeRecentHqs();
 renderCharacterIndex();
 setupSmartSearchPage();
+injectMangaArcsDialog();
 setupArcsDialogs();
 setupEvents();
 createVolumeActions();
