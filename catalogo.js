@@ -54,6 +54,46 @@ export const articles = [
       "Décimo primeiro volume de Naruto, reunindo os capítulos 91 a 99 e iniciando o treinamento de Naruto com Jiraiya."
   },
   {
+    id: "naruto-12",
+    title: "Naruto / Volume 12",
+    category: "Volume",
+    year: "2002",
+    tags: ["Shueisha", "Weekly Shōnen Jump", "Masashi Kishimoto"],
+    summary: "Décimo segundo volume de Naruto, reunindo os capítulos 100 a 108 e acompanhando Naruto contra Neji na fase final dos Exames Chūnin."
+  },
+  {
+    id: "naruto-13",
+    title: "Naruto / Volume 13",
+    category: "Volume",
+    year: "2002",
+    tags: ["Shueisha", "Weekly Shōnen Jump", "Masashi Kishimoto"],
+    summary: "Décimo terceiro volume de Naruto, reunindo os capítulos 109 a 117 e iniciando a invasão de Konoha."
+  },
+  {
+    id: "naruto-14",
+    title: "Naruto / Volume 14",
+    category: "Volume",
+    year: "2002",
+    tags: ["Shueisha", "Weekly Shōnen Jump", "Masashi Kishimoto"],
+    summary: "Décimo quarto volume de Naruto, reunindo os capítulos 118 a 126 e destacando o confronto entre Orochimaru e o Terceiro Hokage."
+  },
+  {
+    id: "naruto-15",
+    title: "Naruto / Volume 15",
+    category: "Volume",
+    year: "2002",
+    tags: ["Shueisha", "Weekly Shōnen Jump", "Masashi Kishimoto"],
+    summary: "Décimo quinto volume de Naruto, reunindo os capítulos 127 a 135 e acompanhando a batalha de Naruto contra Gaara."
+  },
+  {
+    id: "naruto-16",
+    title: "Naruto / Volume 16",
+    category: "Volume",
+    year: "2003",
+    tags: ["Shueisha", "Weekly Shōnen Jump", "Masashi Kishimoto"],
+    summary: "Décimo sexto volume de Naruto, reunindo os capítulos 136 a 144, encerrando a invasão de Konoha e introduzindo a Akatsuki."
+  },
+  {
     id: "naruto-serie",
     title: "Naruto (1999)",
     category: "Série",
@@ -606,6 +646,76 @@ export const acervo = [
     xpReward: 192,
     fileName: "naruto-11-2002.html",
     keywords: ["Naruto", "Jiraiya", "Gaara", "Dosu", "Kabuto", "Baki", "Vila da Areia", "Exames Chūnin", "treinamento"]
+  },
+  {
+    tipo: "hq",
+    id: "naruto-12-2002",
+    title: "Naruto / Volume 12",
+    shortTitle: "Naruto / Volume 12",
+    universe: "Naruto",
+    series: "Naruto",
+    href: "Mangás/Naruto/naruto-12-2002.html",
+    cover: "Mangás/Naruto/Naruto%20%2312.png",
+    pageCount: 192,
+    xpReward: 192,
+    fileName: "naruto-12-2002.html",
+    keywords: ["Naruto", "Neji", "Shikamaru", "Temari", "Clã Hyūga", "Exames Chūnin", "fase final"]
+  },
+  {
+    tipo: "hq",
+    id: "naruto-13-2002",
+    title: "Naruto / Volume 13",
+    shortTitle: "Naruto / Volume 13",
+    universe: "Naruto",
+    series: "Naruto",
+    href: "Mangás/Naruto/naruto-13-2002.html",
+    cover: "Mangás/Naruto/Naruto%20%2313.png",
+    pageCount: 192,
+    xpReward: 192,
+    fileName: "naruto-13-2002.html",
+    keywords: ["Naruto", "Sasuke", "Gaara", "Kakashi", "Chidori", "Orochimaru", "invasão de Konoha", "Exames Chūnin"]
+  },
+  {
+    tipo: "hq",
+    id: "naruto-14-2002",
+    title: "Naruto / Volume 14",
+    shortTitle: "Naruto / Volume 14",
+    universe: "Naruto",
+    series: "Naruto",
+    href: "Mangás/Naruto/naruto-14-2002.html",
+    cover: "Mangás/Naruto/Naruto%20%2314.png",
+    pageCount: 184,
+    xpReward: 184,
+    fileName: "naruto-14-2002.html",
+    keywords: ["Naruto", "Orochimaru", "Terceiro Hokage", "Hiruzen", "Edo Tensei", "Sasuke", "Gaara", "invasão de Konoha"]
+  },
+  {
+    tipo: "hq",
+    id: "naruto-15-2002",
+    title: "Naruto / Volume 15",
+    shortTitle: "Naruto / Volume 15",
+    universe: "Naruto",
+    series: "Naruto",
+    href: "Mangás/Naruto/naruto-15-2002.html",
+    cover: "Mangás/Naruto/Naruto%20%2315.png",
+    pageCount: 184,
+    xpReward: 184,
+    fileName: "naruto-15-2002.html",
+    keywords: ["Naruto", "Gaara", "Sasuke", "Sakura", "Gamabunta", "Shukaku", "jinchūriki", "invasão de Konoha"]
+  },
+  {
+    tipo: "hq",
+    id: "naruto-16-2003",
+    title: "Naruto / Volume 16",
+    shortTitle: "Naruto / Volume 16",
+    universe: "Naruto",
+    series: "Naruto",
+    href: "Mangás/Naruto/naruto-16-2003.html",
+    cover: "Mangás/Naruto/Naruto%20%2316.png",
+    pageCount: 192,
+    xpReward: 192,
+    fileName: "naruto-16-2003.html",
+    keywords: ["Naruto", "Gaara", "Orochimaru", "Terceiro Hokage", "Itachi", "Kisame", "Akatsuki", "invasão de Konoha"]
   },
   {
     tipo: "hq",
