@@ -126,6 +126,30 @@ export const articles = [
       "Vigésimo sétimo volume de Fairy Tail, destacando Loke contra Capricorn e Juvia contra Merudy."
   },
   {
+    id: "fairy-tail-28",
+    title: "Fairy Tail / Volume 28",
+    category: "Volume",
+    year: "2011",
+    tags: ["Kodansha", "Weekly Shōnen Magazine", "Hiro Mashima"],
+    summary: "Vigésimo oitavo volume de Fairy Tail, com Gildarts enfrentando Bluenote e Erza desafiando Azuma."
+  },
+  {
+    id: "fairy-tail-29",
+    title: "Fairy Tail / Volume 29",
+    category: "Volume",
+    year: "2011",
+    tags: ["Kodansha", "Weekly Shōnen Magazine", "Hiro Mashima"],
+    summary: "Vigésimo nono volume de Fairy Tail, com Gray enfrentando Ultear e a batalha final contra Hades."
+  },
+  {
+    id: "fairy-tail-30",
+    title: "Fairy Tail / Volume 30",
+    category: "Volume",
+    year: "2011",
+    tags: ["Kodansha", "Weekly Shōnen Magazine", "Hiro Mashima"],
+    summary: "Trigésimo volume de Fairy Tail, concluindo a batalha da Ilha Tenrou e iniciando o salto de sete anos."
+  },
+  {
     id: "yu-gi-oh-1",
     title: "Yu-Gi-Oh! / Volume 1",
     category: "Volume",
@@ -968,6 +992,48 @@ export const acervo = [
     xpReward: 192,
     fileName: "fairy-tail-27-2011.html",
     keywords: ["Fairy Tail", "Loke", "Capricorn", "Lucy Heartfilia", "Natsu Dragneel", "Juvia Lockser", "Merudy", "Ilha Tenrou", "magia"]
+  },
+  {
+    tipo: "hq",
+    id: "fairy-tail-28-2011",
+    title: "Fairy Tail / Volume 28",
+    shortTitle: "Fairy Tail / Volume 28",
+    universe: "Fairy Tail",
+    series: "Fairy Tail",
+    href: "Mangás/Fairy%20Tail/fairy-tail-28-2011.html",
+    cover: "Mangás/Fairy%20Tail/fairytail%2328.png",
+    pageCount: 192,
+    xpReward: 192,
+    fileName: "fairy-tail-28-2011.html",
+    keywords: ["Fairy Tail", "Gildarts Clive", "Bluenote Stinger", "Erza Scarlet", "Azuma", "Cana Alberona", "Fairy Glitter", "Ilha Tenrou", "magia"]
+  },
+  {
+    tipo: "hq",
+    id: "fairy-tail-29-2011",
+    title: "Fairy Tail / Volume 29",
+    shortTitle: "Fairy Tail / Volume 29",
+    universe: "Fairy Tail",
+    series: "Fairy Tail",
+    href: "Mangás/Fairy%20Tail/fairy-tail-29-2011.html",
+    cover: "Mangás/Fairy%20Tail/fairytail%2329.png",
+    pageCount: 200,
+    xpReward: 200,
+    fileName: "fairy-tail-29-2011.html",
+    keywords: ["Fairy Tail", "Gray Fullbuster", "Ultear Milkovich", "Laxus Dreyar", "Hades", "Natsu Dragneel", "Grimoire Heart", "Ilha Tenrou", "magia"]
+  },
+  {
+    tipo: "hq",
+    id: "fairy-tail-30-2011",
+    title: "Fairy Tail / Volume 30",
+    shortTitle: "Fairy Tail / Volume 30",
+    universe: "Fairy Tail",
+    series: "Fairy Tail",
+    href: "Mangás/Fairy%20Tail/fairy-tail-30-2011.html",
+    cover: "Mangás/Fairy%20Tail/fairytail%2330.png",
+    pageCount: 192,
+    xpReward: 192,
+    fileName: "fairy-tail-30-2011.html",
+    keywords: ["Fairy Tail", "Hades", "Zeref", "Acnologia", "Natsu Dragneel", "Mavis Vermillion", "Fairy Sphere", "X791", "Ilha Tenrou", "magia"]
   },
   {
     tipo: "hq",
