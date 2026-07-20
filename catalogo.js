@@ -224,6 +224,20 @@ export const articles = [
     summary:
       "Série de aventura criada por Eiichiro Oda sobre Monkey D. Luffy e os Piratas do Chapéu de Palha em busca do lendário One Piece."
   },
+  { id: "dragon-ball-1", title: "Dragon Ball / Volume 1", category: "Volume", year: "1985", tags: ["Shueisha", "Akira Toriyama", "aventura"], summary: "Primeiro volume de Dragon Ball, apresentando Goku, Bulma e o início da busca pelas Esferas do Dragão." },
+  { id: "dragon-ball-serie", title: "Dragon Ball (1984)", category: "Série", year: "1984", tags: ["Shueisha", "Akira Toriyama", "artes marciais"], summary: "Série de aventura criada por Akira Toriyama sobre Goku, seus amigos e as Esferas do Dragão." },
+  { id: "bleach-1", title: "Bleach / Volume 1", category: "Volume", year: "2002", tags: ["Shueisha", "Tite Kubo", "sobrenatural"], summary: "Primeiro volume de Bleach, apresentando Ichigo Kurosaki, Rukia Kuchiki e os Hollows." },
+  { id: "bleach-serie", title: "Bleach (2001)", category: "Série", year: "2001", tags: ["Shueisha", "Tite Kubo", "Ceifadores de Almas"], summary: "Série sobrenatural criada por Tite Kubo sobre Ichigo Kurosaki e a Sociedade das Almas." },
+  { id: "berserk-1", title: "Berserk / Volume 1", category: "Volume", year: "1990", tags: ["Hakusensha", "Kentaro Miura", "fantasia sombria"], summary: "Primeiro volume de Berserk, apresentando Guts em sua jornada como o Espadachim Negro." },
+  { id: "berserk-serie", title: "Berserk (1989)", category: "Série", year: "1989", tags: ["Hakusensha", "Kentaro Miura", "fantasia sombria"], summary: "Série de fantasia sombria criada por Kentaro Miura sobre Guts, Griffith e Casca." },
+  { id: "attack-on-titan-1", title: "Attack on Titan / Volume 1", category: "Volume", year: "2010", tags: ["Kodansha", "Hajime Isayama", "Titãs"], summary: "Primeiro volume de Attack on Titan, apresentando Eren, Mikasa, Armin e a queda de Shiganshina." },
+  { id: "attack-on-titan-serie", title: "Attack on Titan (2009)", category: "Série", year: "2009", tags: ["Kodansha", "Hajime Isayama", "muralhas"], summary: "Série criada por Hajime Isayama sobre a luta da humanidade contra os Titãs." },
+  { id: "death-note-1", title: "Death Note / Volume 1", category: "Volume", year: "2004", tags: ["Shueisha", "Tsugumi Ohba", "Takeshi Obata"], summary: "Primeiro volume de Death Note, apresentando Light Yagami, Ryuk, L e o surgimento de Kira." },
+  { id: "death-note-serie", title: "Death Note (2003)", category: "Série", year: "2003", tags: ["Shueisha", "Tsugumi Ohba", "Takeshi Obata"], summary: "Série de suspense sobre o duelo entre Light Yagami e o detetive L." },
+  { id: "jujutsu-kaisen-1", title: "Jujutsu Kaisen / Volume 1", category: "Volume", year: "2018", tags: ["Shueisha", "Gege Akutami", "maldições"], summary: "Primeiro volume de Jujutsu Kaisen, apresentando Yuji Itadori, Sukuna e os feiticeiros jujutsu." },
+  { id: "jujutsu-kaisen-serie", title: "Jujutsu Kaisen (2018)", category: "Série", year: "2018", tags: ["Shueisha", "Gege Akutami", "maldições"], summary: "Série sobrenatural criada por Gege Akutami sobre feiticeiros que combatem maldições." },
+  { id: "demon-slayer-1", title: "Demon Slayer / Volume 1", category: "Volume", year: "2016", tags: ["Shueisha", "Koyoharu Gotouge", "demônios"], summary: "Primeiro volume de Demon Slayer, apresentando Tanjiro, Nezuko e o início de sua jornada." },
+  { id: "demon-slayer-serie", title: "Demon Slayer (2016)", category: "Série", year: "2016", tags: ["Shueisha", "Koyoharu Gotouge", "demônios"], summary: "Série criada por Koyoharu Gotouge sobre Tanjiro e o Corpo de Extermínio de Demônios." },
   {
     id: "universo-naruto",
     title: "Universo Naruto",
@@ -286,7 +300,14 @@ export const articles = [
     tags: ["piratas", "aventura", "Grand Line"],
     summary:
       "Conjunto de histórias, personagens, ilhas e mistérios ligados à jornada dos Piratas do Chapéu de Palha."
-  }
+  },
+  { id: "universo-dragon-ball", title: "Universo Dragon Ball", category: "Universo", year: "1984", tags: ["aventura", "artes marciais", "Esferas do Dragão"], summary: "Histórias, personagens e torneios ligados à jornada de Goku." },
+  { id: "universo-bleach", title: "Universo Bleach", category: "Universo", year: "2001", tags: ["Ceifadores de Almas", "Hollows", "sobrenatural"], summary: "Histórias e personagens ligados ao mundo espiritual de Bleach." },
+  { id: "universo-berserk", title: "Universo Berserk", category: "Universo", year: "1989", tags: ["fantasia sombria", "Guts", "Apóstolos"], summary: "Histórias e personagens ligados à jornada do Espadachim Negro." },
+  { id: "universo-attack-on-titan", title: "Universo Attack on Titan", category: "Universo", year: "2009", tags: ["Titãs", "muralhas", "Tropa de Exploração"], summary: "Histórias e mistérios ligados aos Titãs e ao mundo além das muralhas." },
+  { id: "universo-death-note", title: "Universo Death Note", category: "Universo", year: "2003", tags: ["Kira", "shinigami", "suspense"], summary: "Personagens e conflitos ligados ao Death Note e à disputa entre Kira e L." },
+  { id: "universo-jujutsu-kaisen", title: "Universo Jujutsu Kaisen", category: "Universo", year: "2018", tags: ["maldições", "feiticeiros", "Sukuna"], summary: "Histórias e personagens do mundo da feitiçaria jujutsu." },
+  { id: "universo-demon-slayer", title: "Universo Demon Slayer", category: "Universo", year: "2016", tags: ["demônios", "caçadores", "respiração"], summary: "Histórias e personagens ligados aos caçadores de demônios." }
 ];
 
 export const acervo = [
@@ -388,6 +409,20 @@ export const acervo = [
     universe: "One Piece",
     href: "Mangás/One%20Piece/one-piece.html"
   },
+  { tipo: "universo", id: "dragon-ball", title: "Dragon Ball", href: "Mangás/Dragon%20Ball/dragon-ball.html" },
+  { tipo: "serie", id: "dragon-ball-1984", title: "Dragon Ball", year: "1984", universe: "Dragon Ball", href: "Mangás/Dragon%20Ball/dragon-ball.html" },
+  { tipo: "universo", id: "bleach", title: "Bleach", href: "Mangás/Bleach/bleach.html" },
+  { tipo: "serie", id: "bleach-2001", title: "Bleach", year: "2001", universe: "Bleach", href: "Mangás/Bleach/bleach.html" },
+  { tipo: "universo", id: "berserk", title: "Berserk", href: "Mangás/Berserk/berserk.html" },
+  { tipo: "serie", id: "berserk-1989", title: "Berserk", year: "1989", universe: "Berserk", href: "Mangás/Berserk/berserk.html" },
+  { tipo: "universo", id: "attack-on-titan", title: "Attack on Titan", href: "Mangás/Attack%20on%20Titan/attack-on-titan.html" },
+  { tipo: "serie", id: "attack-on-titan-2009", title: "Attack on Titan", year: "2009", universe: "Attack on Titan", href: "Mangás/Attack%20on%20Titan/attack-on-titan.html" },
+  { tipo: "universo", id: "death-note", title: "Death Note", href: "Mangás/Death%20Note/death-note.html" },
+  { tipo: "serie", id: "death-note-2003", title: "Death Note", year: "2003", universe: "Death Note", href: "Mangás/Death%20Note/death-note.html" },
+  { tipo: "universo", id: "jujutsu-kaisen", title: "Jujutsu Kaisen", href: "Mangás/Jujutsu%20Kaisen/jujutsu-kaisen.html" },
+  { tipo: "serie", id: "jujutsu-kaisen-2018", title: "Jujutsu Kaisen", year: "2018", universe: "Jujutsu Kaisen", href: "Mangás/Jujutsu%20Kaisen/jujutsu-kaisen.html" },
+  { tipo: "universo", id: "demon-slayer", title: "Demon Slayer", href: "Mangás/Demon%20Slayer/demon-slayer.html" },
+  { tipo: "serie", id: "demon-slayer-2016", title: "Demon Slayer", year: "2016", universe: "Demon Slayer", href: "Mangás/Demon%20Slayer/demon-slayer.html" },
   {
     tipo: "hq",
     id: "naruto-1-2000",
@@ -976,6 +1011,13 @@ export const acervo = [
     fileName: "one-piece-1-1997.html",
     keywords: ["One Piece", "Monkey D. Luffy", "Luffy", "Roronoa Zoro", "Koby", "Shanks", "Alvida", "Morgan", "Chap\u00e9u de Palha", "Eiichiro Oda", "piratas", "Grand Line", "Fruta do Diabo"]
   },
+  { tipo: "hq", id: "dragon-ball-1-1985", title: "Dragon Ball / Volume 1", shortTitle: "Dragon Ball / Volume 1", universe: "Dragon Ball", series: "Dragon Ball", href: "Mangás/Dragon%20Ball/dragon-ball-1-1985.html", cover: "Mangás/Dragon%20Ball/Dragon%20Ball%20%231.png", pageCount: 192, xpReward: 192, fileName: "dragon-ball-1-1985.html", keywords: ["Dragon Ball", "Goku", "Bulma", "Oolong", "Yamcha", "Akira Toriyama", "Esferas do Dragão"] },
+  { tipo: "hq", id: "bleach-1-2002", title: "Bleach / Volume 1", shortTitle: "Bleach / Volume 1", universe: "Bleach", series: "Bleach", href: "Mangás/Bleach/bleach-1-2002.html", cover: "Mangás/Bleach/Bleach%20%231.png", pageCount: 192, xpReward: 192, fileName: "bleach-1-2002.html", keywords: ["Bleach", "Ichigo Kurosaki", "Rukia Kuchiki", "Hollow", "Ceifador de Almas", "Tite Kubo"] },
+  { tipo: "hq", id: "berserk-1-1990", title: "Berserk / Volume 1", shortTitle: "Berserk / Volume 1", universe: "Berserk", series: "Berserk", href: "Mangás/Berserk/berserk-1-1990.html", cover: "Mangás/Berserk/Berserk%20%231.png", pageCount: 224, xpReward: 224, fileName: "berserk-1-1990.html", keywords: ["Berserk", "Guts", "Puck", "Espadachim Negro", "Apóstolos", "Kentaro Miura", "fantasia sombria"] },
+  { tipo: "hq", id: "attack-on-titan-1-2010", title: "Attack on Titan / Volume 1", shortTitle: "Attack on Titan / Volume 1", universe: "Attack on Titan", series: "Attack on Titan", href: "Mangás/Attack%20on%20Titan/attack-on-titan-1-2010.html", cover: "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%231.png", pageCount: 192, xpReward: 192, fileName: "attack-on-titan-1-2010.html", keywords: ["Attack on Titan", "Shingeki no Kyojin", "Eren Yeager", "Mikasa Ackerman", "Armin Arlert", "Titãs", "Hajime Isayama"] },
+  { tipo: "hq", id: "death-note-1-2004", title: "Death Note / Volume 1", shortTitle: "Death Note / Volume 1", universe: "Death Note", series: "Death Note", href: "Mangás/Death%20Note/death-note-1-2004.html", cover: "Mangás/Death%20Note/Death%20Note%20%231.png", pageCount: 200, xpReward: 200, fileName: "death-note-1-2004.html", keywords: ["Death Note", "Light Yagami", "Kira", "L", "Ryuk", "Tsugumi Ohba", "Takeshi Obata"] },
+  { tipo: "hq", id: "jujutsu-kaisen-1-2018", title: "Jujutsu Kaisen / Volume 1", shortTitle: "Jujutsu Kaisen / Volume 1", universe: "Jujutsu Kaisen", series: "Jujutsu Kaisen", href: "Mangás/Jujutsu%20Kaisen/jujutsu-kaisen-1-2018.html", cover: "Mangás/Jujutsu%20Kaisen/Jujutsu%20Kaisen%20%231.png", pageCount: 192, xpReward: 192, fileName: "jujutsu-kaisen-1-2018.html", keywords: ["Jujutsu Kaisen", "Yuji Itadori", "Sukuna", "Megumi Fushiguro", "Satoru Gojo", "Gege Akutami", "maldições"] },
+  { tipo: "hq", id: "demon-slayer-1-2016", title: "Demon Slayer / Volume 1", shortTitle: "Demon Slayer / Volume 1", universe: "Demon Slayer", series: "Demon Slayer", href: "Mangás/Demon%20Slayer/demon-slayer-1-2016.html", cover: "Mangás/Demon%20Slayer/Demon%20Slayer%20%231.png", pageCount: 192, xpReward: 192, fileName: "demon-slayer-1-2016.html", keywords: ["Demon Slayer", "Kimetsu no Yaiba", "Tanjiro Kamado", "Nezuko Kamado", "Giyu Tomioka", "Koyoharu Gotouge", "demônios"] },
   {
     tipo: "hq",
     id: "yu-gi-oh-1-1997",
