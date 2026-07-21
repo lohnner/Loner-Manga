@@ -3,7 +3,7 @@ const runtimeAssetVersion = Date.now().toString();
 const { firebaseConfig, firebaseReady } = await import(`./firebase-config.js?v=${runtimeAssetVersion}`);
 const { articles, catalogo, comics, catalogoVolumes } = await import(`./catalogo.js?v=${runtimeAssetVersion}`);
 
-const defaultAvatarPath = "lonermangalogo.png";
+const defaultAvatarPath = "lonermangalogo-v2.png";
 const legacyDefaultAvatarPath = "Avatar/homemaranha.png";
 const normalizedAvatarPath = (path) => !path || path === legacyDefaultAvatarPath ? defaultAvatarPath : path;
 const profileAvatarPath = (profile = {}) => String(profile.nick || "").trim().toLowerCase() === "dihhz" ? defaultAvatarPath : normalizedAvatarPath(profile.avatarPath);
@@ -2023,11 +2023,23 @@ function profileCollectionGallery(items) {
     const sorted = [...volumes].sort((a, b) => a.volumeNumber - b.volumeNumber);
     const have = sorted.filter((volume) => owned.has(volume.volumeId)).length;
     const representative = sorted.find((volume) => volume.volumeNumber === 1) || sorted[0];
-    return `<article class="profile-collection-card ${have ? "" : "is-locked"}"><img src="${imageAssetPath(representative.cover)}" alt="Capa de ${escapeHtml(representative.mangaTitle)}" loading="lazy"><div><strong>${escapeHtml(representative.mangaTitle)}</strong><small>${have} de ${sorted.length} volumes distintos</small></div></article>`;
+    return `<button class="profile-collection-card ${have ? "" : "is-locked"}" type="button" data-profile-collection="${escapeHtml(representative.mangaId)}"><img src="${imageAssetPath(representative.cover)}" alt="Capa de ${escapeHtml(representative.mangaTitle)}" loading="lazy"><div><strong>${escapeHtml(representative.mangaTitle)}</strong><small>${have} de ${sorted.length} volumes distintos</small></div></button>`;
   }).join("")}</div>`;
 }
 
 let profilePurchaseBusy = false;
+let renderedProfileCollection = [];
+function openProfileCollectionManga(mangaId) {
+  const dialog = document.querySelector("#profileCollectionDialog");
+  const content = document.querySelector("#profileCollectionDialogContent");
+  if (!dialog || !content) return;
+  const owned = new Map(renderedProfileCollection.map((item) => [item.volumeId, item]));
+  const volumes = catalogoVolumes.filter((volume) => volume.mangaId === mangaId).sort((a, b) => a.volumeNumber - b.volumeNumber);
+  if (!volumes.length) return;
+  content.innerHTML = `<header><span>COLEÇÃO DA LOJA</span><h2>${escapeHtml(volumes[0].mangaTitle)}</h2><p>${volumes.filter((volume) => owned.has(volume.volumeId)).length} de ${volumes.length} volumes distintos</p></header><div class="profile-volume-grid">${volumes.map((volume) => { const item = owned.get(volume.volumeId); return `<article class="profile-volume-card ${item ? "" : "is-locked"}"><img src="${imageAssetPath(volume.cover)}" alt="Capa de ${escapeHtml(volume.mangaTitle)} volume ${volume.volumeNumber}" loading="lazy"><div><strong>Volume ${volume.volumeNumber}</strong><small>${item ? `Possuídos: ${formatNumber(item.quantity || 1)}` : "Não possui"}</small></div></article>`; }).join("")}</div>`;
+  dialog.showModal();
+}
+
 async function buyProfileListing(listingId) {
   if (!currentUser || !firebaseServices) return setMessage("Entre na sua conta para comprar este mangá.", "error");
   if (profilePurchaseBusy) return;
@@ -2097,7 +2109,7 @@ function profileComicList(items, emptyText, dateField = "") {
           const comic = item.seriesFavorite ? item : enrichedComicInteraction(item);
           const date = formatShortDate(dateField ? comic[dateField] : comic.updatedAt);
           const meta = [comic.series || comic.universe, date].filter(Boolean).join(" - ");
-          const cover = comic.cover ? imageAssetPath(comic.cover) : imageAssetPath("lonermangalogo.png");
+          const cover = comic.cover ? imageAssetPath(comic.cover) : imageAssetPath("lonermangalogo-v2.png");
 
           return `
             <a class="profile-comic-card" href="${assetPath(comic.href)}">
@@ -2300,6 +2312,7 @@ async function renderProfilePage() {
     getUserComicInteractions(uid),
     getPublicShopProfile(uid)
   ]);
+  renderedProfileCollection = gameProfile.collection;
   const reads = interactions
     .filter((item) => item.read)
     .sort((a, b) => timestampToMillis(b.readAt) - timestampToMillis(a.readAt))
@@ -2349,6 +2362,7 @@ async function renderProfilePage() {
       <div class="profile-tab-panel" role="tabpanel" data-profile-panel="collection" hidden>
         <section class="profile-shop"><div class="profile-shop-heading"><div><span>COLEÇÃO DA LOJA</span><h3>${escapeHtml(gameProfile.shop?.shopName || profile.nick)}</h3></div>${gameProfile.shop ? `<div><strong>${formatNumber(gameProfile.shop.collectionDistinctCount || 0)}</strong><small>volumes distintos</small></div>` : ""}</div><div class="profile-shop-section"><p>Obras ainda não colecionadas aparecem em preto e branco.</p>${profileCollectionGallery(gameProfile.collection)}</div></section>
       </div>
+      <dialog class="profile-collection-dialog" id="profileCollectionDialog"><button class="profile-dialog-close" type="button" data-close-profile-collection aria-label="Fechar">×</button><div id="profileCollectionDialogContent"></div></dialog>
     </section>
   `;
 }
@@ -2658,6 +2672,8 @@ function setupEvents() {
     const profileUserButton = event.target.closest("[data-profile-uid]");
     const profileTabButton = event.target.closest("[data-profile-tab]");
     const profileBuyListingButton = event.target.closest("[data-profile-buy-listing]");
+    const profileCollectionButton = event.target.closest("[data-profile-collection]");
+    const profileCollectionClose = event.target.closest("[data-close-profile-collection]");
     const achievementTabButton = event.target.closest("[data-achievement-tab]");
     const profileAvatarButton = event.target.closest("[data-profile-avatar]");
 
@@ -2721,6 +2737,14 @@ function setupEvents() {
 
     if (profileBuyListingButton) {
       await buyProfileListing(profileBuyListingButton.dataset.profileBuyListing);
+    }
+
+    if (profileCollectionButton) {
+      openProfileCollectionManga(profileCollectionButton.dataset.profileCollection);
+    }
+
+    if (profileCollectionClose) {
+      profileCollectionClose.closest("dialog")?.close();
     }
 
     if (achievementTabButton) {

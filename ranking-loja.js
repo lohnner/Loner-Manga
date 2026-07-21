@@ -8,7 +8,7 @@ const app = appSdk.getApps().length ? appSdk.getApp() : appSdk.initializeApp(fir
 const db = dbSdk.getFirestore(app);
 const box = document.querySelector("#gameRankingContent");
 const general = document.querySelector("#rankingPage");
-const defaultAvatar = "lonermangalogo.png";
+const defaultAvatar = "lonermangalogo-v2.png";
 const legacyDefaultAvatar = "Avatar/homemaranha.png";
 let shops = [], profiles = new Map();
 const esc = (value = "") => String(value).replace(/[&<>]/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[char]));
