@@ -2148,6 +2148,79 @@ body.dialog-open {
   line-height: 1.3;
 }
 
+.profile-shop {
+  display: grid;
+  gap: 18px;
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line-soft);
+}
+
+.profile-shop-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: var(--radius-sm);
+  background: linear-gradient(120deg, rgba(76, 29, 149, 0.32), rgba(17, 24, 39, 0.75));
+}
+
+.profile-shop-heading > div:first-child > span {
+  color: #c4b5fd;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.profile-shop-heading h3,
+.profile-shop-section h4 {
+  margin: 3px 0 0;
+  font-family: var(--font-display);
+}
+
+.profile-shop-heading > div:last-child {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 2px 8px;
+  align-items: baseline;
+}
+
+.profile-shop-heading > div:last-child strong { color: #ffffff; font-size: 18px; }
+.profile-shop-heading > div:last-child small { color: var(--muted); }
+.profile-shop-section { display: grid; gap: 10px; }
+
+.profile-game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.profile-game-card {
+  overflow: hidden;
+  border: 1px solid rgba(232, 187, 73, 0.28);
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+}
+
+.profile-game-card > img {
+  width: 100%;
+  aspect-ratio: var(--cover-ratio);
+  object-fit: cover;
+}
+
+.profile-game-card > div { display: grid; gap: 5px; padding: 10px; }
+.profile-game-card strong { color: #ffffff; font-size: 14px; }
+.profile-game-card small { color: var(--muted); }
+.profile-game-card b { color: #86efac; font-size: 13px; }
+.profile-condition { padding: 5px 7px; border-radius: 5px; background: #705000; color: #fff3b5; font-size: 11px; font-weight: 900; letter-spacing: .08em; text-align: center; }
+
+@media (max-width: 620px) {
+  .profile-shop-heading { align-items: flex-start; flex-direction: column; }
+  .profile-game-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 .ranking-page {
   margin-top: 16px;
 }

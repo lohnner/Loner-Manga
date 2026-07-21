@@ -3,7 +3,9 @@ const runtimeAssetVersion = Date.now().toString();
 const { firebaseConfig, firebaseReady } = await import(`./firebase-config.js?v=${runtimeAssetVersion}`);
 const { articles, catalogo, comics } = await import(`./catalogo.js?v=${runtimeAssetVersion}`);
 
-const defaultAvatarPath = "Avatar/homemaranha.png";
+const defaultAvatarPath = "lonermangalogo.png";
+const legacyDefaultAvatarPath = "Avatar/homemaranha.png";
+const normalizedAvatarPath = (path) => !path || path === legacyDefaultAvatarPath ? defaultAvatarPath : path;
 const profileAvatarRewards = [
   {
     id: "naruto-1-volume",
@@ -1048,10 +1050,11 @@ async function ensureProfile(user) {
   if (snapshot.exists()) {
     const profile = snapshot.data();
     const normalizedLevel = levelFromXp(Number(profile.xp || 0));
+    const avatarPath = normalizedAvatarPath(profile.avatarPath);
 
-    if (profile.level !== normalizedLevel) {
-      await firebaseServices.setDoc(ref, { level: normalizedLevel }, { merge: true });
-      return { ...profile, level: normalizedLevel };
+    if (profile.level !== normalizedLevel || profile.avatarPath !== avatarPath) {
+      await firebaseServices.setDoc(ref, { level: normalizedLevel, avatarPath }, { merge: true });
+      return { ...profile, level: normalizedLevel, avatarPath };
     }
 
     return profile;
@@ -1243,7 +1246,7 @@ function renderSignedIn(profile, options = {}) {
   authBadge.style.color = "var(--success)";
   accountPanel.innerHTML = `
     <div class="profile-summary">
-      <img class="profile-avatar" src="${imageAssetPath(profile.avatarPath || defaultAvatarPath)}" alt="Avatar de ${escapeHtml(nick)}" />
+      <img class="profile-avatar" src="${imageAssetPath(normalizedAvatarPath(profile.avatarPath))}" alt="Avatar de ${escapeHtml(nick)}" />
       <div class="profile-summary-body">
         <strong>${escapeHtml(nick)}</strong>
         <span>Level ${progress.level}</span>
@@ -1966,7 +1969,7 @@ async function openReadersModal() {
       const profile = xpProgress(reader);
       return `
         <button class="reader-row" type="button" data-profile-uid="${escapeHtml(reader.uid)}">
-          <img src="${imageAssetPath(reader.avatarPath || defaultAvatarPath)}" alt="Avatar de ${escapeHtml(reader.nick || "Usuário")}" />
+          <img src="${imageAssetPath(normalizedAvatarPath(reader.avatarPath))}" alt="Avatar de ${escapeHtml(reader.nick || "Usuário")}" />
           <span>
             <strong>${escapeHtml(reader.nick || "Usuário")}</strong>
             <small>Level ${profile.level}</small>
@@ -1988,6 +1991,24 @@ async function getUserComicInteractions(uid) {
   );
 
   return interactionsSnapshot.docs.map((item) => enrichedComicInteraction(item.data()));
+}
+
+async function getPublicShopProfile(uid) {
+  const [shopSnapshot, collectionSnapshot, listingsSnapshot] = await Promise.all([
+    firebaseServices.getDoc(firebaseServices.doc(firebaseServices.db, "shops", uid)),
+    firebaseServices.getDocs(firebaseServices.collection(firebaseServices.db, "shops", uid, "collectionVolumes")),
+    firebaseServices.getDocs(firebaseServices.collection(firebaseServices.db, "marketListings"))
+  ]);
+  return {
+    shop: shopSnapshot.exists() ? shopSnapshot.data() : null,
+    collection: collectionSnapshot.docs.map((item) => item.data()).sort((a, b) => String(a.mangaTitle || "").localeCompare(String(b.mangaTitle || ""), "pt-BR") || Number(a.volumeNumber) - Number(b.volumeNumber)),
+    listings: listingsSnapshot.docs.map((item) => ({ id: item.id, ...item.data() })).filter((item) => item.sellerUid === uid && item.status === "active")
+  };
+}
+
+function profileGameItems(items, type) {
+  if (!items.length) return `<p class="empty-state">${type === "collection" ? "Nenhum volume lacrado na coleção." : "Nenhum mangá anunciado no momento."}</p>`;
+  return `<div class="profile-game-grid">${items.map((item) => `<article class="profile-game-card"><img src="${imageAssetPath(item.cover)}" alt="Capa de ${escapeHtml(item.mangaTitle)} volume ${Number(item.volumeNumber)}" loading="lazy"><div><span class="profile-condition">LACRADO</span><strong>${escapeHtml(item.mangaTitle)}</strong><small>Volume ${Number(item.volumeNumber)}</small>${type === "collection" ? `<b>${formatNumber(item.quantity || 1)} ${Number(item.quantity || 1) === 1 ? "cópia" : "cópias"}</b>` : `<b>${formatNumber(item.price)} LM</b>`}</div></article>`).join("")}</div>`;
 }
 
 function renderProfilePageUnavailable(
@@ -2240,7 +2261,10 @@ async function renderProfilePage() {
     return;
   }
 
-  const interactions = await getUserComicInteractions(uid);
+  const [interactions, gameProfile] = await Promise.all([
+    getUserComicInteractions(uid),
+    getPublicShopProfile(uid)
+  ]);
   const reads = interactions
     .filter((item) => item.read)
     .sort((a, b) => timestampToMillis(b.readAt) - timestampToMillis(a.readAt))
@@ -2250,7 +2274,6 @@ async function renderProfilePage() {
     .sort((a, b) => timestampToMillis(b.favoriteAt) - timestampToMillis(a.favoriteAt))
     .slice(0, 12);
   const progress = xpProgress(profile);
-  const isOwnProfile = currentUser?.uid === uid && !currentProfile?.firestoreBlocked;
   const stats = {
     reads: interactions.filter((item) => item.read).length,
     favorites: interactions.filter((item) => item.favorite && item.seriesFavorite).length,
@@ -2261,7 +2284,7 @@ async function renderProfilePage() {
   profilePage.innerHTML = `
     <section class="profile-page-card">
       <div class="profile-hero">
-        <img class="profile-avatar large" src="${imageAssetPath(profile.avatarPath || defaultAvatarPath)}" alt="Avatar de ${escapeHtml(profile.nick)}" />
+        <img class="profile-avatar large" src="${imageAssetPath(normalizedAvatarPath(profile.avatarPath))}" alt="Avatar de ${escapeHtml(profile.nick)}" />
         <div>
           <h2>${escapeHtml(profile.nick)}</h2>
           <p>Level ${progress.level}</p>
@@ -2274,51 +2297,25 @@ async function renderProfilePage() {
 
       ${profileStatCards(stats)}
 
-      <div class="profile-tabs" role="tablist" aria-label="Áreas do perfil">
-        <button
-          class="profile-tab is-active"
-          type="button"
-          role="tab"
-          aria-selected="true"
-          aria-controls="profile-panel-readings"
-          data-profile-tab="readings"
-        >
-          Leituras
-        </button>
-        <button
-          class="profile-tab"
-          type="button"
-          role="tab"
-          aria-selected="false"
-          aria-controls="profile-panel-achievements"
-          data-profile-tab="achievements"
-        >
-          Conquistas
-        </button>
+      <div class="profile-sections">
+        <section>
+          <h3>Últimos mangás lidos</h3>
+          ${profileComicList(reads, "Ainda não marcou nenhuma leitura.", "readAt")}
+        </section>
+        <section>
+          <h3>Mangás favoritos</h3>
+          ${profileComicList(favorites, "Ainda não favoritou nenhuma HQ.", "favoriteAt")}
+        </section>
       </div>
 
-      <div class="profile-tab-panel" id="profile-panel-readings" role="tabpanel" data-profile-panel="readings">
-        <div class="profile-sections">
-          <section>
-            <h3>Últimos mangás lidos</h3>
-            ${profileComicList(reads, "Ainda não marcou nenhuma leitura.", "readAt")}
-          </section>
-          <section>
-            <h3>Mangás favoritos</h3>
-            ${profileComicList(favorites, "Ainda não favoritou nenhuma HQ.", "favoriteAt")}
-          </section>
+      <section class="profile-shop" aria-labelledby="profileShopTitle">
+        <div class="profile-shop-heading">
+          <div><span>MINHA LOJA</span><h3 id="profileShopTitle">${escapeHtml(gameProfile.shop?.shopName || "Loja ainda não criada")}</h3></div>
+          ${gameProfile.shop ? `<div><strong>${formatNumber(gameProfile.shop.collectionDistinctCount || 0)}</strong><small>volumes distintos</small><strong>${formatNumber(gameProfile.listings.length)}</strong><small>anúncios</small></div>` : ""}
         </div>
-      </div>
-
-      <div
-        class="profile-tab-panel"
-        id="profile-panel-achievements"
-        role="tabpanel"
-        data-profile-panel="achievements"
-        hidden
-      >
-        ${profileAchievementsPanel(interactions, profile, isOwnProfile)}
-      </div>
+        <div class="profile-shop-section"><h4>Coleção da loja</h4>${profileGameItems(gameProfile.collection, "collection")}</div>
+        <div class="profile-shop-section"><h4>Mercado de jogadores</h4>${profileGameItems(gameProfile.listings, "market")}</div>
+      </section>
     </section>
   `;
 }
@@ -2449,7 +2446,7 @@ async function renderRankingPage() {
                   role="listitem"
                 >
                   <span class="ranking-position">#${rank}</span>
-                  <img src="${imageAssetPath(profile.avatarPath || defaultAvatarPath)}" alt="Avatar de ${escapeHtml(profile.nick)}" />
+                  <img src="${imageAssetPath(normalizedAvatarPath(profile.avatarPath))}" alt="Avatar de ${escapeHtml(profile.nick)}" />
                   <span class="ranking-user">
                     <strong>${escapeHtml(profile.nick)}${isCurrentUser ? " - você" : ""}</strong>
                     <small>Level ${profile.level} - ${formatNumber(profile.xp)} XP</small>

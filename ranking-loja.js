@@ -8,10 +8,11 @@ const app = appSdk.getApps().length ? appSdk.getApp() : appSdk.initializeApp(fir
 const db = dbSdk.getFirestore(app);
 const box = document.querySelector("#gameRankingContent");
 const general = document.querySelector("#rankingPage");
-const defaultAvatar = "Avatar/homemaranha.png";
+const defaultAvatar = "lonermangalogo.png";
+const legacyDefaultAvatar = "Avatar/homemaranha.png";
 let shops = [], profiles = new Map();
 const esc = (value = "") => String(value).replace(/[&<>]/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[char]));
-const imageUrl = path => new URL(path || defaultAvatar, new URL("./", location.href)).href;
+const imageUrl = path => new URL(!path || path === legacyDefaultAvatar ? defaultAvatar : path, new URL("./", location.href)).href;
 
 function render(type) {
   document.querySelectorAll("[data-rank]").forEach(button => button.classList.toggle("active", button.dataset.rank === type));
