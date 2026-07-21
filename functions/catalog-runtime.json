@@ -1215,6 +1215,87 @@
     "displayTitle": "Jujutsu Kaisen / Volume 1"
   },
   {
+    "mangaId": "jujutsu-kaisen",
+    "mangaTitle": "Jujutsu Kaisen",
+    "volumeId": "jujutsu-kaisen-2-2018",
+    "volumeNumber": 2,
+    "cover": "Mangás/Jujutsu%20Kaisen/Jujutsu%20Kaisen%20%232.png",
+    "pageUrl": "Mangás/Jujutsu%20Kaisen/jujutsu-kaisen-2-2018.html",
+    "displayTitle": "Jujutsu Kaisen / Volume 2"
+  },
+  {
+    "mangaId": "jujutsu-kaisen",
+    "mangaTitle": "Jujutsu Kaisen",
+    "volumeId": "jujutsu-kaisen-3-2018",
+    "volumeNumber": 3,
+    "cover": "Mangás/Jujutsu%20Kaisen/Jujutsu%20Kaisen%20%233.png",
+    "pageUrl": "Mangás/Jujutsu%20Kaisen/jujutsu-kaisen-3-2018.html",
+    "displayTitle": "Jujutsu Kaisen / Volume 3"
+  },
+  {
+    "mangaId": "jujutsu-kaisen",
+    "mangaTitle": "Jujutsu Kaisen",
+    "volumeId": "jujutsu-kaisen-4-2019",
+    "volumeNumber": 4,
+    "cover": "Mangás/Jujutsu%20Kaisen/Jujutsu%20Kaisen%20%234.png",
+    "pageUrl": "Mangás/Jujutsu%20Kaisen/jujutsu-kaisen-4-2019.html",
+    "displayTitle": "Jujutsu Kaisen / Volume 4"
+  },
+  {
+    "mangaId": "jujutsu-kaisen",
+    "mangaTitle": "Jujutsu Kaisen",
+    "volumeId": "jujutsu-kaisen-5-2019",
+    "volumeNumber": 5,
+    "cover": "Mangás/Jujutsu%20Kaisen/Jujutsu%20Kaisen%20%235.png",
+    "pageUrl": "Mangás/Jujutsu%20Kaisen/jujutsu-kaisen-5-2019.html",
+    "displayTitle": "Jujutsu Kaisen / Volume 5"
+  },
+  {
+    "mangaId": "jujutsu-kaisen",
+    "mangaTitle": "Jujutsu Kaisen",
+    "volumeId": "jujutsu-kaisen-6-2019",
+    "volumeNumber": 6,
+    "cover": "Mangás/Jujutsu%20Kaisen/Jujutsu%20Kaisen%20%236.png",
+    "pageUrl": "Mangás/Jujutsu%20Kaisen/jujutsu-kaisen-6-2019.html",
+    "displayTitle": "Jujutsu Kaisen / Volume 6"
+  },
+  {
+    "mangaId": "jujutsu-kaisen",
+    "mangaTitle": "Jujutsu Kaisen",
+    "volumeId": "jujutsu-kaisen-7-2019",
+    "volumeNumber": 7,
+    "cover": "Mangás/Jujutsu%20Kaisen/Jujutsu%20Kaisen%20%237.png",
+    "pageUrl": "Mangás/Jujutsu%20Kaisen/jujutsu-kaisen-7-2019.html",
+    "displayTitle": "Jujutsu Kaisen / Volume 7"
+  },
+  {
+    "mangaId": "jujutsu-kaisen",
+    "mangaTitle": "Jujutsu Kaisen",
+    "volumeId": "jujutsu-kaisen-8-2020",
+    "volumeNumber": 8,
+    "cover": "Mangás/Jujutsu%20Kaisen/Jujutsu%20Kaisen%20%238.png",
+    "pageUrl": "Mangás/Jujutsu%20Kaisen/jujutsu-kaisen-8-2020.html",
+    "displayTitle": "Jujutsu Kaisen / Volume 8"
+  },
+  {
+    "mangaId": "jujutsu-kaisen",
+    "mangaTitle": "Jujutsu Kaisen",
+    "volumeId": "jujutsu-kaisen-9-2020",
+    "volumeNumber": 9,
+    "cover": "Mangás/Jujutsu%20Kaisen/Jujutsu%20Kaisen%20%239.png",
+    "pageUrl": "Mangás/Jujutsu%20Kaisen/jujutsu-kaisen-9-2020.html",
+    "displayTitle": "Jujutsu Kaisen / Volume 9"
+  },
+  {
+    "mangaId": "jujutsu-kaisen",
+    "mangaTitle": "Jujutsu Kaisen",
+    "volumeId": "jujutsu-kaisen-10-2020",
+    "volumeNumber": 10,
+    "cover": "Mangás/Jujutsu%20Kaisen/Jujutsu%20Kaisen%20%2310.png",
+    "pageUrl": "Mangás/Jujutsu%20Kaisen/jujutsu-kaisen-10-2020.html",
+    "displayTitle": "Jujutsu Kaisen / Volume 10"
+  },
+  {
     "mangaId": "demon-slayer",
     "mangaTitle": "Demon Slayer",
     "volumeId": "demon-slayer-1-2016",

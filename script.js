@@ -2922,17 +2922,22 @@ async function startAuth() {
   });
 }
 
-function renderBleachVolumes() {
+function renderCatalogMangaVolumes() {
   const pageName = decodeURIComponent(window.location.pathname.split("/").pop() || "").toLowerCase();
-  if (pageName !== "bleach.html") return;
+  const seriesByPage = {
+    "bleach.html": "Bleach",
+    "jujutsu-kaisen.html": "Jujutsu Kaisen"
+  };
+  const series = seriesByPage[pageName];
+  if (!series) return;
   const gallery = document.querySelector(".volume-gallery");
   if (!gallery) return;
   const volumes = catalogo.hqs
-    .filter((item) => item.series === "Bleach")
+    .filter((item) => item.series === series)
     .sort((a, b) => Number(a.title.match(/Volume\s+(\d+)/i)?.[1]) - Number(b.title.match(/Volume\s+(\d+)/i)?.[1]));
   gallery.innerHTML = volumes.map((volume) => {
     const number = Number(volume.title.match(/Volume\s+(\d+)/i)?.[1]);
-    return `<a class="volume-card" href="${assetPath(volume.href)}"><img src="${imageAssetPath(volume.cover)}" alt="Capa do volume ${number} de Bleach" loading="lazy"><span>Volume ${number}</span></a>`;
+    return `<a class="volume-card" href="${assetPath(volume.href)}"><img src="${imageAssetPath(volume.cover)}" alt="Capa do volume ${number} de ${series}" loading="lazy"><span>Volume ${number}</span></a>`;
   }).join("");
 }
 
@@ -2966,7 +2971,7 @@ function createBrasiliaClock() {
 
 normalizeAuthForms();
 createBrasiliaClock();
-renderBleachVolumes();
+renderCatalogMangaVolumes();
 renderHomeRecentHqs();
 renderCharacterIndex();
 setupSmartSearchPage();
