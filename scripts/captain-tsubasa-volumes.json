@@ -1,0 +1,335 @@
+[
+  {
+    "number": 1,
+    "releaseDate": "1982-01-09",
+    "chapters": [
+      1,
+      4
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088512815/1200/9784088512815.jpg"
+  },
+  {
+    "number": 2,
+    "releaseDate": "1982-05-10",
+    "chapters": [
+      5,
+      8
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088512822/1200/9784088512822.jpg"
+  },
+  {
+    "number": 3,
+    "releaseDate": "1982-08-10",
+    "chapters": [
+      9,
+      13
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088512839/1200/9784088512839.jpg"
+  },
+  {
+    "number": 4,
+    "releaseDate": "1982-11-10",
+    "chapters": [
+      14,
+      18
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088512846/1200/9784088512846.jpg"
+  },
+  {
+    "number": 5,
+    "releaseDate": "1983-02-10",
+    "chapters": [
+      19,
+      23
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088512853/1200/9784088512853.jpg"
+  },
+  {
+    "number": 6,
+    "releaseDate": "1983-05-10",
+    "chapters": [
+      24,
+      27
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088512860/1200/9784088512860.jpg"
+  },
+  {
+    "number": 7,
+    "releaseDate": "1983-08-10",
+    "chapters": [
+      28,
+      29
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088512877/1200/9784088512877.jpg"
+  },
+  {
+    "number": 8,
+    "releaseDate": "1983-11-10",
+    "chapters": [
+      30,
+      33
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088512884/1200/9784088512884.jpg"
+  },
+  {
+    "number": 9,
+    "releaseDate": "1984-02-10",
+    "chapters": [
+      34,
+      37
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088512891/1200/9784088512891.jpg"
+  },
+  {
+    "number": 10,
+    "releaseDate": "1984-06-08",
+    "chapters": [
+      38,
+      42
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088512907/1200/9784088512907.jpg"
+  },
+  {
+    "number": 11,
+    "releaseDate": "1984-08-10",
+    "chapters": [
+      43,
+      45
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088512914/1200/9784088512914.jpg"
+  },
+  {
+    "number": 12,
+    "releaseDate": "1984-11-09",
+    "chapters": [
+      46,
+      49
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088512921/1200/9784088512921.jpg"
+  },
+  {
+    "number": 13,
+    "releaseDate": "1985-01-10",
+    "chapters": [
+      50,
+      53
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088512938/1200/9784088512938.jpg"
+  },
+  {
+    "number": 14,
+    "releaseDate": "1985-04-10",
+    "chapters": [
+      54,
+      55
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088512945/1200/9784088512945.jpg"
+  },
+  {
+    "number": 15,
+    "releaseDate": "1985-07-10",
+    "chapters": [
+      56,
+      59
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088512952/1200/9784088512952.jpg"
+  },
+  {
+    "number": 16,
+    "releaseDate": "1985-10-10",
+    "chapters": [
+      60,
+      63
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088512969/1200/9784088512969.jpg"
+  },
+  {
+    "number": 17,
+    "releaseDate": "1985-12-06",
+    "chapters": [
+      64,
+      65
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088512976/1200/9784088512976.jpg"
+  },
+  {
+    "number": 18,
+    "releaseDate": "1986-01-10",
+    "chapters": [
+      66,
+      67
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088512983/1200/9784088512983.jpg"
+  },
+  {
+    "number": 19,
+    "releaseDate": "1986-03-10",
+    "chapters": [
+      68,
+      71
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088512990/1200/9784088512990.jpg"
+  },
+  {
+    "number": 20,
+    "releaseDate": "1986-05-09",
+    "chapters": [
+      72,
+      75
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088513003/1200/9784088513003.jpg"
+  },
+  {
+    "number": 21,
+    "releaseDate": "1986-07-10",
+    "chapters": [
+      76,
+      77
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088518718/1200/9784088518718.jpg"
+  },
+  {
+    "number": 22,
+    "releaseDate": "1986-09-10",
+    "chapters": [
+      78,
+      79
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088518725/1200/9784088518725.jpg"
+  },
+  {
+    "number": 23,
+    "releaseDate": "1986-11-10",
+    "chapters": [
+      80,
+      80
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088518732/1200/9784088518732.jpg"
+  },
+  {
+    "number": 24,
+    "releaseDate": "1987-01-09",
+    "chapters": [
+      81,
+      83
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088518749/1200/9784088518749.jpg"
+  },
+  {
+    "number": 25,
+    "releaseDate": "1987-03-10",
+    "chapters": [
+      84,
+      85
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088518756/1200/9784088518756.jpg"
+  },
+  {
+    "number": 26,
+    "releaseDate": "1987-05-08",
+    "chapters": [
+      86,
+      87
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088518763/1200/9784088518763.jpg"
+  },
+  {
+    "number": 27,
+    "releaseDate": "1987-07-10",
+    "chapters": [
+      88,
+      89
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088518770/1200/9784088518770.jpg"
+  },
+  {
+    "number": 28,
+    "releaseDate": "1987-09-10",
+    "chapters": [
+      90,
+      91
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088518787/1200/9784088518787.jpg"
+  },
+  {
+    "number": 29,
+    "releaseDate": "1987-11-10",
+    "chapters": [
+      92,
+      93
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088518794/1200/9784088518794.jpg"
+  },
+  {
+    "number": 30,
+    "releaseDate": "1988-01-08",
+    "chapters": [
+      94,
+      94
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088518800/1200/9784088518800.jpg"
+  },
+  {
+    "number": 31,
+    "releaseDate": "1988-03-10",
+    "chapters": [
+      95,
+      98
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088518817/1200/9784088518817.jpg"
+  },
+  {
+    "number": 32,
+    "releaseDate": "1988-05-10",
+    "chapters": [
+      99,
+      99
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088518824/1200/9784088518824.jpg"
+  },
+  {
+    "number": 33,
+    "releaseDate": "1988-07-08",
+    "chapters": [
+      100,
+      102
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088518831/1200/9784088518831.jpg"
+  },
+  {
+    "number": 34,
+    "releaseDate": "1988-09-09",
+    "chapters": [
+      103,
+      104
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088518848/1200/9784088518848.jpg"
+  },
+  {
+    "number": 35,
+    "releaseDate": "1988-11-10",
+    "chapters": [
+      105,
+      107
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088518855/1200/9784088518855.jpg"
+  },
+  {
+    "number": 36,
+    "releaseDate": "1989-01-10",
+    "chapters": [
+      108,
+      109
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088518862/1200/9784088518862.jpg"
+  },
+  {
+    "number": 37,
+    "releaseDate": "1989-03-10",
+    "chapters": [
+      110,
+      114
+    ],
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088518879/1200/9784088518879.jpg"
+  }
+]
