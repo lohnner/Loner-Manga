@@ -17,8 +17,8 @@
 .reward-box-lid{top:18px;height:48px;border-radius:14px;transform-origin:10% 100%;animation:rewardLidOpen .55s 1s cubic-bezier(.2,.8,.2,1) forwards}
 .reward-result-heading{text-align:center;margin:0 auto 20px}.reward-result-heading h2{margin:.15em 0}.reward-result-heading p:last-child{color:#c7cfdd}
 .reward-dialog .reward-grid{grid-template-columns:repeat(auto-fit,minmax(145px,1fr));align-items:start}
-.reward-card{opacity:0;transform:translateY(34px) scale(.9);animation:rewardCardReveal .55s calc(var(--reward-delay) + .08s) cubic-bezier(.2,.8,.2,1) forwards}
-.reward-card.lacrado{animation:rewardCardReveal .55s calc(var(--reward-delay) + .08s) cubic-bezier(.2,.8,.2,1) forwards,rewardSealedGlow 1.4s calc(var(--reward-delay) + .5s) ease-in-out infinite alternate}
+.reward-dialog .reward-grid .reward-card{opacity:0;transform:translateY(34px) scale(.9);animation:rewardCardReveal .55s calc(var(--reward-delay) + .08s) cubic-bezier(.2,.8,.2,1) forwards}
+.reward-dialog .reward-grid .reward-card.lacrado{animation:rewardCardReveal .55s calc(var(--reward-delay) + .08s) cubic-bezier(.2,.8,.2,1) forwards,rewardSealedGlow 1.4s calc(var(--reward-delay) + .5s) ease-in-out infinite alternate}
 .sale-price{display:block;padding:8px;border-radius:8px;background:#162536;color:#8ff0b8;text-align:center;font-size:.9rem}
 @keyframes rewardBoxShake{0%,18%{transform:translateY(15px) scale(.78);opacity:0}28%{opacity:1}38%,54%,70%,86%{transform:translateX(-10px) rotate(-4deg)}46%,62%,78%,94%{transform:translateX(10px) rotate(4deg)}100%{transform:translateX(0) scale(1.08)}}
 @keyframes rewardLidOpen{to{transform:translate(-25px,-95px) rotate(-28deg)}}
