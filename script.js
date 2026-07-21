@@ -2881,6 +2881,11 @@ const mangaArcsByPage = {
     title: "Berserk",
     arcs: [["Espadachim Negro", "Vol. 1", "Vol. 3"], ["Era de Ouro", "Vol. 3", "Vol. 14"], ["Condenação", "Vol. 14", "Vol. 21"], ["Falcão do Império Milenar", "Vol. 22", "Vol. 35"], ["Fantasia", "Vol. 35", "Em andamento"]]
   },
+  "yu-yu-hakusho.html": {
+    id: "yuYuHakushoArcsDialog",
+    title: "Yu Yu Hakusho",
+    arcs: [["Detetive Espiritual", 1, 51], ["Torneio das Trevas", 52, 112], ["Capítulo Negro", 113, 153], ["Três Reis", 154, 175]]
+  },
   "attack-on-titan.html": {
     id: "attackOnTitanArcsDialog",
     title: "Attack on Titan",
