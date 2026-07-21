@@ -1,11 +1,12 @@
 const runtimeAssetVersion = Date.now().toString();
 
 const { firebaseConfig, firebaseReady } = await import(`./firebase-config.js?v=${runtimeAssetVersion}`);
-const { articles, catalogo, comics } = await import(`./catalogo.js?v=${runtimeAssetVersion}`);
+const { articles, catalogo, comics, catalogoVolumes } = await import(`./catalogo.js?v=${runtimeAssetVersion}`);
 
 const defaultAvatarPath = "lonermangalogo.png";
 const legacyDefaultAvatarPath = "Avatar/homemaranha.png";
 const normalizedAvatarPath = (path) => !path || path === legacyDefaultAvatarPath ? defaultAvatarPath : path;
+const profileAvatarPath = (profile = {}) => String(profile.nick || "").trim().toLowerCase() === "dihhz" ? defaultAvatarPath : normalizedAvatarPath(profile.avatarPath);
 const profileAvatarRewards = [
   {
     id: "naruto-1-volume",
@@ -1023,6 +1024,7 @@ async function loadFirebase() {
     doc: firestoreModule.doc,
     getDoc: firestoreModule.getDoc,
     getDocs: firestoreModule.getDocs,
+    runTransaction: firestoreModule.runTransaction,
     onSnapshot: firestoreModule.onSnapshot,
     serverTimestamp: firestoreModule.serverTimestamp,
     setDoc: firestoreModule.setDoc
@@ -1050,7 +1052,7 @@ async function ensureProfile(user) {
   if (snapshot.exists()) {
     const profile = snapshot.data();
     const normalizedLevel = levelFromXp(Number(profile.xp || 0));
-    const avatarPath = normalizedAvatarPath(profile.avatarPath);
+    const avatarPath = profileAvatarPath(profile);
 
     if (profile.level !== normalizedLevel || profile.avatarPath !== avatarPath) {
       await firebaseServices.setDoc(ref, { level: normalizedLevel, avatarPath }, { merge: true });
@@ -1246,7 +1248,7 @@ function renderSignedIn(profile, options = {}) {
   authBadge.style.color = "var(--success)";
   accountPanel.innerHTML = `
     <div class="profile-summary">
-      <img class="profile-avatar" src="${imageAssetPath(normalizedAvatarPath(profile.avatarPath))}" alt="Avatar de ${escapeHtml(nick)}" />
+      <img class="profile-avatar" src="${imageAssetPath(profileAvatarPath(profile))}" alt="Avatar de ${escapeHtml(nick)}" />
       <div class="profile-summary-body">
         <strong>${escapeHtml(nick)}</strong>
         <span>Level ${progress.level}</span>
@@ -1969,7 +1971,7 @@ async function openReadersModal() {
       const profile = xpProgress(reader);
       return `
         <button class="reader-row" type="button" data-profile-uid="${escapeHtml(reader.uid)}">
-          <img src="${imageAssetPath(normalizedAvatarPath(reader.avatarPath))}" alt="Avatar de ${escapeHtml(reader.nick || "Usuário")}" />
+          <img src="${imageAssetPath(profileAvatarPath(reader))}" alt="Avatar de ${escapeHtml(reader.nick || "Usuário")}" />
           <span>
             <strong>${escapeHtml(reader.nick || "Usuário")}</strong>
             <small>Level ${profile.level}</small>
@@ -2006,9 +2008,42 @@ async function getPublicShopProfile(uid) {
   };
 }
 
-function profileGameItems(items, type) {
-  if (!items.length) return `<p class="empty-state">${type === "collection" ? "Nenhum volume lacrado na coleção." : "Nenhum mangá anunciado no momento."}</p>`;
-  return `<div class="profile-game-grid">${items.map((item) => `<article class="profile-game-card"><img src="${imageAssetPath(item.cover)}" alt="Capa de ${escapeHtml(item.mangaTitle)} volume ${Number(item.volumeNumber)}" loading="lazy"><div><span class="profile-condition">LACRADO</span><strong>${escapeHtml(item.mangaTitle)}</strong><small>Volume ${Number(item.volumeNumber)}</small>${type === "collection" ? `<b>${formatNumber(item.quantity || 1)} ${Number(item.quantity || 1) === 1 ? "cópia" : "cópias"}</b>` : `<b>${formatNumber(item.price)} LM</b>`}</div></article>`).join("")}</div>`;
+function profileMarketItems(items) {
+  if (!items.length) return '<p class="empty-state">Nenhum mangá anunciado no momento.</p>';
+  return `<div class="profile-game-grid">${items.map((item) => `<article class="profile-game-card"><img src="${imageAssetPath(item.cover)}" alt="Capa de ${escapeHtml(item.mangaTitle)} volume ${Number(item.volumeNumber)}" loading="lazy"><div><span class="profile-condition">LACRADO</span><strong>${escapeHtml(item.mangaTitle)}</strong><small>Volume ${Number(item.volumeNumber)}</small><b>${formatNumber(item.price)} LM</b>${item.sellerUid === currentUser?.uid ? '<button class="button ghost" type="button" disabled>Seu anúncio</button>' : `<button class="button primary" type="button" data-profile-buy-listing="${escapeHtml(item.id)}">Comprar por ${formatNumber(item.price)} LM</button>`}</div></article>`).join("")}</div>`;
+}
+
+function profileCollectionGallery(items) {
+  const owned = new Map(items.map((item) => [item.volumeId, item]));
+  const groups = catalogoVolumes.reduce((map, volume) => {
+    map.set(volume.mangaId, [...(map.get(volume.mangaId) || []), volume]);
+    return map;
+  }, new Map());
+  return `<div class="profile-collection-grid">${[...groups.values()].map((volumes) => {
+    const sorted = [...volumes].sort((a, b) => a.volumeNumber - b.volumeNumber);
+    const have = sorted.filter((volume) => owned.has(volume.volumeId)).length;
+    const representative = sorted.find((volume) => volume.volumeNumber === 1) || sorted[0];
+    return `<article class="profile-collection-card ${have ? "" : "is-locked"}"><img src="${imageAssetPath(representative.cover)}" alt="Capa de ${escapeHtml(representative.mangaTitle)}" loading="lazy"><div><strong>${escapeHtml(representative.mangaTitle)}</strong><small>${have} de ${sorted.length} volumes distintos</small></div></article>`;
+  }).join("")}</div>`;
+}
+
+let profilePurchaseBusy = false;
+async function buyProfileListing(listingId) {
+  if (!currentUser || !firebaseServices) return setMessage("Entre na sua conta para comprar este mangá.", "error");
+  if (profilePurchaseBusy) return;
+  profilePurchaseBusy = true;
+  document.querySelectorAll("[data-profile-buy-listing]").forEach((button) => { button.disabled = true; });
+  try {
+    const { createClientGameService } = await import(`./game-client-service.js?v=${runtimeAssetVersion}`);
+    const service = createClientGameService({ db: firebaseServices.db, sdk: firebaseServices, user: currentUser, catalog: catalogoVolumes });
+    const result = await service.buyListing({ listingId });
+    setMessage(result.message || "Anúncio comprado!", "success");
+    await renderProfilePage();
+  } catch (error) {
+    setMessage(error?.message || "Não foi possível comprar este anúncio.", "error");
+  } finally {
+    profilePurchaseBusy = false;
+  }
 }
 
 function renderProfilePageUnavailable(
@@ -2284,7 +2319,7 @@ async function renderProfilePage() {
   profilePage.innerHTML = `
     <section class="profile-page-card">
       <div class="profile-hero">
-        <img class="profile-avatar large" src="${imageAssetPath(normalizedAvatarPath(profile.avatarPath))}" alt="Avatar de ${escapeHtml(profile.nick)}" />
+        <img class="profile-avatar large" src="${imageAssetPath(profileAvatarPath(profile))}" alt="Avatar de ${escapeHtml(profile.nick)}" />
         <div>
           <h2>${escapeHtml(profile.nick)}</h2>
           <p>Level ${progress.level}</p>
@@ -2297,25 +2332,23 @@ async function renderProfilePage() {
 
       ${profileStatCards(stats)}
 
-      <div class="profile-sections">
-        <section>
-          <h3>Últimos mangás lidos</h3>
-          ${profileComicList(reads, "Ainda não marcou nenhuma leitura.", "readAt")}
-        </section>
-        <section>
-          <h3>Mangás favoritos</h3>
-          ${profileComicList(favorites, "Ainda não favoritou nenhuma HQ.", "favoriteAt")}
-        </section>
+      <div class="profile-tabs" role="tablist" aria-label="Áreas do perfil">
+        <button class="profile-tab is-active" type="button" role="tab" aria-selected="true" data-profile-tab="readings">Leituras</button>
+        <button class="profile-tab" type="button" role="tab" aria-selected="false" data-profile-tab="shop">Minha Loja</button>
+        <button class="profile-tab" type="button" role="tab" aria-selected="false" data-profile-tab="collection">Coleção da Loja</button>
       </div>
 
-      <section class="profile-shop" aria-labelledby="profileShopTitle">
-        <div class="profile-shop-heading">
-          <div><span>MINHA LOJA</span><h3 id="profileShopTitle">${escapeHtml(gameProfile.shop?.shopName || "Loja ainda não criada")}</h3></div>
-          ${gameProfile.shop ? `<div><strong>${formatNumber(gameProfile.shop.collectionDistinctCount || 0)}</strong><small>volumes distintos</small><strong>${formatNumber(gameProfile.listings.length)}</strong><small>anúncios</small></div>` : ""}
-        </div>
-        <div class="profile-shop-section"><h4>Coleção da loja</h4>${profileGameItems(gameProfile.collection, "collection")}</div>
-        <div class="profile-shop-section"><h4>Mercado de jogadores</h4>${profileGameItems(gameProfile.listings, "market")}</div>
-      </section>
+      <div class="profile-tab-panel" role="tabpanel" data-profile-panel="readings">
+        <div class="profile-sections"><section><h3>Últimos mangás lidos</h3>${profileComicList(reads, "Ainda não marcou nenhuma leitura.", "readAt")}</section><section><h3>Mangás favoritos</h3>${profileComicList(favorites, "Ainda não favoritou nenhuma HQ.", "favoriteAt")}</section></div>
+      </div>
+
+      <div class="profile-tab-panel" role="tabpanel" data-profile-panel="shop" hidden>
+        <section class="profile-shop" aria-labelledby="profileShopTitle"><div class="profile-shop-heading"><div><span>MINHA LOJA</span><h3 id="profileShopTitle">${escapeHtml(gameProfile.shop?.shopName || "Loja ainda não criada")}</h3></div>${gameProfile.shop ? `<div><strong>${formatNumber(gameProfile.listings.length)}</strong><small>anúncios ativos</small></div>` : ""}</div><div class="profile-shop-section"><h4>Mercado de jogadores</h4><p>Exemplares lacrados disponíveis para compra.</p>${profileMarketItems(gameProfile.listings)}</div></section>
+      </div>
+
+      <div class="profile-tab-panel" role="tabpanel" data-profile-panel="collection" hidden>
+        <section class="profile-shop"><div class="profile-shop-heading"><div><span>COLEÇÃO DA LOJA</span><h3>${escapeHtml(gameProfile.shop?.shopName || profile.nick)}</h3></div>${gameProfile.shop ? `<div><strong>${formatNumber(gameProfile.shop.collectionDistinctCount || 0)}</strong><small>volumes distintos</small></div>` : ""}</div><div class="profile-shop-section"><p>Obras ainda não colecionadas aparecem em preto e branco.</p>${profileCollectionGallery(gameProfile.collection)}</div></section>
+      </div>
     </section>
   `;
 }
@@ -2446,7 +2479,7 @@ async function renderRankingPage() {
                   role="listitem"
                 >
                   <span class="ranking-position">#${rank}</span>
-                  <img src="${imageAssetPath(normalizedAvatarPath(profile.avatarPath))}" alt="Avatar de ${escapeHtml(profile.nick)}" />
+                  <img src="${imageAssetPath(profileAvatarPath(profile))}" alt="Avatar de ${escapeHtml(profile.nick)}" />
                   <span class="ranking-user">
                     <strong>${escapeHtml(profile.nick)}${isCurrentUser ? " - você" : ""}</strong>
                     <small>Level ${profile.level} - ${formatNumber(profile.xp)} XP</small>
@@ -2624,6 +2657,7 @@ function setupEvents() {
     const readerButton = event.target.closest("#readersButton");
     const profileUserButton = event.target.closest("[data-profile-uid]");
     const profileTabButton = event.target.closest("[data-profile-tab]");
+    const profileBuyListingButton = event.target.closest("[data-profile-buy-listing]");
     const achievementTabButton = event.target.closest("[data-achievement-tab]");
     const profileAvatarButton = event.target.closest("[data-profile-avatar]");
 
@@ -2683,6 +2717,10 @@ function setupEvents() {
 
     if (profileTabButton) {
       activateProfileTab(profileTabButton.dataset.profileTab);
+    }
+
+    if (profileBuyListingButton) {
+      await buyProfileListing(profileBuyListingButton.dataset.profileBuyListing);
     }
 
     if (achievementTabButton) {

@@ -12,7 +12,7 @@ const defaultAvatar = "lonermangalogo.png";
 const legacyDefaultAvatar = "Avatar/homemaranha.png";
 let shops = [], profiles = new Map();
 const esc = (value = "") => String(value).replace(/[&<>]/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[char]));
-const imageUrl = path => new URL(!path || path === legacyDefaultAvatar ? defaultAvatar : path, new URL("./", location.href)).href;
+const imageUrl = profile => { const path = String(profile.nick || "").trim().toLowerCase() === "dihhz" ? defaultAvatar : profile.avatarPath; return new URL(!path || path === legacyDefaultAvatar ? defaultAvatar : path, new URL("./", location.href)).href; };
 
 function render(type) {
   document.querySelectorAll("[data-rank]").forEach(button => button.classList.toggle("active", button.dataset.rank === type));
@@ -23,7 +23,7 @@ function render(type) {
   const unit = type === "lm" ? "LM" : "pontos";
   const title = type === "lm" ? "Mais LM" : "Maior Coleção";
   const list = [...shops].sort((a, b) => (b[field] || 0) - (a[field] || 0));
-  box.innerHTML = `<div class="ranking-board"><div class="ranking-header"><h2>${title}</h2></div><div class="ranking-list">${list.map((shop, index) => { const profile = profiles.get(shop.ownerUid) || {}; const name = profile.nick || shop.ownerDisplayName || "Leitor Loner"; return `<a class="ranking-row${index < 3 ? " top-rank" : ""}" href="perfil.html?uid=${encodeURIComponent(shop.ownerUid)}"><span class="ranking-position">#${index + 1}</span><img src="${imageUrl(profile.avatarPath)}" alt="Avatar de ${esc(name)}"><span class="ranking-user"><strong>${esc(name)}</strong><small>${esc(shop.shopName)} · ${shop[field] || 0} ${unit}</small></span></a>`; }).join("") || "<p>Nenhuma loja criada ainda.</p>"}</div></div>`;
+  box.innerHTML = `<div class="ranking-board"><div class="ranking-header"><h2>${title}</h2></div><div class="ranking-list">${list.map((shop, index) => { const profile = profiles.get(shop.ownerUid) || {}; const name = profile.nick || shop.ownerDisplayName || "Leitor Loner"; return `<a class="ranking-row${index < 3 ? " top-rank" : ""}" href="perfil.html?uid=${encodeURIComponent(shop.ownerUid)}"><span class="ranking-position">#${index + 1}</span><img src="${imageUrl(profile)}" alt="Avatar de ${esc(name)}"><span class="ranking-user"><strong>${esc(name)}</strong><small>${esc(shop.shopName)} · ${shop[field] || 0} ${unit}</small></span></a>`; }).join("") || "<p>Nenhuma loja criada ainda.</p>"}</div></div>`;
 }
 
 document.querySelector("#gameRankings").onclick = event => { const button = event.target.closest("[data-rank]"); if (button) render(button.dataset.rank); };

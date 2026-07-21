@@ -2214,11 +2214,38 @@ body.dialog-open {
 .profile-game-card strong { color: #ffffff; font-size: 14px; }
 .profile-game-card small { color: var(--muted); }
 .profile-game-card b { color: #86efac; font-size: 13px; }
+.profile-game-card .button { width: 100%; margin-top: 3px; }
 .profile-condition { padding: 5px 7px; border-radius: 5px; background: #705000; color: #fff3b5; font-size: 11px; font-weight: 900; letter-spacing: .08em; text-align: center; }
+
+.profile-collection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+  gap: 12px;
+}
+
+.profile-collection-card {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+}
+
+.profile-collection-card img {
+  width: 100%;
+  aspect-ratio: var(--cover-ratio);
+  object-fit: cover;
+  transition: filter .2s ease, opacity .2s ease;
+}
+
+.profile-collection-card.is-locked img { filter: grayscale(100%); opacity: .42; }
+.profile-collection-card > div { display: grid; gap: 4px; padding: 10px; }
+.profile-collection-card strong { color: #ffffff; font-size: 14px; }
+.profile-collection-card small { color: var(--muted); font-size: 12px; }
 
 @media (max-width: 620px) {
   .profile-shop-heading { align-items: flex-start; flex-direction: column; }
   .profile-game-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .profile-collection-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 .ranking-page {
