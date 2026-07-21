@@ -2,3 +2,8 @@
 .notification-list{display:grid;gap:10px}.notification-card{display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:center;background:#0b1019;border:1px solid #303a50;border-radius:12px;padding:10px}.notification-card img{width:64px;aspect-ratio:300/460;object-fit:cover;border-radius:7px}.notification-card p{margin:.4rem 0 0}
 @media(max-width:850px){.box-options{grid-template-columns:1fr}}
 .panel-heading p:has([data-npc-cooldown]){display:none}
+.box-card>strong{display:block;margin-bottom:18px}.box-card>button{margin-top:4px}
+.store-dialog{position:relative}.dialog-x{position:sticky;z-index:20;top:0;float:right;width:42px;height:42px;border:1px solid #65718a;border-radius:50%;background:#171e2b;color:#fff;font-size:28px;line-height:1;cursor:pointer}.collection-dialog{width:min(1280px,calc(100vw - 32px));height:min(720px,calc(100vh - 32px));max-width:none;box-sizing:border-box}.collection-dialog #dialogContent{clear:both}.collection-dialog .store-grid{grid-template-columns:repeat(auto-fill,minmax(125px,1fr));gap:12px}.collection-dialog .item-body{padding:9px}.collection-dialog .item-body h3{font-size:.9rem}
+.pending-rewards{margin-top:24px;padding-top:18px;border-top:1px solid #303a50}
+@media(max-width:600px){.collection-dialog{width:calc(100vw - 12px);height:calc(100vh - 12px);padding:12px}.collection-dialog .store-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.collection-dialog .item-body{padding:6px}.collection-dialog .item-body h3,.collection-dialog .item-body strong{font-size:.72rem}.dialog-x{width:38px;height:38px}}
+.collection-dialog{max-height:none}
