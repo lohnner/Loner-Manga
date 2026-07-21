@@ -3015,6 +3015,7 @@ async function startAuth() {
 function renderCatalogMangaVolumes() {
   const pageName = decodeURIComponent(window.location.pathname.split("/").pop() || "").toLowerCase();
   const seriesByPage = {
+    "berserk.html": "Berserk",
     "bleach.html": "Bleach",
     "jujutsu-kaisen.html": "Jujutsu Kaisen",
     "yu-yu-hakusho.html": "Yu Yu Hakusho"
