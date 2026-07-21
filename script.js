@@ -3030,6 +3030,8 @@ function renderCatalogMangaVolumes() {
     "captain-tsubasa.html": "Captain Tsubasa",
     "hajime-no-ippo.html": "Hajime no Ippo",
     "jujutsu-kaisen.html": "Jujutsu Kaisen",
+    "naruto.html": "Naruto",
+    "naruto-shippuden.html": "Naruto Shippuden",
     "one-piece.html": "One Piece",
     "yu-yu-hakusho.html": "Yu Yu Hakusho",
     "vagabond.html": "Vagabond"

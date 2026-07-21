@@ -1,0 +1,868 @@
+[
+  {
+    "number": 1,
+    "releaseDate": "2000-03-03",
+    "isbn": "9784088728407",
+    "chaptersFound": [],
+    "chapters": [
+      1,
+      7
+    ],
+    "phase": "Naruto",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088728407/1200/9784088728407.jpg"
+  },
+  {
+    "number": 2,
+    "releaseDate": "2000-06-02",
+    "isbn": "9784088728780",
+    "chaptersFound": [],
+    "chapters": [
+      8,
+      17
+    ],
+    "phase": "Naruto",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088728780/1200/9784088728780.jpg"
+  },
+  {
+    "number": 3,
+    "releaseDate": "2000-08-04",
+    "isbn": "9784088728988",
+    "chaptersFound": [],
+    "chapters": [
+      18,
+      27
+    ],
+    "phase": "Naruto",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088728988/1200/9784088728988.jpg"
+  },
+  {
+    "number": 4,
+    "releaseDate": "2000-10-04",
+    "isbn": "9784088730264",
+    "chaptersFound": [],
+    "chapters": [
+      28,
+      36
+    ],
+    "phase": "Naruto",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088730264/1200/9784088730264.jpg"
+  },
+  {
+    "number": 5,
+    "releaseDate": "2000-12-04",
+    "isbn": "9784088730509",
+    "chaptersFound": [],
+    "chapters": [
+      37,
+      45
+    ],
+    "phase": "Naruto",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088730509/1200/9784088730509.jpg"
+  },
+  {
+    "number": 6,
+    "releaseDate": "2001-03-02",
+    "isbn": "9784088730899",
+    "chaptersFound": [],
+    "chapters": [
+      46,
+      54
+    ],
+    "phase": "Naruto",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088730899/1200/9784088730899.jpg"
+  },
+  {
+    "number": 7,
+    "releaseDate": "2001-05-01",
+    "isbn": "9784088731131",
+    "chaptersFound": [],
+    "chapters": [
+      55,
+      63
+    ],
+    "phase": "Naruto",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088731131/1200/9784088731131.jpg"
+  },
+  {
+    "number": 8,
+    "releaseDate": "2001-08-03",
+    "isbn": "9784088731476",
+    "chaptersFound": [],
+    "chapters": [
+      64,
+      72
+    ],
+    "phase": "Naruto",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088731476/1200/9784088731476.jpg"
+  },
+  {
+    "number": 9,
+    "releaseDate": "2001-10-04",
+    "isbn": "9784088731742",
+    "chaptersFound": [],
+    "chapters": [
+      73,
+      81
+    ],
+    "phase": "Naruto",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088731742/1200/9784088731742.jpg"
+  },
+  {
+    "number": 10,
+    "releaseDate": "2001-12-04",
+    "isbn": "9784088731971",
+    "chaptersFound": [],
+    "chapters": [
+      82,
+      90
+    ],
+    "phase": "Naruto",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088731971/1200/9784088731971.jpg"
+  },
+  {
+    "number": 11,
+    "releaseDate": "2002-03-04",
+    "isbn": "9784088732367",
+    "chaptersFound": [],
+    "chapters": [
+      91,
+      99
+    ],
+    "phase": "Naruto",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088732367/1200/9784088732367.jpg"
+  },
+  {
+    "number": 12,
+    "releaseDate": "2002-05-01",
+    "isbn": "9784088732596",
+    "chaptersFound": [],
+    "chapters": [
+      100,
+      108
+    ],
+    "phase": "Naruto",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088732596/1200/9784088732596.jpg"
+  },
+  {
+    "number": 13,
+    "releaseDate": "2002-08-02",
+    "isbn": "9784088732985",
+    "chaptersFound": [],
+    "chapters": [
+      109,
+      117
+    ],
+    "phase": "Naruto",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088732985/1200/9784088732985.jpg"
+  },
+  {
+    "number": 14,
+    "releaseDate": "2002-11-01",
+    "isbn": "",
+    "chaptersFound": [],
+    "chapters": [
+      118,
+      126
+    ],
+    "phase": "Naruto",
+    "coverSource": ""
+  },
+  {
+    "number": 15,
+    "releaseDate": "2002-12-20",
+    "isbn": "9784088733685",
+    "chaptersFound": [],
+    "chapters": [
+      127,
+      135
+    ],
+    "phase": "Naruto",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088733685/1200/9784088733685.jpg"
+  },
+  {
+    "number": 16,
+    "releaseDate": "2003-03-04",
+    "isbn": "9784088733944",
+    "chaptersFound": [],
+    "chapters": [
+      136,
+      144
+    ],
+    "phase": "Naruto",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088733944/1200/9784088733944.jpg"
+  },
+  {
+    "number": 17,
+    "releaseDate": "2003-05-01",
+    "isbn": "9784088734200",
+    "chaptersFound": [],
+    "chapters": [
+      145,
+      153
+    ],
+    "phase": "Naruto",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088734200/1200/9784088734200.jpg"
+  },
+  {
+    "number": 18,
+    "releaseDate": "2003-08-04",
+    "isbn": "9784088734934",
+    "chaptersFound": [],
+    "chapters": [
+      154,
+      162
+    ],
+    "phase": "Naruto",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088734934/1200/9784088734934.jpg"
+  },
+  {
+    "number": 19,
+    "releaseDate": "2003-11-04",
+    "isbn": "9784088735238",
+    "chaptersFound": [],
+    "chapters": [
+      163,
+      171
+    ],
+    "phase": "Naruto",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088735238/1200/9784088735238.jpg"
+  },
+  {
+    "number": 20,
+    "releaseDate": "2003-12-19",
+    "isbn": "9784088735528",
+    "chaptersFound": [],
+    "chapters": [
+      172,
+      180
+    ],
+    "phase": "Naruto",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088735528/1200/9784088735528.jpg"
+  },
+  {
+    "number": 21,
+    "releaseDate": "2004-03-04",
+    "isbn": "9784088735733",
+    "chaptersFound": [],
+    "chapters": [
+      181,
+      189
+    ],
+    "phase": "Naruto",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088735733/1200/9784088735733.jpg"
+  },
+  {
+    "number": 22,
+    "releaseDate": "2004-04-30",
+    "isbn": "9784088735955",
+    "chaptersFound": [],
+    "chapters": [
+      190,
+      199
+    ],
+    "phase": "Naruto",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088735955/1200/9784088735955.jpg"
+  },
+  {
+    "number": 23,
+    "releaseDate": "2004-08-04",
+    "isbn": "9784088736396",
+    "chaptersFound": [],
+    "chapters": [
+      200,
+      209
+    ],
+    "phase": "Naruto",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088736396/1200/9784088736396.jpg"
+  },
+  {
+    "number": 24,
+    "releaseDate": "2004-10-04",
+    "isbn": "9784088736600",
+    "chaptersFound": [],
+    "chapters": [
+      210,
+      218
+    ],
+    "phase": "Naruto",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088736600/1200/9784088736600.jpg"
+  },
+  {
+    "number": 25,
+    "releaseDate": "2004-12-03",
+    "isbn": "9784088736792",
+    "chaptersFound": [],
+    "chapters": [
+      219,
+      228
+    ],
+    "phase": "Naruto",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088736792/1200/9784088736792.jpg"
+  },
+  {
+    "number": 26,
+    "releaseDate": "2005-02-04",
+    "isbn": "9784088737706",
+    "chaptersFound": [],
+    "chapters": [
+      229,
+      238
+    ],
+    "phase": "Naruto",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088737706/1200/9784088737706.jpg"
+  },
+  {
+    "number": 27,
+    "releaseDate": "2005-04-04",
+    "isbn": "9784088737911",
+    "chaptersFound": [],
+    "chapters": [
+      239,
+      244
+    ],
+    "phase": "Naruto",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088737911/1200/9784088737911.jpg"
+  },
+  {
+    "number": 28,
+    "releaseDate": "2005-06-03",
+    "isbn": "9784088738284",
+    "chaptersFound": [],
+    "chapters": [
+      245,
+      253
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088738284/1200/9784088738284.jpg"
+  },
+  {
+    "number": 29,
+    "releaseDate": "2005-08-04",
+    "isbn": "9784088738499",
+    "chaptersFound": [],
+    "chapters": [
+      254,
+      263
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088738499/1200/9784088738499.jpg"
+  },
+  {
+    "number": 30,
+    "releaseDate": "2005-11-04",
+    "isbn": "9784088738819",
+    "chaptersFound": [],
+    "chapters": [
+      264,
+      272
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088738819/1200/9784088738819.jpg"
+  },
+  {
+    "number": 31,
+    "releaseDate": "2005-12-26",
+    "isbn": "9784088740027",
+    "chaptersFound": [],
+    "chapters": [
+      273,
+      281
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088740027/1200/9784088740027.jpg"
+  },
+  {
+    "number": 32,
+    "releaseDate": "2006-04-04",
+    "isbn": "9784088740393",
+    "chaptersFound": [],
+    "chapters": [
+      282,
+      290
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088740393/1200/9784088740393.jpg"
+  },
+  {
+    "number": 33,
+    "releaseDate": "2006-06-02",
+    "isbn": "9784088741086",
+    "chaptersFound": [],
+    "chapters": [
+      291,
+      299
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088741086/1200/9784088741086.jpg"
+  },
+  {
+    "number": 34,
+    "releaseDate": "2006-08-04",
+    "isbn": "9784088741383",
+    "chaptersFound": [],
+    "chapters": [
+      300,
+      309
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088741383/1200/9784088741383.jpg"
+  },
+  {
+    "number": 35,
+    "releaseDate": "2006-11-02",
+    "isbn": "9784088742731",
+    "chaptersFound": [
+      10
+    ],
+    "chapters": [
+      310,
+      319
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088742731/1200/9784088742731.jpg"
+  },
+  {
+    "number": 36,
+    "releaseDate": "2006-12-27",
+    "isbn": "9784088742885",
+    "chaptersFound": [],
+    "chapters": [
+      320,
+      329
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088742885/1200/9784088742885.jpg"
+  },
+  {
+    "number": 37,
+    "releaseDate": "2007-04-04",
+    "isbn": "9784088743387",
+    "chaptersFound": [],
+    "chapters": [
+      330,
+      339
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088743387/1200/9784088743387.jpg"
+  },
+  {
+    "number": 38,
+    "releaseDate": "2007-06-04",
+    "isbn": "9784088743646",
+    "chaptersFound": [],
+    "chapters": [
+      340,
+      349
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088743646/1200/9784088743646.jpg"
+  },
+  {
+    "number": 39,
+    "releaseDate": "2007-08-03",
+    "isbn": "9784088743974",
+    "chaptersFound": [],
+    "chapters": [
+      350,
+      359
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088743974/1200/9784088743974.jpg"
+  },
+  {
+    "number": 40,
+    "releaseDate": "2007-11-02",
+    "isbn": "9784088744322",
+    "chaptersFound": [],
+    "chapters": [
+      360,
+      369
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088744322/1200/9784088744322.jpg"
+  },
+  {
+    "number": 41,
+    "releaseDate": "2008-02-04",
+    "isbn": "9784088744728",
+    "chaptersFound": [],
+    "chapters": [
+      370,
+      379
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088744728/1200/9784088744728.jpg"
+  },
+  {
+    "number": 42,
+    "releaseDate": "2008-05-02",
+    "isbn": "9784088745121",
+    "chaptersFound": [],
+    "chapters": [
+      380,
+      389
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088745121/1200/9784088745121.jpg"
+  },
+  {
+    "number": 43,
+    "releaseDate": "2008-08-04",
+    "isbn": "9784088745527",
+    "chaptersFound": [],
+    "chapters": [
+      390,
+      402
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088745527/1200/9784088745527.jpg"
+  },
+  {
+    "number": 44,
+    "releaseDate": "2008-11-04",
+    "isbn": "9784088745893",
+    "chaptersFound": [],
+    "chapters": [
+      403,
+      412
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088745893/1200/9784088745893.jpg"
+  },
+  {
+    "number": 45,
+    "releaseDate": "2009-02-04",
+    "isbn": "9784088746272",
+    "chaptersFound": [],
+    "chapters": [
+      413,
+      422
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088746272/1200/9784088746272.jpg"
+  },
+  {
+    "number": 46,
+    "releaseDate": "2009-05-01",
+    "isbn": "9784088746630",
+    "chaptersFound": [],
+    "chapters": [
+      423,
+      432
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088746630/1200/9784088746630.jpg"
+  },
+  {
+    "number": 47,
+    "releaseDate": "2009-08-04",
+    "isbn": "9784088747118",
+    "chaptersFound": [],
+    "chapters": [
+      433,
+      442
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088747118/1200/9784088747118.jpg"
+  },
+  {
+    "number": 48,
+    "releaseDate": "2009-11-04",
+    "isbn": "9784088747484",
+    "chaptersFound": [],
+    "chapters": [
+      443,
+      453
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088747484/1200/9784088747484.jpg"
+  },
+  {
+    "number": 49,
+    "releaseDate": "2010-01-04",
+    "isbn": "9784088747842",
+    "chaptersFound": [],
+    "chapters": [
+      454,
+      463
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088747842/1200/9784088747842.jpg"
+  },
+  {
+    "number": 50,
+    "releaseDate": "2010-03-04",
+    "isbn": "9784088700113",
+    "chaptersFound": [],
+    "chapters": [
+      464,
+      473
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088700113/1200/9784088700113.jpg"
+  },
+  {
+    "number": 51,
+    "releaseDate": "2010-04-30",
+    "isbn": "9784088700335",
+    "chaptersFound": [],
+    "chapters": [
+      474,
+      483
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088700335/1200/9784088700335.jpg"
+  },
+  {
+    "number": 52,
+    "releaseDate": "2010-08-04",
+    "isbn": "9784088700847",
+    "chaptersFound": [],
+    "chapters": [
+      484,
+      494
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088700847/1200/9784088700847.jpg"
+  },
+  {
+    "number": 53,
+    "releaseDate": "2010-11-04",
+    "isbn": "9784088701264",
+    "chaptersFound": [],
+    "chapters": [
+      495,
+      504
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088701264/1200/9784088701264.jpg"
+  },
+  {
+    "number": 54,
+    "releaseDate": "2010-12-29",
+    "isbn": "9784088701431",
+    "chaptersFound": [],
+    "chapters": [
+      505,
+      514
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088701431/1200/9784088701431.jpg"
+  },
+  {
+    "number": 55,
+    "releaseDate": "2011-04-21",
+    "isbn": "9784088701851",
+    "chaptersFound": [],
+    "chapters": [
+      515,
+      524
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088701851/1200/9784088701851.jpg"
+  },
+  {
+    "number": 56,
+    "releaseDate": "2011-06-03",
+    "isbn": "9784088702186",
+    "chaptersFound": [],
+    "chapters": [
+      525,
+      534
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088702186/1200/9784088702186.jpg"
+  },
+  {
+    "number": 57,
+    "releaseDate": "2011-08-04",
+    "isbn": "9784088702711",
+    "chaptersFound": [],
+    "chapters": [
+      535,
+      544
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088702711/1200/9784088702711.jpg"
+  },
+  {
+    "number": 58,
+    "releaseDate": "2011-11-04",
+    "isbn": "9784088703022",
+    "chaptersFound": [],
+    "chapters": [
+      545,
+      555
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088703022/1200/9784088703022.jpg"
+  },
+  {
+    "number": 59,
+    "releaseDate": "2012-02-03",
+    "isbn": "9784088703688",
+    "chaptersFound": [],
+    "chapters": [
+      556,
+      565
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088703688/1200/9784088703688.jpg"
+  },
+  {
+    "number": 60,
+    "releaseDate": "2012-05-02",
+    "isbn": "9784088704173",
+    "chaptersFound": [],
+    "chapters": [
+      566,
+      575
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088704173/1200/9784088704173.jpg"
+  },
+  {
+    "number": 61,
+    "releaseDate": "2012-07-27",
+    "isbn": "9784088704777",
+    "chaptersFound": [],
+    "chapters": [
+      576,
+      587
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088704777/1200/9784088704777.jpg"
+  },
+  {
+    "number": 62,
+    "releaseDate": "2012-10-04",
+    "isbn": "9784088705156",
+    "chaptersFound": [],
+    "chapters": [
+      588,
+      597
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088705156/1200/9784088705156.jpg"
+  },
+  {
+    "number": 63,
+    "releaseDate": "2012-12-28",
+    "isbn": "9784088705507",
+    "chaptersFound": [],
+    "chapters": [
+      598,
+      607
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088705507/1200/9784088705507.jpg"
+  },
+  {
+    "number": 64,
+    "releaseDate": "2013-04-04",
+    "isbn": "9784088706283",
+    "chaptersFound": [],
+    "chapters": [
+      608,
+      617
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088706283/1200/9784088706283.jpg"
+  },
+  {
+    "number": 65,
+    "releaseDate": "2013-07-04",
+    "isbn": "9784088706610",
+    "chaptersFound": [],
+    "chapters": [
+      618,
+      627
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088706610/1200/9784088706610.jpg"
+  },
+  {
+    "number": 66,
+    "releaseDate": "2013-09-04",
+    "isbn": "9784088708010",
+    "chaptersFound": [],
+    "chapters": [
+      628,
+      637
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088708010/1200/9784088708010.jpg"
+  },
+  {
+    "number": 67,
+    "releaseDate": "2013-12-04",
+    "isbn": "9784088708492",
+    "chaptersFound": [],
+    "chapters": [
+      638,
+      647
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088708492/1200/9784088708492.jpg"
+  },
+  {
+    "number": 68,
+    "releaseDate": "2014-03-04",
+    "isbn": "9784088800233",
+    "chaptersFound": [],
+    "chapters": [
+      648,
+      657
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088800233/1200/9784088800233.jpg"
+  },
+  {
+    "number": 69,
+    "releaseDate": "2014-05-02",
+    "isbn": "9784088800547",
+    "chaptersFound": [],
+    "chapters": [
+      658,
+      668
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088800547/1200/9784088800547.jpg"
+  },
+  {
+    "number": 70,
+    "releaseDate": "2014-08-04",
+    "isbn": "9784088801513",
+    "chaptersFound": [],
+    "chapters": [
+      669,
+      679
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088801513/1200/9784088801513.jpg"
+  },
+  {
+    "number": 71,
+    "releaseDate": "2014-11-04",
+    "isbn": "9784088802084",
+    "chaptersFound": [],
+    "chapters": [
+      680,
+      690
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088802084/1200/9784088802084.jpg"
+  },
+  {
+    "number": 72,
+    "releaseDate": "2015-02-04",
+    "isbn": "9784088802206",
+    "chaptersFound": [],
+    "chapters": [
+      691,
+      700
+    ],
+    "phase": "Naruto Shippuden",
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088802206/1200/9784088802206.jpg"
+  }
+]
