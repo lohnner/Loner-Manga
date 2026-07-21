@@ -1694,6 +1694,14 @@ function filterUniverseCards(query) {
   }
 }
 
+function sortUniverseCards() {
+  const grid = document.querySelector(".universe-grid");
+  if (!grid) return;
+  [...grid.querySelectorAll(".universe-card")]
+    .sort((a, b) => String(a.querySelector("h2")?.textContent || "").localeCompare(String(b.querySelector("h2")?.textContent || ""), "pt-BR", { sensitivity: "base" }))
+    .forEach((card) => grid.append(card));
+}
+
 function filterCharacterCards(query) {
   const cards = Array.from(document.querySelectorAll(".character-card"));
 
@@ -2025,7 +2033,8 @@ function profileCollectionGallery(items) {
     return map;
   }, new Map());
   const tabs=Object.entries(GAME_CONFIG.conditions).map(([id,c])=>`<button type="button" class="${id===condition?"is-active":""}" data-profile-collection-condition="${id}">${c.label} · ${c.collectionPoints} pts</button>`).join("");
-  return `<div class="profile-collection-condition-tabs">${tabs}</div><div class="profile-collection-grid">${[...groups.values()].map((volumes) => {
+  const sortedGroups=[...groups.values()].sort((a,b)=>String(a[0]?.mangaTitle||"").localeCompare(String(b[0]?.mangaTitle||""),"pt-BR",{sensitivity:"base"}));
+  return `<div class="profile-collection-condition-tabs">${tabs}</div><input class="profile-collection-search" id="profileCollectionSearch" type="search" placeholder="Buscar mangá na coleção" autocomplete="off" aria-label="Buscar mangá na coleção"><div class="profile-collection-grid">${sortedGroups.map((volumes) => {
     const sorted = [...volumes].sort((a, b) => a.volumeNumber - b.volumeNumber);
     const have = sorted.filter((volume) => owned.has(volume.volumeId)).length;
     const representative = sorted.find((volume) => volume.volumeNumber === 1) || sorted[0];
@@ -2665,6 +2674,14 @@ function setupEvents() {
     debouncedFilterCharacterCards(event.target.value);
   });
 
+  document.addEventListener("input", (event) => {
+    if (event.target.id !== "profileCollectionSearch") return;
+    const query = normalizeSearchText(event.target.value);
+    document.querySelectorAll(".profile-collection-card").forEach((card) => {
+      card.hidden = Boolean(query) && !normalizeSearchText(card.textContent || "").includes(query);
+    });
+  });
+
   document.addEventListener("click", async (event) => {
     const articleButton = event.target.closest("[data-open-article]");
     const sectionLink = event.target.closest("[data-section]");
@@ -3065,6 +3082,7 @@ function createBrasiliaClock() {
 normalizeAuthForms();
 createBrasiliaClock();
 renderCatalogMangaVolumes();
+sortUniverseCards();
 renderHomeRecentHqs();
 renderCharacterIndex();
 setupSmartSearchPage();
