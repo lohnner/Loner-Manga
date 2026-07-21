@@ -20,7 +20,13 @@ const tsMillis = value => value?.toMillis?.() || 0;
 const coverUrl = path => new URL(path, new URL("./", location.href)).href;
 const condition = id => GAME_CONFIG.conditions[id] || { label: id, npcValue: 0 };
 function message(text, type="success") { notice.textContent=text; notice.className=`store-notice ${type}`; notice.hidden=false; clearTimeout(message.timer); message.timer=setTimeout(()=>notice.hidden=true,6000); }
-function errorMessage(error) { return error?.message?.replace(/^FirebaseError:\s*/i, "") || "Falha de conexão. Tente novamente."; }
+function errorMessage(error) {
+  const code = String(error?.code || "");
+  if (code.includes("functions/not-found")) return "O serviço da loja ainda não foi publicado no Firebase. Publique as Cloud Functions e tente novamente.";
+  if (code.includes("functions/unauthenticated")) return "Sua sessão expirou. Entre novamente na conta.";
+  if (code.includes("functions/unavailable") || code.includes("functions/internal")) return "O serviço da loja está temporariamente indisponível. Tente novamente.";
+  return error?.message?.replace(/^FirebaseError:\s*/i, "") || "Falha de conexão. Tente novamente.";
+}
 async function action(name, data={}) { if (busy) return; busy=true; render(); try { const result=await callable(name)(data); if(result.data?.message) message(result.data.message); return result.data; } catch(e){ console.error(e); message(errorMessage(e),"error"); } finally { busy=false; render(); } }
 
 function watchCollection(path, setter, queryBuilder) {

@@ -1,0 +1,12 @@
+# Dependências locais das Cloud Functions (recriadas com npm install)
+functions/node_modules/
+node_modules/
+
+# Arquivos locais do Firebase
+.firebase/
+firebase-debug.log
+firebase-debug.*.log
+
+# Sistema e editores
+.DS_Store
+Thumbs.db
