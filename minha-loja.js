@@ -1,21 +1,21 @@
 import { firebaseConfig } from "./firebase-config.js";
 import { catalogoVolumes } from "./catalogo.js";
 import { GAME_CONFIG, upgradeCost } from "./game-config.js";
+import { createClientGameService } from "./game-client-service.js";
 
-const [appSdk, authSdk, dbSdk, fnSdk] = await Promise.all([
+const [appSdk, authSdk, dbSdk] = await Promise.all([
   import("https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js"),
   import("https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js"),
-  import("https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js"),
-  import("https://www.gstatic.com/firebasejs/10.12.5/firebase-functions.js")
+  import("https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js")
 ]);
 const app = appSdk.getApps().length ? appSdk.getApp() : appSdk.initializeApp(firebaseConfig);
-const auth = authSdk.getAuth(app), db = dbSdk.getFirestore(app), functions = fnSdk.getFunctions(app, "southamerica-east1");
+const auth = authSdk.getAuth(app), db = dbSdk.getFirestore(app);
 const gate = document.querySelector("#storeGate"), storeApp = document.querySelector("#storeApp"), panels = document.querySelector("#storePanels"), notice = document.querySelector("#storeNotice"), dialog = document.querySelector("#storeDialog");
 let user, shop, inventory = [], boxes = [], npcItems = [], collectionItems = [], listings = [], publicShops = [], busy = false, activeTab = "boxes", serverOffset = 0;
+let gameService = null;
 const unsubscribers = [];
 
 const esc = (value="") => String(value).replace(/[&<>'"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[c]));
-const callable = name => fnSdk.httpsCallable(functions, name);
 const tsMillis = value => value?.toMillis?.() || 0;
 const coverUrl = path => new URL(path, new URL("./", location.href)).href;
 const condition = id => GAME_CONFIG.conditions[id] || { label: id, npcValue: 0 };
@@ -27,7 +27,7 @@ function errorMessage(error) {
   if (code.includes("functions/unavailable") || code.includes("functions/internal")) return "O serviço da loja está temporariamente indisponível. Tente novamente.";
   return error?.message?.replace(/^FirebaseError:\s*/i, "") || "Falha de conexão. Tente novamente.";
 }
-async function action(name, data={}) { if (busy) return; busy=true; render(); try { const result=await callable(name)(data); if(result.data?.message) message(result.data.message); return result.data; } catch(e){ console.error(e); message(errorMessage(e),"error"); } finally { busy=false; render(); } }
+async function action(name, data={}) { if (busy || !gameService?.[name]) return; busy=true; render(); try { const result=await gameService[name](data); if(result?.message) message(result.message); return result; } catch(e){ console.error(e); message(errorMessage(e),"error"); } finally { busy=false; render(); } }
 
 function watchCollection(path, setter, queryBuilder) {
   const ref = dbSdk.collection(db, ...path); const target = queryBuilder ? queryBuilder(ref) : ref;
@@ -61,4 +61,4 @@ function formatDuration(ms){const total=Math.ceil(ms/1000);return `${String(Math
 function showRewards(rewards,title="Resultado da caixa"){document.querySelector("#dialogContent").innerHTML=`<h2>${title}</h2><div class="store-grid reward-grid">${rewards.map((x,i)=>itemCard(x,"reward").replace('class="item-card','style="animation-delay:'+i*.15+'s" class="item-card')).join("")}</div>`;dialog.showModal();}
 async function handleClick(e){const el=e.target.closest("[data-act]");if(!el)return;const {act,id,type}=el.dataset;if(act==="buyBox")await action("buyBox",{type});if(act==="openBox"){const r=await action("openBox",{boxId:id});if(r?.rewards)showRewards(r.rewards)}if(act==="claimBox")await action("claimBox",{boxId:id});if(act==="toNpc")await action("moveToNpc",{copyId:id});if(act==="sellNpc")await action("sellNpc",{copyIds:[id]});if(act==="sellAllNpc")await action("sellNpc",{copyIds:npcItems.map(x=>x.copyId||x.id)});if(act==="discard"&&confirm("Descartar definitivamente este exemplar?"))await action("discardItem",{copyId:id});if(act==="collect")await action("moveToCollection",{copyId:id});if(act==="list"){const price=Number(prompt(`Preço inteiro em LM (máximo ${GAME_CONFIG.currency.maxSafePrice}):`));if(Number.isSafeInteger(price)&&price>0&&price<=GAME_CONFIG.currency.maxSafePrice)await action("createListing",{copyId:id,price});else message("Informe um preço inteiro válido.","error")}if(act==="cancelListing")await action("cancelListing",{listingId:id});if(act==="buyListing")await action("buyListing",{listingId:id});if(act==="upgrade")await action("buyUpgrade",{type});if(act==="visitShop"){const items=listings.filter(x=>x.sellerUid===id);document.querySelector("#dialogContent").innerHTML=`<h2>${esc(publicShops.find(x=>x.ownerUid===id)?.shopName||"Loja")}</h2><div class="store-grid">${items.map(x=>itemCard(x,"listing")).join("")||"<p>Esta loja não tem anúncios.</p>"}</div>`;dialog.showModal()}if(act==="openCollection"){const vols=catalogoVolumes.filter(v=>v.mangaId===id).sort((a,b)=>a.volumeNumber-b.volumeNumber),owned=new Map(collectionItems.map(x=>[x.volumeId,x]));document.querySelector("#dialogContent").innerHTML=`<h2>${esc(vols[0]?.mangaTitle)}</h2><div class="store-grid">${vols.map(v=>{const o=owned.get(v.volumeId);return `<article class="item-card"><img class="collection-cover ${o?"":"locked"}" src="${coverUrl(v.cover)}" alt="Capa volume ${v.volumeNumber}"><div class="item-body"><h3>Volume ${v.volumeNumber}</h3><strong>Possuídos: ${o?.quantity||0}</strong>${o?`<button data-act="removeCollection" data-id="${v.volumeId}">Retirar uma cópia</button>`:""}</div></article>`}).join("")}</div>`;dialog.showModal()}if(act==="removeCollection")await action("removeFromCollection",{volumeId:id});}
 document.addEventListener("click",handleClick);document.querySelector("[data-close-dialog]").onclick=()=>dialog.close();document.querySelector(".store-tabs").onclick=e=>{const b=e.target.closest("[data-tab]");if(b){activeTab=b.dataset.tab;render()}};document.addEventListener("input",e=>{if(e.target.id==="shopSearch")document.querySelector("#shopList").innerHTML=shopRows(e.target.value)});document.addEventListener("submit",async e=>{if(e.target.id!=="createShopForm")return;e.preventDefault();const shopName=document.querySelector("#newShopName").value.trim();if(shopName.length<3||shopName.length>24)return message("O nome deve ter entre 3 e 24 caracteres.","error");await action("createShop",{shopName})});setInterval(()=>{document.querySelectorAll("[data-cooldown]").forEach(x=>{const left=Math.max(0,Number(x.dataset.cooldown)-(Date.now()+serverOffset));x.textContent=left?`Disponível em ${formatDuration(left)}`:"Disponível agora";if(!left)render()})},1000);
-authSdk.onAuthStateChanged(auth,async current=>{user=current;if(!user){render();return}try{const before=Date.now();const result=await callable("serverTime")();serverOffset=Number(result.data.now)-before}catch{}startWatchers();render()});
+authSdk.onAuthStateChanged(auth,async current=>{user=current;if(!user){gameService=null;render();return}gameService=createClientGameService({db,sdk:dbSdk,user,catalog:catalogoVolumes});serverOffset=0;startWatchers();render()});
