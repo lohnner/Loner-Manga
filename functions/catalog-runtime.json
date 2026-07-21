@@ -342,15 +342,6 @@
     "displayTitle": "Dorohedoro / Volume 1"
   },
   {
-    "mangaId": "astra-lost-in-space",
-    "mangaTitle": "Astra Lost in Space",
-    "volumeId": "astra-lost-in-space-1-2016",
-    "volumeNumber": 1,
-    "cover": "Mangás/Astra%20Lost%20In%20Space/Astra%20Lost%20In%20Space%20%231.png",
-    "pageUrl": "Mangás/Astra%20Lost%20In%20Space/astra-lost-in-space-1-2016.html",
-    "displayTitle": "Astra Lost in Space / Volume 1"
-  },
-  {
     "mangaId": "dragon-ball",
     "mangaTitle": "Dragon Ball",
     "volumeId": "dragon-ball-1-1985",
@@ -1357,6 +1348,51 @@
     "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%233.png",
     "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-3-1997.html",
     "displayTitle": "Yu-Gi-Oh! / Volume 3"
+  },
+  {
+    "mangaId": "astra-lost-in-space",
+    "mangaTitle": "Astra Lost in Space",
+    "volumeId": "astra-lost-in-space-1-2016",
+    "volumeNumber": 1,
+    "cover": "Mangás/Astra%20Lost%20In%20Space/Astra%20Lost%20In%20Space%20%231.png",
+    "pageUrl": "Mangás/Astra%20Lost%20In%20Space/astra-lost-in-space-1-2016.html",
+    "displayTitle": "Astra Lost in Space / Volume 1"
+  },
+  {
+    "mangaId": "astra-lost-in-space",
+    "mangaTitle": "Astra Lost in Space",
+    "volumeId": "astra-lost-in-space-2-2016",
+    "volumeNumber": 2,
+    "cover": "Mangás/Astra%20Lost%20In%20Space/Astra%20Lost%20In%20Space%20%232.png",
+    "pageUrl": "Mangás/Astra%20Lost%20In%20Space/astra-lost-in-space-2-2016.html",
+    "displayTitle": "Astra Lost in Space / Volume 2"
+  },
+  {
+    "mangaId": "astra-lost-in-space",
+    "mangaTitle": "Astra Lost in Space",
+    "volumeId": "astra-lost-in-space-3-2017",
+    "volumeNumber": 3,
+    "cover": "Mangás/Astra%20Lost%20In%20Space/Astra%20Lost%20In%20Space%20%233.png",
+    "pageUrl": "Mangás/Astra%20Lost%20In%20Space/astra-lost-in-space-3-2017.html",
+    "displayTitle": "Astra Lost in Space / Volume 3"
+  },
+  {
+    "mangaId": "astra-lost-in-space",
+    "mangaTitle": "Astra Lost in Space",
+    "volumeId": "astra-lost-in-space-4-2017",
+    "volumeNumber": 4,
+    "cover": "Mangás/Astra%20Lost%20In%20Space/Astra%20Lost%20In%20Space%20%234.png",
+    "pageUrl": "Mangás/Astra%20Lost%20In%20Space/astra-lost-in-space-4-2017.html",
+    "displayTitle": "Astra Lost in Space / Volume 4"
+  },
+  {
+    "mangaId": "astra-lost-in-space",
+    "mangaTitle": "Astra Lost in Space",
+    "volumeId": "astra-lost-in-space-5-2018",
+    "volumeNumber": 5,
+    "cover": "Mangás/Astra%20Lost%20In%20Space/Astra%20Lost%20In%20Space%20%235.png",
+    "pageUrl": "Mangás/Astra%20Lost%20In%20Space/astra-lost-in-space-5-2018.html",
+    "displayTitle": "Astra Lost in Space / Volume 5"
   },
   {
     "mangaId": "naruto",

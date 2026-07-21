@@ -947,20 +947,6 @@ export const acervo = [
     fileName: "dorohedoro-1-2002.html",
     keywords: ["Dorohedoro", "Caiman", "Kaiman", "Nikaido", "Fujita", "Ebisu", "Shin", "Noi", "En", "Hole", "Q Hayashida", "fantasia sombria", "magia"]
   },
-  {
-    tipo: "hq",
-    id: "astra-lost-in-space-1-2016",
-    title: "Astra Lost in Space / Volume 1",
-    shortTitle: "Astra Lost in Space / Volume 1",
-    universe: "Astra Lost in Space",
-    series: "Astra Lost in Space",
-    href: "Mangás/Astra%20Lost%20In%20Space/astra-lost-in-space-1-2016.html",
-    cover: "Mangás/Astra%20Lost%20In%20Space/Astra%20Lost%20In%20Space%20%231.png",
-    pageCount: 204,
-    xpReward: 204,
-    fileName: "astra-lost-in-space-1-2016.html",
-    keywords: ["Astra Lost in Space", "Kanata no Astra", "Kanata Hoshijima", "Aries Spring", "Zack Walker", "Quitterie Raffaëlli", "nave Astra", "McPa", "Kenta Shinohara", "ficção científica", "espaço", "sobrevivência"]
-  },
   { tipo: "hq", id: "dragon-ball-1-1985", title: "Dragon Ball / Volume 1", shortTitle: "Dragon Ball / Volume 1", universe: "Dragon Ball", series: "Dragon Ball", href: "Mangás/Dragon%20Ball/dragon-ball-1-1985.html", cover: "Mangás/Dragon%20Ball/Dragon%20Ball%20%231.png", pageCount: 192, xpReward: 192, fileName: "dragon-ball-1-1985.html", keywords: ["Dragon Ball", "Goku", "Bulma", "Oolong", "Yamcha", "Akira Toriyama", "Esferas do Dragão"] },
   { tipo: "hq", id: "bleach-1-2002", title: "Bleach / Volume 1", shortTitle: "Bleach / Volume 1", universe: "Bleach", series: "Bleach", href: "Mangás/Bleach/bleach-1-2002.html", cover: "Mangás/Bleach/Bleach%20%231.png", pageCount: 192, xpReward: 192, fileName: "bleach-1-2002.html", keywords: ["Bleach", "Ichigo Kurosaki", "Rukia Kuchiki", "Hollow", "Ceifador de Almas", "Tite Kubo"] },
   { tipo: "hq", id: "bleach-2-2002", title: "Bleach / Volume 2", shortTitle: "Bleach / Volume 2", universe: "Bleach", series: "Bleach", href: "Mangás/Bleach/bleach-2-2002.html", cover: "Mangás/Bleach/Bleach%20%232.png", pageCount: 200, xpReward: 200, fileName: "bleach-2-2002.html", publicationDate: "4 de março de 2002", chapters: "8 a 16", summary: "Ichigo e Rukia investigam o caso de Chad e de um periquito habitado pela alma de um menino, enquanto um Hollow perigoso transforma a perseguição em uma luta pela libertação do espírito.", keywords: ["Bleach", "Rukia Kuchiki", "Yasutora Sado", "Chad", "periquito", "Hollow", "Tite Kubo"] },
@@ -1112,6 +1098,13 @@ export const acervo = [
     fileName: "yu-gi-oh-3-1997.html",
     keywords: ["Yu-Gi-Oh!", "Yugi Muto", "Shadi", "Mokuba Kaiba", "Hanasaki", "Capsule Monster Chess", "Itens do Milênio", "Kazuki Takahashi"]
   },
+  // ASTRA_COMPLETE_CATALOG
+  { tipo: "hq", id: "astra-lost-in-space-1-2016", title: "Astra Lost in Space / Volume 1", shortTitle: "Astra Lost in Space / Volume 1", universe: "Astra Lost in Space", series: "Astra Lost in Space", href: "Mangás/Astra%20Lost%20In%20Space/astra-lost-in-space-1-2016.html", cover: "Mangás/Astra%20Lost%20In%20Space/Astra%20Lost%20In%20Space%20%231.png", pageCount: 204, xpReward: 204, fileName: "astra-lost-in-space-1-2016.html", publicationDate: "4 de julho de 2016", chapters: "1 a 7", keywords: ["Astra Lost in Space", "Kanata no Astra", "Volume 1", "Kenta Shinohara", "Shueisha", "ficção científica", "espaço"] },
+  { tipo: "hq", id: "astra-lost-in-space-2-2016", title: "Astra Lost in Space / Volume 2", shortTitle: "Astra Lost in Space / Volume 2", universe: "Astra Lost in Space", series: "Astra Lost in Space", href: "Mangás/Astra%20Lost%20In%20Space/astra-lost-in-space-2-2016.html", cover: "Mangás/Astra%20Lost%20In%20Space/Astra%20Lost%20In%20Space%20%232.png", pageCount: 242, xpReward: 242, fileName: "astra-lost-in-space-2-2016.html", publicationDate: "4 de novembro de 2016", chapters: "8 a 18", keywords: ["Astra Lost in Space", "Kanata no Astra", "Volume 2", "Kenta Shinohara", "Shueisha", "ficção científica", "espaço"] },
+  { tipo: "hq", id: "astra-lost-in-space-3-2017", title: "Astra Lost in Space / Volume 3", shortTitle: "Astra Lost in Space / Volume 3", universe: "Astra Lost in Space", series: "Astra Lost in Space", href: "Mangás/Astra%20Lost%20In%20Space/astra-lost-in-space-3-2017.html", cover: "Mangás/Astra%20Lost%20In%20Space/Astra%20Lost%20In%20Space%20%233.png", pageCount: 234, xpReward: 234, fileName: "astra-lost-in-space-3-2017.html", publicationDate: "4 de abril de 2017", chapters: "19 a 28", keywords: ["Astra Lost in Space", "Kanata no Astra", "Volume 3", "Kenta Shinohara", "Shueisha", "ficção científica", "espaço"] },
+  { tipo: "hq", id: "astra-lost-in-space-4-2017", title: "Astra Lost in Space / Volume 4", shortTitle: "Astra Lost in Space / Volume 4", universe: "Astra Lost in Space", series: "Astra Lost in Space", href: "Mangás/Astra%20Lost%20In%20Space/astra-lost-in-space-4-2017.html", cover: "Mangás/Astra%20Lost%20In%20Space/Astra%20Lost%20In%20Space%20%234.png", pageCount: 194, xpReward: 194, fileName: "astra-lost-in-space-4-2017.html", publicationDate: "4 de agosto de 2017", chapters: "29 a 37", keywords: ["Astra Lost in Space", "Kanata no Astra", "Volume 4", "Kenta Shinohara", "Shueisha", "ficção científica", "espaço"] },
+  { tipo: "hq", id: "astra-lost-in-space-5-2018", title: "Astra Lost in Space / Volume 5", shortTitle: "Astra Lost in Space / Volume 5", universe: "Astra Lost in Space", series: "Astra Lost in Space", href: "Mangás/Astra%20Lost%20In%20Space/astra-lost-in-space-5-2018.html", cover: "Mangás/Astra%20Lost%20In%20Space/Astra%20Lost%20In%20Space%20%235.png", pageCount: 282, xpReward: 282, fileName: "astra-lost-in-space-5-2018.html", publicationDate: "2 de fevereiro de 2018", chapters: "38 a 49", keywords: ["Astra Lost in Space", "Kanata no Astra", "Volume 5", "Kenta Shinohara", "Shueisha", "ficção científica", "espaço"] },
+  // ASTRA_COMPLETE_CATALOG_END
   // NARUTO_BORUTO_COMPLETE_CATALOG
   { tipo: "hq", id: "naruto-1-2000", title: "Naruto / Volume 1", shortTitle: "Naruto / Volume 1", universe: "Naruto", series: "Naruto", href: "Mangás/Naruto/naruto-1-2000.html", cover: "Mangás/Naruto/Naruto%20%231.png", pageCount: 192, xpReward: 192, fileName: "naruto-1-2000.html", publicationDate: "3 de março de 2000", chapters: "1 a 7", keywords: ["Naruto", "Naruto", "Volume 1", "Masashi Kishimoto", "Shueisha", "ninja"] },
   { tipo: "hq", id: "naruto-2-2000", title: "Naruto / Volume 2", shortTitle: "Naruto / Volume 2", universe: "Naruto", series: "Naruto", href: "Mangás/Naruto/naruto-2-2000.html", cover: "Mangás/Naruto/Naruto%20%232.png", pageCount: 192, xpReward: 192, fileName: "naruto-2-2000.html", publicationDate: "2 de junho de 2000", chapters: "8 a 17", keywords: ["Naruto", "Naruto", "Volume 2", "Masashi Kishimoto", "Shueisha", "ninja"] },
