@@ -9,12 +9,12 @@ export const GAME_CONFIG = Object.freeze({
     free: { id: "free", label: "Caixa Gratuita", price: 0, hourlyStock: 1, quantityWeights: { 2: 100 }, excludedConditions: ["lacrado", "novo"] }
   },
   conditions: {
-    lacrado: { label: "LACRADO", weight: 1, saleValue: 50 },
-    novo: { label: "NOVO", weight: 10, saleValue: 32 },
-    seminovo: { label: "SEMINOVO", weight: 24, saleValue: 22 },
-    usado: { label: "USADO", weight: 40, saleValue: 16 },
-    desgastado: { label: "DESGASTADO", weight: 18, saleValue: 10 },
-    danificado: { label: "DANIFICADO", weight: 7, saleValue: 5 }
+    lacrado: { label: "LACRADO", weight: 1, saleValue: 50, collectionPoints: 50 },
+    novo: { label: "NOVO", weight: 10, saleValue: 32, collectionPoints: 10 },
+    seminovo: { label: "SEMINOVO", weight: 24, saleValue: 22, collectionPoints: 5 },
+    usado: { label: "USADO", weight: 40, saleValue: 16, collectionPoints: 2 },
+    desgastado: { label: "DESGASTADO", weight: 18, saleValue: 10, collectionPoints: 1 },
+    danificado: { label: "DANIFICADO", weight: 7, saleValue: 5, collectionPoints: 0.5 }
   },
   // Valores provisórios de balanceamento.
   upgrades: {

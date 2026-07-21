@@ -19,11 +19,11 @@ function render(type) {
   general.hidden = type !== "general";
   box.hidden = type === "general";
   if (type === "general") return;
-  const field = type === "lm" ? "lm" : "collectionDistinctCount";
+  const field = type === "lm" ? "lm" : "collectionPoints";
   const unit = type === "lm" ? "LM" : "pontos";
   const title = type === "lm" ? "Mais LM" : "Maior Coleção";
-  const list = [...shops].sort((a, b) => (b[field] || 0) - (a[field] || 0));
-  box.innerHTML = `<div class="ranking-board"><div class="ranking-header"><h2>${title}</h2></div><div class="ranking-list">${list.map((shop, index) => { const profile = profiles.get(shop.ownerUid) || {}; const name = profile.nick || shop.ownerDisplayName || "Leitor Loner"; return `<a class="ranking-row${index < 3 ? " top-rank" : ""}" href="perfil.html?uid=${encodeURIComponent(shop.ownerUid)}"><span class="ranking-position">#${index + 1}</span><img src="${imageUrl(profile)}" alt="Avatar de ${esc(name)}"><span class="ranking-user"><strong>${esc(name)}</strong><small>${esc(shop.shopName)} · ${shop[field] || 0} ${unit}</small></span></a>`; }).join("") || "<p>Nenhuma loja criada ainda.</p>"}</div></div>`;
+  const value=shop=>type==="lm"?(shop.lm||0):(shop.collectionPoints??shop.collectionDistinctCount??0),list=[...shops].sort((a,b)=>value(b)-value(a));
+  box.innerHTML = `<div class="ranking-board"><div class="ranking-header"><h2>${title}</h2></div><div class="ranking-list">${list.map((shop, index) => { const profile = profiles.get(shop.ownerUid) || {}; const name = profile.nick || shop.ownerDisplayName || "Leitor Loner"; return `<a class="ranking-row${index < 3 ? " top-rank" : ""}" href="perfil.html?uid=${encodeURIComponent(shop.ownerUid)}"><span class="ranking-position">#${index + 1}</span><img src="${imageUrl(profile)}" alt="Avatar de ${esc(name)}"><span class="ranking-user"><strong>${esc(name)}</strong><small>${esc(shop.shopName)} · ${value(shop)} ${unit}</small></span></a>`; }).join("") || "<p>Nenhuma loja criada ainda.</p>"}</div></div>`;
 }
 
 document.querySelector("#gameRankings").onclick = event => { const button = event.target.closest("[data-rank]"); if (button) render(button.dataset.rank); };

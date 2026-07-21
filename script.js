@@ -2,6 +2,7 @@ const runtimeAssetVersion = Date.now().toString();
 
 const { firebaseConfig, firebaseReady } = await import(`./firebase-config.js?v=${runtimeAssetVersion}`);
 const { articles, catalogo, comics, catalogoVolumes } = await import(`./catalogo.js?v=${runtimeAssetVersion}`);
+const { GAME_CONFIG } = await import(`./game-config.js?v=${runtimeAssetVersion}`);
 
 const defaultAvatarPath = "lonermangalogo-v2.png";
 const legacyDefaultAvatarPath = "Avatar/homemaranha.png";
@@ -1274,7 +1275,7 @@ function renderSignedIn(profile, options = {}) {
         const lm = document.querySelector("#sidebarLm");
         const collection = document.querySelector("#sidebarCollection");
         if (lm) lm.textContent = formatNumber(shop.lm || 0);
-        if (collection) collection.textContent = formatNumber(shop.collectionDistinctCount || 0);
+        if (collection) collection.textContent = formatNumber(shop.collectionPoints ?? shop.collectionDistinctCount ?? 0);
       }
     );
   }
@@ -2010,33 +2011,35 @@ async function getPublicShopProfile(uid) {
 
 function profileMarketItems(items) {
   if (!items.length) return '<p class="empty-state">Nenhum mangá anunciado no momento.</p>';
-  return `<div class="profile-game-grid">${items.map((item) => `<article class="profile-game-card"><img src="${imageAssetPath(item.cover)}" alt="Capa de ${escapeHtml(item.mangaTitle)} volume ${Number(item.volumeNumber)}" loading="lazy"><div><span class="profile-condition">LACRADO</span><strong>${escapeHtml(item.mangaTitle)}</strong><small>Volume ${Number(item.volumeNumber)}</small><b>${formatNumber(item.price)} LM</b>${item.sellerUid === currentUser?.uid ? '<button class="button ghost" type="button" disabled>Seu anúncio</button>' : `<button class="button primary" type="button" data-profile-buy-listing="${escapeHtml(item.id)}">Comprar por ${formatNumber(item.price)} LM</button>`}</div></article>`).join("")}</div>`;
+  return `<div class="profile-game-grid">${items.map((item) => {const c=GAME_CONFIG.conditions[item.condition]||GAME_CONFIG.conditions.lacrado;return `<article class="profile-game-card condition-${escapeHtml(item.condition||"lacrado")}"><img src="${imageAssetPath(item.cover)}" alt="Capa de ${escapeHtml(item.mangaTitle)} volume ${Number(item.volumeNumber)}" loading="lazy"><div><span class="profile-condition">${escapeHtml(c.label)}</span><strong>${escapeHtml(item.mangaTitle)}</strong><small>Volume ${Number(item.volumeNumber)}</small><b>${formatNumber(item.price)} LM</b>${item.sellerUid === currentUser?.uid ? '<button class="button ghost" type="button" disabled>Seu anúncio</button>' : `<button class="button primary" type="button" data-profile-buy-listing="${escapeHtml(item.id)}">Comprar por ${formatNumber(item.price)} LM</button>`}</div></article>`}).join("")}</div>`;
 }
 
 function profileCollectionGallery(items) {
-  const owned = new Map(items.map((item) => [item.volumeId, item]));
+  const condition=activeProfileCollectionCondition,owned = new Map(items.filter(item=>(item.condition||"lacrado")===condition).map((item) => [item.volumeId, item]));
   const groups = catalogoVolumes.reduce((map, volume) => {
     map.set(volume.mangaId, [...(map.get(volume.mangaId) || []), volume]);
     return map;
   }, new Map());
-  return `<div class="profile-collection-grid">${[...groups.values()].map((volumes) => {
+  const tabs=Object.entries(GAME_CONFIG.conditions).map(([id,c])=>`<button type="button" class="${id===condition?"is-active":""}" data-profile-collection-condition="${id}">${c.label} · ${c.collectionPoints} pts</button>`).join("");
+  return `<div class="profile-collection-condition-tabs">${tabs}</div><div class="profile-collection-grid">${[...groups.values()].map((volumes) => {
     const sorted = [...volumes].sort((a, b) => a.volumeNumber - b.volumeNumber);
     const have = sorted.filter((volume) => owned.has(volume.volumeId)).length;
     const representative = sorted.find((volume) => volume.volumeNumber === 1) || sorted[0];
-    return `<button class="profile-collection-card ${have ? "" : "is-locked"}" type="button" data-profile-collection="${escapeHtml(representative.mangaId)}"><img src="${imageAssetPath(representative.cover)}" alt="Capa de ${escapeHtml(representative.mangaTitle)}" loading="lazy"><div><strong>${escapeHtml(representative.mangaTitle)}</strong><small>${have} de ${sorted.length} volumes distintos</small></div></button>`;
+    return `<button class="profile-collection-card condition-${condition} ${have ? "" : "is-locked"}" type="button" data-profile-collection="${escapeHtml(representative.mangaId)}"><img src="${imageAssetPath(representative.cover)}" alt="Capa de ${escapeHtml(representative.mangaTitle)}" loading="lazy"><div><strong>${escapeHtml(representative.mangaTitle)}</strong><small>${have} de ${sorted.length} volumes distintos</small></div></button>`;
   }).join("")}</div>`;
 }
 
 let profilePurchaseBusy = false;
 let renderedProfileCollection = [];
+let activeProfileCollectionCondition = "lacrado";
 function openProfileCollectionManga(mangaId) {
   const dialog = document.querySelector("#profileCollectionDialog");
   const content = document.querySelector("#profileCollectionDialogContent");
   if (!dialog || !content) return;
-  const owned = new Map(renderedProfileCollection.map((item) => [item.volumeId, item]));
+  const owned = new Map(renderedProfileCollection.filter(item=>(item.condition||"lacrado")===activeProfileCollectionCondition).map((item) => [item.volumeId, item]));
   const volumes = catalogoVolumes.filter((volume) => volume.mangaId === mangaId).sort((a, b) => a.volumeNumber - b.volumeNumber);
   if (!volumes.length) return;
-  content.innerHTML = `<header><span>COLEÇÃO DA LOJA</span><h2>${escapeHtml(volumes[0].mangaTitle)}</h2><p>${volumes.filter((volume) => owned.has(volume.volumeId)).length} de ${volumes.length} volumes distintos</p></header><div class="profile-volume-grid">${volumes.map((volume) => { const item = owned.get(volume.volumeId); return `<article class="profile-volume-card ${item ? "" : "is-locked"}"><img src="${imageAssetPath(volume.cover)}" alt="Capa de ${escapeHtml(volume.mangaTitle)} volume ${volume.volumeNumber}" loading="lazy"><div><strong>Volume ${volume.volumeNumber}</strong><small>${item ? `Possuídos: ${formatNumber(item.quantity || 1)}` : "Não possui"}</small></div></article>`; }).join("")}</div>`;
+  const c=GAME_CONFIG.conditions[activeProfileCollectionCondition];content.innerHTML = `<header><span>COLEÇÃO DA LOJA · ${c.label}</span><h2>${escapeHtml(volumes[0].mangaTitle)}</h2><p>${volumes.filter((volume) => owned.has(volume.volumeId)).length} de ${volumes.length} volumes distintos</p></header><div class="profile-volume-grid">${volumes.map((volume) => { const item = owned.get(volume.volumeId); return `<article class="profile-volume-card condition-${activeProfileCollectionCondition} ${item ? "" : "is-locked"}"><img src="${imageAssetPath(volume.cover)}" alt="Capa de ${escapeHtml(volume.mangaTitle)} volume ${volume.volumeNumber}" loading="lazy"><div><span class="profile-condition">${c.label}</span><strong>Volume ${volume.volumeNumber}</strong><small>${item ? `Possuídos: ${formatNumber(item.quantity || 1)}` : "Não possui"}</small></div></article>`; }).join("")}</div>`;
   dialog.showModal();
 }
 
@@ -2356,11 +2359,11 @@ async function renderProfilePage() {
       </div>
 
       <div class="profile-tab-panel" role="tabpanel" data-profile-panel="shop" hidden>
-        <section class="profile-shop" aria-labelledby="profileShopTitle"><div class="profile-shop-heading"><div><span>MINHA LOJA</span><h3 id="profileShopTitle">${escapeHtml(gameProfile.shop?.shopName || "Loja ainda não criada")}</h3></div>${gameProfile.shop ? `<div><strong>${formatNumber(gameProfile.listings.length)}</strong><small>anúncios ativos</small></div>` : ""}</div><div class="profile-shop-section"><h4>Mercado de jogadores</h4><p>Exemplares lacrados disponíveis para compra.</p>${profileMarketItems(gameProfile.listings)}</div></section>
+        <section class="profile-shop" aria-labelledby="profileShopTitle"><div class="profile-shop-heading"><div><span>MINHA LOJA</span><h3 id="profileShopTitle">${escapeHtml(gameProfile.shop?.shopName || "Loja ainda não criada")}</h3></div>${gameProfile.shop ? `<div><strong>${formatNumber(gameProfile.listings.length)}</strong><small>anúncios ativos</small></div>` : ""}</div><div class="profile-shop-section"><h4>Mercado de jogadores</h4><p>Exemplares de todas as condições disponíveis para compra.</p>${profileMarketItems(gameProfile.listings)}</div></section>
       </div>
 
       <div class="profile-tab-panel" role="tabpanel" data-profile-panel="collection" hidden>
-        <section class="profile-shop"><div class="profile-shop-heading"><div><span>COLEÇÃO DA LOJA</span><h3>${escapeHtml(gameProfile.shop?.shopName || profile.nick)}</h3></div>${gameProfile.shop ? `<div><strong>${formatNumber(gameProfile.shop.collectionDistinctCount || 0)}</strong><small>volumes distintos</small></div>` : ""}</div><div class="profile-shop-section"><p>Obras ainda não colecionadas aparecem em preto e branco.</p>${profileCollectionGallery(gameProfile.collection)}</div></section>
+        <section class="profile-shop"><div class="profile-shop-heading"><div><span>COLEÇÃO DA LOJA</span><h3>${escapeHtml(gameProfile.shop?.shopName || profile.nick)}</h3></div>${gameProfile.shop ? `<div><strong>${formatNumber(gameProfile.shop.collectionPoints ?? gameProfile.shop.collectionDistinctCount ?? 0)}</strong><small>pontos da coleção</small></div>` : ""}</div><div class="profile-shop-section"><p>Escolha uma condição. Obras ainda não colecionadas aparecem em preto e branco.</p>${profileCollectionGallery(gameProfile.collection)}</div></section>
       </div>
       <dialog class="profile-collection-dialog" id="profileCollectionDialog"><button class="profile-dialog-close" type="button" data-close-profile-collection aria-label="Fechar">×</button><div id="profileCollectionDialogContent"></div></dialog>
     </section>
@@ -2673,6 +2676,7 @@ function setupEvents() {
     const profileTabButton = event.target.closest("[data-profile-tab]");
     const profileBuyListingButton = event.target.closest("[data-profile-buy-listing]");
     const profileCollectionButton = event.target.closest("[data-profile-collection]");
+    const profileCollectionConditionButton = event.target.closest("[data-profile-collection-condition]");
     const profileCollectionClose = event.target.closest("[data-close-profile-collection]");
     const achievementTabButton = event.target.closest("[data-achievement-tab]");
     const profileAvatarButton = event.target.closest("[data-profile-avatar]");
@@ -2741,6 +2745,12 @@ function setupEvents() {
 
     if (profileCollectionButton) {
       openProfileCollectionManga(profileCollectionButton.dataset.profileCollection);
+    }
+
+    if (profileCollectionConditionButton) {
+      activeProfileCollectionCondition = profileCollectionConditionButton.dataset.profileCollectionCondition;
+      const section = profileCollectionConditionButton.closest(".profile-shop-section");
+      if (section) section.innerHTML = `<p>Escolha uma condição. Obras ainda não colecionadas aparecem em preto e branco.</p>${profileCollectionGallery(renderedProfileCollection)}`;
     }
 
     if (profileCollectionClose) {

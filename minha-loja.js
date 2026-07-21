@@ -11,7 +11,7 @@ const [appSdk, authSdk, dbSdk] = await Promise.all([
 const app = appSdk.getApps().length ? appSdk.getApp() : appSdk.initializeApp(firebaseConfig);
 const auth = authSdk.getAuth(app), db = dbSdk.getFirestore(app);
 const gate = document.querySelector("#storeGate"), storeApp = document.querySelector("#storeApp"), panels = document.querySelector("#storePanels"), notice = document.querySelector("#storeNotice"), dialog = document.querySelector("#storeDialog");
-let user, shop, inventory = [], boxes = [], collectionItems = [], listings = [], publicShops = [], busy = false, activeTab = "boxes";
+let user, shop, inventory = [], boxes = [], collectionItems = [], listings = [], publicShops = [], busy = false, activeTab = "boxes", activeCollectionCondition = "lacrado";
 let gameService = null;
 let renderedBoxHour = brasiliaHourKey();
 const unsubscribers = [];
@@ -19,6 +19,8 @@ const unsubscribers = [];
 const esc = (value="") => String(value).replace(/[&<>'"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[c]));
 const coverUrl = path => new URL(path, new URL("./", location.href)).href;
 const condition = id => GAME_CONFIG.conditions[id] || { label: id, saleValue: 0 };
+let scoreSyncing=false;
+async function reconcileCollectionScore(){if(!user||!shop||scoreSyncing)return;const points=collectionItems.reduce((sum,item)=>sum+(GAME_CONFIG.conditions[item.condition||"lacrado"]?.collectionPoints||0),0),distinct=collectionItems.length;if(shop.collectionPoints===points&&shop.collectionDistinctCount===distinct)return;scoreSyncing=true;try{await dbSdk.setDoc(dbSdk.doc(db,"shops",user.uid),{collectionPoints:points,collectionDistinctCount:distinct,updatedAt:dbSdk.serverTimestamp()},{merge:true})}catch(e){console.error(e)}finally{scoreSyncing=false}}
 function message(text, type="success") { notice.textContent=text; notice.className=`store-notice ${type}`; notice.hidden=false; clearTimeout(message.timer); message.timer=setTimeout(()=>notice.hidden=true,6000); }
 function errorMessage(error) {
   const code = String(error?.code || "");
@@ -35,28 +37,29 @@ function watchCollection(path, setter, queryBuilder) {
 }
 function startWatchers() {
   unsubscribers.splice(0).forEach(fn=>fn());
-  unsubscribers.push(dbSdk.onSnapshot(dbSdk.doc(db,"shops",user.uid), snap=>{shop=snap.exists()?snap.data():null; render();}));
+  unsubscribers.push(dbSdk.onSnapshot(dbSdk.doc(db,"shops",user.uid), snap=>{shop=snap.exists()?snap.data():null; render();reconcileCollectionScore();}));
   watchCollection(["shops",user.uid,"inventory"],v=>inventory=v);
   watchCollection(["shops",user.uid,"boxes"],v=>boxes=v,ref=>dbSdk.query(ref,dbSdk.orderBy("purchasedAt","desc")));
-  watchCollection(["shops",user.uid,"collectionVolumes"],v=>collectionItems=v);
+  watchCollection(["shops",user.uid,"collectionVolumes"],v=>{collectionItems=v;reconcileCollectionScore()});
   watchCollection(["marketListings"],v=>listings=v,ref=>dbSdk.query(ref,dbSdk.where("status","==","active")));
   watchCollection(["shops"],v=>publicShops=v);
 }
 
 function itemCard(item, area="inventory") {
   const c=condition(item.condition); let actions="";
-  if(area==="inventory") actions=`<button data-act="sellToNpc" data-id="${esc(item.copyId||item.id)}">Vender por ${c.saleValue} LM</button>${item.condition==="lacrado"?`<button data-act="list" data-id="${esc(item.copyId||item.id)}">Colocar à venda</button><button data-act="collect" data-id="${esc(item.copyId||item.id)}">Adicionar à coleção</button>`:""}`;
+  if(area==="inventory") actions=`<button data-act="sellToNpc" data-id="${esc(item.copyId||item.id)}">Vender por ${c.saleValue} LM</button><button data-act="list" data-id="${esc(item.copyId||item.id)}">Colocar à venda</button><button data-act="collect" data-id="${esc(item.copyId||item.id)}">Adicionar à coleção</button>`;
   if(area==="listing") actions=item.sellerUid===user.uid?`<button data-act="cancelListing" data-id="${item.id}">Cancelar anúncio</button>`:`<button data-act="buyListing" data-id="${item.id}">Comprar por ${item.price} LM</button>`;
   return `<article class="item-card ${esc(item.condition)}"><img src="${coverUrl(item.cover)}" alt="Capa de ${esc(item.mangaTitle)} volume ${item.volumeNumber}" loading="lazy"><div class="item-body"><span class="condition condition-${esc(item.condition)}">${esc(c.label)}</span><h3>${esc(item.mangaTitle)}</h3><span>Volume ${item.volumeNumber}</span>${area==="reward"?`<strong class="sale-price">Valor de venda: ${c.saleValue} LM</strong>`:""}<div class="item-actions">${actions}</div></div></article>`;
 }
-function stats() { document.querySelector("#shopName").textContent=shop?.shopName||"Minha Loja"; document.querySelector("#storeStats").innerHTML=[[`Saldo`,`${shop?.lm??0} LM`],[`Inventário`,`${shop?.inventoryCount??0}/${shop?.inventoryCapacity??15}`],[`Prateleira`,`${shop?.marketListingCount??0}/${shop?.marketCapacity??5}`],[`Coleção`,`${shop?.collectionDistinctCount??0} pontos`]].map(([a,b])=>`<span class="stat-pill"><small>${a}</small><strong>${b}</strong></span>`).join(""); }
+function collectionPoints(){return shop?.collectionPoints??collectionItems.reduce((sum,item)=>sum+(GAME_CONFIG.conditions[item.condition||"lacrado"]?.collectionPoints||0),0)}
+function stats() { document.querySelector("#shopName").textContent=shop?.shopName||"Minha Loja"; document.querySelector("#storeStats").innerHTML=[[`Saldo`,`${shop?.lm??0} LM`],[`Inventário`,`${shop?.inventoryCount??0}/${shop?.inventoryCapacity??15}`],[`Prateleira`,`${shop?.marketListingCount??0}/${shop?.marketCapacity??5}`],[`Coleção`,`${collectionPoints()} pontos`]].map(([a,b])=>`<span class="stat-pill"><small>${a}</small><strong>${b}</strong></span>`).join(""); }
 function boxesPanel(){
   const descriptions={paid:"De 4 a 8 exemplares, com todas as condições possíveis.",premium:"De 4 a 8 exemplares e pelo menos um volume Lacrado garantido.",free:"Exatamente 2 exemplares, sem chance de Novo ou Lacrado."};
   const images={paid:"assets/caixas/caixa-gratuita.png",premium:"assets/caixas/caixa-lacrada.png",free:"assets/caixas/caixa-classica.png"};
   const visual=box=>`<div class="box-visual"><img src="${images[box.id]||images.paid}" alt="${esc(box.label)}" loading="lazy"></div>`;
   return `<section class="store-panel"><div class="panel-heading"><div><h2>Caixas</h2><p>O estoque é renovado a cada hora cheia no horário de Brasília.</p></div></div><div class="box-options">${Object.values(GAME_CONFIG.boxes).map(box=>`<article class="box-card box-card-${box.id}">${visual(box)}<h3>${box.label}</h3><p>${descriptions[box.id]}</p><strong>${box.price?`${box.price} LM`:"GRÁTIS"}</strong><button data-act="buyBox" data-type="${box.id}" ${busy||shop.lm<box.price?"disabled":""}>Comprar caixa</button></article>`).join("")}</div><h2>Suas caixas</h2><div class="store-grid">${boxes.length?boxes.map(box=>{const config=GAME_CONFIG.boxes[box.type]||{id:"paid",label:"Caixa"};return `<article class="box-card box-card-${config.id}"><div class="box-visual ${box.status==="opened"?"box-opening":""}"><img src="${images[config.id]||images.paid}" alt="${esc(config.label)}" loading="lazy"></div><h3>${esc(config.label)}</h3><p>${box.status==="purchased"?"Pronta para abrir":box.claimed?"Recompensas recebidas":`Recompensas pendentes: ${box.rewards?.length||0}`}</p>${box.status==="purchased"?`<button data-act="openBox" data-id="${box.id}">Abrir caixa</button>`:""}${box.status==="opened"&&!box.claimed?`<button data-act="claimBox" data-id="${box.id}">Receber recompensas</button>`:""}</article>`}).join(""):"<p class='empty-state'>Nenhuma caixa comprada.</p>"}</div></section>`;
 }
-function collectionPanel(){ const owned=new Map(collectionItems.map(x=>[x.volumeId,x])); const groups=Map.groupBy?Map.groupBy(catalogoVolumes,v=>v.mangaId):catalogoVolumes.reduce((m,v)=>(m.set(v.mangaId,[...(m.get(v.mangaId)||[]),v]),m),new Map()); return `<section class="store-panel"><h2>Coleção — ${shop.collectionDistinctCount||0} pontos</h2><p>Cada volume lacrado distinto vale um ponto; duplicatas são guardadas sem limite.</p><div class="store-grid">${[...groups].map(([id,vols])=>{const have=vols.filter(v=>owned.has(v.volumeId)).length,cover=vols.find(v=>v.volumeNumber===1)||vols[0];return `<article class="item-card collection-group" data-act="openCollection" data-id="${id}"><img class="collection-cover ${have?"":"locked"}" src="${coverUrl(cover.cover)}" alt="Capa de ${esc(cover.mangaTitle)}"><div class="item-body"><h3>${esc(cover.mangaTitle)}</h3><strong>${have} de ${vols.length} volumes distintos</strong></div></article>`}).join("")}</div></section>`; }
+function collectionPanel(){ const conditionItems=collectionItems.filter(item=>(item.condition||"lacrado")===activeCollectionCondition),owned=new Map(conditionItems.map(x=>[x.volumeId,x])),groups=Map.groupBy?Map.groupBy(catalogoVolumes,v=>v.mangaId):catalogoVolumes.reduce((m,v)=>(m.set(v.mangaId,[...(m.get(v.mangaId)||[]),v]),m),new Map()),tabs=Object.entries(GAME_CONFIG.conditions).map(([id,c])=>`<button data-act="collectionCondition" data-type="${id}" class="${id===activeCollectionCondition?"active":""}">${c.label} · ${c.collectionPoints} pts</button>`).join(""); return `<section class="store-panel"><h2>Coleção — ${collectionPoints()} pontos</h2><p>Cada condição possui sua própria coleção. Cópias repetidas não somam pontos extras.</p><div class="collection-condition-tabs">${tabs}</div><div class="store-grid">${[...groups].map(([id,vols])=>{const have=vols.filter(v=>owned.has(v.volumeId)).length,cover=vols.find(v=>v.volumeNumber===1)||vols[0];return `<article class="item-card collection-group ${activeCollectionCondition}" data-act="openCollection" data-id="${id}"><img class="collection-cover ${have?"":"locked"}" src="${coverUrl(cover.cover)}" alt="Capa de ${esc(cover.mangaTitle)}"><div class="item-body"><span class="condition condition-${activeCollectionCondition}">${condition(activeCollectionCondition).label}</span><h3>${esc(cover.mangaTitle)}</h3><strong>${have} de ${vols.length} volumes distintos</strong></div></article>`}).join("")}</div></section>`; }
 function renderPanel(){ if(!shop)return; const mine=listings.filter(x=>x.sellerUid===user.uid); const content={boxes:boxesPanel(),inventory:`<section class="store-panel"><h2>Inventário: ${inventory.length} / ${shop.inventoryCapacity}</h2><p>Venda qualquer exemplar diretamente pelo valor indicado em seu cartão.</p><div class="store-grid">${inventory.map(x=>itemCard(x)).join("")||"<p class='empty-state'>Seu inventário está vazio.</p>"}</div></section>`,market:`<section class="store-panel"><h2>Prateleira: ${mine.length} / ${shop.marketCapacity}</h2><div class="store-grid">${mine.map(x=>itemCard(x,"listing")).join("")||"<p class='empty-state'>Nenhum anúncio ativo.</p>"}</div></section>`,collection:collectionPanel(),shops:`<section class="store-panel"><h2>Visitar lojas</h2><input class="store-search" id="shopSearch" placeholder="Pesquisar pelo nome da loja"><div id="shopList">${shopRows("")}</div></section>`,upgrades:`<section class="store-panel"><h2>Melhorias</h2><div class="upgrade-list">${Object.entries(GAME_CONFIG.upgrades).map(([id,u])=>{const level=shop.upgradeLevels?.[id]||0,cost=upgradeCost(id,level);return `<article class="upgrade-card"><h3>${u.label}</h3><p>Nível ${level} · +${u.increase} espaços</p><button data-act="upgrade" data-type="${id}" ${shop.lm<cost?"disabled":""}>Melhorar por ${cost} LM</button></article>`}).join("")}</div></section>`}[activeTab]; panels.innerHTML=content; }
 function shopRows(filter){return publicShops.filter(x=>x.ownerUid!==user.uid&&x.shopName?.toLowerCase().includes(filter.toLowerCase())).map(x=>`<div class="shop-row"><span><strong>${esc(x.shopName)}</strong><br><small>${esc(x.ownerDisplayName||"Leitor Loner")} · ${x.marketListingCount||0} anúncios</small></span><button data-act="visitShop" data-id="${x.ownerUid}">Visitar loja</button></div>`).join("")||"<p class='empty-state'>Nenhuma loja encontrada.</p>";}
 function cleanupOpenedBoxes(){
@@ -73,6 +76,7 @@ function renderHourlyBoxStock(){
     const box=GAME_CONFIG.boxes[button.dataset.type],remaining=stock[box.id]||0;
     button.closest(".box-card")?.querySelector(".box-hourly-stock")?.remove();
     button.insertAdjacentHTML("beforebegin",`<p class="box-hourly-stock"><strong>${remaining}</strong> de ${box.hourlyStock} disponível(is) nesta hora</p>`);
+    if(box.id==="free"&&remaining>0&&!button.closest(".box-card")?.querySelector(".free-box-alert"))button.closest(".box-card")?.querySelector(".box-visual")?.insertAdjacentHTML("afterend",'<strong class="free-box-alert">Caixa Gratuita Disponível</strong>');
     if(remaining<1)button.disabled=true;
   });
   const heading=panels.querySelector(".panel-heading div");
@@ -114,6 +118,7 @@ async function handleClick(e){
   }
   if(act==="discard"&&confirm("Descartar definitivamente este exemplar?"))await action("discardItem",{copyId:id});
   if(act==="collect")await action("moveToCollection",{copyId:id});
+  if(act==="collectionCondition"){activeCollectionCondition=type;render();}
   if(act==="list"){
     const price=Number(prompt(`Preço inteiro em LM (máximo ${GAME_CONFIG.currency.maxSafePrice}):`));
     if(Number.isSafeInteger(price)&&price>0&&price<=GAME_CONFIG.currency.maxSafePrice)await action("createListing",{copyId:id,price});else message("Informe um preço inteiro válido.","error");
@@ -126,10 +131,10 @@ async function handleClick(e){
     document.querySelector("#dialogContent").innerHTML=`<h2>${esc(publicShops.find(x=>x.ownerUid===id)?.shopName||"Loja")}</h2><div class="store-grid">${items.map(x=>itemCard(x,"listing")).join("")||"<p>Esta loja não tem anúncios.</p>"}</div>`;dialog.showModal();
   }
   if(act==="openCollection"){
-    const vols=catalogoVolumes.filter(v=>v.mangaId===id).sort((a,b)=>a.volumeNumber-b.volumeNumber),owned=new Map(collectionItems.map(x=>[x.volumeId,x]));
-    document.querySelector("#dialogContent").innerHTML=`<h2>${esc(vols[0]?.mangaTitle)}</h2><div class="store-grid">${vols.map(v=>{const o=owned.get(v.volumeId);return `<article class="item-card"><img class="collection-cover ${o?"":"locked"}" src="${coverUrl(v.cover)}" alt="Capa volume ${v.volumeNumber}"><div class="item-body"><h3>Volume ${v.volumeNumber}</h3><strong>Possuídos: ${o?.quantity||0}</strong>${o?`<button data-act="removeCollection" data-id="${v.volumeId}">Retirar uma cópia</button>`:""}</div></article>`}).join("")}</div>`;dialog.showModal();
+    const vols=catalogoVolumes.filter(v=>v.mangaId===id).sort((a,b)=>a.volumeNumber-b.volumeNumber),owned=new Map(collectionItems.filter(x=>(x.condition||"lacrado")===activeCollectionCondition).map(x=>[x.volumeId,x])),c=condition(activeCollectionCondition);
+    document.querySelector("#dialogContent").innerHTML=`<h2>${esc(vols[0]?.mangaTitle)} — ${c.label}</h2><div class="store-grid">${vols.map(v=>{const o=owned.get(v.volumeId);return `<article class="item-card ${activeCollectionCondition}"><img class="collection-cover ${o?"":"locked"}" src="${coverUrl(v.cover)}" alt="Capa volume ${v.volumeNumber}"><div class="item-body"><span class="condition condition-${activeCollectionCondition}">${c.label}</span><h3>Volume ${v.volumeNumber}</h3><strong>Possuídos: ${o?.quantity||0}</strong>${o?`<button data-act="removeCollection" data-id="${esc(o.id)}">Retirar uma cópia</button>`:""}</div></article>`}).join("")}</div>`;dialog.showModal();
   }
-  if(act==="removeCollection")await action("removeFromCollection",{volumeId:id});
+  if(act==="removeCollection")await action("removeFromCollection",{collectionId:id});
 }
 document.addEventListener("click",handleClick);document.querySelector("[data-close-dialog]").onclick=()=>dialog.close();document.querySelector(".store-tabs").onclick=e=>{const b=e.target.closest("[data-tab]");if(b){activeTab=b.dataset.tab;render()}};document.addEventListener("input",e=>{if(e.target.id==="shopSearch")document.querySelector("#shopList").innerHTML=shopRows(e.target.value)});document.addEventListener("submit",async e=>{if(e.target.id!=="createShopForm")return;e.preventDefault();const shopName=document.querySelector("#newShopName").value.trim();if(shopName.length<3||shopName.length>24)return message("O nome deve ter entre 3 e 24 caracteres.","error");await action("createShop",{shopName})});
 setInterval(()=>{const currentHour=brasiliaHourKey();if(currentHour!==renderedBoxHour){renderedBoxHour=currentHour;render()}},1000);
