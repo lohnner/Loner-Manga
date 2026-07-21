@@ -1,1 +1,1 @@
-{"functions":{"source":"functions","predeploy":["npm --prefix functions run catalog"]},"firestore":{"rules":"firestore.rules","indexes":"firestore.indexes.json"}}
+{"functions":{"source":"functions","predeploy":["node functions/scripts/build-catalog.mjs"]},"firestore":{"rules":"firestore.rules","indexes":"firestore.indexes.json"}}
