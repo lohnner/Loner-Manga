@@ -1026,15 +1026,6 @@
     "displayTitle": "Berserk / Volume 1"
   },
   {
-    "mangaId": "attack-on-titan",
-    "mangaTitle": "Attack on Titan",
-    "volumeId": "attack-on-titan-1-2010",
-    "volumeNumber": 1,
-    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%231.png",
-    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-1-2010.html",
-    "displayTitle": "Attack on Titan / Volume 1"
-  },
-  {
     "mangaId": "death-note",
     "mangaTitle": "Death Note",
     "volumeId": "death-note-1-2004",
@@ -1348,6 +1339,312 @@
     "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%233.png",
     "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-3-1997.html",
     "displayTitle": "Yu-Gi-Oh! / Volume 3"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-1-2010",
+    "volumeNumber": 1,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%231.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-1-2010.html",
+    "displayTitle": "Attack on Titan / Volume 1"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-2-2010",
+    "volumeNumber": 2,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%232.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-2-2010.html",
+    "displayTitle": "Attack on Titan / Volume 2"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-3-2010",
+    "volumeNumber": 3,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%233.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-3-2010.html",
+    "displayTitle": "Attack on Titan / Volume 3"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-4-2011",
+    "volumeNumber": 4,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%234.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-4-2011.html",
+    "displayTitle": "Attack on Titan / Volume 4"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-5-2011",
+    "volumeNumber": 5,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%235.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-5-2011.html",
+    "displayTitle": "Attack on Titan / Volume 5"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-6-2011",
+    "volumeNumber": 6,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%236.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-6-2011.html",
+    "displayTitle": "Attack on Titan / Volume 6"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-7-2012",
+    "volumeNumber": 7,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%237.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-7-2012.html",
+    "displayTitle": "Attack on Titan / Volume 7"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-8-2012",
+    "volumeNumber": 8,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%238.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-8-2012.html",
+    "displayTitle": "Attack on Titan / Volume 8"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-9-2012",
+    "volumeNumber": 9,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%239.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-9-2012.html",
+    "displayTitle": "Attack on Titan / Volume 9"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-10-2013",
+    "volumeNumber": 10,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%2310.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-10-2013.html",
+    "displayTitle": "Attack on Titan / Volume 10"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-11-2013",
+    "volumeNumber": 11,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%2311.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-11-2013.html",
+    "displayTitle": "Attack on Titan / Volume 11"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-12-2013",
+    "volumeNumber": 12,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%2312.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-12-2013.html",
+    "displayTitle": "Attack on Titan / Volume 12"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-13-2014",
+    "volumeNumber": 13,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%2313.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-13-2014.html",
+    "displayTitle": "Attack on Titan / Volume 13"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-14-2014",
+    "volumeNumber": 14,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%2314.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-14-2014.html",
+    "displayTitle": "Attack on Titan / Volume 14"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-15-2014",
+    "volumeNumber": 15,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%2315.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-15-2014.html",
+    "displayTitle": "Attack on Titan / Volume 15"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-16-2015",
+    "volumeNumber": 16,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%2316.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-16-2015.html",
+    "displayTitle": "Attack on Titan / Volume 16"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-17-2015",
+    "volumeNumber": 17,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%2317.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-17-2015.html",
+    "displayTitle": "Attack on Titan / Volume 17"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-18-2015",
+    "volumeNumber": 18,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%2318.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-18-2015.html",
+    "displayTitle": "Attack on Titan / Volume 18"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-19-2016",
+    "volumeNumber": 19,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%2319.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-19-2016.html",
+    "displayTitle": "Attack on Titan / Volume 19"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-20-2016",
+    "volumeNumber": 20,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%2320.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-20-2016.html",
+    "displayTitle": "Attack on Titan / Volume 20"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-21-2016",
+    "volumeNumber": 21,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%2321.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-21-2016.html",
+    "displayTitle": "Attack on Titan / Volume 21"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-22-2017",
+    "volumeNumber": 22,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%2322.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-22-2017.html",
+    "displayTitle": "Attack on Titan / Volume 22"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-23-2017",
+    "volumeNumber": 23,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%2323.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-23-2017.html",
+    "displayTitle": "Attack on Titan / Volume 23"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-24-2017",
+    "volumeNumber": 24,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%2324.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-24-2017.html",
+    "displayTitle": "Attack on Titan / Volume 24"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-25-2018",
+    "volumeNumber": 25,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%2325.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-25-2018.html",
+    "displayTitle": "Attack on Titan / Volume 25"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-26-2018",
+    "volumeNumber": 26,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%2326.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-26-2018.html",
+    "displayTitle": "Attack on Titan / Volume 26"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-27-2018",
+    "volumeNumber": 27,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%2327.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-27-2018.html",
+    "displayTitle": "Attack on Titan / Volume 27"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-28-2019",
+    "volumeNumber": 28,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%2328.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-28-2019.html",
+    "displayTitle": "Attack on Titan / Volume 28"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-29-2019",
+    "volumeNumber": 29,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%2329.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-29-2019.html",
+    "displayTitle": "Attack on Titan / Volume 29"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-30-2019",
+    "volumeNumber": 30,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%2330.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-30-2019.html",
+    "displayTitle": "Attack on Titan / Volume 30"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-31-2020",
+    "volumeNumber": 31,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%2331.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-31-2020.html",
+    "displayTitle": "Attack on Titan / Volume 31"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-32-2020",
+    "volumeNumber": 32,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%2332.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-32-2020.html",
+    "displayTitle": "Attack on Titan / Volume 32"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-33-2021",
+    "volumeNumber": 33,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%2333.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-33-2021.html",
+    "displayTitle": "Attack on Titan / Volume 33"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-34-2021",
+    "volumeNumber": 34,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%2334.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-34-2021.html",
+    "displayTitle": "Attack on Titan / Volume 34"
   },
   {
     "mangaId": "slam-dunk",
