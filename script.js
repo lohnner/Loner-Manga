@@ -3031,7 +3031,8 @@ function renderCatalogMangaVolumes() {
     "hajime-no-ippo.html": "Hajime no Ippo",
     "jujutsu-kaisen.html": "Jujutsu Kaisen",
     "one-piece.html": "One Piece",
-    "yu-yu-hakusho.html": "Yu Yu Hakusho"
+    "yu-yu-hakusho.html": "Yu Yu Hakusho",
+    "vagabond.html": "Vagabond"
   };
   const series = seriesByPage[pageName];
   if (!series) return;
