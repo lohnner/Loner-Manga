@@ -3033,6 +3033,7 @@ function renderCatalogMangaVolumes() {
     "naruto.html": "Naruto",
     "naruto-shippuden.html": "Naruto Shippuden",
     "one-piece.html": "One Piece",
+    "slam-dunk.html": "Slam Dunk",
     "yu-yu-hakusho.html": "Yu Yu Hakusho",
     "vagabond.html": "Vagabond"
   };
