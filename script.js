@@ -2876,6 +2876,11 @@ const mangaArcsByPage = {
     title: "Bleach",
     arcs: [["Ceifador de Almas Substituto", 1, 70], ["Sociedade das Almas", 71, 183], ["Arrancar", 184, 423], ["Agente Perdido", 424, 479], ["Guerra Sangrenta dos Mil Anos", 480, 686]]
   },
+  "one-piece.html": {
+    id: "onePieceArcsDialog",
+    title: "One Piece",
+    arcs: [["Romance Dawn", 1, 7], ["Orange Town", 8, 21], ["Vila Syrup", 22, 41], ["Baratie", 42, 68], ["Arlong Park", 69, 95], ["Loguetown", 96, 100], ["Reverse Mountain", 101, 105], ["Whiskey Peak", 106, 114], ["Little Garden", 115, 129], ["Ilha Drum", 130, 154], ["Alabasta", 155, 217], ["Jaya", 218, 236], ["Skypiea", 237, 302], ["Long Ring Long Land", 303, 321], ["Water 7", 322, 374], ["Enies Lobby", 375, 430], ["Pós-Enies Lobby", 431, 441], ["Thriller Bark", 442, 489], ["Sabaody", 490, 513], ["Amazon Lily", 514, 524], ["Impel Down", 525, 549], ["Marineford", 550, 580], ["Pós-Guerra", 581, 597], ["Retorno a Sabaody", 598, 602], ["Ilha dos Homens-Peixe", 603, 653], ["Punk Hazard", 654, 699], ["Dressrosa", 700, 801], ["Zou", 802, 824], ["Whole Cake Island", 825, 902], ["Levely", 903, 908], ["País de Wano", 909, 1057], ["Egghead", 1058, 1125], ["Elbaph", 1126, "Em andamento"]]
+  },
   "berserk.html": {
     id: "berserkArcsDialog",
     title: "Berserk",
@@ -3023,6 +3028,7 @@ function renderCatalogMangaVolumes() {
     "berserk.html": "Berserk",
     "bleach.html": "Bleach",
     "jujutsu-kaisen.html": "Jujutsu Kaisen",
+    "one-piece.html": "One Piece",
     "yu-yu-hakusho.html": "Yu Yu Hakusho"
   };
   const series = seriesByPage[pageName];
