@@ -3027,6 +3027,7 @@ function renderCatalogMangaVolumes() {
   const seriesByPage = {
     "berserk.html": "Berserk",
     "bleach.html": "Bleach",
+    "hajime-no-ippo.html": "Hajime no Ippo",
     "jujutsu-kaisen.html": "Jujutsu Kaisen",
     "one-piece.html": "One Piece",
     "yu-yu-hakusho.html": "Yu Yu Hakusho"
