@@ -1,6 +1,6 @@
 import { firebaseConfig } from "./firebase-config.js";
 import { catalogoVolumes } from "./catalogo.js";
-import { GAME_CONFIG, upgradeCost } from "./game-config.js";
+import { GAME_CONFIG, brasiliaHourKey, freshHourlyBoxStock, upgradeCost } from "./game-config.js";
 import { createClientGameService } from "./game-client-service.js";
 
 const [appSdk, authSdk, dbSdk] = await Promise.all([
@@ -13,6 +13,7 @@ const auth = authSdk.getAuth(app), db = dbSdk.getFirestore(app);
 const gate = document.querySelector("#storeGate"), storeApp = document.querySelector("#storeApp"), panels = document.querySelector("#storePanels"), notice = document.querySelector("#storeNotice"), dialog = document.querySelector("#storeDialog");
 let user, shop, inventory = [], boxes = [], npcItems = [], collectionItems = [], notifications = [], listings = [], publicShops = [], busy = false, activeTab = "boxes", serverOffset = 0;
 let gameService = null, npcShopOpen = false;
+let renderedBoxHour = brasiliaHourKey();
 const unsubscribers = [];
 
 const esc = (value="") => String(value).replace(/[&<>'"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[c]));
@@ -82,8 +83,21 @@ function renderNpcSessionControls(){
     controls.insertAdjacentHTML("beforebegin",`<button class="button primary" data-act="openNpcShop" ${busy||npcShopOpen||!npcItems.length?"disabled":""}>${npcShopOpen?"Loja aberta":"Abrir Loja"}</button>`);
   }
 }
+function renderHourlyBoxStock(){
+  if(activeTab!=="boxes"||!shop)return;
+  const currentHour=brasiliaHourKey(),stock=shop.boxStockHour===currentHour?{...freshHourlyBoxStock(),...shop.boxHourlyStock}:freshHourlyBoxStock();
+  document.querySelectorAll('.box-options [data-act="buyBox"]').forEach(button=>{
+    const box=GAME_CONFIG.boxes[button.dataset.type],remaining=stock[box.id]||0;
+    button.closest(".box-card")?.querySelector(".box-hourly-stock")?.remove();
+    button.insertAdjacentHTML("beforebegin",`<p class="box-hourly-stock"><strong>${remaining}</strong> de ${box.hourlyStock} disponível(is) nesta hora</p>`);
+    if(remaining<1)button.disabled=true;
+  });
+  const heading=panels.querySelector(".panel-heading div");
+  if(heading&&!heading.querySelector(".box-stock-reset"))heading.insertAdjacentHTML("beforeend",'<small class="box-stock-reset">O estoque é renovado na próxima hora de Brasília e não acumula.</small>');
+}
 function render(){
   queueMicrotask(renderNpcSessionControls);
+  queueMicrotask(renderHourlyBoxStock);
   if(!user){gate.innerHTML="<h1>Minha Loja</h1><p>Entre na sua conta pela barra lateral para jogar.</p>";gate.hidden=false;storeApp.hidden=true;return}
   if(!shop){gate.innerHTML=`<h1>Crie sua loja</h1><p>Escolha um nome entre 3 e 24 caracteres.</p><form id="createShopForm"><label for="newShopName">Nome da loja</label><input id="newShopName" minlength="3" maxlength="24" required><button class="button primary">Criar loja com 200 LM</button></form>`;gate.hidden=false;storeApp.hidden=true;return}
   gate.hidden=true;storeApp.hidden=false;stats();document.querySelectorAll("[data-tab]").forEach(b=>b.classList.toggle("active",b.dataset.tab===activeTab));renderPanel();cleanupOpenedBoxes();
@@ -92,6 +106,7 @@ function formatDuration(ms){const total=Math.ceil(ms/1000);return `${String(Math
 function showRewards(rewards,title="Resultado da caixa"){document.querySelector("#dialogContent").innerHTML=`<h2>${title}</h2><div class="store-grid reward-grid">${rewards.map((x,i)=>itemCard(x,"reward").replace('class="item-card','style="animation-delay:'+i*.15+'s" class="item-card')).join("")}</div>`;dialog.showModal();}
 async function handleClick(e){const el=e.target.closest("[data-act]");if(!el)return;const {act,id,type}=el.dataset;if(act==="buyBox")await action("buyBox",{type});if(act==="openBox"){const r=await action("openBox",{boxId:id});if(r?.rewards)showRewards(r.rewards)}if(act==="claimBox")await action("claimBox",{boxId:id});if(act==="toNpc")await action("moveToNpc",{copyId:id});if(act==="sellNpc")await action("sellNpc",{copyIds:[id]});if(act==="sellAllNpc")await action("sellNpc",{copyIds:npcItems.map(x=>x.copyId||x.id)});if(act==="discard"&&confirm("Descartar definitivamente este exemplar?"))await action("discardItem",{copyId:id});if(act==="collect")await action("moveToCollection",{copyId:id});if(act==="list"){const price=Number(prompt(`Preço inteiro em LM (máximo ${GAME_CONFIG.currency.maxSafePrice}):`));if(Number.isSafeInteger(price)&&price>0&&price<=GAME_CONFIG.currency.maxSafePrice)await action("createListing",{copyId:id,price});else message("Informe um preço inteiro válido.","error")}if(act==="cancelListing")await action("cancelListing",{listingId:id});if(act==="buyListing")await action("buyListing",{listingId:id});if(act==="upgrade")await action("buyUpgrade",{type});if(act==="visitShop"){const items=listings.filter(x=>x.sellerUid===id);document.querySelector("#dialogContent").innerHTML=`<h2>${esc(publicShops.find(x=>x.ownerUid===id)?.shopName||"Loja")}</h2><div class="store-grid">${items.map(x=>itemCard(x,"listing")).join("")||"<p>Esta loja não tem anúncios.</p>"}</div>`;dialog.showModal()}if(act==="openCollection"){const vols=catalogoVolumes.filter(v=>v.mangaId===id).sort((a,b)=>a.volumeNumber-b.volumeNumber),owned=new Map(collectionItems.map(x=>[x.volumeId,x]));document.querySelector("#dialogContent").innerHTML=`<h2>${esc(vols[0]?.mangaTitle)}</h2><div class="store-grid">${vols.map(v=>{const o=owned.get(v.volumeId);return `<article class="item-card"><img class="collection-cover ${o?"":"locked"}" src="${coverUrl(v.cover)}" alt="Capa volume ${v.volumeNumber}"><div class="item-body"><h3>Volume ${v.volumeNumber}</h3><strong>Possuídos: ${o?.quantity||0}</strong>${o?`<button data-act="removeCollection" data-id="${v.volumeId}">Retirar uma cópia</button>`:""}</div></article>`}).join("")}</div>`;dialog.showModal()}if(act==="removeCollection")await action("removeFromCollection",{volumeId:id});}
 document.addEventListener("click",handleClick);document.querySelector("[data-close-dialog]").onclick=()=>dialog.close();document.querySelector(".store-tabs").onclick=e=>{const b=e.target.closest("[data-tab]");if(b){activeTab=b.dataset.tab;render()}};document.addEventListener("input",e=>{if(e.target.id==="shopSearch")document.querySelector("#shopList").innerHTML=shopRows(e.target.value)});document.addEventListener("submit",async e=>{if(e.target.id!=="createShopForm")return;e.preventDefault();const shopName=document.querySelector("#newShopName").value.trim();if(shopName.length<3||shopName.length>24)return message("O nome deve ter entre 3 e 24 caracteres.","error");await action("createShop",{shopName})});setInterval(()=>{document.querySelectorAll("[data-cooldown]").forEach(x=>{const left=Math.max(0,Number(x.dataset.cooldown)-(Date.now()+serverOffset));x.textContent=left?`Disponível em ${formatDuration(left)}`:"Disponível agora";if(!left)render()})},1000);
+setInterval(()=>{const currentHour=brasiliaHourKey();if(currentHour!==renderedBoxHour){renderedBoxHour=currentHour;render()}},1000);
 document.addEventListener("click",async event=>{if(!event.target.closest('[data-act="openNpcShop"]'))return;const result=await action("openNpcShop");if(result){npcShopOpen=true;render()}});
 document.addEventListener("click",event=>{if(!event.target.closest('[data-act="notifications"]'))return;document.querySelector("#dialogContent").innerHTML=`<h2>Vendas automáticas</h2><div class="notification-list">${notifications.map(n=>`<article class="notification-card"><img src="${coverUrl(n.cover)}" alt="Capa de ${esc(n.mangaTitle)}"><div><strong>${esc(n.mangaTitle)} — Volume ${n.volumeNumber}</strong><span class="condition condition-${esc(n.condition)}">${esc(condition(n.condition).label)}</span><p>Vendido por <strong>${n.value} LM</strong></p></div></article>`).join("")||"<p>Nenhuma venda automática registrada.</p>"}</div>`;dialog.showModal()});
 document.addEventListener("click",event=>{const action=event.target.closest("[data-act]")?.dataset.act;if(action)dialog.classList.toggle("collection-dialog",action==="openCollection")});

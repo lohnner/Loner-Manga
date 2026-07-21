@@ -5,9 +5,9 @@ export const GAME_CONFIG = Object.freeze({
   capacities: { inventory: 15, npc: 20, market: 5 },
   cooldownMinutes: 20,
   boxes: {
-    paid: { id: "paid", label: "Caixa Clássica", price: 50, quantityWeights: { 4: 20, 5: 50, 6: 20, 7: 9, 8: 1 }, excludedConditions: [] },
-    premium: { id: "premium", label: "Caixa Lacrada", price: 500, quantityWeights: { 4: 20, 5: 50, 6: 20, 7: 9, 8: 1 }, excludedConditions: [], guaranteedSealed: 1 },
-    free: { id: "free", label: "Caixa Gratuita", price: 0, quantityWeights: { 2: 100 }, excludedConditions: ["lacrado", "novo"] }
+    paid: { id: "paid", label: "Caixa Clássica", price: 50, hourlyStock: 3, quantityWeights: { 4: 20, 5: 50, 6: 20, 7: 9, 8: 1 }, excludedConditions: [] },
+    premium: { id: "premium", label: "Caixa Lacrada", price: 500, hourlyStock: 1, quantityWeights: { 4: 20, 5: 50, 6: 20, 7: 9, 8: 1 }, excludedConditions: [], guaranteedSealed: 1 },
+    free: { id: "free", label: "Caixa Gratuita", price: 0, hourlyStock: 1, quantityWeights: { 2: 100 }, excludedConditions: ["lacrado", "novo"] }
   },
   npcAutoSale: { minSeconds: 5, maxSeconds: 35, maxNotifications: 10 },
   conditions: {
@@ -29,4 +29,21 @@ export const GAME_CONFIG = Object.freeze({
 export function upgradeCost(type, level = 0) {
   const config = GAME_CONFIG.upgrades[type];
   return config ? Math.round(config.initialCost * config.multiplier ** level) : 0;
+}
+
+export function brasiliaHourKey(date = new Date()) {
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "America/Sao_Paulo",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    hourCycle: "h23"
+  }).formatToParts(date);
+  const value = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+  return `${value.year}-${value.month}-${value.day}T${value.hour}`;
+}
+
+export function freshHourlyBoxStock() {
+  return Object.fromEntries(Object.values(GAME_CONFIG.boxes).map((box) => [box.id, box.hourlyStock]));
 }
