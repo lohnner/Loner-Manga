@@ -1,0 +1,596 @@
+[
+  {
+    "mangaId": "naruto",
+    "mangaTitle": "Naruto",
+    "volumeId": "naruto-1-2000",
+    "volumeNumber": 1,
+    "cover": "Mangás/Naruto/Naruto%20%231.png",
+    "pageUrl": "Mangás/Naruto/naruto-1-2000.html",
+    "displayTitle": "Naruto / Volume 1"
+  },
+  {
+    "mangaId": "naruto",
+    "mangaTitle": "Naruto",
+    "volumeId": "naruto-2-2000",
+    "volumeNumber": 2,
+    "cover": "Mangás/Naruto/Naruto%20%232.png",
+    "pageUrl": "Mangás/Naruto/naruto-2-2000.html",
+    "displayTitle": "Naruto / Volume 2"
+  },
+  {
+    "mangaId": "naruto",
+    "mangaTitle": "Naruto",
+    "volumeId": "naruto-3-2000",
+    "volumeNumber": 3,
+    "cover": "Mangás/Naruto/Naruto%20%233.png",
+    "pageUrl": "Mangás/Naruto/naruto-3-2000.html",
+    "displayTitle": "Naruto / Volume 3"
+  },
+  {
+    "mangaId": "naruto",
+    "mangaTitle": "Naruto",
+    "volumeId": "naruto-4-2000",
+    "volumeNumber": 4,
+    "cover": "Mangás/Naruto/Naruto%20%234.png",
+    "pageUrl": "Mangás/Naruto/naruto-4-2000.html",
+    "displayTitle": "Naruto / Volume 4"
+  },
+  {
+    "mangaId": "naruto",
+    "mangaTitle": "Naruto",
+    "volumeId": "naruto-5-2000",
+    "volumeNumber": 5,
+    "cover": "Mangás/Naruto/Naruto%20%235.png",
+    "pageUrl": "Mangás/Naruto/naruto-5-2000.html",
+    "displayTitle": "Naruto / Volume 5"
+  },
+  {
+    "mangaId": "naruto",
+    "mangaTitle": "Naruto",
+    "volumeId": "naruto-6-2001",
+    "volumeNumber": 6,
+    "cover": "Mangás/Naruto/Naruto%20%236.png",
+    "pageUrl": "Mangás/Naruto/naruto-6-2001.html",
+    "displayTitle": "Naruto / Volume 6"
+  },
+  {
+    "mangaId": "naruto",
+    "mangaTitle": "Naruto",
+    "volumeId": "naruto-7-2001",
+    "volumeNumber": 7,
+    "cover": "Mangás/Naruto/Naruto%20%237.png",
+    "pageUrl": "Mangás/Naruto/naruto-7-2001.html",
+    "displayTitle": "Naruto / Volume 7"
+  },
+  {
+    "mangaId": "naruto",
+    "mangaTitle": "Naruto",
+    "volumeId": "naruto-8-2001",
+    "volumeNumber": 8,
+    "cover": "Mangás/Naruto/Naruto%20%238.png",
+    "pageUrl": "Mangás/Naruto/naruto-8-2001.html",
+    "displayTitle": "Naruto / Volume 8"
+  },
+  {
+    "mangaId": "naruto",
+    "mangaTitle": "Naruto",
+    "volumeId": "naruto-9-2001",
+    "volumeNumber": 9,
+    "cover": "Mangás/Naruto/Naruto%20%239.png",
+    "pageUrl": "Mangás/Naruto/naruto-9-2001.html",
+    "displayTitle": "Naruto / Volume 9"
+  },
+  {
+    "mangaId": "naruto",
+    "mangaTitle": "Naruto",
+    "volumeId": "naruto-10-2001",
+    "volumeNumber": 10,
+    "cover": "Mangás/Naruto/Naruto%20%2310.png",
+    "pageUrl": "Mangás/Naruto/naruto-10-2001.html",
+    "displayTitle": "Naruto / Volume 10"
+  },
+  {
+    "mangaId": "naruto",
+    "mangaTitle": "Naruto",
+    "volumeId": "naruto-11-2002",
+    "volumeNumber": 11,
+    "cover": "Mangás/Naruto/Naruto%20%2311.png",
+    "pageUrl": "Mangás/Naruto/naruto-11-2002.html",
+    "displayTitle": "Naruto / Volume 11"
+  },
+  {
+    "mangaId": "naruto",
+    "mangaTitle": "Naruto",
+    "volumeId": "naruto-12-2002",
+    "volumeNumber": 12,
+    "cover": "Mangás/Naruto/Naruto%20%2312.png",
+    "pageUrl": "Mangás/Naruto/naruto-12-2002.html",
+    "displayTitle": "Naruto / Volume 12"
+  },
+  {
+    "mangaId": "naruto",
+    "mangaTitle": "Naruto",
+    "volumeId": "naruto-13-2002",
+    "volumeNumber": 13,
+    "cover": "Mangás/Naruto/Naruto%20%2313.png",
+    "pageUrl": "Mangás/Naruto/naruto-13-2002.html",
+    "displayTitle": "Naruto / Volume 13"
+  },
+  {
+    "mangaId": "naruto",
+    "mangaTitle": "Naruto",
+    "volumeId": "naruto-14-2002",
+    "volumeNumber": 14,
+    "cover": "Mangás/Naruto/Naruto%20%2314.png",
+    "pageUrl": "Mangás/Naruto/naruto-14-2002.html",
+    "displayTitle": "Naruto / Volume 14"
+  },
+  {
+    "mangaId": "naruto",
+    "mangaTitle": "Naruto",
+    "volumeId": "naruto-15-2002",
+    "volumeNumber": 15,
+    "cover": "Mangás/Naruto/Naruto%20%2315.png",
+    "pageUrl": "Mangás/Naruto/naruto-15-2002.html",
+    "displayTitle": "Naruto / Volume 15"
+  },
+  {
+    "mangaId": "naruto",
+    "mangaTitle": "Naruto",
+    "volumeId": "naruto-16-2003",
+    "volumeNumber": 16,
+    "cover": "Mangás/Naruto/Naruto%20%2316.png",
+    "pageUrl": "Mangás/Naruto/naruto-16-2003.html",
+    "displayTitle": "Naruto / Volume 16"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-1-2006",
+    "volumeNumber": 1,
+    "cover": "Mangás/Kingdom/Kingdom%20%231.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-1-2006.html",
+    "displayTitle": "Kingdom / Volume 1"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-1-2006",
+    "volumeNumber": 1,
+    "cover": "Mangás/Fairy%20Tail/fairytail%231.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-1-2006.html",
+    "displayTitle": "Fairy Tail / Volume 1"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-2-2007",
+    "volumeNumber": 2,
+    "cover": "Mangás/Fairy%20Tail/fairytail%232.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-2-2007.html",
+    "displayTitle": "Fairy Tail / Volume 2"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-3-2007",
+    "volumeNumber": 3,
+    "cover": "Mangás/Fairy%20Tail/fairytail%233.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-3-2007.html",
+    "displayTitle": "Fairy Tail / Volume 3"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-4-2007",
+    "volumeNumber": 4,
+    "cover": "Mangás/Fairy%20Tail/fairytail%234.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-4-2007.html",
+    "displayTitle": "Fairy Tail / Volume 4"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-5-2007",
+    "volumeNumber": 5,
+    "cover": "Mangás/Fairy%20Tail/fairytail%235.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-5-2007.html",
+    "displayTitle": "Fairy Tail / Volume 5"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-6-2007",
+    "volumeNumber": 6,
+    "cover": "Mangás/Fairy%20Tail/fairytail%236.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-6-2007.html",
+    "displayTitle": "Fairy Tail / Volume 6"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-7-2007",
+    "volumeNumber": 7,
+    "cover": "Mangás/Fairy%20Tail/fairytail%237.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-7-2007.html",
+    "displayTitle": "Fairy Tail / Volume 7"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-8-2008",
+    "volumeNumber": 8,
+    "cover": "Mangás/Fairy%20Tail/fairytail%238.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-8-2008.html",
+    "displayTitle": "Fairy Tail / Volume 8"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-9-2008",
+    "volumeNumber": 9,
+    "cover": "Mangás/Fairy%20Tail/fairytail%239.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-9-2008.html",
+    "displayTitle": "Fairy Tail / Volume 9"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-10-2008",
+    "volumeNumber": 10,
+    "cover": "Mangás/Fairy%20Tail/fairytail%2310.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-10-2008.html",
+    "displayTitle": "Fairy Tail / Volume 10"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-11-2008",
+    "volumeNumber": 11,
+    "cover": "Mangás/Fairy%20Tail/fairytail%2311.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-11-2008.html",
+    "displayTitle": "Fairy Tail / Volume 11"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-12-2008",
+    "volumeNumber": 12,
+    "cover": "Mangás/Fairy%20Tail/fairytail%2312.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-12-2008.html",
+    "displayTitle": "Fairy Tail / Volume 12"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-13-2008",
+    "volumeNumber": 13,
+    "cover": "Mangás/Fairy%20Tail/fairytail%2313.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-13-2008.html",
+    "displayTitle": "Fairy Tail / Volume 13"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-14-2009",
+    "volumeNumber": 14,
+    "cover": "Mangás/Fairy%20Tail/fairytail%2314.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-14-2009.html",
+    "displayTitle": "Fairy Tail / Volume 14"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-15-2009",
+    "volumeNumber": 15,
+    "cover": "Mangás/Fairy%20Tail/fairytail%2315.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-15-2009.html",
+    "displayTitle": "Fairy Tail / Volume 15"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-16-2009",
+    "volumeNumber": 16,
+    "cover": "Mangás/Fairy%20Tail/fairytail%2316.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-16-2009.html",
+    "displayTitle": "Fairy Tail / Volume 16"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-17-2009",
+    "volumeNumber": 17,
+    "cover": "Mangás/Fairy%20Tail/fairytail%2317.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-17-2009.html",
+    "displayTitle": "Fairy Tail / Volume 17"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-18-2009",
+    "volumeNumber": 18,
+    "cover": "Mangás/Fairy%20Tail/fairytail%2318.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-18-2009.html",
+    "displayTitle": "Fairy Tail / Volume 18"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-19-2010",
+    "volumeNumber": 19,
+    "cover": "Mangás/Fairy%20Tail/fairytail%2319.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-19-2010.html",
+    "displayTitle": "Fairy Tail / Volume 19"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-20-2010",
+    "volumeNumber": 20,
+    "cover": "Mangás/Fairy%20Tail/fairytail%2320.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-20-2010.html",
+    "displayTitle": "Fairy Tail / Volume 20"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-21-2010",
+    "volumeNumber": 21,
+    "cover": "Mangás/Fairy%20Tail/fairytail%2321.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-21-2010.html",
+    "displayTitle": "Fairy Tail / Volume 21"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-22-2010",
+    "volumeNumber": 22,
+    "cover": "Mangás/Fairy%20Tail/fairytail%2322.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-22-2010.html",
+    "displayTitle": "Fairy Tail / Volume 22"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-23-2010",
+    "volumeNumber": 23,
+    "cover": "Mangás/Fairy%20Tail/fairytail%2323.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-23-2010.html",
+    "displayTitle": "Fairy Tail / Volume 23"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-24-2010",
+    "volumeNumber": 24,
+    "cover": "Mangás/Fairy%20Tail/fairytail%2324.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-24-2010.html",
+    "displayTitle": "Fairy Tail / Volume 24"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-25-2011",
+    "volumeNumber": 25,
+    "cover": "Mangás/Fairy%20Tail/fairytail%2325.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-25-2011.html",
+    "displayTitle": "Fairy Tail / Volume 25"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-26-2011",
+    "volumeNumber": 26,
+    "cover": "Mangás/Fairy%20Tail/fairytail%2326.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-26-2011.html",
+    "displayTitle": "Fairy Tail / Volume 26"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-27-2011",
+    "volumeNumber": 27,
+    "cover": "Mangás/Fairy%20Tail/fairytail%2327.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-27-2011.html",
+    "displayTitle": "Fairy Tail / Volume 27"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-28-2011",
+    "volumeNumber": 28,
+    "cover": "Mangás/Fairy%20Tail/fairytail%2328.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-28-2011.html",
+    "displayTitle": "Fairy Tail / Volume 28"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-29-2011",
+    "volumeNumber": 29,
+    "cover": "Mangás/Fairy%20Tail/fairytail%2329.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-29-2011.html",
+    "displayTitle": "Fairy Tail / Volume 29"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-30-2011",
+    "volumeNumber": 30,
+    "cover": "Mangás/Fairy%20Tail/fairytail%2330.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-30-2011.html",
+    "displayTitle": "Fairy Tail / Volume 30"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-31-2012",
+    "volumeNumber": 31,
+    "cover": "Mangás/Fairy%20Tail/fairytail%2331.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-31-2012.html",
+    "displayTitle": "Fairy Tail / Volume 31"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-32-2012",
+    "volumeNumber": 32,
+    "cover": "Mangás/Fairy%20Tail/fairytail%2332.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-32-2012.html",
+    "displayTitle": "Fairy Tail / Volume 32"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-33-2012",
+    "volumeNumber": 33,
+    "cover": "Mangás/Fairy%20Tail/fairytail%2333.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-33-2012.html",
+    "displayTitle": "Fairy Tail / Volume 33"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-34-2012",
+    "volumeNumber": 34,
+    "cover": "Mangás/Fairy%20Tail/fairytail%2334.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-34-2012.html",
+    "displayTitle": "Fairy Tail / Volume 34"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-35-2012",
+    "volumeNumber": 35,
+    "cover": "Mangás/Fairy%20Tail/fairytail%2335.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-35-2012.html",
+    "displayTitle": "Fairy Tail / Volume 35"
+  },
+  {
+    "mangaId": "fairy-tail",
+    "mangaTitle": "Fairy Tail",
+    "volumeId": "fairy-tail-36-2013",
+    "volumeNumber": 36,
+    "cover": "Mangás/Fairy%20Tail/fairytail%2336.png",
+    "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-36-2013.html",
+    "displayTitle": "Fairy Tail / Volume 36"
+  },
+  {
+    "mangaId": "dorohedoro",
+    "mangaTitle": "Dorohedoro",
+    "volumeId": "dorohedoro-1-2002",
+    "volumeNumber": 1,
+    "cover": "Mangás/Dorohedoro/Dorohedoro%20%231.png",
+    "pageUrl": "Mangás/Dorohedoro/dorohedoro-1-2002.html",
+    "displayTitle": "Dorohedoro / Volume 1"
+  },
+  {
+    "mangaId": "astra-lost-in-space",
+    "mangaTitle": "Astra Lost in Space",
+    "volumeId": "astra-lost-in-space-1-2016",
+    "volumeNumber": 1,
+    "cover": "Mangás/Astra%20Lost%20In%20Space/Astra%20Lost%20In%20Space%20%231.png",
+    "pageUrl": "Mangás/Astra%20Lost%20In%20Space/astra-lost-in-space-1-2016.html",
+    "displayTitle": "Astra Lost in Space / Volume 1"
+  },
+  {
+    "mangaId": "one-piece",
+    "mangaTitle": "One Piece",
+    "volumeId": "one-piece-1-1997",
+    "volumeNumber": 1,
+    "cover": "Mangás/One%20Piece/One%20Piece%20%231.png",
+    "pageUrl": "Mangás/One%20Piece/one-piece-1-1997.html",
+    "displayTitle": "One Piece / Volume 1"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-1-1985",
+    "volumeNumber": 1,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%231.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-1-1985.html",
+    "displayTitle": "Dragon Ball / Volume 1"
+  },
+  {
+    "mangaId": "bleach",
+    "mangaTitle": "Bleach",
+    "volumeId": "bleach-1-2002",
+    "volumeNumber": 1,
+    "cover": "Mangás/Bleach/Bleach%20%231.png",
+    "pageUrl": "Mangás/Bleach/bleach-1-2002.html",
+    "displayTitle": "Bleach / Volume 1"
+  },
+  {
+    "mangaId": "berserk",
+    "mangaTitle": "Berserk",
+    "volumeId": "berserk-1-1990",
+    "volumeNumber": 1,
+    "cover": "Mangás/Berserk/Berserk%20%231.png",
+    "pageUrl": "Mangás/Berserk/berserk-1-1990.html",
+    "displayTitle": "Berserk / Volume 1"
+  },
+  {
+    "mangaId": "attack-on-titan",
+    "mangaTitle": "Attack on Titan",
+    "volumeId": "attack-on-titan-1-2010",
+    "volumeNumber": 1,
+    "cover": "Mangás/Attack%20on%20Titan/Attack%20on%20Titan%20%231.png",
+    "pageUrl": "Mangás/Attack%20on%20Titan/attack-on-titan-1-2010.html",
+    "displayTitle": "Attack on Titan / Volume 1"
+  },
+  {
+    "mangaId": "death-note",
+    "mangaTitle": "Death Note",
+    "volumeId": "death-note-1-2004",
+    "volumeNumber": 1,
+    "cover": "Mangás/Death%20Note/Death%20Note%20%231.png",
+    "pageUrl": "Mangás/Death%20Note/death-note-1-2004.html",
+    "displayTitle": "Death Note / Volume 1"
+  },
+  {
+    "mangaId": "jujutsu-kaisen",
+    "mangaTitle": "Jujutsu Kaisen",
+    "volumeId": "jujutsu-kaisen-1-2018",
+    "volumeNumber": 1,
+    "cover": "Mangás/Jujutsu%20Kaisen/Jujutsu%20Kaisen%20%231.png",
+    "pageUrl": "Mangás/Jujutsu%20Kaisen/jujutsu-kaisen-1-2018.html",
+    "displayTitle": "Jujutsu Kaisen / Volume 1"
+  },
+  {
+    "mangaId": "demon-slayer",
+    "mangaTitle": "Demon Slayer",
+    "volumeId": "demon-slayer-1-2016",
+    "volumeNumber": 1,
+    "cover": "Mangás/Demon%20Slayer/Demon%20Slayer%20%231.png",
+    "pageUrl": "Mangás/Demon%20Slayer/demon-slayer-1-2016.html",
+    "displayTitle": "Demon Slayer / Volume 1"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-1-1997",
+    "volumeNumber": 1,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%231.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-1-1997.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 1"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-2-1997",
+    "volumeNumber": 2,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%232.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-2-1997.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 2"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-3-1997",
+    "volumeNumber": 3,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%233.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-3-1997.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 3"
+  }
+]

@@ -252,6 +252,8 @@ function sidebarSection() {
     return "pesquisar";
   }
 
+  if (path.endsWith("/minha-loja.html")) return "loja";
+
   return "inicio";
 }
 
@@ -272,7 +274,8 @@ function renderSharedSidebar() {
     { label: "HOME", section: "inicio", href: `${root}index.html` },
     { label: "Mangás", section: "universos", href: `${root}Universos/universos.html` },
     { label: "Pesquisar", section: "pesquisar", href: `${root}pesquisar.html` },
-    { label: "Ranking de Usuários", section: "ranking", href: `${root}ranking.html` }
+    { label: "Ranking de Usuários", section: "ranking", href: `${root}ranking.html` },
+    { label: "Minha Loja", section: "loja", href: `${root}minha-loja.html` }
   ];
   const navLinksMarkup = navItems
     .map((item) => {

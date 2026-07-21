@@ -1260,3 +1260,19 @@ export const catalogo = {
 };
 
 export const comics = Object.fromEntries(catalogo.hqs.map((hq) => [hq.id, hq]));
+
+// Fonte oficial compartilhada pelo site e pelo jogo. Qualquer HQ adicionada ao
+// acervo entra automaticamente nas caixas e na coleção.
+export const catalogoVolumes = catalogo.hqs.map((hq) => {
+  const match = String(hq.title || hq.shortTitle || "").match(/^(.*?)\s*\/\s*Volume\s+(\d+)/i);
+  const volumeNumber = Number(match?.[2]);
+  return {
+    mangaId: String(hq.series || match?.[1] || hq.universe || "manga").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""),
+    mangaTitle: hq.series || match?.[1] || hq.universe,
+    volumeId: hq.id,
+    volumeNumber,
+    cover: hq.cover,
+    pageUrl: hq.href,
+    displayTitle: hq.shortTitle || hq.title
+  };
+}).filter((volume) => volume.volumeId && volume.mangaTitle && Number.isInteger(volume.volumeNumber) && volume.volumeNumber > 0 && volume.cover);
