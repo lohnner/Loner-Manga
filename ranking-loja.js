@@ -1,1 +1,31 @@
-import {firebaseConfig} from "./firebase-config.js";const [a,d]=await Promise.all([import("https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js"),import("https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js")]);const app=a.getApps().length?a.getApp():a.initializeApp(firebaseConfig),db=d.getFirestore(app),box=document.querySelector("#gameRankingContent"),general=document.querySelector("#rankingPage");let shops=[];const esc=s=>String(s||"").replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));function render(type){document.querySelectorAll("[data-rank]").forEach(b=>b.classList.toggle("active",b.dataset.rank===type));general.hidden=type!=="general";box.hidden=type==="general";if(type==="general")return;const field=type==="lm"?"lm":"collectionDistinctCount",unit=type==="lm"?"LM":"pontos",title=type==="lm"?"Mais LM":"Maior Coleção";const list=[...shops].sort((x,y)=>(y[field]||0)-(x[field]||0));box.innerHTML=`<div class="ranking-board"><div class="ranking-header"><h2>${title}</h2></div><div class="ranking-list">${list.map((s,i)=>`<div class="ranking-row"><span class="ranking-position">#${i+1}</span><span class="ranking-user"><strong>${esc(s.ownerDisplayName||"Leitor Loner")}</strong><small>${esc(s.shopName)} · ${s[field]||0} ${unit}</small></span></div>`).join("")||"<p>Nenhuma loja criada ainda.</p>"}</div></div>`}document.querySelector("#gameRankings").onclick=e=>{const b=e.target.closest("[data-rank]");if(b)render(b.dataset.rank)};d.onSnapshot(d.collection(db,"shops"),s=>{shops=s.docs.map(x=>x.data());const active=document.querySelector("[data-rank].active")?.dataset.rank||"general";render(active)});
+import { firebaseConfig } from "./firebase-config.js";
+
+const [appSdk, dbSdk] = await Promise.all([
+  import("https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js"),
+  import("https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js")
+]);
+const app = appSdk.getApps().length ? appSdk.getApp() : appSdk.initializeApp(firebaseConfig);
+const db = dbSdk.getFirestore(app);
+const box = document.querySelector("#gameRankingContent");
+const general = document.querySelector("#rankingPage");
+const defaultAvatar = "Avatar/homemaranha.png";
+let shops = [], profiles = new Map();
+const esc = (value = "") => String(value).replace(/[&<>]/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[char]));
+const imageUrl = path => new URL(path || defaultAvatar, new URL("./", location.href)).href;
+
+function render(type) {
+  document.querySelectorAll("[data-rank]").forEach(button => button.classList.toggle("active", button.dataset.rank === type));
+  general.hidden = type !== "general";
+  box.hidden = type === "general";
+  if (type === "general") return;
+  const field = type === "lm" ? "lm" : "collectionDistinctCount";
+  const unit = type === "lm" ? "LM" : "pontos";
+  const title = type === "lm" ? "Mais LM" : "Maior Coleção";
+  const list = [...shops].sort((a, b) => (b[field] || 0) - (a[field] || 0));
+  box.innerHTML = `<div class="ranking-board"><div class="ranking-header"><h2>${title}</h2></div><div class="ranking-list">${list.map((shop, index) => { const profile = profiles.get(shop.ownerUid) || {}; const name = profile.nick || shop.ownerDisplayName || "Leitor Loner"; return `<a class="ranking-row${index < 3 ? " top-rank" : ""}" href="perfil.html?uid=${encodeURIComponent(shop.ownerUid)}"><span class="ranking-position">#${index + 1}</span><img src="${imageUrl(profile.avatarPath)}" alt="Avatar de ${esc(name)}"><span class="ranking-user"><strong>${esc(name)}</strong><small>${esc(shop.shopName)} · ${shop[field] || 0} ${unit}</small></span></a>`; }).join("") || "<p>Nenhuma loja criada ainda.</p>"}</div></div>`;
+}
+
+document.querySelector("#gameRankings").onclick = event => { const button = event.target.closest("[data-rank]"); if (button) render(button.dataset.rank); };
+const rerender = () => render(document.querySelector("[data-rank].active")?.dataset.rank || "general");
+dbSdk.onSnapshot(dbSdk.collection(db, "shops"), snapshot => { shops = snapshot.docs.map(doc => doc.data()); rerender(); });
+dbSdk.onSnapshot(dbSdk.collection(db, "users"), snapshot => { profiles = new Map(snapshot.docs.map(doc => [doc.id, doc.data()])); rerender(); });
