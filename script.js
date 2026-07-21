@@ -2936,7 +2936,36 @@ function renderBleachVolumes() {
   }).join("");
 }
 
+function createBrasiliaClock() {
+  if (document.querySelector(".brasilia-clock")) return;
+  const clock = document.createElement("time");
+  clock.className = "brasilia-clock";
+  clock.setAttribute("aria-label", "Data e horário de Brasília");
+  document.body.append(clock);
+
+  const formatter = new Intl.DateTimeFormat("pt-BR", {
+    timeZone: "America/Sao_Paulo",
+    weekday: "short",
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false
+  });
+
+  const updateClock = () => {
+    const now = new Date();
+    clock.dateTime = now.toISOString();
+    clock.innerHTML = `<span>Horário de Brasília</span><strong>${formatter.format(now)}</strong>`;
+  };
+  updateClock();
+  window.setInterval(updateClock, 1000);
+}
+
 normalizeAuthForms();
+createBrasiliaClock();
 renderBleachVolumes();
 renderHomeRecentHqs();
 renderCharacterIndex();
