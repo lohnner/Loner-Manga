@@ -12,7 +12,7 @@ const app = appSdk.getApps().length ? appSdk.getApp() : appSdk.initializeApp(fir
 const auth = authSdk.getAuth(app), db = dbSdk.getFirestore(app);
 const gate = document.querySelector("#storeGate"), storeApp = document.querySelector("#storeApp"), panels = document.querySelector("#storePanels"), notice = document.querySelector("#storeNotice"), dialog = document.querySelector("#storeDialog");
 let user, shop, inventory = [], boxes = [], npcItems = [], collectionItems = [], notifications = [], listings = [], publicShops = [], busy = false, activeTab = "boxes", serverOffset = 0;
-let gameService = null;
+let gameService = null, npcShopOpen = false;
 const unsubscribers = [];
 
 const esc = (value="") => String(value).replace(/[&<>'"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[c]));
@@ -64,7 +64,26 @@ function cleanupOpenedBoxes(){
   if(!pending.length)return;
   panels.querySelector(".store-panel")?.insertAdjacentHTML("beforeend",`<section class="pending-rewards"><h2>Recompensas pendentes</h2><p>Libere espaço no inventário para receber estes resultados já sorteados.</p><div class="store-grid">${pending.map(box=>`<article class="box-card"><h3>${esc(GAME_CONFIG.boxes[box.type]?.label||"Caixa")}</h3><p>${box.rewards?.length||0} exemplares aguardando.</p><button data-act="claimBox" data-id="${box.id}">Receber recompensas</button></article>`).join("")}</div></section>`);
 }
+function renderNpcSessionControls(){
+  if(activeTab!=="npc"||!shop)return;
+  const heading=panels.querySelector(".panel-heading");
+  if(!heading)return;
+  const npcNext=tsMillis(shop.nextNpcSaleAt),npcRemaining=Math.max(0,npcNext-Date.now());
+  const status=!npcItems.length
+    ? "Envie itens do inventário para começar."
+    : npcShopOpen
+      ? `Loja aberta · próxima venda em <span class="cooldown" data-npc-cooldown="${npcNext}">${formatDuration(npcRemaining)}</span>.`
+      : "A loja está fechada. Clique em Abrir Loja para iniciar as vendas automáticas.";
+  heading.querySelector("p").innerHTML=status;
+  const controls=heading.querySelector(":scope > button")?.parentElement===heading
+    ? heading.querySelector(":scope > button")
+    : null;
+  if(controls&&!heading.querySelector('[data-act="openNpcShop"]')){
+    controls.insertAdjacentHTML("beforebegin",`<button class="button primary" data-act="openNpcShop" ${busy||npcShopOpen||!npcItems.length?"disabled":""}>${npcShopOpen?"Loja aberta":"Abrir Loja"}</button>`);
+  }
+}
 function render(){
+  queueMicrotask(renderNpcSessionControls);
   if(!user){gate.innerHTML="<h1>Minha Loja</h1><p>Entre na sua conta pela barra lateral para jogar.</p>";gate.hidden=false;storeApp.hidden=true;return}
   if(!shop){gate.innerHTML=`<h1>Crie sua loja</h1><p>Escolha um nome entre 3 e 24 caracteres.</p><form id="createShopForm"><label for="newShopName">Nome da loja</label><input id="newShopName" minlength="3" maxlength="24" required><button class="button primary">Criar loja com 200 LM</button></form>`;gate.hidden=false;storeApp.hidden=true;return}
   gate.hidden=true;storeApp.hidden=false;stats();document.querySelectorAll("[data-tab]").forEach(b=>b.classList.toggle("active",b.dataset.tab===activeTab));renderPanel();cleanupOpenedBoxes();
@@ -73,9 +92,10 @@ function formatDuration(ms){const total=Math.ceil(ms/1000);return `${String(Math
 function showRewards(rewards,title="Resultado da caixa"){document.querySelector("#dialogContent").innerHTML=`<h2>${title}</h2><div class="store-grid reward-grid">${rewards.map((x,i)=>itemCard(x,"reward").replace('class="item-card','style="animation-delay:'+i*.15+'s" class="item-card')).join("")}</div>`;dialog.showModal();}
 async function handleClick(e){const el=e.target.closest("[data-act]");if(!el)return;const {act,id,type}=el.dataset;if(act==="buyBox")await action("buyBox",{type});if(act==="openBox"){const r=await action("openBox",{boxId:id});if(r?.rewards)showRewards(r.rewards)}if(act==="claimBox")await action("claimBox",{boxId:id});if(act==="toNpc")await action("moveToNpc",{copyId:id});if(act==="sellNpc")await action("sellNpc",{copyIds:[id]});if(act==="sellAllNpc")await action("sellNpc",{copyIds:npcItems.map(x=>x.copyId||x.id)});if(act==="discard"&&confirm("Descartar definitivamente este exemplar?"))await action("discardItem",{copyId:id});if(act==="collect")await action("moveToCollection",{copyId:id});if(act==="list"){const price=Number(prompt(`Preço inteiro em LM (máximo ${GAME_CONFIG.currency.maxSafePrice}):`));if(Number.isSafeInteger(price)&&price>0&&price<=GAME_CONFIG.currency.maxSafePrice)await action("createListing",{copyId:id,price});else message("Informe um preço inteiro válido.","error")}if(act==="cancelListing")await action("cancelListing",{listingId:id});if(act==="buyListing")await action("buyListing",{listingId:id});if(act==="upgrade")await action("buyUpgrade",{type});if(act==="visitShop"){const items=listings.filter(x=>x.sellerUid===id);document.querySelector("#dialogContent").innerHTML=`<h2>${esc(publicShops.find(x=>x.ownerUid===id)?.shopName||"Loja")}</h2><div class="store-grid">${items.map(x=>itemCard(x,"listing")).join("")||"<p>Esta loja não tem anúncios.</p>"}</div>`;dialog.showModal()}if(act==="openCollection"){const vols=catalogoVolumes.filter(v=>v.mangaId===id).sort((a,b)=>a.volumeNumber-b.volumeNumber),owned=new Map(collectionItems.map(x=>[x.volumeId,x]));document.querySelector("#dialogContent").innerHTML=`<h2>${esc(vols[0]?.mangaTitle)}</h2><div class="store-grid">${vols.map(v=>{const o=owned.get(v.volumeId);return `<article class="item-card"><img class="collection-cover ${o?"":"locked"}" src="${coverUrl(v.cover)}" alt="Capa volume ${v.volumeNumber}"><div class="item-body"><h3>Volume ${v.volumeNumber}</h3><strong>Possuídos: ${o?.quantity||0}</strong>${o?`<button data-act="removeCollection" data-id="${v.volumeId}">Retirar uma cópia</button>`:""}</div></article>`}).join("")}</div>`;dialog.showModal()}if(act==="removeCollection")await action("removeFromCollection",{volumeId:id});}
 document.addEventListener("click",handleClick);document.querySelector("[data-close-dialog]").onclick=()=>dialog.close();document.querySelector(".store-tabs").onclick=e=>{const b=e.target.closest("[data-tab]");if(b){activeTab=b.dataset.tab;render()}};document.addEventListener("input",e=>{if(e.target.id==="shopSearch")document.querySelector("#shopList").innerHTML=shopRows(e.target.value)});document.addEventListener("submit",async e=>{if(e.target.id!=="createShopForm")return;e.preventDefault();const shopName=document.querySelector("#newShopName").value.trim();if(shopName.length<3||shopName.length>24)return message("O nome deve ter entre 3 e 24 caracteres.","error");await action("createShop",{shopName})});setInterval(()=>{document.querySelectorAll("[data-cooldown]").forEach(x=>{const left=Math.max(0,Number(x.dataset.cooldown)-(Date.now()+serverOffset));x.textContent=left?`Disponível em ${formatDuration(left)}`:"Disponível agora";if(!left)render()})},1000);
+document.addEventListener("click",async event=>{if(!event.target.closest('[data-act="openNpcShop"]'))return;const result=await action("openNpcShop");if(result){npcShopOpen=true;render()}});
 document.addEventListener("click",event=>{if(!event.target.closest('[data-act="notifications"]'))return;document.querySelector("#dialogContent").innerHTML=`<h2>Vendas automáticas</h2><div class="notification-list">${notifications.map(n=>`<article class="notification-card"><img src="${coverUrl(n.cover)}" alt="Capa de ${esc(n.mangaTitle)}"><div><strong>${esc(n.mangaTitle)} — Volume ${n.volumeNumber}</strong><span class="condition condition-${esc(n.condition)}">${esc(condition(n.condition).label)}</span><p>Vendido por <strong>${n.value} LM</strong></p></div></article>`).join("")||"<p>Nenhuma venda automática registrada.</p>"}</div>`;dialog.showModal()});
 document.addEventListener("click",event=>{const action=event.target.closest("[data-act]")?.dataset.act;if(action)dialog.classList.toggle("collection-dialog",action==="openCollection")});
 document.querySelectorAll("[data-close-dialog]").forEach(button=>{button.onclick=null;button.addEventListener("click",()=>dialog.close())});
 setInterval(()=>{document.querySelectorAll("[data-npc-cooldown]").forEach(element=>{element.textContent=formatDuration(Math.max(0,Number(element.dataset.npcCooldown)-Date.now()))})},1000);
-setInterval(async()=>{if(!gameService||busy||!shop?.npcCount)return;try{const result=await gameService.processPendingNpcSales();if(result?.sold)message(result.message)}catch(error){console.error(error)}},15000);
-authSdk.onAuthStateChanged(auth,async current=>{user=current;if(!user){gameService=null;render();return}gameService=createClientGameService({db,sdk:dbSdk,user,catalog:catalogoVolumes});serverOffset=0;startWatchers();render();gameService.ensureNpcSchedule().then(()=>gameService.processPendingNpcSales()).then(result=>{if(result?.sold)message(result.message)}).catch(console.error)});
+setInterval(async()=>{if(!npcShopOpen||!gameService||busy||!shop?.npcCount)return;try{const itemCount=npcItems.length,result=await gameService.processPendingNpcSales();if(result?.sold)message(result.message);if(result?.count>=itemCount)npcShopOpen=false}catch(error){console.error(error)}},1000);
+authSdk.onAuthStateChanged(auth,current=>{npcShopOpen=false;user=current;if(!user){gameService=null;render();return}gameService=createClientGameService({db,sdk:dbSdk,user,catalog:catalogoVolumes});serverOffset=0;startWatchers();render()});
