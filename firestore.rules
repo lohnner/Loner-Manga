@@ -24,7 +24,20 @@ service cloud.firestore { match /databases/{database}/documents {
     allow update: if signedIn() && validShop(uid); allow delete: if false;
     match /inventory/{id} { allow read,write: if owner(uid); }
     match /boxes/{id} { allow read,write: if owner(uid); }
-    match /collectionVolumes/{id} { allow read: if true; allow write: if owner(uid); }
+    match /collectionVolumes/{id} {
+      allow read: if true;
+      allow create: if owner(uid)
+        && request.resource.data.quantity == 1
+        && request.resource.data.condition in ['lacrado', 'novo', 'seminovo', 'usado', 'desgastado', 'danificado'];
+      // Permite somente reduzir duplicatas antigas; novas entradas sempre nascem com uma cópia.
+      allow update: if owner(uid)
+        && resource.data.quantity > 1
+        && request.resource.data.quantity == resource.data.quantity - 1
+        && request.resource.data.collectionId == resource.data.collectionId
+        && request.resource.data.volumeId == resource.data.volumeId
+        && request.resource.data.condition == resource.data.condition;
+      allow delete: if owner(uid);
+    }
   }
   match /marketListings/{id} {
     allow read: if true;
