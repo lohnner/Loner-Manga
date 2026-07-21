@@ -1257,7 +1257,7 @@ function renderSignedIn(profile, options = {}) {
           <span style="width: ${progress.percent}%"></span>
         </div>
         <small>${progress.current} / ${progress.next} XP</small>
-        <small><strong id="sidebarLm">—</strong> LM · <strong id="sidebarCollection">—</strong> volumes na coleção</small>
+        <small><strong id="sidebarLm">—</strong> LM · <strong id="sidebarCollection">—</strong> pontos da coleção</small>
       </div>
     </div>
     <div class="profile-actions">
