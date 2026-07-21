@@ -30,10 +30,16 @@
 .reward-box-body,.reward-box-lid{position:absolute;left:0;width:100%;box-sizing:border-box;border:4px solid #e2c9ff;background:linear-gradient(145deg,#8e52e8,#4d218f)}
 .reward-box-body{bottom:0;height:120px;display:grid;place-items:center;border-radius:12px 12px 22px 22px;color:#fff;font-size:2.6rem;font-weight:1000;letter-spacing:.08em}
 .reward-box-lid{top:18px;height:48px;border-radius:14px;transform-origin:10% 100%;animation:rewardLidOpen .55s 1s cubic-bezier(.2,.8,.2,1) forwards}
-.reward-result-heading{text-align:center;margin:0 auto 20px}.reward-result-heading h2{margin:.15em 0}.reward-result-heading p:last-child{color:#c7cfdd}
+.reward-result-heading{text-align:center;margin:0 auto 12px}.reward-result-heading h2{margin:.1em 0}.reward-result-heading p{margin:.2em 0}.reward-result-heading p:last-child{color:#c7cfdd}
 .reward-total{display:inline-block;color:#8ff0b8;text-shadow:0 0 14px rgba(74,222,128,.35)}
 .sealed-announcement{margin:0 auto 20px;padding:12px 18px;width:max-content;max-width:90%;border:1px solid #ffe17a;border-radius:999px;background:linear-gradient(90deg,rgba(108,74,0,.25),rgba(255,218,94,.22),rgba(108,74,0,.25));color:#fff0a6;font-weight:1000;letter-spacing:.1em;text-align:center;box-shadow:0 0 28px rgba(255,214,74,.25);animation:sealedAnnouncement .8s ease both}
-.reward-dialog .reward-grid{grid-template-columns:repeat(auto-fit,minmax(145px,1fr));align-items:start}
+.reward-dialog .reward-grid{grid-template-columns:repeat(auto-fit,minmax(112px,145px));justify-content:center;align-items:start;gap:10px}
+.reward-dialog .reward-card{width:100%;max-width:145px}
+.reward-dialog .reward-card img{aspect-ratio:300/430}
+.reward-dialog .reward-card .item-body{gap:4px;padding:7px}
+.reward-dialog .reward-card .condition{padding:5px 3px;font-size:.68rem}
+.reward-dialog .reward-card .item-body h3{font-size:.78rem;line-height:1.15}
+.reward-dialog .reward-card .item-body>span:not(.condition),.reward-dialog .reward-card .sale-price{font-size:.7rem;line-height:1.15}
 .reward-dialog .reward-grid .reward-card{opacity:0;transform:translateY(34px) scale(.9);animation:rewardCardReveal .55s calc(var(--reward-delay) + .08s) cubic-bezier(.2,.8,.2,1) forwards}
 .reward-dialog .reward-grid .reward-card.lacrado{z-index:4;animation:rewardSealedReveal .9s calc(var(--reward-delay) + .08s) cubic-bezier(.16,1,.3,1) forwards,rewardSealedGlow 1.2s calc(var(--reward-delay) + .7s) ease-in-out infinite alternate}
 .sale-price{display:block;padding:8px;border-radius:8px;background:#162536;color:#8ff0b8;text-align:center;font-size:.9rem}
