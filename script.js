@@ -174,8 +174,8 @@ const homeRecentSeries = [
     coverComicId: "yu-gi-oh-1-1997"
   },
   {
-    seriesId: "fairy-tail-2006",
-    coverComicId: "fairy-tail-1-2006"
+    seriesId: "jujutsu-kaisen-2018",
+    coverComicId: "jujutsu-kaisen-1-2018"
   },
   {
     seriesId: "naruto-1999",
@@ -197,6 +197,7 @@ let currentInteraction = {};
 let interactionUnsubscribe = null;
 let readersUnsubscribe = null;
 let sidebarShopUnsubscribe = null;
+let sidebarShopData = null;
 let volumeActions = null;
 let readersButton = null;
 let pendingAuthError = "";
@@ -1222,6 +1223,7 @@ function renderSignedOut() {
   accountPanel.innerHTML = "";
   if (sidebarShopUnsubscribe) sidebarShopUnsubscribe();
   sidebarShopUnsubscribe = null;
+  sidebarShopData = null;
   authBadge.textContent = "Visitante";
   authBadge.style.color = "var(--muted)";
 
@@ -1267,11 +1269,13 @@ function renderSignedIn(profile, options = {}) {
   `;
   if (sidebarShopUnsubscribe) sidebarShopUnsubscribe();
   sidebarShopUnsubscribe = null;
+  sidebarShopData = null;
   if (firebaseServices && profile.uid) {
     sidebarShopUnsubscribe = firebaseServices.onSnapshot(
       firebaseServices.doc(firebaseServices.db, "shops", profile.uid),
       (snapshot) => {
         const shop = snapshot.data() || {};
+        sidebarShopData = snapshot.exists() ? shop : null;
         const lm = document.querySelector("#sidebarLm");
         const collection = document.querySelector("#sidebarCollection");
         if (lm) lm.textContent = formatNumber(shop.lm || 0);
@@ -3031,8 +3035,23 @@ function createBrasiliaClock() {
 
   const updateClock = () => {
     const now = new Date();
+    const hourParts = new Intl.DateTimeFormat("en-CA", {
+      timeZone: "America/Sao_Paulo",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      hourCycle: "h23"
+    }).formatToParts(now);
+    const hourValues = Object.fromEntries(hourParts.map((part) => [part.type, part.value]));
+    const hourKey = `${hourValues.year}-${hourValues.month}-${hourValues.day}T${hourValues.hour}`;
+    const freeBoxAvailable = Boolean(
+      currentUser &&
+      sidebarShopData &&
+      (sidebarShopData.boxStockHour !== hourKey || Number(sidebarShopData.boxHourlyStock?.free ?? 1) > 0)
+    );
     clock.dateTime = now.toISOString();
-    clock.innerHTML = `<span>Horário de Brasília</span><strong>${formatter.format(now)}</strong>`;
+    clock.innerHTML = `${freeBoxAvailable ? '<span class="brasilia-free-box-alert">Caixa Gratuita Disponível</span>' : ""}<span class="brasilia-clock-label">Horário de Brasília</span><strong>${formatter.format(now)}</strong>`;
   };
   updateClock();
   window.setInterval(updateClock, 1000);
