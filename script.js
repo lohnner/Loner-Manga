@@ -835,7 +835,9 @@ function currentSeriesFavorite() {
 
   if (!series) return null;
 
-  const firstVolume = Object.values(comics).find((comic) => comic.series === series.title);
+  const firstVolume = Object.values(comics).find(
+    (comic) => comic.series === series.title || comic.universe === series.title
+  );
   if (!firstVolume) return null;
 
   return {
