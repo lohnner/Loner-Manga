@@ -1296,15 +1296,6 @@
     "displayTitle": "Jujutsu Kaisen / Volume 30"
   },
   {
-    "mangaId": "demon-slayer",
-    "mangaTitle": "Demon Slayer",
-    "volumeId": "demon-slayer-1-2016",
-    "volumeNumber": 1,
-    "cover": "Mangás/Demon%20Slayer/Demon%20Slayer%20%231.png",
-    "pageUrl": "Mangás/Demon%20Slayer/demon-slayer-1-2016.html",
-    "displayTitle": "Demon Slayer / Volume 1"
-  },
-  {
     "mangaId": "yu-gi-oh",
     "mangaTitle": "Yu-Gi-Oh!",
     "volumeId": "yu-gi-oh-1-1997",
@@ -1330,6 +1321,213 @@
     "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%233.png",
     "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-3-1997.html",
     "displayTitle": "Yu-Gi-Oh! / Volume 3"
+  },
+  {
+    "mangaId": "demon-slayer",
+    "mangaTitle": "Demon Slayer",
+    "volumeId": "demon-slayer-1-2016",
+    "volumeNumber": 1,
+    "cover": "Mangás/Demon%20Slayer/Demon%20Slayer%20%231.png",
+    "pageUrl": "Mangás/Demon%20Slayer/demon-slayer-1-2016.html",
+    "displayTitle": "Demon Slayer / Volume 1"
+  },
+  {
+    "mangaId": "demon-slayer",
+    "mangaTitle": "Demon Slayer",
+    "volumeId": "demon-slayer-2-2016",
+    "volumeNumber": 2,
+    "cover": "Mangás/Demon%20Slayer/Demon%20Slayer%20%232.png",
+    "pageUrl": "Mangás/Demon%20Slayer/demon-slayer-2-2016.html",
+    "displayTitle": "Demon Slayer / Volume 2"
+  },
+  {
+    "mangaId": "demon-slayer",
+    "mangaTitle": "Demon Slayer",
+    "volumeId": "demon-slayer-3-2016",
+    "volumeNumber": 3,
+    "cover": "Mangás/Demon%20Slayer/Demon%20Slayer%20%233.png",
+    "pageUrl": "Mangás/Demon%20Slayer/demon-slayer-3-2016.html",
+    "displayTitle": "Demon Slayer / Volume 3"
+  },
+  {
+    "mangaId": "demon-slayer",
+    "mangaTitle": "Demon Slayer",
+    "volumeId": "demon-slayer-4-2016",
+    "volumeNumber": 4,
+    "cover": "Mangás/Demon%20Slayer/Demon%20Slayer%20%234.png",
+    "pageUrl": "Mangás/Demon%20Slayer/demon-slayer-4-2016.html",
+    "displayTitle": "Demon Slayer / Volume 4"
+  },
+  {
+    "mangaId": "demon-slayer",
+    "mangaTitle": "Demon Slayer",
+    "volumeId": "demon-slayer-5-2017",
+    "volumeNumber": 5,
+    "cover": "Mangás/Demon%20Slayer/Demon%20Slayer%20%235.png",
+    "pageUrl": "Mangás/Demon%20Slayer/demon-slayer-5-2017.html",
+    "displayTitle": "Demon Slayer / Volume 5"
+  },
+  {
+    "mangaId": "demon-slayer",
+    "mangaTitle": "Demon Slayer",
+    "volumeId": "demon-slayer-6-2017",
+    "volumeNumber": 6,
+    "cover": "Mangás/Demon%20Slayer/Demon%20Slayer%20%236.png",
+    "pageUrl": "Mangás/Demon%20Slayer/demon-slayer-6-2017.html",
+    "displayTitle": "Demon Slayer / Volume 6"
+  },
+  {
+    "mangaId": "demon-slayer",
+    "mangaTitle": "Demon Slayer",
+    "volumeId": "demon-slayer-7-2017",
+    "volumeNumber": 7,
+    "cover": "Mangás/Demon%20Slayer/Demon%20Slayer%20%237.png",
+    "pageUrl": "Mangás/Demon%20Slayer/demon-slayer-7-2017.html",
+    "displayTitle": "Demon Slayer / Volume 7"
+  },
+  {
+    "mangaId": "demon-slayer",
+    "mangaTitle": "Demon Slayer",
+    "volumeId": "demon-slayer-8-2017",
+    "volumeNumber": 8,
+    "cover": "Mangás/Demon%20Slayer/Demon%20Slayer%20%238.png",
+    "pageUrl": "Mangás/Demon%20Slayer/demon-slayer-8-2017.html",
+    "displayTitle": "Demon Slayer / Volume 8"
+  },
+  {
+    "mangaId": "demon-slayer",
+    "mangaTitle": "Demon Slayer",
+    "volumeId": "demon-slayer-9-2017",
+    "volumeNumber": 9,
+    "cover": "Mangás/Demon%20Slayer/Demon%20Slayer%20%239.png",
+    "pageUrl": "Mangás/Demon%20Slayer/demon-slayer-9-2017.html",
+    "displayTitle": "Demon Slayer / Volume 9"
+  },
+  {
+    "mangaId": "demon-slayer",
+    "mangaTitle": "Demon Slayer",
+    "volumeId": "demon-slayer-10-2018",
+    "volumeNumber": 10,
+    "cover": "Mangás/Demon%20Slayer/Demon%20Slayer%20%2310.png",
+    "pageUrl": "Mangás/Demon%20Slayer/demon-slayer-10-2018.html",
+    "displayTitle": "Demon Slayer / Volume 10"
+  },
+  {
+    "mangaId": "demon-slayer",
+    "mangaTitle": "Demon Slayer",
+    "volumeId": "demon-slayer-11-2018",
+    "volumeNumber": 11,
+    "cover": "Mangás/Demon%20Slayer/Demon%20Slayer%20%2311.png",
+    "pageUrl": "Mangás/Demon%20Slayer/demon-slayer-11-2018.html",
+    "displayTitle": "Demon Slayer / Volume 11"
+  },
+  {
+    "mangaId": "demon-slayer",
+    "mangaTitle": "Demon Slayer",
+    "volumeId": "demon-slayer-12-2018",
+    "volumeNumber": 12,
+    "cover": "Mangás/Demon%20Slayer/Demon%20Slayer%20%2312.png",
+    "pageUrl": "Mangás/Demon%20Slayer/demon-slayer-12-2018.html",
+    "displayTitle": "Demon Slayer / Volume 12"
+  },
+  {
+    "mangaId": "demon-slayer",
+    "mangaTitle": "Demon Slayer",
+    "volumeId": "demon-slayer-13-2018",
+    "volumeNumber": 13,
+    "cover": "Mangás/Demon%20Slayer/Demon%20Slayer%20%2313.png",
+    "pageUrl": "Mangás/Demon%20Slayer/demon-slayer-13-2018.html",
+    "displayTitle": "Demon Slayer / Volume 13"
+  },
+  {
+    "mangaId": "demon-slayer",
+    "mangaTitle": "Demon Slayer",
+    "volumeId": "demon-slayer-14-2019",
+    "volumeNumber": 14,
+    "cover": "Mangás/Demon%20Slayer/Demon%20Slayer%20%2314.png",
+    "pageUrl": "Mangás/Demon%20Slayer/demon-slayer-14-2019.html",
+    "displayTitle": "Demon Slayer / Volume 14"
+  },
+  {
+    "mangaId": "demon-slayer",
+    "mangaTitle": "Demon Slayer",
+    "volumeId": "demon-slayer-15-2019",
+    "volumeNumber": 15,
+    "cover": "Mangás/Demon%20Slayer/Demon%20Slayer%20%2315.png",
+    "pageUrl": "Mangás/Demon%20Slayer/demon-slayer-15-2019.html",
+    "displayTitle": "Demon Slayer / Volume 15"
+  },
+  {
+    "mangaId": "demon-slayer",
+    "mangaTitle": "Demon Slayer",
+    "volumeId": "demon-slayer-16-2019",
+    "volumeNumber": 16,
+    "cover": "Mangás/Demon%20Slayer/Demon%20Slayer%20%2316.png",
+    "pageUrl": "Mangás/Demon%20Slayer/demon-slayer-16-2019.html",
+    "displayTitle": "Demon Slayer / Volume 16"
+  },
+  {
+    "mangaId": "demon-slayer",
+    "mangaTitle": "Demon Slayer",
+    "volumeId": "demon-slayer-17-2019",
+    "volumeNumber": 17,
+    "cover": "Mangás/Demon%20Slayer/Demon%20Slayer%20%2317.png",
+    "pageUrl": "Mangás/Demon%20Slayer/demon-slayer-17-2019.html",
+    "displayTitle": "Demon Slayer / Volume 17"
+  },
+  {
+    "mangaId": "demon-slayer",
+    "mangaTitle": "Demon Slayer",
+    "volumeId": "demon-slayer-18-2019",
+    "volumeNumber": 18,
+    "cover": "Mangás/Demon%20Slayer/Demon%20Slayer%20%2318.png",
+    "pageUrl": "Mangás/Demon%20Slayer/demon-slayer-18-2019.html",
+    "displayTitle": "Demon Slayer / Volume 18"
+  },
+  {
+    "mangaId": "demon-slayer",
+    "mangaTitle": "Demon Slayer",
+    "volumeId": "demon-slayer-19-2020",
+    "volumeNumber": 19,
+    "cover": "Mangás/Demon%20Slayer/Demon%20Slayer%20%2319.png",
+    "pageUrl": "Mangás/Demon%20Slayer/demon-slayer-19-2020.html",
+    "displayTitle": "Demon Slayer / Volume 19"
+  },
+  {
+    "mangaId": "demon-slayer",
+    "mangaTitle": "Demon Slayer",
+    "volumeId": "demon-slayer-20-2020",
+    "volumeNumber": 20,
+    "cover": "Mangás/Demon%20Slayer/Demon%20Slayer%20%2320.png",
+    "pageUrl": "Mangás/Demon%20Slayer/demon-slayer-20-2020.html",
+    "displayTitle": "Demon Slayer / Volume 20"
+  },
+  {
+    "mangaId": "demon-slayer",
+    "mangaTitle": "Demon Slayer",
+    "volumeId": "demon-slayer-21-2020",
+    "volumeNumber": 21,
+    "cover": "Mangás/Demon%20Slayer/Demon%20Slayer%20%2321.png",
+    "pageUrl": "Mangás/Demon%20Slayer/demon-slayer-21-2020.html",
+    "displayTitle": "Demon Slayer / Volume 21"
+  },
+  {
+    "mangaId": "demon-slayer",
+    "mangaTitle": "Demon Slayer",
+    "volumeId": "demon-slayer-22-2020",
+    "volumeNumber": 22,
+    "cover": "Mangás/Demon%20Slayer/Demon%20Slayer%20%2322.png",
+    "pageUrl": "Mangás/Demon%20Slayer/demon-slayer-22-2020.html",
+    "displayTitle": "Demon Slayer / Volume 22"
+  },
+  {
+    "mangaId": "demon-slayer",
+    "mangaTitle": "Demon Slayer",
+    "volumeId": "demon-slayer-23-2020",
+    "volumeNumber": 23,
+    "cover": "Mangás/Demon%20Slayer/Demon%20Slayer%20%2323.png",
+    "pageUrl": "Mangás/Demon%20Slayer/demon-slayer-23-2020.html",
+    "displayTitle": "Demon Slayer / Volume 23"
   },
   {
     "mangaId": "death-note",
