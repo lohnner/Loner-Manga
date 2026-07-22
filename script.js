@@ -170,8 +170,8 @@ const articleContent = document.querySelector("#articleContent");
 const homeRecentHqs = document.querySelector("#homeRecentHqs");
 const homeRecentSeries = [
   {
-    seriesId: "yu-gi-oh-1996",
-    coverComicId: "yu-gi-oh-1-1997"
+    seriesId: "alien-headbutt-2026",
+    coverComicId: "alien-headbutt-1-2026"
   },
   {
     seriesId: "jujutsu-kaisen-2018",
@@ -2860,6 +2860,10 @@ function dataErrorMessage(error) {
 }
 
 const mangaArcsByPage = {
+  "alien-headbutt.html": {
+    id: "alienHeadbuttArcsDialog", title: "Alien Headbutt",
+    arcs: [["Invasão da ilha e batalha contra os alienígenas",1,16]]
+  },
   "monster.html": {
     id: "monsterArcsDialog", title: "Monster",
     arcs: [["O cirurgião e os gêmeos Liebert",1,16],["Kinderheim 511",17,32],["A perseguição a Tenma",33,50],["Munique e o Monstro sem Nome",51,77],["Praga e a Mansão das Rosas",78,104],["Memórias e reencontros",105,131],["Ruhenheim",132,162]]
