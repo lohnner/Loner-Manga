@@ -2869,6 +2869,26 @@ function dataErrorMessage(error) {
 }
 
 const mangaArcsByPage = {
+  "hajime-no-ippo.html": {
+    id: "hajimeNoIppoArcsDialog", title: "Hajime no Ippo",
+    arcs: [["Primeiros Dias",1,13],["Estreia",14,23],["Torneio dos Novatos: Primeira Fase",24,51],["Torneio dos Novatos: Finais",52,87],["Tigre de Naniwa",88,107],["Dois Reis Novatos",108,124],["Jolt Counter",125,131],["Torneio Classe A: Estrela da Velocidade",132,146],["Torneio Classe A: Presas Brancas",147,169],["Desafio pelo Trono",170,195],["Caminho de Volta",196,214],["Juventude Delinquente de Aoki e Kimura",215,222],["Treinamento na Montanha",223,238],["Lallapallooza",239,269],["Execução",270,289],["Primeiro Passo",290,314],["Cruz Sangrenta",315,325],["Revanche",326,340],["Prova de Poder",341,354],["Batalha de Hawk",355,399],["Pós-Guerra",400,414],["Guerras Submarinas",415,440],["Show Cômico",441,460],["Caçador de Dragões",461,502],["Um Ponto de Passagem",503,557],["Espírito de Erva Daninha",558,572],["Sob Cerco",573,592],["Carta Fantasma",593,624],["Costas do Pai",625,656],["Lâmina Enferrujada",657,672],["Caos",673,699],["Seiken",700,717],["Arranhão",718,741],["Zona de Velocidade",742,754],["O Vencedor Leva Tudo",755,790],["Relâmpago Vermelho",791,849],["A Segunda Vinda da Morte",850,855],["Na Selva",856,897],["Chronos",898,912],["Passo Cego",913,941],["Boxeador Destinado",942,981],["Lobo Orgulhoso",982,1009],["Rumo ao Mundo",1010,1072],["Batalha das Feras",1073,1121],["Buscando Alturas",1122,1173],["Dez Meses de Preparação",1174,1209],["Segundo Passo",1210,1269],["Sendō no México",1270,1275],["A Importância do Apoio",1276,1291],["Combate Mortal no México",1292,1316],["Keith Dragon",1317,1349],["Ceifador Rumo ao Mundo",1350,1375],["Alfa e Ômega",1376,1413],["Dia do Julgamento",1414,1483],["Rei contra Tigre",1484,"Em andamento"]]
+  },
+  "naruto.html": {
+    id: "narutoArcsDialog", title: "Naruto",
+    arcs: [["Prólogo — País das Ondas",1,33],["Exames Chūnin",34,115],["Destruição de Konoha",116,138],["Busca por Tsunade",139,171],["Missão de Recuperação de Sasuke",172,238],["Kakashi Gaiden",239,244],["Resgate do Kazekage",245,281],["Reconhecimento da Ponte Tenchi",282,310],["Supressão da Akatsuki",311,342],["Perseguição a Itachi",343,367],["Conto de Jiraiya, o Destemido",368,383],["Batalha Predestinada entre Irmãos",384,412],["Ataque de Pain",413,453],["Reunião dos Cinco Kage",454,483],["Quarta Guerra Ninja: Contagem Regressiva",484,515],["Quarta Guerra Ninja: Confronto",516,559],["Quarta Guerra Ninja: Clímax",560,639],["Nascimento do Jinchūriki do Dez-Caudas",640,677],["Ataque de Kaguya Ōtsutsuki",678,699],["Epílogo",700,700]]
+  },
+  "slam-dunk.html": {
+    id: "slamDunkArcsDialog", title: "Slam Dunk",
+    arcs: [["Formação da Shohoku",1,31],["Jogo-Treino contra Ryonan",32,50],["Retorno de Miyagi e Mitsui",51,71],["Eliminatórias de Kanagawa",72,103],["Shohoku contra Shoyo",104,131],["Shohoku contra Kainan",132,173],["Shohoku contra Ryonan",174,215],["Preparação para o Nacional",216,224],["Campeonato Nacional: Toyotama",225,247],["Campeonato Nacional: Sannoh",248,276]]
+  },
+  "kingdom.html": {
+    id: "kingdomArcsDialog", title: "Kingdom",
+    arcs: [["Rebelião de Sei Kyou",1,47],["Campanha de Keiyou",48,73],["Fuga de Zhao",74,81],["Plano de Assassinato",82,100],["Treinamento",101,107],["Batalha de Bayou",108,173],["Aliança",174,182],["Terceira Facção",183,188],["Campanha de Sanyou",189,243],["Consequências de Sanyou",244,256],["Invasão da Coalizão",257,356],["Vingança de Kyou Kai",357,365],["Conspiração na Corte",366,378],["Dragões de Fogo de Wei",379,401],["Estado de Ai",402,437],["Campanha de Koku You",438,484],["Trabalho dos Burocratas",485,495],["Invasão Ocidental de Zhao",496,642],["Crise de Zhao",643,647],["Guerra dos Três Estados",648,660],["Conflito Shiyuu",661,669],["Batalha de Eikyuu",670,700],["Retaliação de Zhao",701,754],["Natureza da Humanidade",755,768],["Campanha de Hango",769,799],["Três Pilares",800,812],["Conquista de Han",813,844],["Grande Guerra Qin–Zhao",845,"Em andamento"]]
+  },
+  "yu-gi-oh.html": {
+    id: "yugiohArcsDialog", title: "Yu-Gi-Oh!",
+    arcs: [["Escola",1,25],["Death-T",26,40],["Monster World",41,59],["Reino dos Duelistas",60,133],["Dungeon Dice Monsters",134,145],["Cidade das Batalhas",146,201],["Finais do Torneio",202,278],["Memórias do Faraó",279,328],["Batalha Cerimonial",329,343]]
+  },
   "dragon-ball.html": {
     id: "dragonBallArcsDialog",
     title: "Dragon Ball",

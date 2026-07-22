@@ -1,0 +1,382 @@
+[
+  {
+    "number": 1,
+    "releaseDate": "1997-03-04",
+    "chapters": [
+      1,
+      7
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088723112/1200/9784088723112.jpg"
+  },
+  {
+    "number": 2,
+    "releaseDate": "1997-05-01",
+    "chapters": [
+      8,
+      15
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088723129/1200/9784088723129.jpg"
+  },
+  {
+    "number": 3,
+    "releaseDate": "1997-07-04",
+    "chapters": [
+      16,
+      24
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088723136/1200/9784088723136.jpg"
+  },
+  {
+    "number": 4,
+    "releaseDate": "1997-09-04",
+    "chapters": [
+      25,
+      33
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088723143/1200/9784088723143.jpg"
+  },
+  {
+    "number": 5,
+    "releaseDate": "1997-11-04",
+    "chapters": [
+      34,
+      42
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088723150/1200/9784088723150.jpg"
+  },
+  {
+    "number": 6,
+    "releaseDate": "1998-01-09",
+    "chapters": [
+      43,
+      51
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088725055/1200/9784088725055.jpg"
+  },
+  {
+    "number": 7,
+    "releaseDate": "1998-03-04",
+    "chapters": [
+      52,
+      60
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088725307/1200/9784088725307.jpg"
+  },
+  {
+    "number": 8,
+    "releaseDate": "1998-05-01",
+    "chapters": [
+      61,
+      69
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088725673/1200/9784088725673.jpg"
+  },
+  {
+    "number": 9,
+    "releaseDate": "1998-08-04",
+    "chapters": [
+      70,
+      78
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088725918/1200/9784088725918.jpg"
+  },
+  {
+    "number": 10,
+    "releaseDate": "1998-10-02",
+    "chapters": [
+      79,
+      87
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088726168/1200/9784088726168.jpg"
+  },
+  {
+    "number": 11,
+    "releaseDate": "1999-01-08",
+    "chapters": [
+      88,
+      96
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088726618/1200/9784088726618.jpg"
+  },
+  {
+    "number": 12,
+    "releaseDate": "1999-03-04",
+    "chapters": [
+      97,
+      105
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088726878/1200/9784088726878.jpg"
+  },
+  {
+    "number": 13,
+    "releaseDate": "1999-04-30",
+    "chapters": [
+      106,
+      114
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088727158/1200/9784088727158.jpg"
+  },
+  {
+    "number": 14,
+    "releaseDate": "1999-07-02",
+    "chapters": [
+      115,
+      123
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088727332/1200/9784088727332.jpg"
+  },
+  {
+    "number": 15,
+    "releaseDate": "1999-10-04",
+    "chapters": [
+      124,
+      133
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088727721/1200/9784088727721.jpg"
+  },
+  {
+    "number": 16,
+    "releaseDate": "1999-12-22",
+    "chapters": [
+      134,
+      142
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088728070/1200/9784088728070.jpg"
+  },
+  {
+    "number": 17,
+    "releaseDate": "2000-03-03",
+    "chapters": [
+      143,
+      151
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088728353/1200/9784088728353.jpg"
+  },
+  {
+    "number": 18,
+    "releaseDate": "2000-04-28",
+    "chapters": [
+      152,
+      160
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088728605/1200/9784088728605.jpg"
+  },
+  {
+    "number": 19,
+    "releaseDate": "2000-07-04",
+    "chapters": [
+      161,
+      169
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088728841/1200/9784088728841.jpg"
+  },
+  {
+    "number": 20,
+    "releaseDate": "2000-09-04",
+    "chapters": [
+      170,
+      178
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088730080/1200/9784088730080.jpg"
+  },
+  {
+    "number": 21,
+    "releaseDate": "2000-11-02",
+    "chapters": [
+      179,
+      187
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088730356/1200/9784088730356.jpg"
+  },
+  {
+    "number": 22,
+    "releaseDate": "2000-12-22",
+    "chapters": [
+      188,
+      196
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088730608/1200/9784088730608.jpg"
+  },
+  {
+    "number": 23,
+    "releaseDate": "2001-04-04",
+    "chapters": [
+      197,
+      205
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088730998/1200/9784088730998.jpg"
+  },
+  {
+    "number": 24,
+    "releaseDate": "2001-06-04",
+    "chapters": [
+      206,
+      214
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088731230/1200/9784088731230.jpg"
+  },
+  {
+    "number": 25,
+    "releaseDate": "2001-09-04",
+    "chapters": [
+      215,
+      223
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088731575/1200/9784088731575.jpg"
+  },
+  {
+    "number": 26,
+    "releaseDate": "2001-11-02",
+    "chapters": [
+      224,
+      232
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088731827/1200/9784088731827.jpg"
+  },
+  {
+    "number": 27,
+    "releaseDate": "2002-03-04",
+    "chapters": [
+      233,
+      241
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088732312/1200/9784088732312.jpg"
+  },
+  {
+    "number": 28,
+    "releaseDate": "2002-05-01",
+    "chapters": [
+      242,
+      250
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088732572/1200/9784088732572.jpg"
+  },
+  {
+    "number": 29,
+    "releaseDate": "2002-08-02",
+    "chapters": [
+      251,
+      259
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088732978/1200/9784088732978.jpg"
+  },
+  {
+    "number": 30,
+    "releaseDate": "2002-10-04",
+    "chapters": [
+      260,
+      268
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088733302/1200/9784088733302.jpg"
+  },
+  {
+    "number": 31,
+    "releaseDate": "2002-12-04",
+    "chapters": [
+      269,
+      278
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088733470/1200/9784088733470.jpg"
+  },
+  {
+    "number": 32,
+    "releaseDate": "2003-03-04",
+    "chapters": [
+      279,
+      287
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088733906/1200/9784088733906.jpg"
+  },
+  {
+    "number": 33,
+    "releaseDate": "2003-05-01",
+    "chapters": [
+      288,
+      296
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088734194/1200/9784088734194.jpg"
+  },
+  {
+    "number": 34,
+    "releaseDate": "2003-08-04",
+    "chapters": [
+      297,
+      305
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088734927/1200/9784088734927.jpg"
+  },
+  {
+    "number": 35,
+    "releaseDate": "2003-11-04",
+    "chapters": [
+      306,
+      314
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088735221/1200/9784088735221.jpg"
+  },
+  {
+    "number": 36,
+    "releaseDate": "2004-02-04",
+    "chapters": [
+      315,
+      323
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088735603/1200/9784088735603.jpg"
+  },
+  {
+    "number": 37,
+    "releaseDate": "2004-04-30",
+    "chapters": [
+      324,
+      333
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088735924/1200/9784088735924.jpg"
+  },
+  {
+    "number": 38,
+    "releaseDate": "2004-06-04",
+    "chapters": [
+      334,
+      343
+    ],
+    "pageCount": 192,
+    "coverSource": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784088736266/1200/9784088736266.jpg"
+  }
+]
