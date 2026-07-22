@@ -2869,6 +2869,10 @@ function dataErrorMessage(error) {
 }
 
 const mangaArcsByPage = {
+  "jojo.html": {
+    id: "jojoArcsDialog", title: "JoJo no Kimyou na Bouken",
+    arcs: [["Parte 1: Phantom Blood",1,44],["Parte 2: Battle Tendency",1,69],["Parte 3: Stardust Crusaders",1,152],["Parte 4: Diamond is Unbreakable",1,174],["Parte 5: Golden Wind",1,155],["Parte 6: Stone Ocean",1,158],["Parte 7: Steel Ball Run",1,95],["Parte 8: JoJolion",1,110],["Parte 9: The JOJOLands",1,"Em andamento"]]
+  },
   "my-hero-academia.html": {
     id: "myHeroAcademiaArcsDialog", title: "My Hero Academia",
     arcs: [["Entrada na U.A.",1,21],["Festival Esportivo",22,44],["Assassino de Heróis",45,59],["Exames Finais e Kamino",60,97],["Licença Provisória",98,121],["Shie Hassaikai",122,162],["Festival Cultural",163,183],["Treinamento Conjunto",184,217],["Exército de Libertação",218,240],["Guerra de Libertação Paranormal",241,306],["Herói Sombrio",307,328],["Preparação para a Guerra Final",329,342],["Guerra Final",343,422],["Epílogo",423,431]]
