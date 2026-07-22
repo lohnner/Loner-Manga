@@ -2871,6 +2871,10 @@ function dataErrorMessage(error) {
 }
 
 const mangaArcsByPage = {
+  "monster.html": {
+    id: "monsterArcsDialog", title: "Monster",
+    arcs: [["O cirurgião e os gêmeos Liebert",1,16],["Kinderheim 511",17,32],["A perseguição a Tenma",33,50],["Munique e o Monstro sem Nome",51,77],["Praga e a Mansão das Rosas",78,104],["Memórias e reencontros",105,131],["Ruhenheim",132,162]]
+  },
   "jojo.html": {
     id: "jojoArcsDialog", title: "JoJo no Kimyou na Bouken",
     arcs: [["Parte 1: Phantom Blood",1,44],["Parte 2: Battle Tendency",1,69],["Parte 3: Stardust Crusaders",1,152],["Parte 4: Diamond is Unbreakable",1,174],["Parte 5: Golden Wind",1,155],["Parte 6: Stone Ocean",1,158],["Parte 7: Steel Ball Run",1,95],["Parte 8: JoJolion",1,110],["Parte 9: The JOJOLands",1,"Em andamento"]]

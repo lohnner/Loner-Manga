@@ -1,0 +1,20 @@
+[
+  {"number":1,"title":"Herr Doctor Tenma","releaseDate":"1995-06-30","chapters":[1,8],"isbn":"1591166411","pageCount":216},
+  {"number":2,"title":"Surprise Party","releaseDate":"1995-09-30","chapters":[9,16],"isbn":"1421501120","pageCount":216},
+  {"number":3,"title":"Kinderheim 511","releaseDate":"1996-04-27","chapters":[17,24],"isbn":"1421502550","pageCount":216},
+  {"number":4,"title":"Ayse's Friend","releaseDate":"1996-08-30","chapters":[25,32],"isbn":"1421503859","pageCount":216},
+  {"number":5,"title":"After the Carnival","releaseDate":"1997-04-02","chapters":[33,41],"isbn":"1421504987","pageCount":216},
+  {"number":6,"title":"The Secret Woods","releaseDate":"1997-05-30","chapters":[42,50],"isbn":"1421504995","pageCount":216},
+  {"number":7,"title":"Richard","releaseDate":"1997-10-30","chapters":[51,59],"isbn":"1421505002","pageCount":216},
+  {"number":8,"title":"My Nameless Hero","releaseDate":"1998-02-26","chapters":[60,68],"isbn":"1421505010","pageCount":216},
+  {"number":9,"title":"A Nameless Monster","releaseDate":"1998-05-30","chapters":[69,77],"isbn":"1421509687","pageCount":216},
+  {"number":10,"title":"Picnic","releaseDate":"1998-10-30","chapters":[78,86],"isbn":"1421509695","pageCount":216},
+  {"number":11,"title":"The Dead Angle","releaseDate":"1999-03-30","chapters":[87,95],"isbn":"1421509709","pageCount":216},
+  {"number":12,"title":"The Rose Mansion","releaseDate":"1999-06-30","chapters":[96,104],"isbn":"1421509717","pageCount":216},
+  {"number":13,"title":"Escape","releaseDate":"2000-02-29","chapters":[105,113],"isbn":"1421515326","pageCount":216},
+  {"number":14,"title":"That Night","releaseDate":"2000-06-30","chapters":[114,122],"isbn":"1421518368","pageCount":216},
+  {"number":15,"title":"The Door to Memories","releaseDate":"2000-10-30","chapters":[123,131],"isbn":"1421518376","pageCount":216},
+  {"number":16,"title":"Welcome Home","releaseDate":"2001-02-28","chapters":[132,141],"isbn":"1421518384","pageCount":232},
+  {"number":17,"title":"I'm Home","releaseDate":"2001-08-30","chapters":[142,151],"isbn":"1421518392","pageCount":232},
+  {"number":18,"title":"Scenery of the Doomsday","releaseDate":"2002-02-28","chapters":[152,162],"isbn":"1421518406","pageCount":248}
+]
