@@ -2860,6 +2860,10 @@ function dataErrorMessage(error) {
 }
 
 const mangaArcsByPage = {
+  "dogsred.html": {
+    id: "dogsredArcsDialog", title: "Dogsred",
+    arcs: [["Do gelo artístico ao hóquei",1,7],["Entrada no colégio Oinokami",8,24],["Formação dos novatos e Sekka",25,40],["Preparação para o campeonato",41,48],["Campeonato colegial",49,"Em andamento"]]
+  },
   "alien-headbutt.html": {
     id: "alienHeadbuttArcsDialog", title: "Alien Headbutt",
     arcs: [["Invasão da ilha e batalha contra os alienígenas",1,16]]

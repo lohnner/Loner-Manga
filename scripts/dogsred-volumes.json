@@ -1,0 +1,10 @@
+[
+  {"number":1,"releaseDate":"2024-01-18","chapters":[1,7],"pageCount":212,"coverId":"08X10000000033942600"},
+  {"number":2,"releaseDate":"2024-02-19","chapters":[8,16],"pageCount":186,"coverId":"08X10000000034709500"},
+  {"number":3,"releaseDate":"2024-07-18","chapters":[17,24],"pageCount":162,"coverId":"08X10000000048786400"},
+  {"number":4,"releaseDate":"2024-11-19","chapters":[25,32],"pageCount":162,"coverId":"08X10000000054245200"},
+  {"number":5,"releaseDate":"2025-04-17","chapters":[33,40],"pageCount":162,"coverId":"08X10000000060941300"},
+  {"number":6,"releaseDate":"2025-08-19","chapters":[41,48],"pageCount":162,"coverId":"08X10000000064281700"},
+  {"number":7,"releaseDate":"2026-01-19","chapters":[49,57],"pageCount":178,"coverId":"08X10000000068538200"},
+  {"number":8,"releaseDate":"2026-05-19","chapters":[58,65],"pageCount":162,"coverId":"08X10000000071296400"}
+]
