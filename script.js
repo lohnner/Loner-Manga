@@ -2879,6 +2879,11 @@ const mangaArcsByPage = {
     title: "Bleach",
     arcs: [["Ceifador de Almas Substituto", 1, 70], ["Sociedade das Almas", 71, 183], ["Arrancar", 184, 423], ["Agente Perdido", 424, 479], ["Guerra Sangrenta dos Mil Anos", 480, 686]]
   },
+  "boruto.html": {
+    id: "borutoArcsDialog",
+    title: "Boruto",
+    arcs: [["Parte I — Versus Momoshiki", 1, 10], ["Parte I — Bandidos Mujina", 11, 15], ["Parte I — Receptáculo", 16, 23], ["Parte I — Kawaki", 24, 55], ["Parte I — Ataque de Code", 56, 71], ["Parte I — Profecia", 72, 80], ["Two Blue Vortex — Retorno de Boruto", 1, 15], ["Two Blue Vortex — Resgate de Shinki", 16, 25], ["Two Blue Vortex — Mamushi", 26, 34], ["Two Blue Vortex — Arco atual", 35, "Em andamento"]]
+  },
   "one-piece.html": {
     id: "onePieceArcsDialog",
     title: "One Piece",
@@ -2888,6 +2893,11 @@ const mangaArcsByPage = {
     id: "berserkArcsDialog",
     title: "Berserk",
     arcs: [["Espadachim Negro", "Vol. 1", "Vol. 3"], ["Era de Ouro", "Vol. 3", "Vol. 14"], ["Condenação", "Vol. 14", "Vol. 21"], ["Falcão do Império Milenar", "Vol. 22", "Vol. 35"], ["Fantasia", "Vol. 35", "Em andamento"]]
+  },
+  "dorohedoro.html": {
+    id: "dorohedoroArcsDialog",
+    title: "Dorohedoro",
+    arcs: [["A busca de Caiman", 1, 23], ["Família En", 24, 48], ["Olhos Cruzados", 49, 72], ["Ai Coleman", 73, 100], ["Chuva Negra", 101, 126], ["Hole", 127, 155], ["Batalha Final", 156, 167]]
   },
   "yu-yu-hakusho.html": {
     id: "yuYuHakushoArcsDialog",
