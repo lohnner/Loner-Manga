@@ -2900,6 +2900,10 @@ const mangaArcsByPage = {
     id: "hunterXHunterArcsDialog", title: "Hunter x Hunter",
     arcs: [["Exame Hunter",1,38],["Família Zoldyck",39,43],["Torre Celestial",44,63],["York Shin",64,119],["Greed Island",120,185],["Formigas Quimera",186,318],["Eleição do Presidente Hunter",319,339],["Expedição ao Continente Negro",340,348],["Guerra de Sucessão",349,"Em andamento"]]
   },
+  "grand-blue.html": {
+    id: "grandBlueArcsDialog", title: "Grand Blue",
+    arcs: [["Início no Peek a Boo",1,12],["Primeira viagem a Okinawa",13,21],["Família e universidade",22,33],["Trabalho e ilha deserta",34,45],["Casa de Iori e Palau",46,57],["Retorno a Okinawa",58,69],["Casamento e viagens",70,81],["Vida universitária",82,"Em andamento"]]
+  },
   "naruto.html": {
     id: "narutoArcsDialog", title: "Naruto",
     arcs: [["Prólogo — País das Ondas",1,33],["Exames Chūnin",34,115],["Destruição de Konoha",116,138],["Busca por Tsunade",139,171],["Missão de Recuperação de Sasuke",172,238],["Kakashi Gaiden",239,244],["Resgate do Kazekage",245,281],["Reconhecimento da Ponte Tenchi",282,310],["Supressão da Akatsuki",311,342],["Perseguição a Itachi",343,367],["Conto de Jiraiya, o Destemido",368,383],["Batalha Predestinada entre Irmãos",384,412],["Ataque de Pain",413,453],["Reunião dos Cinco Kage",454,483],["Quarta Guerra Ninja: Contagem Regressiva",484,515],["Quarta Guerra Ninja: Confronto",516,559],["Quarta Guerra Ninja: Clímax",560,639],["Nascimento do Jinchūriki do Dez-Caudas",640,677],["Ataque de Kaguya Ōtsutsuki",678,699],["Epílogo",700,700]]
@@ -3095,6 +3099,7 @@ function renderCatalogMangaVolumes() {
     "captain-tsubasa.html": "Captain Tsubasa",
     "fullmetal-alchemist.html": "Fullmetal Alchemist",
     "hajime-no-ippo.html": "Hajime no Ippo",
+    "grand-blue.html": "Grand Blue",
     "hunter-x-hunter.html": "Hunter x Hunter",
     "jujutsu-kaisen.html": "Jujutsu Kaisen",
     "my-hero-academia.html": "My Hero Academia",

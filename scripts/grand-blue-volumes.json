@@ -1,0 +1,262 @@
+[
+  {
+    "number": 1,
+    "releaseDate": "2014-11-07",
+    "chapters": [
+      1,
+      4
+    ],
+    "pageCount": 192,
+    "isbn": "9784063879902"
+  },
+  {
+    "number": 2,
+    "releaseDate": "2014-12-05",
+    "chapters": [
+      5,
+      8
+    ],
+    "pageCount": 192,
+    "isbn": "9784063880182"
+  },
+  {
+    "number": 3,
+    "releaseDate": "2015-04-07",
+    "chapters": [
+      9,
+      12
+    ],
+    "pageCount": 192,
+    "isbn": "9784063880533"
+  },
+  {
+    "number": 4,
+    "releaseDate": "2015-09-07",
+    "chapters": [
+      13,
+      17
+    ],
+    "pageCount": 192,
+    "isbn": "9784063880816"
+  },
+  {
+    "number": 5,
+    "releaseDate": "2016-02-05",
+    "chapters": [
+      18,
+      21
+    ],
+    "pageCount": 192,
+    "isbn": "9784063881158"
+  },
+  {
+    "number": 6,
+    "releaseDate": "2016-08-05",
+    "chapters": [
+      22,
+      25
+    ],
+    "pageCount": 192,
+    "isbn": "9784063881646"
+  },
+  {
+    "number": 7,
+    "releaseDate": "2016-12-07",
+    "chapters": [
+      26,
+      28
+    ],
+    "pageCount": 192,
+    "isbn": "9784063882209"
+  },
+  {
+    "number": 8,
+    "releaseDate": "2017-04-07",
+    "chapters": [
+      29,
+      33
+    ],
+    "pageCount": 192,
+    "isbn": "9784063882490"
+  },
+  {
+    "number": 9,
+    "releaseDate": "2017-10-06",
+    "chapters": [
+      34,
+      37
+    ],
+    "pageCount": 192,
+    "isbn": "9784063882902"
+  },
+  {
+    "number": 10,
+    "releaseDate": "2018-03-07",
+    "chapters": [
+      38,
+      41
+    ],
+    "pageCount": 192,
+    "isbn": "9784065110966"
+  },
+  {
+    "number": 11,
+    "releaseDate": "2018-07-06",
+    "chapters": [
+      42,
+      45
+    ],
+    "pageCount": 192,
+    "isbn": "9784065119792"
+  },
+  {
+    "number": 12,
+    "releaseDate": "2018-11-22",
+    "chapters": [
+      46,
+      49
+    ],
+    "pageCount": 192,
+    "isbn": "9784065134474"
+  },
+  {
+    "number": 13,
+    "releaseDate": "2019-07-05",
+    "chapters": [
+      50,
+      53
+    ],
+    "pageCount": 192,
+    "isbn": "9784065162385"
+  },
+  {
+    "number": 14,
+    "releaseDate": "2019-11-22",
+    "chapters": [
+      54,
+      57
+    ],
+    "pageCount": 192,
+    "isbn": "9784065175576"
+  },
+  {
+    "number": 15,
+    "releaseDate": "2020-05-22",
+    "chapters": [
+      58,
+      61
+    ],
+    "pageCount": 192,
+    "isbn": "9784065194805"
+  },
+  {
+    "number": 16,
+    "releaseDate": "2020-11-20",
+    "chapters": [
+      62,
+      65
+    ],
+    "pageCount": 192,
+    "isbn": "9784065214176"
+  },
+  {
+    "number": 17,
+    "releaseDate": "2021-08-05",
+    "chapters": [
+      66,
+      69
+    ],
+    "pageCount": 192,
+    "isbn": "9784065242926"
+  },
+  {
+    "number": 18,
+    "releaseDate": "2022-03-07",
+    "chapters": [
+      70,
+      73
+    ],
+    "pageCount": 192,
+    "isbn": "9784065270417"
+  },
+  {
+    "number": 19,
+    "releaseDate": "2022-08-05",
+    "chapters": [
+      74,
+      77
+    ],
+    "pageCount": 192,
+    "isbn": "9784065287682"
+  },
+  {
+    "number": 20,
+    "releaseDate": "2023-04-06",
+    "chapters": [
+      78,
+      81
+    ],
+    "pageCount": 192,
+    "isbn": "9784065313299"
+  },
+  {
+    "number": 21,
+    "releaseDate": "2023-10-05",
+    "chapters": [
+      82,
+      85
+    ],
+    "pageCount": 192,
+    "isbn": "9784065330890"
+  },
+  {
+    "number": 22,
+    "releaseDate": "2024-04-05",
+    "chapters": [
+      86,
+      89
+    ],
+    "pageCount": 192,
+    "isbn": "9784065350171"
+  },
+  {
+    "number": 23,
+    "releaseDate": "2024-10-07",
+    "chapters": [
+      90,
+      94
+    ],
+    "pageCount": 192,
+    "isbn": "9784065370988"
+  },
+  {
+    "number": 24,
+    "releaseDate": "2025-04-07",
+    "chapters": [
+      95,
+      98
+    ],
+    "pageCount": 192,
+    "isbn": "9784065389706"
+  },
+  {
+    "number": 25,
+    "releaseDate": "2025-10-07",
+    "chapters": [
+      99,
+      103
+    ],
+    "pageCount": 192,
+    "isbn": "9784065409626"
+  },
+  {
+    "number": 26,
+    "releaseDate": "2026-04-07",
+    "chapters": [
+      104,
+      106
+    ],
+    "pageCount": 192,
+    "isbn": "9784065430354"
+  }
+]
