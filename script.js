@@ -211,21 +211,10 @@ window.addEventListener("pageshow", resetPageTransition);
 startSiteUpdateWatcher();
 
 function rootPath() {
-  const path = decodeURIComponent(window.location.pathname).replace(/\\/g, "/");
-
-  if (path.includes("/Mangás/")) {
-    return "../../";
-  }
-
-  if (path.includes("/Universos/")) {
-    return "../";
-  }
-
-  if (path.includes("/Personagens/")) {
-    return "../";
-  }
-
-  return "";
+  // script.js sempre fica na raiz do site. Usar a URL do próprio módulo
+  // mantém HOME e os recursos corretos mesmo em páginas mais profundas,
+  // como Mangás/JoJo/jojo-classico/volume.html.
+  return new URL(".", import.meta.url).href;
 }
 
 function sidebarSection() {
