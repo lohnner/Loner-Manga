@@ -178,8 +178,8 @@ const homeRecentSeries = [
     coverComicId: "jujutsu-kaisen-1-2018"
   },
   {
-    seriesId: "naruto-1999",
-    coverComicId: "naruto-1-2000"
+    seriesId: "dogsred-2023",
+    coverComicId: "dogsred-1-2024"
   }
 ];
 const smartSearchForm = document.querySelector("#smartSearchForm");
