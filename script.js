@@ -2869,6 +2869,10 @@ function dataErrorMessage(error) {
 }
 
 const mangaArcsByPage = {
+  "fullmetal-alchemist.html": {
+    id: "fullmetalAlchemistArcsDialog", title: "Fullmetal Alchemist",
+    arcs: [["Início da Jornada", 1, 5], ["Scar", 6, 9], ["Laboratório 5", 10, 16], ["Rush Valley", 17, 19], ["Dublith", 20, 31], ["Xing e Central", 32, 44], ["Retorno de Scar", 45, 48], ["Guerra de Ishval", 49, 61], ["Briggs", 62, 83], ["Dia Prometido", 84, 108]]
+  },
   "vinland-saga.html": {
     id: "vinlandSagaArcsDialog", title: "Vinland Saga",
     arcs: [["Guerra", 1, 54], ["Escravidão", 55, 99], ["Expedição ao Leste", 100, 166], ["Vinland", 167, 220]]
@@ -3070,6 +3074,7 @@ function renderCatalogMangaVolumes() {
     "berserk.html": "Berserk",
     "bleach.html": "Bleach",
     "captain-tsubasa.html": "Captain Tsubasa",
+    "fullmetal-alchemist.html": "Fullmetal Alchemist",
     "hajime-no-ippo.html": "Hajime no Ippo",
     "jujutsu-kaisen.html": "Jujutsu Kaisen",
     "naruto.html": "Naruto",

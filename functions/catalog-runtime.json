@@ -1,14 +1,5 @@
 [
   {
-    "mangaId": "kingdom",
-    "mangaTitle": "Kingdom",
-    "volumeId": "kingdom-1-2006",
-    "volumeNumber": 1,
-    "cover": "Mangás/Kingdom/Kingdom%20%231.png",
-    "pageUrl": "Mangás/Kingdom/kingdom-1-2006.html",
-    "displayTitle": "Kingdom / Volume 1"
-  },
-  {
     "mangaId": "fairy-tail",
     "mangaTitle": "Fairy Tail",
     "volumeId": "fairy-tail-1-2006",
@@ -331,15 +322,6 @@
     "cover": "Mangás/Fairy%20Tail/fairytail%2336.png",
     "pageUrl": "Mangás/Fairy%20Tail/fairy-tail-36-2013.html",
     "displayTitle": "Fairy Tail / Volume 36"
-  },
-  {
-    "mangaId": "dragon-ball",
-    "mangaTitle": "Dragon Ball",
-    "volumeId": "dragon-ball-1-1985",
-    "volumeNumber": 1,
-    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%231.png",
-    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-1-1985.html",
-    "displayTitle": "Dragon Ball / Volume 1"
   },
   {
     "mangaId": "bleach",
@@ -1287,6 +1269,717 @@
     "displayTitle": "Jujutsu Kaisen / Volume 30"
   },
   {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-1-2006",
+    "volumeNumber": 1,
+    "cover": "Mangás/Kingdom/Kingdom%20%231.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-1-2006.html",
+    "displayTitle": "Kingdom / Volume 1"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-2-2006",
+    "volumeNumber": 2,
+    "cover": "Mangás/Kingdom/Kingdom%20%232.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-2-2006.html",
+    "displayTitle": "Kingdom / Volume 2"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-3-2006",
+    "volumeNumber": 3,
+    "cover": "Mangás/Kingdom/Kingdom%20%233.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-3-2006.html",
+    "displayTitle": "Kingdom / Volume 3"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-4-2007",
+    "volumeNumber": 4,
+    "cover": "Mangás/Kingdom/Kingdom%20%234.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-4-2007.html",
+    "displayTitle": "Kingdom / Volume 4"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-5-2007",
+    "volumeNumber": 5,
+    "cover": "Mangás/Kingdom/Kingdom%20%235.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-5-2007.html",
+    "displayTitle": "Kingdom / Volume 5"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-6-2007",
+    "volumeNumber": 6,
+    "cover": "Mangás/Kingdom/Kingdom%20%236.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-6-2007.html",
+    "displayTitle": "Kingdom / Volume 6"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-7-2007",
+    "volumeNumber": 7,
+    "cover": "Mangás/Kingdom/Kingdom%20%237.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-7-2007.html",
+    "displayTitle": "Kingdom / Volume 7"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-8-2007",
+    "volumeNumber": 8,
+    "cover": "Mangás/Kingdom/Kingdom%20%238.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-8-2007.html",
+    "displayTitle": "Kingdom / Volume 8"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-9-2008",
+    "volumeNumber": 9,
+    "cover": "Mangás/Kingdom/Kingdom%20%239.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-9-2008.html",
+    "displayTitle": "Kingdom / Volume 9"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-10-2008",
+    "volumeNumber": 10,
+    "cover": "Mangás/Kingdom/Kingdom%20%2310.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-10-2008.html",
+    "displayTitle": "Kingdom / Volume 10"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-11-2008",
+    "volumeNumber": 11,
+    "cover": "Mangás/Kingdom/Kingdom%20%2311.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-11-2008.html",
+    "displayTitle": "Kingdom / Volume 11"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-12-2008",
+    "volumeNumber": 12,
+    "cover": "Mangás/Kingdom/Kingdom%20%2312.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-12-2008.html",
+    "displayTitle": "Kingdom / Volume 12"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-13-2009",
+    "volumeNumber": 13,
+    "cover": "Mangás/Kingdom/Kingdom%20%2313.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-13-2009.html",
+    "displayTitle": "Kingdom / Volume 13"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-14-2009",
+    "volumeNumber": 14,
+    "cover": "Mangás/Kingdom/Kingdom%20%2314.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-14-2009.html",
+    "displayTitle": "Kingdom / Volume 14"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-15-2009",
+    "volumeNumber": 15,
+    "cover": "Mangás/Kingdom/Kingdom%20%2315.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-15-2009.html",
+    "displayTitle": "Kingdom / Volume 15"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-16-2009",
+    "volumeNumber": 16,
+    "cover": "Mangás/Kingdom/Kingdom%20%2316.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-16-2009.html",
+    "displayTitle": "Kingdom / Volume 16"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-17-2010",
+    "volumeNumber": 17,
+    "cover": "Mangás/Kingdom/Kingdom%20%2317.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-17-2010.html",
+    "displayTitle": "Kingdom / Volume 17"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-18-2010",
+    "volumeNumber": 18,
+    "cover": "Mangás/Kingdom/Kingdom%20%2318.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-18-2010.html",
+    "displayTitle": "Kingdom / Volume 18"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-19-2010",
+    "volumeNumber": 19,
+    "cover": "Mangás/Kingdom/Kingdom%20%2319.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-19-2010.html",
+    "displayTitle": "Kingdom / Volume 19"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-20-2010",
+    "volumeNumber": 20,
+    "cover": "Mangás/Kingdom/Kingdom%20%2320.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-20-2010.html",
+    "displayTitle": "Kingdom / Volume 20"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-21-2011",
+    "volumeNumber": 21,
+    "cover": "Mangás/Kingdom/Kingdom%20%2321.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-21-2011.html",
+    "displayTitle": "Kingdom / Volume 21"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-22-2011",
+    "volumeNumber": 22,
+    "cover": "Mangás/Kingdom/Kingdom%20%2322.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-22-2011.html",
+    "displayTitle": "Kingdom / Volume 22"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-23-2011",
+    "volumeNumber": 23,
+    "cover": "Mangás/Kingdom/Kingdom%20%2323.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-23-2011.html",
+    "displayTitle": "Kingdom / Volume 23"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-24-2011",
+    "volumeNumber": 24,
+    "cover": "Mangás/Kingdom/Kingdom%20%2324.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-24-2011.html",
+    "displayTitle": "Kingdom / Volume 24"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-25-2012",
+    "volumeNumber": 25,
+    "cover": "Mangás/Kingdom/Kingdom%20%2325.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-25-2012.html",
+    "displayTitle": "Kingdom / Volume 25"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-26-2012",
+    "volumeNumber": 26,
+    "cover": "Mangás/Kingdom/Kingdom%20%2326.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-26-2012.html",
+    "displayTitle": "Kingdom / Volume 26"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-27-2012",
+    "volumeNumber": 27,
+    "cover": "Mangás/Kingdom/Kingdom%20%2327.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-27-2012.html",
+    "displayTitle": "Kingdom / Volume 27"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-28-2012",
+    "volumeNumber": 28,
+    "cover": "Mangás/Kingdom/Kingdom%20%2328.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-28-2012.html",
+    "displayTitle": "Kingdom / Volume 28"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-29-2013",
+    "volumeNumber": 29,
+    "cover": "Mangás/Kingdom/Kingdom%20%2329.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-29-2013.html",
+    "displayTitle": "Kingdom / Volume 29"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-30-2013",
+    "volumeNumber": 30,
+    "cover": "Mangás/Kingdom/Kingdom%20%2330.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-30-2013.html",
+    "displayTitle": "Kingdom / Volume 30"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-31-2013",
+    "volumeNumber": 31,
+    "cover": "Mangás/Kingdom/Kingdom%20%2331.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-31-2013.html",
+    "displayTitle": "Kingdom / Volume 31"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-32-2013",
+    "volumeNumber": 32,
+    "cover": "Mangás/Kingdom/Kingdom%20%2332.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-32-2013.html",
+    "displayTitle": "Kingdom / Volume 32"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-33-2014",
+    "volumeNumber": 33,
+    "cover": "Mangás/Kingdom/Kingdom%20%2333.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-33-2014.html",
+    "displayTitle": "Kingdom / Volume 33"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-34-2014",
+    "volumeNumber": 34,
+    "cover": "Mangás/Kingdom/Kingdom%20%2334.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-34-2014.html",
+    "displayTitle": "Kingdom / Volume 34"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-35-2014",
+    "volumeNumber": 35,
+    "cover": "Mangás/Kingdom/Kingdom%20%2335.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-35-2014.html",
+    "displayTitle": "Kingdom / Volume 35"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-36-2014",
+    "volumeNumber": 36,
+    "cover": "Mangás/Kingdom/Kingdom%20%2336.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-36-2014.html",
+    "displayTitle": "Kingdom / Volume 36"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-37-2015",
+    "volumeNumber": 37,
+    "cover": "Mangás/Kingdom/Kingdom%20%2337.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-37-2015.html",
+    "displayTitle": "Kingdom / Volume 37"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-38-2015",
+    "volumeNumber": 38,
+    "cover": "Mangás/Kingdom/Kingdom%20%2338.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-38-2015.html",
+    "displayTitle": "Kingdom / Volume 38"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-39-2015",
+    "volumeNumber": 39,
+    "cover": "Mangás/Kingdom/Kingdom%20%2339.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-39-2015.html",
+    "displayTitle": "Kingdom / Volume 39"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-40-2015",
+    "volumeNumber": 40,
+    "cover": "Mangás/Kingdom/Kingdom%20%2340.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-40-2015.html",
+    "displayTitle": "Kingdom / Volume 40"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-41-2016",
+    "volumeNumber": 41,
+    "cover": "Mangás/Kingdom/Kingdom%20%2341.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-41-2016.html",
+    "displayTitle": "Kingdom / Volume 41"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-42-2016",
+    "volumeNumber": 42,
+    "cover": "Mangás/Kingdom/Kingdom%20%2342.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-42-2016.html",
+    "displayTitle": "Kingdom / Volume 42"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-43-2016",
+    "volumeNumber": 43,
+    "cover": "Mangás/Kingdom/Kingdom%20%2343.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-43-2016.html",
+    "displayTitle": "Kingdom / Volume 43"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-44-2016",
+    "volumeNumber": 44,
+    "cover": "Mangás/Kingdom/Kingdom%20%2344.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-44-2016.html",
+    "displayTitle": "Kingdom / Volume 44"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-45-2017",
+    "volumeNumber": 45,
+    "cover": "Mangás/Kingdom/Kingdom%20%2345.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-45-2017.html",
+    "displayTitle": "Kingdom / Volume 45"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-46-2017",
+    "volumeNumber": 46,
+    "cover": "Mangás/Kingdom/Kingdom%20%2346.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-46-2017.html",
+    "displayTitle": "Kingdom / Volume 46"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-47-2017",
+    "volumeNumber": 47,
+    "cover": "Mangás/Kingdom/Kingdom%20%2347.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-47-2017.html",
+    "displayTitle": "Kingdom / Volume 47"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-48-2017",
+    "volumeNumber": 48,
+    "cover": "Mangás/Kingdom/Kingdom%20%2348.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-48-2017.html",
+    "displayTitle": "Kingdom / Volume 48"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-49-2018",
+    "volumeNumber": 49,
+    "cover": "Mangás/Kingdom/Kingdom%20%2349.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-49-2018.html",
+    "displayTitle": "Kingdom / Volume 49"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-50-2018",
+    "volumeNumber": 50,
+    "cover": "Mangás/Kingdom/Kingdom%20%2350.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-50-2018.html",
+    "displayTitle": "Kingdom / Volume 50"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-51-2018",
+    "volumeNumber": 51,
+    "cover": "Mangás/Kingdom/Kingdom%20%2351.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-51-2018.html",
+    "displayTitle": "Kingdom / Volume 51"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-52-2018",
+    "volumeNumber": 52,
+    "cover": "Mangás/Kingdom/Kingdom%20%2352.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-52-2018.html",
+    "displayTitle": "Kingdom / Volume 52"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-53-2019",
+    "volumeNumber": 53,
+    "cover": "Mangás/Kingdom/Kingdom%20%2353.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-53-2019.html",
+    "displayTitle": "Kingdom / Volume 53"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-54-2019",
+    "volumeNumber": 54,
+    "cover": "Mangás/Kingdom/Kingdom%20%2354.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-54-2019.html",
+    "displayTitle": "Kingdom / Volume 54"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-55-2019",
+    "volumeNumber": 55,
+    "cover": "Mangás/Kingdom/Kingdom%20%2355.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-55-2019.html",
+    "displayTitle": "Kingdom / Volume 55"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-56-2019",
+    "volumeNumber": 56,
+    "cover": "Mangás/Kingdom/Kingdom%20%2356.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-56-2019.html",
+    "displayTitle": "Kingdom / Volume 56"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-57-2020",
+    "volumeNumber": 57,
+    "cover": "Mangás/Kingdom/Kingdom%20%2357.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-57-2020.html",
+    "displayTitle": "Kingdom / Volume 57"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-58-2020",
+    "volumeNumber": 58,
+    "cover": "Mangás/Kingdom/Kingdom%20%2358.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-58-2020.html",
+    "displayTitle": "Kingdom / Volume 58"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-59-2020",
+    "volumeNumber": 59,
+    "cover": "Mangás/Kingdom/Kingdom%20%2359.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-59-2020.html",
+    "displayTitle": "Kingdom / Volume 59"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-60-2020",
+    "volumeNumber": 60,
+    "cover": "Mangás/Kingdom/Kingdom%20%2360.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-60-2020.html",
+    "displayTitle": "Kingdom / Volume 60"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-61-2021",
+    "volumeNumber": 61,
+    "cover": "Mangás/Kingdom/Kingdom%20%2361.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-61-2021.html",
+    "displayTitle": "Kingdom / Volume 61"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-62-2021",
+    "volumeNumber": 62,
+    "cover": "Mangás/Kingdom/Kingdom%20%2362.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-62-2021.html",
+    "displayTitle": "Kingdom / Volume 62"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-63-2021",
+    "volumeNumber": 63,
+    "cover": "Mangás/Kingdom/Kingdom%20%2363.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-63-2021.html",
+    "displayTitle": "Kingdom / Volume 63"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-64-2022",
+    "volumeNumber": 64,
+    "cover": "Mangás/Kingdom/Kingdom%20%2364.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-64-2022.html",
+    "displayTitle": "Kingdom / Volume 64"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-65-2022",
+    "volumeNumber": 65,
+    "cover": "Mangás/Kingdom/Kingdom%20%2365.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-65-2022.html",
+    "displayTitle": "Kingdom / Volume 65"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-66-2022",
+    "volumeNumber": 66,
+    "cover": "Mangás/Kingdom/Kingdom%20%2366.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-66-2022.html",
+    "displayTitle": "Kingdom / Volume 66"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-67-2023",
+    "volumeNumber": 67,
+    "cover": "Mangás/Kingdom/Kingdom%20%2367.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-67-2023.html",
+    "displayTitle": "Kingdom / Volume 67"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-68-2023",
+    "volumeNumber": 68,
+    "cover": "Mangás/Kingdom/Kingdom%20%2368.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-68-2023.html",
+    "displayTitle": "Kingdom / Volume 68"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-69-2023",
+    "volumeNumber": 69,
+    "cover": "Mangás/Kingdom/Kingdom%20%2369.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-69-2023.html",
+    "displayTitle": "Kingdom / Volume 69"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-70-2023",
+    "volumeNumber": 70,
+    "cover": "Mangás/Kingdom/Kingdom%20%2370.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-70-2023.html",
+    "displayTitle": "Kingdom / Volume 70"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-71-2024",
+    "volumeNumber": 71,
+    "cover": "Mangás/Kingdom/Kingdom%20%2371.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-71-2024.html",
+    "displayTitle": "Kingdom / Volume 71"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-72-2024",
+    "volumeNumber": 72,
+    "cover": "Mangás/Kingdom/Kingdom%20%2372.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-72-2024.html",
+    "displayTitle": "Kingdom / Volume 72"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-73-2024",
+    "volumeNumber": 73,
+    "cover": "Mangás/Kingdom/Kingdom%20%2373.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-73-2024.html",
+    "displayTitle": "Kingdom / Volume 73"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-74-2024",
+    "volumeNumber": 74,
+    "cover": "Mangás/Kingdom/Kingdom%20%2374.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-74-2024.html",
+    "displayTitle": "Kingdom / Volume 74"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-75-2025",
+    "volumeNumber": 75,
+    "cover": "Mangás/Kingdom/Kingdom%20%2375.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-75-2025.html",
+    "displayTitle": "Kingdom / Volume 75"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-76-2025",
+    "volumeNumber": 76,
+    "cover": "Mangás/Kingdom/Kingdom%20%2376.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-76-2025.html",
+    "displayTitle": "Kingdom / Volume 76"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-77-2025",
+    "volumeNumber": 77,
+    "cover": "Mangás/Kingdom/Kingdom%20%2377.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-77-2025.html",
+    "displayTitle": "Kingdom / Volume 77"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-78-2026",
+    "volumeNumber": 78,
+    "cover": "Mangás/Kingdom/Kingdom%20%2378.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-78-2026.html",
+    "displayTitle": "Kingdom / Volume 78"
+  },
+  {
+    "mangaId": "kingdom",
+    "mangaTitle": "Kingdom",
+    "volumeId": "kingdom-79-2026",
+    "volumeNumber": 79,
+    "cover": "Mangás/Kingdom/Kingdom%20%2379.png",
+    "pageUrl": "Mangás/Kingdom/kingdom-79-2026.html",
+    "displayTitle": "Kingdom / Volume 79"
+  },
+  {
     "mangaId": "yu-gi-oh",
     "mangaTitle": "Yu-Gi-Oh!",
     "volumeId": "yu-gi-oh-1-1997",
@@ -1312,6 +2005,699 @@
     "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%233.png",
     "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-3-1997.html",
     "displayTitle": "Yu-Gi-Oh! / Volume 3"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-4-1997",
+    "volumeNumber": 4,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%234.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-4-1997.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 4"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-5-1997",
+    "volumeNumber": 5,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%235.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-5-1997.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 5"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-6-1998",
+    "volumeNumber": 6,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%236.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-6-1998.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 6"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-7-1998",
+    "volumeNumber": 7,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%237.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-7-1998.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 7"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-8-1998",
+    "volumeNumber": 8,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%238.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-8-1998.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 8"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-9-1998",
+    "volumeNumber": 9,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%239.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-9-1998.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 9"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-10-1998",
+    "volumeNumber": 10,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2310.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-10-1998.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 10"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-11-1999",
+    "volumeNumber": 11,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2311.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-11-1999.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 11"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-12-1999",
+    "volumeNumber": 12,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2312.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-12-1999.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 12"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-13-1999",
+    "volumeNumber": 13,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2313.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-13-1999.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 13"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-14-1999",
+    "volumeNumber": 14,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2314.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-14-1999.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 14"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-15-1999",
+    "volumeNumber": 15,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2315.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-15-1999.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 15"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-16-1999",
+    "volumeNumber": 16,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2316.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-16-1999.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 16"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-17-2000",
+    "volumeNumber": 17,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2317.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-17-2000.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 17"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-18-2000",
+    "volumeNumber": 18,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2318.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-18-2000.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 18"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-19-2000",
+    "volumeNumber": 19,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2319.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-19-2000.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 19"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-20-2000",
+    "volumeNumber": 20,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2320.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-20-2000.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 20"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-21-2000",
+    "volumeNumber": 21,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2321.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-21-2000.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 21"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-22-2000",
+    "volumeNumber": 22,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2322.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-22-2000.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 22"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-23-2001",
+    "volumeNumber": 23,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2323.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-23-2001.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 23"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-24-2001",
+    "volumeNumber": 24,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2324.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-24-2001.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 24"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-25-2001",
+    "volumeNumber": 25,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2325.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-25-2001.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 25"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-26-2001",
+    "volumeNumber": 26,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2326.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-26-2001.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 26"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-27-2002",
+    "volumeNumber": 27,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2327.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-27-2002.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 27"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-28-2002",
+    "volumeNumber": 28,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2328.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-28-2002.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 28"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-29-2002",
+    "volumeNumber": 29,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2329.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-29-2002.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 29"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-30-2002",
+    "volumeNumber": 30,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2330.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-30-2002.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 30"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-31-2002",
+    "volumeNumber": 31,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2331.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-31-2002.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 31"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-32-2003",
+    "volumeNumber": 32,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2332.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-32-2003.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 32"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-33-2003",
+    "volumeNumber": 33,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2333.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-33-2003.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 33"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-34-2003",
+    "volumeNumber": 34,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2334.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-34-2003.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 34"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-35-2003",
+    "volumeNumber": 35,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2335.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-35-2003.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 35"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-36-2004",
+    "volumeNumber": 36,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2336.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-36-2004.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 36"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-37-2004",
+    "volumeNumber": 37,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2337.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-37-2004.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 37"
+  },
+  {
+    "mangaId": "yu-gi-oh",
+    "mangaTitle": "Yu-Gi-Oh!",
+    "volumeId": "yu-gi-oh-38-2004",
+    "volumeNumber": 38,
+    "cover": "Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2338.png",
+    "pageUrl": "Mangás/Yu-Gi-Oh!/yu-gi-oh-38-2004.html",
+    "displayTitle": "Yu-Gi-Oh! / Volume 38"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-1-1985",
+    "volumeNumber": 1,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%231.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-1-1985.html",
+    "displayTitle": "Dragon Ball / Volume 1"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-2-1986",
+    "volumeNumber": 2,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%232.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-2-1986.html",
+    "displayTitle": "Dragon Ball / Volume 2"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-3-1986",
+    "volumeNumber": 3,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%233.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-3-1986.html",
+    "displayTitle": "Dragon Ball / Volume 3"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-4-1986",
+    "volumeNumber": 4,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%234.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-4-1986.html",
+    "displayTitle": "Dragon Ball / Volume 4"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-5-1987",
+    "volumeNumber": 5,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%235.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-5-1987.html",
+    "displayTitle": "Dragon Ball / Volume 5"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-6-1987",
+    "volumeNumber": 6,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%236.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-6-1987.html",
+    "displayTitle": "Dragon Ball / Volume 6"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-7-1987",
+    "volumeNumber": 7,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%237.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-7-1987.html",
+    "displayTitle": "Dragon Ball / Volume 7"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-8-1987",
+    "volumeNumber": 8,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%238.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-8-1987.html",
+    "displayTitle": "Dragon Ball / Volume 8"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-9-1987",
+    "volumeNumber": 9,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%239.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-9-1987.html",
+    "displayTitle": "Dragon Ball / Volume 9"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-10-1987",
+    "volumeNumber": 10,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2310.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-10-1987.html",
+    "displayTitle": "Dragon Ball / Volume 10"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-11-1988",
+    "volumeNumber": 11,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2311.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-11-1988.html",
+    "displayTitle": "Dragon Ball / Volume 11"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-12-1988",
+    "volumeNumber": 12,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2312.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-12-1988.html",
+    "displayTitle": "Dragon Ball / Volume 12"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-13-1988",
+    "volumeNumber": 13,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2313.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-13-1988.html",
+    "displayTitle": "Dragon Ball / Volume 13"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-14-1988",
+    "volumeNumber": 14,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2314.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-14-1988.html",
+    "displayTitle": "Dragon Ball / Volume 14"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-15-1988",
+    "volumeNumber": 15,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2315.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-15-1988.html",
+    "displayTitle": "Dragon Ball / Volume 15"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-16-1989",
+    "volumeNumber": 16,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2316.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-16-1989.html",
+    "displayTitle": "Dragon Ball / Volume 16"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-17-1989",
+    "volumeNumber": 17,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2317.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-17-1989.html",
+    "displayTitle": "Dragon Ball / Volume 17"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-18-1989",
+    "volumeNumber": 18,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2318.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-18-1989.html",
+    "displayTitle": "Dragon Ball / Volume 18"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-19-1989",
+    "volumeNumber": 19,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2319.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-19-1989.html",
+    "displayTitle": "Dragon Ball / Volume 19"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-20-1990",
+    "volumeNumber": 20,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2320.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-20-1990.html",
+    "displayTitle": "Dragon Ball / Volume 20"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-21-1990",
+    "volumeNumber": 21,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2321.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-21-1990.html",
+    "displayTitle": "Dragon Ball / Volume 21"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-22-1990",
+    "volumeNumber": 22,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2322.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-22-1990.html",
+    "displayTitle": "Dragon Ball / Volume 22"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-23-1990",
+    "volumeNumber": 23,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2323.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-23-1990.html",
+    "displayTitle": "Dragon Ball / Volume 23"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-24-1991",
+    "volumeNumber": 24,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2324.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-24-1991.html",
+    "displayTitle": "Dragon Ball / Volume 24"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-25-1991",
+    "volumeNumber": 25,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2325.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-25-1991.html",
+    "displayTitle": "Dragon Ball / Volume 25"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-26-1991",
+    "volumeNumber": 26,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2326.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-26-1991.html",
+    "displayTitle": "Dragon Ball / Volume 26"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-27-1991",
+    "volumeNumber": 27,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2327.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-27-1991.html",
+    "displayTitle": "Dragon Ball / Volume 27"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-28-1991",
+    "volumeNumber": 28,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2328.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-28-1991.html",
+    "displayTitle": "Dragon Ball / Volume 28"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-29-1992",
+    "volumeNumber": 29,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2329.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-29-1992.html",
+    "displayTitle": "Dragon Ball / Volume 29"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-30-1992",
+    "volumeNumber": 30,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2330.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-30-1992.html",
+    "displayTitle": "Dragon Ball / Volume 30"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-31-1992",
+    "volumeNumber": 31,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2331.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-31-1992.html",
+    "displayTitle": "Dragon Ball / Volume 31"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-32-1992",
+    "volumeNumber": 32,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2332.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-32-1992.html",
+    "displayTitle": "Dragon Ball / Volume 32"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-33-1992",
+    "volumeNumber": 33,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2333.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-33-1992.html",
+    "displayTitle": "Dragon Ball / Volume 33"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-34-1993",
+    "volumeNumber": 34,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2334.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-34-1993.html",
+    "displayTitle": "Dragon Ball / Volume 34"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-35-1993",
+    "volumeNumber": 35,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2335.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-35-1993.html",
+    "displayTitle": "Dragon Ball / Volume 35"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-36-1993",
+    "volumeNumber": 36,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2336.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-36-1993.html",
+    "displayTitle": "Dragon Ball / Volume 36"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-37-1994",
+    "volumeNumber": 37,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2337.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-37-1994.html",
+    "displayTitle": "Dragon Ball / Volume 37"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-38-1994",
+    "volumeNumber": 38,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2338.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-38-1994.html",
+    "displayTitle": "Dragon Ball / Volume 38"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-39-1994",
+    "volumeNumber": 39,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2339.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-39-1994.html",
+    "displayTitle": "Dragon Ball / Volume 39"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-40-1995",
+    "volumeNumber": 40,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2340.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-40-1995.html",
+    "displayTitle": "Dragon Ball / Volume 40"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-41-1995",
+    "volumeNumber": 41,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2341.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-41-1995.html",
+    "displayTitle": "Dragon Ball / Volume 41"
+  },
+  {
+    "mangaId": "dragon-ball",
+    "mangaTitle": "Dragon Ball",
+    "volumeId": "dragon-ball-42-1995",
+    "volumeNumber": 42,
+    "cover": "Mangás/Dragon%20Ball/Dragon%20Ball%20%2342.png",
+    "pageUrl": "Mangás/Dragon%20Ball/dragon-ball-42-1995.html",
+    "displayTitle": "Dragon Ball / Volume 42"
   },
   {
     "mangaId": "dorohedoro",
@@ -3364,6 +4750,510 @@
     "cover": "Mangás/Boruto/Boruto%20Two%20Blue%20Vortex%20%238.png",
     "pageUrl": "Mangás/Boruto/boruto-two-blue-vortex-8-2026.html",
     "displayTitle": "Boruto: Two Blue Vortex / Volume 8"
+  },
+  {
+    "mangaId": "fullmetal-alchemist",
+    "mangaTitle": "Fullmetal Alchemist",
+    "volumeId": "fullmetal-alchemist-1-2002",
+    "volumeNumber": 1,
+    "cover": "Mangás/Fullmetal%20Alchemist/Fullmetal%20Alchemist%20%231.png",
+    "pageUrl": "Mangás/Fullmetal%20Alchemist/fullmetal-alchemist-1-2002.html",
+    "displayTitle": "Fullmetal Alchemist / Volume 1"
+  },
+  {
+    "mangaId": "fullmetal-alchemist",
+    "mangaTitle": "Fullmetal Alchemist",
+    "volumeId": "fullmetal-alchemist-2-2002",
+    "volumeNumber": 2,
+    "cover": "Mangás/Fullmetal%20Alchemist/Fullmetal%20Alchemist%20%232.png",
+    "pageUrl": "Mangás/Fullmetal%20Alchemist/fullmetal-alchemist-2-2002.html",
+    "displayTitle": "Fullmetal Alchemist / Volume 2"
+  },
+  {
+    "mangaId": "fullmetal-alchemist",
+    "mangaTitle": "Fullmetal Alchemist",
+    "volumeId": "fullmetal-alchemist-3-2002",
+    "volumeNumber": 3,
+    "cover": "Mangás/Fullmetal%20Alchemist/Fullmetal%20Alchemist%20%233.png",
+    "pageUrl": "Mangás/Fullmetal%20Alchemist/fullmetal-alchemist-3-2002.html",
+    "displayTitle": "Fullmetal Alchemist / Volume 3"
+  },
+  {
+    "mangaId": "fullmetal-alchemist",
+    "mangaTitle": "Fullmetal Alchemist",
+    "volumeId": "fullmetal-alchemist-4-2003",
+    "volumeNumber": 4,
+    "cover": "Mangás/Fullmetal%20Alchemist/Fullmetal%20Alchemist%20%234.png",
+    "pageUrl": "Mangás/Fullmetal%20Alchemist/fullmetal-alchemist-4-2003.html",
+    "displayTitle": "Fullmetal Alchemist / Volume 4"
+  },
+  {
+    "mangaId": "fullmetal-alchemist",
+    "mangaTitle": "Fullmetal Alchemist",
+    "volumeId": "fullmetal-alchemist-5-2003",
+    "volumeNumber": 5,
+    "cover": "Mangás/Fullmetal%20Alchemist/Fullmetal%20Alchemist%20%235.png",
+    "pageUrl": "Mangás/Fullmetal%20Alchemist/fullmetal-alchemist-5-2003.html",
+    "displayTitle": "Fullmetal Alchemist / Volume 5"
+  },
+  {
+    "mangaId": "fullmetal-alchemist",
+    "mangaTitle": "Fullmetal Alchemist",
+    "volumeId": "fullmetal-alchemist-6-2003",
+    "volumeNumber": 6,
+    "cover": "Mangás/Fullmetal%20Alchemist/Fullmetal%20Alchemist%20%236.png",
+    "pageUrl": "Mangás/Fullmetal%20Alchemist/fullmetal-alchemist-6-2003.html",
+    "displayTitle": "Fullmetal Alchemist / Volume 6"
+  },
+  {
+    "mangaId": "fullmetal-alchemist",
+    "mangaTitle": "Fullmetal Alchemist",
+    "volumeId": "fullmetal-alchemist-7-2004",
+    "volumeNumber": 7,
+    "cover": "Mangás/Fullmetal%20Alchemist/Fullmetal%20Alchemist%20%237.png",
+    "pageUrl": "Mangás/Fullmetal%20Alchemist/fullmetal-alchemist-7-2004.html",
+    "displayTitle": "Fullmetal Alchemist / Volume 7"
+  },
+  {
+    "mangaId": "fullmetal-alchemist",
+    "mangaTitle": "Fullmetal Alchemist",
+    "volumeId": "fullmetal-alchemist-8-2004",
+    "volumeNumber": 8,
+    "cover": "Mangás/Fullmetal%20Alchemist/Fullmetal%20Alchemist%20%238.png",
+    "pageUrl": "Mangás/Fullmetal%20Alchemist/fullmetal-alchemist-8-2004.html",
+    "displayTitle": "Fullmetal Alchemist / Volume 8"
+  },
+  {
+    "mangaId": "fullmetal-alchemist",
+    "mangaTitle": "Fullmetal Alchemist",
+    "volumeId": "fullmetal-alchemist-9-2004",
+    "volumeNumber": 9,
+    "cover": "Mangás/Fullmetal%20Alchemist/Fullmetal%20Alchemist%20%239.png",
+    "pageUrl": "Mangás/Fullmetal%20Alchemist/fullmetal-alchemist-9-2004.html",
+    "displayTitle": "Fullmetal Alchemist / Volume 9"
+  },
+  {
+    "mangaId": "fullmetal-alchemist",
+    "mangaTitle": "Fullmetal Alchemist",
+    "volumeId": "fullmetal-alchemist-10-2005",
+    "volumeNumber": 10,
+    "cover": "Mangás/Fullmetal%20Alchemist/Fullmetal%20Alchemist%20%2310.png",
+    "pageUrl": "Mangás/Fullmetal%20Alchemist/fullmetal-alchemist-10-2005.html",
+    "displayTitle": "Fullmetal Alchemist / Volume 10"
+  },
+  {
+    "mangaId": "fullmetal-alchemist",
+    "mangaTitle": "Fullmetal Alchemist",
+    "volumeId": "fullmetal-alchemist-11-2005",
+    "volumeNumber": 11,
+    "cover": "Mangás/Fullmetal%20Alchemist/Fullmetal%20Alchemist%20%2311.png",
+    "pageUrl": "Mangás/Fullmetal%20Alchemist/fullmetal-alchemist-11-2005.html",
+    "displayTitle": "Fullmetal Alchemist / Volume 11"
+  },
+  {
+    "mangaId": "fullmetal-alchemist",
+    "mangaTitle": "Fullmetal Alchemist",
+    "volumeId": "fullmetal-alchemist-12-2005",
+    "volumeNumber": 12,
+    "cover": "Mangás/Fullmetal%20Alchemist/Fullmetal%20Alchemist%20%2312.png",
+    "pageUrl": "Mangás/Fullmetal%20Alchemist/fullmetal-alchemist-12-2005.html",
+    "displayTitle": "Fullmetal Alchemist / Volume 12"
+  },
+  {
+    "mangaId": "fullmetal-alchemist",
+    "mangaTitle": "Fullmetal Alchemist",
+    "volumeId": "fullmetal-alchemist-13-2006",
+    "volumeNumber": 13,
+    "cover": "Mangás/Fullmetal%20Alchemist/Fullmetal%20Alchemist%20%2313.png",
+    "pageUrl": "Mangás/Fullmetal%20Alchemist/fullmetal-alchemist-13-2006.html",
+    "displayTitle": "Fullmetal Alchemist / Volume 13"
+  },
+  {
+    "mangaId": "fullmetal-alchemist",
+    "mangaTitle": "Fullmetal Alchemist",
+    "volumeId": "fullmetal-alchemist-14-2006",
+    "volumeNumber": 14,
+    "cover": "Mangás/Fullmetal%20Alchemist/Fullmetal%20Alchemist%20%2314.png",
+    "pageUrl": "Mangás/Fullmetal%20Alchemist/fullmetal-alchemist-14-2006.html",
+    "displayTitle": "Fullmetal Alchemist / Volume 14"
+  },
+  {
+    "mangaId": "fullmetal-alchemist",
+    "mangaTitle": "Fullmetal Alchemist",
+    "volumeId": "fullmetal-alchemist-15-2006",
+    "volumeNumber": 15,
+    "cover": "Mangás/Fullmetal%20Alchemist/Fullmetal%20Alchemist%20%2315.png",
+    "pageUrl": "Mangás/Fullmetal%20Alchemist/fullmetal-alchemist-15-2006.html",
+    "displayTitle": "Fullmetal Alchemist / Volume 15"
+  },
+  {
+    "mangaId": "fullmetal-alchemist",
+    "mangaTitle": "Fullmetal Alchemist",
+    "volumeId": "fullmetal-alchemist-16-2007",
+    "volumeNumber": 16,
+    "cover": "Mangás/Fullmetal%20Alchemist/Fullmetal%20Alchemist%20%2316.png",
+    "pageUrl": "Mangás/Fullmetal%20Alchemist/fullmetal-alchemist-16-2007.html",
+    "displayTitle": "Fullmetal Alchemist / Volume 16"
+  },
+  {
+    "mangaId": "fullmetal-alchemist",
+    "mangaTitle": "Fullmetal Alchemist",
+    "volumeId": "fullmetal-alchemist-17-2007",
+    "volumeNumber": 17,
+    "cover": "Mangás/Fullmetal%20Alchemist/Fullmetal%20Alchemist%20%2317.png",
+    "pageUrl": "Mangás/Fullmetal%20Alchemist/fullmetal-alchemist-17-2007.html",
+    "displayTitle": "Fullmetal Alchemist / Volume 17"
+  },
+  {
+    "mangaId": "fullmetal-alchemist",
+    "mangaTitle": "Fullmetal Alchemist",
+    "volumeId": "fullmetal-alchemist-18-2007",
+    "volumeNumber": 18,
+    "cover": "Mangás/Fullmetal%20Alchemist/Fullmetal%20Alchemist%20%2318.png",
+    "pageUrl": "Mangás/Fullmetal%20Alchemist/fullmetal-alchemist-18-2007.html",
+    "displayTitle": "Fullmetal Alchemist / Volume 18"
+  },
+  {
+    "mangaId": "fullmetal-alchemist",
+    "mangaTitle": "Fullmetal Alchemist",
+    "volumeId": "fullmetal-alchemist-19-2008",
+    "volumeNumber": 19,
+    "cover": "Mangás/Fullmetal%20Alchemist/Fullmetal%20Alchemist%20%2319.png",
+    "pageUrl": "Mangás/Fullmetal%20Alchemist/fullmetal-alchemist-19-2008.html",
+    "displayTitle": "Fullmetal Alchemist / Volume 19"
+  },
+  {
+    "mangaId": "fullmetal-alchemist",
+    "mangaTitle": "Fullmetal Alchemist",
+    "volumeId": "fullmetal-alchemist-20-2008",
+    "volumeNumber": 20,
+    "cover": "Mangás/Fullmetal%20Alchemist/Fullmetal%20Alchemist%20%2320.png",
+    "pageUrl": "Mangás/Fullmetal%20Alchemist/fullmetal-alchemist-20-2008.html",
+    "displayTitle": "Fullmetal Alchemist / Volume 20"
+  },
+  {
+    "mangaId": "fullmetal-alchemist",
+    "mangaTitle": "Fullmetal Alchemist",
+    "volumeId": "fullmetal-alchemist-21-2008",
+    "volumeNumber": 21,
+    "cover": "Mangás/Fullmetal%20Alchemist/Fullmetal%20Alchemist%20%2321.png",
+    "pageUrl": "Mangás/Fullmetal%20Alchemist/fullmetal-alchemist-21-2008.html",
+    "displayTitle": "Fullmetal Alchemist / Volume 21"
+  },
+  {
+    "mangaId": "fullmetal-alchemist",
+    "mangaTitle": "Fullmetal Alchemist",
+    "volumeId": "fullmetal-alchemist-22-2009",
+    "volumeNumber": 22,
+    "cover": "Mangás/Fullmetal%20Alchemist/Fullmetal%20Alchemist%20%2322.png",
+    "pageUrl": "Mangás/Fullmetal%20Alchemist/fullmetal-alchemist-22-2009.html",
+    "displayTitle": "Fullmetal Alchemist / Volume 22"
+  },
+  {
+    "mangaId": "fullmetal-alchemist",
+    "mangaTitle": "Fullmetal Alchemist",
+    "volumeId": "fullmetal-alchemist-23-2009",
+    "volumeNumber": 23,
+    "cover": "Mangás/Fullmetal%20Alchemist/Fullmetal%20Alchemist%20%2323.png",
+    "pageUrl": "Mangás/Fullmetal%20Alchemist/fullmetal-alchemist-23-2009.html",
+    "displayTitle": "Fullmetal Alchemist / Volume 23"
+  },
+  {
+    "mangaId": "fullmetal-alchemist",
+    "mangaTitle": "Fullmetal Alchemist",
+    "volumeId": "fullmetal-alchemist-24-2009",
+    "volumeNumber": 24,
+    "cover": "Mangás/Fullmetal%20Alchemist/Fullmetal%20Alchemist%20%2324.png",
+    "pageUrl": "Mangás/Fullmetal%20Alchemist/fullmetal-alchemist-24-2009.html",
+    "displayTitle": "Fullmetal Alchemist / Volume 24"
+  },
+  {
+    "mangaId": "fullmetal-alchemist",
+    "mangaTitle": "Fullmetal Alchemist",
+    "volumeId": "fullmetal-alchemist-25-2010",
+    "volumeNumber": 25,
+    "cover": "Mangás/Fullmetal%20Alchemist/Fullmetal%20Alchemist%20%2325.png",
+    "pageUrl": "Mangás/Fullmetal%20Alchemist/fullmetal-alchemist-25-2010.html",
+    "displayTitle": "Fullmetal Alchemist / Volume 25"
+  },
+  {
+    "mangaId": "fullmetal-alchemist",
+    "mangaTitle": "Fullmetal Alchemist",
+    "volumeId": "fullmetal-alchemist-26-2010",
+    "volumeNumber": 26,
+    "cover": "Mangás/Fullmetal%20Alchemist/Fullmetal%20Alchemist%20%2326.png",
+    "pageUrl": "Mangás/Fullmetal%20Alchemist/fullmetal-alchemist-26-2010.html",
+    "displayTitle": "Fullmetal Alchemist / Volume 26"
+  },
+  {
+    "mangaId": "fullmetal-alchemist",
+    "mangaTitle": "Fullmetal Alchemist",
+    "volumeId": "fullmetal-alchemist-27-2010",
+    "volumeNumber": 27,
+    "cover": "Mangás/Fullmetal%20Alchemist/Fullmetal%20Alchemist%20%2327.png",
+    "pageUrl": "Mangás/Fullmetal%20Alchemist/fullmetal-alchemist-27-2010.html",
+    "displayTitle": "Fullmetal Alchemist / Volume 27"
+  },
+  {
+    "mangaId": "vinland-saga",
+    "mangaTitle": "Vinland Saga",
+    "volumeId": "vinland-saga-1-2005",
+    "volumeNumber": 1,
+    "cover": "Mangás/Vinland%20Saga/Vinland%20Saga%20%231.png",
+    "pageUrl": "Mangás/Vinland%20Saga/vinland-saga-1-2005.html",
+    "displayTitle": "Vinland Saga / Volume 1"
+  },
+  {
+    "mangaId": "vinland-saga",
+    "mangaTitle": "Vinland Saga",
+    "volumeId": "vinland-saga-2-2005",
+    "volumeNumber": 2,
+    "cover": "Mangás/Vinland%20Saga/Vinland%20Saga%20%232.png",
+    "pageUrl": "Mangás/Vinland%20Saga/vinland-saga-2-2005.html",
+    "displayTitle": "Vinland Saga / Volume 2"
+  },
+  {
+    "mangaId": "vinland-saga",
+    "mangaTitle": "Vinland Saga",
+    "volumeId": "vinland-saga-3-2006",
+    "volumeNumber": 3,
+    "cover": "Mangás/Vinland%20Saga/Vinland%20Saga%20%233.png",
+    "pageUrl": "Mangás/Vinland%20Saga/vinland-saga-3-2006.html",
+    "displayTitle": "Vinland Saga / Volume 3"
+  },
+  {
+    "mangaId": "vinland-saga",
+    "mangaTitle": "Vinland Saga",
+    "volumeId": "vinland-saga-4-2007",
+    "volumeNumber": 4,
+    "cover": "Mangás/Vinland%20Saga/Vinland%20Saga%20%234.png",
+    "pageUrl": "Mangás/Vinland%20Saga/vinland-saga-4-2007.html",
+    "displayTitle": "Vinland Saga / Volume 4"
+  },
+  {
+    "mangaId": "vinland-saga",
+    "mangaTitle": "Vinland Saga",
+    "volumeId": "vinland-saga-5-2007",
+    "volumeNumber": 5,
+    "cover": "Mangás/Vinland%20Saga/Vinland%20Saga%20%235.png",
+    "pageUrl": "Mangás/Vinland%20Saga/vinland-saga-5-2007.html",
+    "displayTitle": "Vinland Saga / Volume 5"
+  },
+  {
+    "mangaId": "vinland-saga",
+    "mangaTitle": "Vinland Saga",
+    "volumeId": "vinland-saga-6-2008",
+    "volumeNumber": 6,
+    "cover": "Mangás/Vinland%20Saga/Vinland%20Saga%20%236.png",
+    "pageUrl": "Mangás/Vinland%20Saga/vinland-saga-6-2008.html",
+    "displayTitle": "Vinland Saga / Volume 6"
+  },
+  {
+    "mangaId": "vinland-saga",
+    "mangaTitle": "Vinland Saga",
+    "volumeId": "vinland-saga-7-2009",
+    "volumeNumber": 7,
+    "cover": "Mangás/Vinland%20Saga/Vinland%20Saga%20%237.png",
+    "pageUrl": "Mangás/Vinland%20Saga/vinland-saga-7-2009.html",
+    "displayTitle": "Vinland Saga / Volume 7"
+  },
+  {
+    "mangaId": "vinland-saga",
+    "mangaTitle": "Vinland Saga",
+    "volumeId": "vinland-saga-8-2009",
+    "volumeNumber": 8,
+    "cover": "Mangás/Vinland%20Saga/Vinland%20Saga%20%238.png",
+    "pageUrl": "Mangás/Vinland%20Saga/vinland-saga-8-2009.html",
+    "displayTitle": "Vinland Saga / Volume 8"
+  },
+  {
+    "mangaId": "vinland-saga",
+    "mangaTitle": "Vinland Saga",
+    "volumeId": "vinland-saga-9-2010",
+    "volumeNumber": 9,
+    "cover": "Mangás/Vinland%20Saga/Vinland%20Saga%20%239.png",
+    "pageUrl": "Mangás/Vinland%20Saga/vinland-saga-9-2010.html",
+    "displayTitle": "Vinland Saga / Volume 9"
+  },
+  {
+    "mangaId": "vinland-saga",
+    "mangaTitle": "Vinland Saga",
+    "volumeId": "vinland-saga-10-2011",
+    "volumeNumber": 10,
+    "cover": "Mangás/Vinland%20Saga/Vinland%20Saga%20%2310.png",
+    "pageUrl": "Mangás/Vinland%20Saga/vinland-saga-10-2011.html",
+    "displayTitle": "Vinland Saga / Volume 10"
+  },
+  {
+    "mangaId": "vinland-saga",
+    "mangaTitle": "Vinland Saga",
+    "volumeId": "vinland-saga-11-2012",
+    "volumeNumber": 11,
+    "cover": "Mangás/Vinland%20Saga/Vinland%20Saga%20%2311.png",
+    "pageUrl": "Mangás/Vinland%20Saga/vinland-saga-11-2012.html",
+    "displayTitle": "Vinland Saga / Volume 11"
+  },
+  {
+    "mangaId": "vinland-saga",
+    "mangaTitle": "Vinland Saga",
+    "volumeId": "vinland-saga-12-2012",
+    "volumeNumber": 12,
+    "cover": "Mangás/Vinland%20Saga/Vinland%20Saga%20%2312.png",
+    "pageUrl": "Mangás/Vinland%20Saga/vinland-saga-12-2012.html",
+    "displayTitle": "Vinland Saga / Volume 12"
+  },
+  {
+    "mangaId": "vinland-saga",
+    "mangaTitle": "Vinland Saga",
+    "volumeId": "vinland-saga-13-2013",
+    "volumeNumber": 13,
+    "cover": "Mangás/Vinland%20Saga/Vinland%20Saga%20%2313.png",
+    "pageUrl": "Mangás/Vinland%20Saga/vinland-saga-13-2013.html",
+    "displayTitle": "Vinland Saga / Volume 13"
+  },
+  {
+    "mangaId": "vinland-saga",
+    "mangaTitle": "Vinland Saga",
+    "volumeId": "vinland-saga-14-2014",
+    "volumeNumber": 14,
+    "cover": "Mangás/Vinland%20Saga/Vinland%20Saga%20%2314.png",
+    "pageUrl": "Mangás/Vinland%20Saga/vinland-saga-14-2014.html",
+    "displayTitle": "Vinland Saga / Volume 14"
+  },
+  {
+    "mangaId": "vinland-saga",
+    "mangaTitle": "Vinland Saga",
+    "volumeId": "vinland-saga-15-2014",
+    "volumeNumber": 15,
+    "cover": "Mangás/Vinland%20Saga/Vinland%20Saga%20%2315.png",
+    "pageUrl": "Mangás/Vinland%20Saga/vinland-saga-15-2014.html",
+    "displayTitle": "Vinland Saga / Volume 15"
+  },
+  {
+    "mangaId": "vinland-saga",
+    "mangaTitle": "Vinland Saga",
+    "volumeId": "vinland-saga-16-2015",
+    "volumeNumber": 16,
+    "cover": "Mangás/Vinland%20Saga/Vinland%20Saga%20%2316.png",
+    "pageUrl": "Mangás/Vinland%20Saga/vinland-saga-16-2015.html",
+    "displayTitle": "Vinland Saga / Volume 16"
+  },
+  {
+    "mangaId": "vinland-saga",
+    "mangaTitle": "Vinland Saga",
+    "volumeId": "vinland-saga-17-2016",
+    "volumeNumber": 17,
+    "cover": "Mangás/Vinland%20Saga/Vinland%20Saga%20%2317.png",
+    "pageUrl": "Mangás/Vinland%20Saga/vinland-saga-17-2016.html",
+    "displayTitle": "Vinland Saga / Volume 17"
+  },
+  {
+    "mangaId": "vinland-saga",
+    "mangaTitle": "Vinland Saga",
+    "volumeId": "vinland-saga-18-2016",
+    "volumeNumber": 18,
+    "cover": "Mangás/Vinland%20Saga/Vinland%20Saga%20%2318.png",
+    "pageUrl": "Mangás/Vinland%20Saga/vinland-saga-18-2016.html",
+    "displayTitle": "Vinland Saga / Volume 18"
+  },
+  {
+    "mangaId": "vinland-saga",
+    "mangaTitle": "Vinland Saga",
+    "volumeId": "vinland-saga-19-2017",
+    "volumeNumber": 19,
+    "cover": "Mangás/Vinland%20Saga/Vinland%20Saga%20%2319.png",
+    "pageUrl": "Mangás/Vinland%20Saga/vinland-saga-19-2017.html",
+    "displayTitle": "Vinland Saga / Volume 19"
+  },
+  {
+    "mangaId": "vinland-saga",
+    "mangaTitle": "Vinland Saga",
+    "volumeId": "vinland-saga-20-2017",
+    "volumeNumber": 20,
+    "cover": "Mangás/Vinland%20Saga/Vinland%20Saga%20%2320.png",
+    "pageUrl": "Mangás/Vinland%20Saga/vinland-saga-20-2017.html",
+    "displayTitle": "Vinland Saga / Volume 20"
+  },
+  {
+    "mangaId": "vinland-saga",
+    "mangaTitle": "Vinland Saga",
+    "volumeId": "vinland-saga-21-2018",
+    "volumeNumber": 21,
+    "cover": "Mangás/Vinland%20Saga/Vinland%20Saga%20%2321.png",
+    "pageUrl": "Mangás/Vinland%20Saga/vinland-saga-21-2018.html",
+    "displayTitle": "Vinland Saga / Volume 21"
+  },
+  {
+    "mangaId": "vinland-saga",
+    "mangaTitle": "Vinland Saga",
+    "volumeId": "vinland-saga-22-2019",
+    "volumeNumber": 22,
+    "cover": "Mangás/Vinland%20Saga/Vinland%20Saga%20%2322.png",
+    "pageUrl": "Mangás/Vinland%20Saga/vinland-saga-22-2019.html",
+    "displayTitle": "Vinland Saga / Volume 22"
+  },
+  {
+    "mangaId": "vinland-saga",
+    "mangaTitle": "Vinland Saga",
+    "volumeId": "vinland-saga-23-2019",
+    "volumeNumber": 23,
+    "cover": "Mangás/Vinland%20Saga/Vinland%20Saga%20%2323.png",
+    "pageUrl": "Mangás/Vinland%20Saga/vinland-saga-23-2019.html",
+    "displayTitle": "Vinland Saga / Volume 23"
+  },
+  {
+    "mangaId": "vinland-saga",
+    "mangaTitle": "Vinland Saga",
+    "volumeId": "vinland-saga-24-2020",
+    "volumeNumber": 24,
+    "cover": "Mangás/Vinland%20Saga/Vinland%20Saga%20%2324.png",
+    "pageUrl": "Mangás/Vinland%20Saga/vinland-saga-24-2020.html",
+    "displayTitle": "Vinland Saga / Volume 24"
+  },
+  {
+    "mangaId": "vinland-saga",
+    "mangaTitle": "Vinland Saga",
+    "volumeId": "vinland-saga-25-2021",
+    "volumeNumber": 25,
+    "cover": "Mangás/Vinland%20Saga/Vinland%20Saga%20%2325.png",
+    "pageUrl": "Mangás/Vinland%20Saga/vinland-saga-25-2021.html",
+    "displayTitle": "Vinland Saga / Volume 25"
+  },
+  {
+    "mangaId": "vinland-saga",
+    "mangaTitle": "Vinland Saga",
+    "volumeId": "vinland-saga-26-2022",
+    "volumeNumber": 26,
+    "cover": "Mangás/Vinland%20Saga/Vinland%20Saga%20%2326.png",
+    "pageUrl": "Mangás/Vinland%20Saga/vinland-saga-26-2022.html",
+    "displayTitle": "Vinland Saga / Volume 26"
+  },
+  {
+    "mangaId": "vinland-saga",
+    "mangaTitle": "Vinland Saga",
+    "volumeId": "vinland-saga-27-2023",
+    "volumeNumber": 27,
+    "cover": "Mangás/Vinland%20Saga/Vinland%20Saga%20%2327.png",
+    "pageUrl": "Mangás/Vinland%20Saga/vinland-saga-27-2023.html",
+    "displayTitle": "Vinland Saga / Volume 27"
+  },
+  {
+    "mangaId": "vinland-saga",
+    "mangaTitle": "Vinland Saga",
+    "volumeId": "vinland-saga-28-2024",
+    "volumeNumber": 28,
+    "cover": "Mangás/Vinland%20Saga/Vinland%20Saga%20%2328.png",
+    "pageUrl": "Mangás/Vinland%20Saga/vinland-saga-28-2024.html",
+    "displayTitle": "Vinland Saga / Volume 28"
+  },
+  {
+    "mangaId": "vinland-saga",
+    "mangaTitle": "Vinland Saga",
+    "volumeId": "vinland-saga-29-2025",
+    "volumeNumber": 29,
+    "cover": "Mangás/Vinland%20Saga/Vinland%20Saga%20%2329.png",
+    "pageUrl": "Mangás/Vinland%20Saga/vinland-saga-29-2025.html",
+    "displayTitle": "Vinland Saga / Volume 29"
   },
   {
     "mangaId": "vagabond",
@@ -6920,189 +8810,4 @@
     "pageUrl": "Mangás/Yu%20Yu%20Hakusho/yu-yu-hakusho-19-1994.html",
     "displayTitle": "Yu Yu Hakusho / Volume 19"
   }
-,
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-2-2006","volumeNumber":2,"cover":"Mangás/Kingdom/Kingdom%20%232.png","pageUrl":"Mangás/Kingdom/kingdom-2-2006.html","displayTitle":"Kingdom / Volume 2"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-3-2006","volumeNumber":3,"cover":"Mangás/Kingdom/Kingdom%20%233.png","pageUrl":"Mangás/Kingdom/kingdom-3-2006.html","displayTitle":"Kingdom / Volume 3"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-4-2007","volumeNumber":4,"cover":"Mangás/Kingdom/Kingdom%20%234.png","pageUrl":"Mangás/Kingdom/kingdom-4-2007.html","displayTitle":"Kingdom / Volume 4"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-5-2007","volumeNumber":5,"cover":"Mangás/Kingdom/Kingdom%20%235.png","pageUrl":"Mangás/Kingdom/kingdom-5-2007.html","displayTitle":"Kingdom / Volume 5"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-6-2007","volumeNumber":6,"cover":"Mangás/Kingdom/Kingdom%20%236.png","pageUrl":"Mangás/Kingdom/kingdom-6-2007.html","displayTitle":"Kingdom / Volume 6"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-7-2007","volumeNumber":7,"cover":"Mangás/Kingdom/Kingdom%20%237.png","pageUrl":"Mangás/Kingdom/kingdom-7-2007.html","displayTitle":"Kingdom / Volume 7"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-8-2007","volumeNumber":8,"cover":"Mangás/Kingdom/Kingdom%20%238.png","pageUrl":"Mangás/Kingdom/kingdom-8-2007.html","displayTitle":"Kingdom / Volume 8"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-9-2008","volumeNumber":9,"cover":"Mangás/Kingdom/Kingdom%20%239.png","pageUrl":"Mangás/Kingdom/kingdom-9-2008.html","displayTitle":"Kingdom / Volume 9"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-10-2008","volumeNumber":10,"cover":"Mangás/Kingdom/Kingdom%20%2310.png","pageUrl":"Mangás/Kingdom/kingdom-10-2008.html","displayTitle":"Kingdom / Volume 10"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-11-2008","volumeNumber":11,"cover":"Mangás/Kingdom/Kingdom%20%2311.png","pageUrl":"Mangás/Kingdom/kingdom-11-2008.html","displayTitle":"Kingdom / Volume 11"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-12-2008","volumeNumber":12,"cover":"Mangás/Kingdom/Kingdom%20%2312.png","pageUrl":"Mangás/Kingdom/kingdom-12-2008.html","displayTitle":"Kingdom / Volume 12"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-13-2009","volumeNumber":13,"cover":"Mangás/Kingdom/Kingdom%20%2313.png","pageUrl":"Mangás/Kingdom/kingdom-13-2009.html","displayTitle":"Kingdom / Volume 13"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-14-2009","volumeNumber":14,"cover":"Mangás/Kingdom/Kingdom%20%2314.png","pageUrl":"Mangás/Kingdom/kingdom-14-2009.html","displayTitle":"Kingdom / Volume 14"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-15-2009","volumeNumber":15,"cover":"Mangás/Kingdom/Kingdom%20%2315.png","pageUrl":"Mangás/Kingdom/kingdom-15-2009.html","displayTitle":"Kingdom / Volume 15"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-16-2009","volumeNumber":16,"cover":"Mangás/Kingdom/Kingdom%20%2316.png","pageUrl":"Mangás/Kingdom/kingdom-16-2009.html","displayTitle":"Kingdom / Volume 16"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-17-2010","volumeNumber":17,"cover":"Mangás/Kingdom/Kingdom%20%2317.png","pageUrl":"Mangás/Kingdom/kingdom-17-2010.html","displayTitle":"Kingdom / Volume 17"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-18-2010","volumeNumber":18,"cover":"Mangás/Kingdom/Kingdom%20%2318.png","pageUrl":"Mangás/Kingdom/kingdom-18-2010.html","displayTitle":"Kingdom / Volume 18"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-19-2010","volumeNumber":19,"cover":"Mangás/Kingdom/Kingdom%20%2319.png","pageUrl":"Mangás/Kingdom/kingdom-19-2010.html","displayTitle":"Kingdom / Volume 19"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-20-2010","volumeNumber":20,"cover":"Mangás/Kingdom/Kingdom%20%2320.png","pageUrl":"Mangás/Kingdom/kingdom-20-2010.html","displayTitle":"Kingdom / Volume 20"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-21-2011","volumeNumber":21,"cover":"Mangás/Kingdom/Kingdom%20%2321.png","pageUrl":"Mangás/Kingdom/kingdom-21-2011.html","displayTitle":"Kingdom / Volume 21"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-22-2011","volumeNumber":22,"cover":"Mangás/Kingdom/Kingdom%20%2322.png","pageUrl":"Mangás/Kingdom/kingdom-22-2011.html","displayTitle":"Kingdom / Volume 22"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-23-2011","volumeNumber":23,"cover":"Mangás/Kingdom/Kingdom%20%2323.png","pageUrl":"Mangás/Kingdom/kingdom-23-2011.html","displayTitle":"Kingdom / Volume 23"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-24-2011","volumeNumber":24,"cover":"Mangás/Kingdom/Kingdom%20%2324.png","pageUrl":"Mangás/Kingdom/kingdom-24-2011.html","displayTitle":"Kingdom / Volume 24"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-25-2012","volumeNumber":25,"cover":"Mangás/Kingdom/Kingdom%20%2325.png","pageUrl":"Mangás/Kingdom/kingdom-25-2012.html","displayTitle":"Kingdom / Volume 25"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-26-2012","volumeNumber":26,"cover":"Mangás/Kingdom/Kingdom%20%2326.png","pageUrl":"Mangás/Kingdom/kingdom-26-2012.html","displayTitle":"Kingdom / Volume 26"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-27-2012","volumeNumber":27,"cover":"Mangás/Kingdom/Kingdom%20%2327.png","pageUrl":"Mangás/Kingdom/kingdom-27-2012.html","displayTitle":"Kingdom / Volume 27"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-28-2012","volumeNumber":28,"cover":"Mangás/Kingdom/Kingdom%20%2328.png","pageUrl":"Mangás/Kingdom/kingdom-28-2012.html","displayTitle":"Kingdom / Volume 28"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-29-2013","volumeNumber":29,"cover":"Mangás/Kingdom/Kingdom%20%2329.png","pageUrl":"Mangás/Kingdom/kingdom-29-2013.html","displayTitle":"Kingdom / Volume 29"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-30-2013","volumeNumber":30,"cover":"Mangás/Kingdom/Kingdom%20%2330.png","pageUrl":"Mangás/Kingdom/kingdom-30-2013.html","displayTitle":"Kingdom / Volume 30"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-31-2013","volumeNumber":31,"cover":"Mangás/Kingdom/Kingdom%20%2331.png","pageUrl":"Mangás/Kingdom/kingdom-31-2013.html","displayTitle":"Kingdom / Volume 31"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-32-2013","volumeNumber":32,"cover":"Mangás/Kingdom/Kingdom%20%2332.png","pageUrl":"Mangás/Kingdom/kingdom-32-2013.html","displayTitle":"Kingdom / Volume 32"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-33-2014","volumeNumber":33,"cover":"Mangás/Kingdom/Kingdom%20%2333.png","pageUrl":"Mangás/Kingdom/kingdom-33-2014.html","displayTitle":"Kingdom / Volume 33"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-34-2014","volumeNumber":34,"cover":"Mangás/Kingdom/Kingdom%20%2334.png","pageUrl":"Mangás/Kingdom/kingdom-34-2014.html","displayTitle":"Kingdom / Volume 34"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-35-2014","volumeNumber":35,"cover":"Mangás/Kingdom/Kingdom%20%2335.png","pageUrl":"Mangás/Kingdom/kingdom-35-2014.html","displayTitle":"Kingdom / Volume 35"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-36-2014","volumeNumber":36,"cover":"Mangás/Kingdom/Kingdom%20%2336.png","pageUrl":"Mangás/Kingdom/kingdom-36-2014.html","displayTitle":"Kingdom / Volume 36"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-37-2015","volumeNumber":37,"cover":"Mangás/Kingdom/Kingdom%20%2337.png","pageUrl":"Mangás/Kingdom/kingdom-37-2015.html","displayTitle":"Kingdom / Volume 37"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-38-2015","volumeNumber":38,"cover":"Mangás/Kingdom/Kingdom%20%2338.png","pageUrl":"Mangás/Kingdom/kingdom-38-2015.html","displayTitle":"Kingdom / Volume 38"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-39-2015","volumeNumber":39,"cover":"Mangás/Kingdom/Kingdom%20%2339.png","pageUrl":"Mangás/Kingdom/kingdom-39-2015.html","displayTitle":"Kingdom / Volume 39"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-40-2015","volumeNumber":40,"cover":"Mangás/Kingdom/Kingdom%20%2340.png","pageUrl":"Mangás/Kingdom/kingdom-40-2015.html","displayTitle":"Kingdom / Volume 40"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-41-2016","volumeNumber":41,"cover":"Mangás/Kingdom/Kingdom%20%2341.png","pageUrl":"Mangás/Kingdom/kingdom-41-2016.html","displayTitle":"Kingdom / Volume 41"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-42-2016","volumeNumber":42,"cover":"Mangás/Kingdom/Kingdom%20%2342.png","pageUrl":"Mangás/Kingdom/kingdom-42-2016.html","displayTitle":"Kingdom / Volume 42"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-43-2016","volumeNumber":43,"cover":"Mangás/Kingdom/Kingdom%20%2343.png","pageUrl":"Mangás/Kingdom/kingdom-43-2016.html","displayTitle":"Kingdom / Volume 43"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-44-2016","volumeNumber":44,"cover":"Mangás/Kingdom/Kingdom%20%2344.png","pageUrl":"Mangás/Kingdom/kingdom-44-2016.html","displayTitle":"Kingdom / Volume 44"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-45-2017","volumeNumber":45,"cover":"Mangás/Kingdom/Kingdom%20%2345.png","pageUrl":"Mangás/Kingdom/kingdom-45-2017.html","displayTitle":"Kingdom / Volume 45"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-46-2017","volumeNumber":46,"cover":"Mangás/Kingdom/Kingdom%20%2346.png","pageUrl":"Mangás/Kingdom/kingdom-46-2017.html","displayTitle":"Kingdom / Volume 46"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-47-2017","volumeNumber":47,"cover":"Mangás/Kingdom/Kingdom%20%2347.png","pageUrl":"Mangás/Kingdom/kingdom-47-2017.html","displayTitle":"Kingdom / Volume 47"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-48-2017","volumeNumber":48,"cover":"Mangás/Kingdom/Kingdom%20%2348.png","pageUrl":"Mangás/Kingdom/kingdom-48-2017.html","displayTitle":"Kingdom / Volume 48"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-49-2018","volumeNumber":49,"cover":"Mangás/Kingdom/Kingdom%20%2349.png","pageUrl":"Mangás/Kingdom/kingdom-49-2018.html","displayTitle":"Kingdom / Volume 49"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-50-2018","volumeNumber":50,"cover":"Mangás/Kingdom/Kingdom%20%2350.png","pageUrl":"Mangás/Kingdom/kingdom-50-2018.html","displayTitle":"Kingdom / Volume 50"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-51-2018","volumeNumber":51,"cover":"Mangás/Kingdom/Kingdom%20%2351.png","pageUrl":"Mangás/Kingdom/kingdom-51-2018.html","displayTitle":"Kingdom / Volume 51"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-52-2018","volumeNumber":52,"cover":"Mangás/Kingdom/Kingdom%20%2352.png","pageUrl":"Mangás/Kingdom/kingdom-52-2018.html","displayTitle":"Kingdom / Volume 52"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-53-2019","volumeNumber":53,"cover":"Mangás/Kingdom/Kingdom%20%2353.png","pageUrl":"Mangás/Kingdom/kingdom-53-2019.html","displayTitle":"Kingdom / Volume 53"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-54-2019","volumeNumber":54,"cover":"Mangás/Kingdom/Kingdom%20%2354.png","pageUrl":"Mangás/Kingdom/kingdom-54-2019.html","displayTitle":"Kingdom / Volume 54"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-55-2019","volumeNumber":55,"cover":"Mangás/Kingdom/Kingdom%20%2355.png","pageUrl":"Mangás/Kingdom/kingdom-55-2019.html","displayTitle":"Kingdom / Volume 55"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-56-2019","volumeNumber":56,"cover":"Mangás/Kingdom/Kingdom%20%2356.png","pageUrl":"Mangás/Kingdom/kingdom-56-2019.html","displayTitle":"Kingdom / Volume 56"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-57-2020","volumeNumber":57,"cover":"Mangás/Kingdom/Kingdom%20%2357.png","pageUrl":"Mangás/Kingdom/kingdom-57-2020.html","displayTitle":"Kingdom / Volume 57"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-58-2020","volumeNumber":58,"cover":"Mangás/Kingdom/Kingdom%20%2358.png","pageUrl":"Mangás/Kingdom/kingdom-58-2020.html","displayTitle":"Kingdom / Volume 58"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-59-2020","volumeNumber":59,"cover":"Mangás/Kingdom/Kingdom%20%2359.png","pageUrl":"Mangás/Kingdom/kingdom-59-2020.html","displayTitle":"Kingdom / Volume 59"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-60-2020","volumeNumber":60,"cover":"Mangás/Kingdom/Kingdom%20%2360.png","pageUrl":"Mangás/Kingdom/kingdom-60-2020.html","displayTitle":"Kingdom / Volume 60"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-61-2021","volumeNumber":61,"cover":"Mangás/Kingdom/Kingdom%20%2361.png","pageUrl":"Mangás/Kingdom/kingdom-61-2021.html","displayTitle":"Kingdom / Volume 61"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-62-2021","volumeNumber":62,"cover":"Mangás/Kingdom/Kingdom%20%2362.png","pageUrl":"Mangás/Kingdom/kingdom-62-2021.html","displayTitle":"Kingdom / Volume 62"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-63-2021","volumeNumber":63,"cover":"Mangás/Kingdom/Kingdom%20%2363.png","pageUrl":"Mangás/Kingdom/kingdom-63-2021.html","displayTitle":"Kingdom / Volume 63"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-64-2022","volumeNumber":64,"cover":"Mangás/Kingdom/Kingdom%20%2364.png","pageUrl":"Mangás/Kingdom/kingdom-64-2022.html","displayTitle":"Kingdom / Volume 64"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-65-2022","volumeNumber":65,"cover":"Mangás/Kingdom/Kingdom%20%2365.png","pageUrl":"Mangás/Kingdom/kingdom-65-2022.html","displayTitle":"Kingdom / Volume 65"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-66-2022","volumeNumber":66,"cover":"Mangás/Kingdom/Kingdom%20%2366.png","pageUrl":"Mangás/Kingdom/kingdom-66-2022.html","displayTitle":"Kingdom / Volume 66"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-67-2023","volumeNumber":67,"cover":"Mangás/Kingdom/Kingdom%20%2367.png","pageUrl":"Mangás/Kingdom/kingdom-67-2023.html","displayTitle":"Kingdom / Volume 67"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-68-2023","volumeNumber":68,"cover":"Mangás/Kingdom/Kingdom%20%2368.png","pageUrl":"Mangás/Kingdom/kingdom-68-2023.html","displayTitle":"Kingdom / Volume 68"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-69-2023","volumeNumber":69,"cover":"Mangás/Kingdom/Kingdom%20%2369.png","pageUrl":"Mangás/Kingdom/kingdom-69-2023.html","displayTitle":"Kingdom / Volume 69"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-70-2023","volumeNumber":70,"cover":"Mangás/Kingdom/Kingdom%20%2370.png","pageUrl":"Mangás/Kingdom/kingdom-70-2023.html","displayTitle":"Kingdom / Volume 70"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-71-2024","volumeNumber":71,"cover":"Mangás/Kingdom/Kingdom%20%2371.png","pageUrl":"Mangás/Kingdom/kingdom-71-2024.html","displayTitle":"Kingdom / Volume 71"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-72-2024","volumeNumber":72,"cover":"Mangás/Kingdom/Kingdom%20%2372.png","pageUrl":"Mangás/Kingdom/kingdom-72-2024.html","displayTitle":"Kingdom / Volume 72"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-73-2024","volumeNumber":73,"cover":"Mangás/Kingdom/Kingdom%20%2373.png","pageUrl":"Mangás/Kingdom/kingdom-73-2024.html","displayTitle":"Kingdom / Volume 73"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-74-2024","volumeNumber":74,"cover":"Mangás/Kingdom/Kingdom%20%2374.png","pageUrl":"Mangás/Kingdom/kingdom-74-2024.html","displayTitle":"Kingdom / Volume 74"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-75-2025","volumeNumber":75,"cover":"Mangás/Kingdom/Kingdom%20%2375.png","pageUrl":"Mangás/Kingdom/kingdom-75-2025.html","displayTitle":"Kingdom / Volume 75"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-76-2025","volumeNumber":76,"cover":"Mangás/Kingdom/Kingdom%20%2376.png","pageUrl":"Mangás/Kingdom/kingdom-76-2025.html","displayTitle":"Kingdom / Volume 76"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-77-2025","volumeNumber":77,"cover":"Mangás/Kingdom/Kingdom%20%2377.png","pageUrl":"Mangás/Kingdom/kingdom-77-2025.html","displayTitle":"Kingdom / Volume 77"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-78-2026","volumeNumber":78,"cover":"Mangás/Kingdom/Kingdom%20%2378.png","pageUrl":"Mangás/Kingdom/kingdom-78-2026.html","displayTitle":"Kingdom / Volume 78"},
-{"mangaId":"kingdom","mangaTitle":"Kingdom","volumeId":"kingdom-79-2026","volumeNumber":79,"cover":"Mangás/Kingdom/Kingdom%20%2379.png","pageUrl":"Mangás/Kingdom/kingdom-79-2026.html","displayTitle":"Kingdom / Volume 79"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-4-1997","volumeNumber":4,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%234.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-4-1997.html","displayTitle":"Yu-Gi-Oh! / Volume 4"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-5-1997","volumeNumber":5,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%235.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-5-1997.html","displayTitle":"Yu-Gi-Oh! / Volume 5"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-6-1998","volumeNumber":6,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%236.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-6-1998.html","displayTitle":"Yu-Gi-Oh! / Volume 6"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-7-1998","volumeNumber":7,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%237.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-7-1998.html","displayTitle":"Yu-Gi-Oh! / Volume 7"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-8-1998","volumeNumber":8,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%238.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-8-1998.html","displayTitle":"Yu-Gi-Oh! / Volume 8"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-9-1998","volumeNumber":9,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%239.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-9-1998.html","displayTitle":"Yu-Gi-Oh! / Volume 9"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-10-1998","volumeNumber":10,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2310.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-10-1998.html","displayTitle":"Yu-Gi-Oh! / Volume 10"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-11-1999","volumeNumber":11,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2311.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-11-1999.html","displayTitle":"Yu-Gi-Oh! / Volume 11"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-12-1999","volumeNumber":12,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2312.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-12-1999.html","displayTitle":"Yu-Gi-Oh! / Volume 12"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-13-1999","volumeNumber":13,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2313.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-13-1999.html","displayTitle":"Yu-Gi-Oh! / Volume 13"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-14-1999","volumeNumber":14,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2314.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-14-1999.html","displayTitle":"Yu-Gi-Oh! / Volume 14"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-15-1999","volumeNumber":15,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2315.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-15-1999.html","displayTitle":"Yu-Gi-Oh! / Volume 15"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-16-1999","volumeNumber":16,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2316.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-16-1999.html","displayTitle":"Yu-Gi-Oh! / Volume 16"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-17-2000","volumeNumber":17,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2317.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-17-2000.html","displayTitle":"Yu-Gi-Oh! / Volume 17"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-18-2000","volumeNumber":18,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2318.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-18-2000.html","displayTitle":"Yu-Gi-Oh! / Volume 18"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-19-2000","volumeNumber":19,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2319.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-19-2000.html","displayTitle":"Yu-Gi-Oh! / Volume 19"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-20-2000","volumeNumber":20,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2320.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-20-2000.html","displayTitle":"Yu-Gi-Oh! / Volume 20"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-21-2000","volumeNumber":21,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2321.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-21-2000.html","displayTitle":"Yu-Gi-Oh! / Volume 21"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-22-2000","volumeNumber":22,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2322.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-22-2000.html","displayTitle":"Yu-Gi-Oh! / Volume 22"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-23-2001","volumeNumber":23,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2323.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-23-2001.html","displayTitle":"Yu-Gi-Oh! / Volume 23"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-24-2001","volumeNumber":24,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2324.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-24-2001.html","displayTitle":"Yu-Gi-Oh! / Volume 24"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-25-2001","volumeNumber":25,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2325.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-25-2001.html","displayTitle":"Yu-Gi-Oh! / Volume 25"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-26-2001","volumeNumber":26,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2326.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-26-2001.html","displayTitle":"Yu-Gi-Oh! / Volume 26"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-27-2002","volumeNumber":27,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2327.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-27-2002.html","displayTitle":"Yu-Gi-Oh! / Volume 27"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-28-2002","volumeNumber":28,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2328.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-28-2002.html","displayTitle":"Yu-Gi-Oh! / Volume 28"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-29-2002","volumeNumber":29,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2329.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-29-2002.html","displayTitle":"Yu-Gi-Oh! / Volume 29"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-30-2002","volumeNumber":30,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2330.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-30-2002.html","displayTitle":"Yu-Gi-Oh! / Volume 30"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-31-2002","volumeNumber":31,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2331.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-31-2002.html","displayTitle":"Yu-Gi-Oh! / Volume 31"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-32-2003","volumeNumber":32,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2332.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-32-2003.html","displayTitle":"Yu-Gi-Oh! / Volume 32"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-33-2003","volumeNumber":33,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2333.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-33-2003.html","displayTitle":"Yu-Gi-Oh! / Volume 33"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-34-2003","volumeNumber":34,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2334.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-34-2003.html","displayTitle":"Yu-Gi-Oh! / Volume 34"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-35-2003","volumeNumber":35,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2335.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-35-2003.html","displayTitle":"Yu-Gi-Oh! / Volume 35"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-36-2004","volumeNumber":36,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2336.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-36-2004.html","displayTitle":"Yu-Gi-Oh! / Volume 36"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-37-2004","volumeNumber":37,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2337.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-37-2004.html","displayTitle":"Yu-Gi-Oh! / Volume 37"},
-{"mangaId":"yu-gi-oh","mangaTitle":"Yu-Gi-Oh!","volumeId":"yu-gi-oh-38-2004","volumeNumber":38,"cover":"Mangás/Yu-Gi-Oh!/Yu-Gi-Oh!%20%2338.png","pageUrl":"Mangás/Yu-Gi-Oh!/yu-gi-oh-38-2004.html","displayTitle":"Yu-Gi-Oh! / Volume 38"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-2-1986","volumeNumber":2,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%232.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-2-1986.html","displayTitle":"Dragon Ball / Volume 2"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-3-1986","volumeNumber":3,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%233.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-3-1986.html","displayTitle":"Dragon Ball / Volume 3"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-4-1986","volumeNumber":4,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%234.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-4-1986.html","displayTitle":"Dragon Ball / Volume 4"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-5-1987","volumeNumber":5,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%235.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-5-1987.html","displayTitle":"Dragon Ball / Volume 5"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-6-1987","volumeNumber":6,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%236.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-6-1987.html","displayTitle":"Dragon Ball / Volume 6"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-7-1987","volumeNumber":7,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%237.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-7-1987.html","displayTitle":"Dragon Ball / Volume 7"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-8-1987","volumeNumber":8,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%238.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-8-1987.html","displayTitle":"Dragon Ball / Volume 8"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-9-1987","volumeNumber":9,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%239.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-9-1987.html","displayTitle":"Dragon Ball / Volume 9"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-10-1987","volumeNumber":10,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2310.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-10-1987.html","displayTitle":"Dragon Ball / Volume 10"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-11-1988","volumeNumber":11,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2311.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-11-1988.html","displayTitle":"Dragon Ball / Volume 11"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-12-1988","volumeNumber":12,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2312.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-12-1988.html","displayTitle":"Dragon Ball / Volume 12"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-13-1988","volumeNumber":13,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2313.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-13-1988.html","displayTitle":"Dragon Ball / Volume 13"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-14-1988","volumeNumber":14,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2314.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-14-1988.html","displayTitle":"Dragon Ball / Volume 14"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-15-1988","volumeNumber":15,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2315.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-15-1988.html","displayTitle":"Dragon Ball / Volume 15"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-16-1989","volumeNumber":16,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2316.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-16-1989.html","displayTitle":"Dragon Ball / Volume 16"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-17-1989","volumeNumber":17,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2317.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-17-1989.html","displayTitle":"Dragon Ball / Volume 17"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-18-1989","volumeNumber":18,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2318.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-18-1989.html","displayTitle":"Dragon Ball / Volume 18"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-19-1989","volumeNumber":19,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2319.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-19-1989.html","displayTitle":"Dragon Ball / Volume 19"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-20-1990","volumeNumber":20,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2320.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-20-1990.html","displayTitle":"Dragon Ball / Volume 20"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-21-1990","volumeNumber":21,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2321.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-21-1990.html","displayTitle":"Dragon Ball / Volume 21"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-22-1990","volumeNumber":22,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2322.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-22-1990.html","displayTitle":"Dragon Ball / Volume 22"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-23-1990","volumeNumber":23,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2323.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-23-1990.html","displayTitle":"Dragon Ball / Volume 23"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-24-1991","volumeNumber":24,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2324.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-24-1991.html","displayTitle":"Dragon Ball / Volume 24"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-25-1991","volumeNumber":25,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2325.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-25-1991.html","displayTitle":"Dragon Ball / Volume 25"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-26-1991","volumeNumber":26,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2326.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-26-1991.html","displayTitle":"Dragon Ball / Volume 26"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-27-1991","volumeNumber":27,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2327.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-27-1991.html","displayTitle":"Dragon Ball / Volume 27"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-28-1991","volumeNumber":28,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2328.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-28-1991.html","displayTitle":"Dragon Ball / Volume 28"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-29-1992","volumeNumber":29,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2329.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-29-1992.html","displayTitle":"Dragon Ball / Volume 29"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-30-1992","volumeNumber":30,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2330.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-30-1992.html","displayTitle":"Dragon Ball / Volume 30"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-31-1992","volumeNumber":31,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2331.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-31-1992.html","displayTitle":"Dragon Ball / Volume 31"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-32-1992","volumeNumber":32,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2332.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-32-1992.html","displayTitle":"Dragon Ball / Volume 32"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-33-1992","volumeNumber":33,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2333.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-33-1992.html","displayTitle":"Dragon Ball / Volume 33"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-34-1993","volumeNumber":34,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2334.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-34-1993.html","displayTitle":"Dragon Ball / Volume 34"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-35-1993","volumeNumber":35,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2335.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-35-1993.html","displayTitle":"Dragon Ball / Volume 35"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-36-1993","volumeNumber":36,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2336.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-36-1993.html","displayTitle":"Dragon Ball / Volume 36"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-37-1994","volumeNumber":37,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2337.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-37-1994.html","displayTitle":"Dragon Ball / Volume 37"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-38-1994","volumeNumber":38,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2338.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-38-1994.html","displayTitle":"Dragon Ball / Volume 38"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-39-1994","volumeNumber":39,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2339.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-39-1994.html","displayTitle":"Dragon Ball / Volume 39"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-40-1995","volumeNumber":40,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2340.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-40-1995.html","displayTitle":"Dragon Ball / Volume 40"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-41-1995","volumeNumber":41,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2341.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-41-1995.html","displayTitle":"Dragon Ball / Volume 41"},
-{"mangaId":"dragon-ball","mangaTitle":"Dragon Ball","volumeId":"dragon-ball-42-1995","volumeNumber":42,"cover":"Mangás/Dragon%20Ball/Dragon%20Ball%20%2342.png","pageUrl":"Mangás/Dragon%20Ball/dragon-ball-42-1995.html","displayTitle":"Dragon Ball / Volume 42"}
-,
-{"mangaId":"vinland-saga","mangaTitle":"Vinland Saga","volumeId":"vinland-saga-1-2005","volumeNumber":1,"cover":"Mangás/Vinland%20Saga/Vinland%20Saga%20%231.png","pageUrl":"Mangás/Vinland%20Saga/vinland-saga-1-2005.html","displayTitle":"Vinland Saga / Volume 1"},
-{"mangaId":"vinland-saga","mangaTitle":"Vinland Saga","volumeId":"vinland-saga-2-2005","volumeNumber":2,"cover":"Mangás/Vinland%20Saga/Vinland%20Saga%20%232.png","pageUrl":"Mangás/Vinland%20Saga/vinland-saga-2-2005.html","displayTitle":"Vinland Saga / Volume 2"},
-{"mangaId":"vinland-saga","mangaTitle":"Vinland Saga","volumeId":"vinland-saga-3-2006","volumeNumber":3,"cover":"Mangás/Vinland%20Saga/Vinland%20Saga%20%233.png","pageUrl":"Mangás/Vinland%20Saga/vinland-saga-3-2006.html","displayTitle":"Vinland Saga / Volume 3"},
-{"mangaId":"vinland-saga","mangaTitle":"Vinland Saga","volumeId":"vinland-saga-4-2007","volumeNumber":4,"cover":"Mangás/Vinland%20Saga/Vinland%20Saga%20%234.png","pageUrl":"Mangás/Vinland%20Saga/vinland-saga-4-2007.html","displayTitle":"Vinland Saga / Volume 4"},
-{"mangaId":"vinland-saga","mangaTitle":"Vinland Saga","volumeId":"vinland-saga-5-2007","volumeNumber":5,"cover":"Mangás/Vinland%20Saga/Vinland%20Saga%20%235.png","pageUrl":"Mangás/Vinland%20Saga/vinland-saga-5-2007.html","displayTitle":"Vinland Saga / Volume 5"},
-{"mangaId":"vinland-saga","mangaTitle":"Vinland Saga","volumeId":"vinland-saga-6-2008","volumeNumber":6,"cover":"Mangás/Vinland%20Saga/Vinland%20Saga%20%236.png","pageUrl":"Mangás/Vinland%20Saga/vinland-saga-6-2008.html","displayTitle":"Vinland Saga / Volume 6"},
-{"mangaId":"vinland-saga","mangaTitle":"Vinland Saga","volumeId":"vinland-saga-7-2009","volumeNumber":7,"cover":"Mangás/Vinland%20Saga/Vinland%20Saga%20%237.png","pageUrl":"Mangás/Vinland%20Saga/vinland-saga-7-2009.html","displayTitle":"Vinland Saga / Volume 7"},
-{"mangaId":"vinland-saga","mangaTitle":"Vinland Saga","volumeId":"vinland-saga-8-2009","volumeNumber":8,"cover":"Mangás/Vinland%20Saga/Vinland%20Saga%20%238.png","pageUrl":"Mangás/Vinland%20Saga/vinland-saga-8-2009.html","displayTitle":"Vinland Saga / Volume 8"},
-{"mangaId":"vinland-saga","mangaTitle":"Vinland Saga","volumeId":"vinland-saga-9-2010","volumeNumber":9,"cover":"Mangás/Vinland%20Saga/Vinland%20Saga%20%239.png","pageUrl":"Mangás/Vinland%20Saga/vinland-saga-9-2010.html","displayTitle":"Vinland Saga / Volume 9"},
-{"mangaId":"vinland-saga","mangaTitle":"Vinland Saga","volumeId":"vinland-saga-10-2011","volumeNumber":10,"cover":"Mangás/Vinland%20Saga/Vinland%20Saga%20%2310.png","pageUrl":"Mangás/Vinland%20Saga/vinland-saga-10-2011.html","displayTitle":"Vinland Saga / Volume 10"},
-{"mangaId":"vinland-saga","mangaTitle":"Vinland Saga","volumeId":"vinland-saga-11-2012","volumeNumber":11,"cover":"Mangás/Vinland%20Saga/Vinland%20Saga%20%2311.png","pageUrl":"Mangás/Vinland%20Saga/vinland-saga-11-2012.html","displayTitle":"Vinland Saga / Volume 11"},
-{"mangaId":"vinland-saga","mangaTitle":"Vinland Saga","volumeId":"vinland-saga-12-2012","volumeNumber":12,"cover":"Mangás/Vinland%20Saga/Vinland%20Saga%20%2312.png","pageUrl":"Mangás/Vinland%20Saga/vinland-saga-12-2012.html","displayTitle":"Vinland Saga / Volume 12"},
-{"mangaId":"vinland-saga","mangaTitle":"Vinland Saga","volumeId":"vinland-saga-13-2013","volumeNumber":13,"cover":"Mangás/Vinland%20Saga/Vinland%20Saga%20%2313.png","pageUrl":"Mangás/Vinland%20Saga/vinland-saga-13-2013.html","displayTitle":"Vinland Saga / Volume 13"},
-{"mangaId":"vinland-saga","mangaTitle":"Vinland Saga","volumeId":"vinland-saga-14-2014","volumeNumber":14,"cover":"Mangás/Vinland%20Saga/Vinland%20Saga%20%2314.png","pageUrl":"Mangás/Vinland%20Saga/vinland-saga-14-2014.html","displayTitle":"Vinland Saga / Volume 14"},
-{"mangaId":"vinland-saga","mangaTitle":"Vinland Saga","volumeId":"vinland-saga-15-2014","volumeNumber":15,"cover":"Mangás/Vinland%20Saga/Vinland%20Saga%20%2315.png","pageUrl":"Mangás/Vinland%20Saga/vinland-saga-15-2014.html","displayTitle":"Vinland Saga / Volume 15"},
-{"mangaId":"vinland-saga","mangaTitle":"Vinland Saga","volumeId":"vinland-saga-16-2015","volumeNumber":16,"cover":"Mangás/Vinland%20Saga/Vinland%20Saga%20%2316.png","pageUrl":"Mangás/Vinland%20Saga/vinland-saga-16-2015.html","displayTitle":"Vinland Saga / Volume 16"},
-{"mangaId":"vinland-saga","mangaTitle":"Vinland Saga","volumeId":"vinland-saga-17-2016","volumeNumber":17,"cover":"Mangás/Vinland%20Saga/Vinland%20Saga%20%2317.png","pageUrl":"Mangás/Vinland%20Saga/vinland-saga-17-2016.html","displayTitle":"Vinland Saga / Volume 17"},
-{"mangaId":"vinland-saga","mangaTitle":"Vinland Saga","volumeId":"vinland-saga-18-2016","volumeNumber":18,"cover":"Mangás/Vinland%20Saga/Vinland%20Saga%20%2318.png","pageUrl":"Mangás/Vinland%20Saga/vinland-saga-18-2016.html","displayTitle":"Vinland Saga / Volume 18"},
-{"mangaId":"vinland-saga","mangaTitle":"Vinland Saga","volumeId":"vinland-saga-19-2017","volumeNumber":19,"cover":"Mangás/Vinland%20Saga/Vinland%20Saga%20%2319.png","pageUrl":"Mangás/Vinland%20Saga/vinland-saga-19-2017.html","displayTitle":"Vinland Saga / Volume 19"},
-{"mangaId":"vinland-saga","mangaTitle":"Vinland Saga","volumeId":"vinland-saga-20-2017","volumeNumber":20,"cover":"Mangás/Vinland%20Saga/Vinland%20Saga%20%2320.png","pageUrl":"Mangás/Vinland%20Saga/vinland-saga-20-2017.html","displayTitle":"Vinland Saga / Volume 20"},
-{"mangaId":"vinland-saga","mangaTitle":"Vinland Saga","volumeId":"vinland-saga-21-2018","volumeNumber":21,"cover":"Mangás/Vinland%20Saga/Vinland%20Saga%20%2321.png","pageUrl":"Mangás/Vinland%20Saga/vinland-saga-21-2018.html","displayTitle":"Vinland Saga / Volume 21"},
-{"mangaId":"vinland-saga","mangaTitle":"Vinland Saga","volumeId":"vinland-saga-22-2019","volumeNumber":22,"cover":"Mangás/Vinland%20Saga/Vinland%20Saga%20%2322.png","pageUrl":"Mangás/Vinland%20Saga/vinland-saga-22-2019.html","displayTitle":"Vinland Saga / Volume 22"},
-{"mangaId":"vinland-saga","mangaTitle":"Vinland Saga","volumeId":"vinland-saga-23-2019","volumeNumber":23,"cover":"Mangás/Vinland%20Saga/Vinland%20Saga%20%2323.png","pageUrl":"Mangás/Vinland%20Saga/vinland-saga-23-2019.html","displayTitle":"Vinland Saga / Volume 23"},
-{"mangaId":"vinland-saga","mangaTitle":"Vinland Saga","volumeId":"vinland-saga-24-2020","volumeNumber":24,"cover":"Mangás/Vinland%20Saga/Vinland%20Saga%20%2324.png","pageUrl":"Mangás/Vinland%20Saga/vinland-saga-24-2020.html","displayTitle":"Vinland Saga / Volume 24"},
-{"mangaId":"vinland-saga","mangaTitle":"Vinland Saga","volumeId":"vinland-saga-25-2021","volumeNumber":25,"cover":"Mangás/Vinland%20Saga/Vinland%20Saga%20%2325.png","pageUrl":"Mangás/Vinland%20Saga/vinland-saga-25-2021.html","displayTitle":"Vinland Saga / Volume 25"},
-{"mangaId":"vinland-saga","mangaTitle":"Vinland Saga","volumeId":"vinland-saga-26-2022","volumeNumber":26,"cover":"Mangás/Vinland%20Saga/Vinland%20Saga%20%2326.png","pageUrl":"Mangás/Vinland%20Saga/vinland-saga-26-2022.html","displayTitle":"Vinland Saga / Volume 26"},
-{"mangaId":"vinland-saga","mangaTitle":"Vinland Saga","volumeId":"vinland-saga-27-2023","volumeNumber":27,"cover":"Mangás/Vinland%20Saga/Vinland%20Saga%20%2327.png","pageUrl":"Mangás/Vinland%20Saga/vinland-saga-27-2023.html","displayTitle":"Vinland Saga / Volume 27"},
-{"mangaId":"vinland-saga","mangaTitle":"Vinland Saga","volumeId":"vinland-saga-28-2024","volumeNumber":28,"cover":"Mangás/Vinland%20Saga/Vinland%20Saga%20%2328.png","pageUrl":"Mangás/Vinland%20Saga/vinland-saga-28-2024.html","displayTitle":"Vinland Saga / Volume 28"},
-{"mangaId":"vinland-saga","mangaTitle":"Vinland Saga","volumeId":"vinland-saga-29-2025","volumeNumber":29,"cover":"Mangás/Vinland%20Saga/Vinland%20Saga%20%2329.png","pageUrl":"Mangás/Vinland%20Saga/vinland-saga-29-2025.html","displayTitle":"Vinland Saga / Volume 29"}
 ]
