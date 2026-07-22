@@ -2869,6 +2869,10 @@ function dataErrorMessage(error) {
 }
 
 const mangaArcsByPage = {
+  "one-punch-man.html": {
+    id: "onePunchManArcsDialog", title: "One-Punch Man",
+    arcs: [["Introdução de Saitama", 1, 4], ["Casa da Evolução", 5, 11], ["Paradisers", 12, 15], ["Associação de Heróis", 16, 20], ["Meteoro", 21, 22], ["Rei do Mar Profundo", 23, 29], ["Invasores Alienígenas", 30, 37], ["King", 38, 39], ["Caçador de Heróis", 40, 44], ["Torneio de Artes Marciais", 45, 77], ["Associação de Monstros", 78, 175], ["Neo Heroes", 176, 194]]
+  },
   "fullmetal-alchemist.html": {
     id: "fullmetalAlchemistArcsDialog", title: "Fullmetal Alchemist",
     arcs: [["Início da Jornada", 1, 5], ["Scar", 6, 9], ["Laboratório 5", 10, 16], ["Rush Valley", 17, 19], ["Dublith", 20, 31], ["Xing e Central", 32, 44], ["Retorno de Scar", 45, 48], ["Guerra de Ishval", 49, 61], ["Briggs", 62, 83], ["Dia Prometido", 84, 108]]
@@ -3080,6 +3084,7 @@ function renderCatalogMangaVolumes() {
     "naruto.html": "Naruto",
     "naruto-shippuden.html": "Naruto Shippuden",
     "one-piece.html": "One Piece",
+    "one-punch-man.html": "One-Punch Man",
     "slam-dunk.html": "Slam Dunk",
     "vinland-saga.html": "Vinland Saga",
     "yu-yu-hakusho.html": "Yu Yu Hakusho",
