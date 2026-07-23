@@ -18,6 +18,12 @@ if (!document.querySelector('link[href="profile-ranking.css"]')) {
   profileRankingStyles.href = 'profile-ranking.css';
   document.head.append(profileRankingStyles);
 }
+if (!document.querySelector('link[href="avatar-layout.css"]')) {
+  const avatarLayoutStyles = document.createElement('link');
+  avatarLayoutStyles.rel = 'stylesheet';
+  avatarLayoutStyles.href = 'avatar-layout.css';
+  document.head.append(avatarLayoutStyles);
+}
 
 const PAGE_ANIME = document.body.dataset.anime || 'naruto';
 const TOTAL_EPISODES = Number(document.body.dataset.totalEpisodes || 220);
@@ -148,11 +154,11 @@ async function renderRanking() {
     rankingUsersByUid = new Map(users.map(user => [user.uid, user]));
     if (document.body.dataset.ranking === 'animes') {
       const animeRanking = [
-        { title:'Naruto', href:'naruto.html', cover:'naruto-500x750.jpg', watched:users.reduce((sum,u)=>sum+Number(u.watchedEpisodes||0),0), total:220 },
-        { title:'My Hero Academia', href:'my-hero-academia.html', cover:'my-hero-academia-500x750.jpg', watched:users.reduce((sum,u)=>sum+Number(u.myHeroWatchedEpisodes||0),0), total:170 }
-      ].sort((a,b)=>b.watched-a.watched);
+        { title:'Naruto', href:'naruto.html', cover:'naruto-500x750.jpg', points:users.filter(u=>Number(u.watchedEpisodes||0)>=1).length, total:220 },
+        { title:'My Hero Academia', href:'my-hero-academia.html', cover:'my-hero-academia-500x750.jpg', points:users.filter(u=>Number(u.myHeroWatchedEpisodes||0)>=1).length, total:170 }
+      ].sort((a,b)=>b.points-a.points || a.title.localeCompare(b.title));
       list.classList.add('anime-ranking-grid');
-      list.innerHTML = animeRanking.map((anime,i)=>`<a class="anime-ranking-card" href="${anime.href}"><div class="anime-ranking-cover"><img src="${anime.cover}" width="500" height="750" alt="${escapeHtml(anime.title)}"><span>#${i+1}</span></div><div class="anime-ranking-info"><span class="tag">${i===0?'MAIS ASSISTIDO':'EM DESTAQUE'}</span><h2>${escapeHtml(anime.title)}</h2><p>${anime.total} episódios disponíveis</p><strong>${anime.watched.toLocaleString('pt-BR')} <small>episódios assistidos</small></strong></div></a>`).join('');
+      list.innerHTML = animeRanking.map((anime,i)=>`<a class="anime-ranking-card" href="${anime.href}"><div class="anime-ranking-cover"><img src="${anime.cover}" width="500" height="750" alt="${escapeHtml(anime.title)}"><span>#${i+1}</span></div><div class="anime-ranking-info"><span class="tag">${i===0?'MAIS ADICIONADO':'EM DESTAQUE'}</span><h2>${escapeHtml(anime.title)}</h2><p>${anime.total} episódios disponíveis</p><strong>${anime.points.toLocaleString('pt-BR')} <small>${anime.points===1?'ponto':'pontos'} • usuários que começaram</small></strong></div></a>`).join('');
       return;
     }
     list.innerHTML = users.length ? users.map((u,i) => `<button class="rank-row user-rank-row" type="button" data-public-profile="${escapeHtml(u.uid)}"><span class="rank-position">#${i+1}</span><img src="${escapeHtml(u.avatarPath || DEFAULT_AVATAR)}" width="52" height="52" alt="Avatar de ${escapeHtml(u.nick || 'Ninja Loner')}"><div><strong>${escapeHtml(u.nick || 'Ninja Loner')}</strong><small>Level ${levelFromXp(u.xp)} • ${Number(u.watchedEpisodes||0) + Number(u.myHeroWatchedEpisodes||0)} episódios assistidos</small></div><b>${Number(u.xp||0).toLocaleString('pt-BR')} XP</b></button>`).join('') : '<p>Ainda não há ninjas no ranking de usuários.</p>';
