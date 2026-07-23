@@ -1,18 +1,40 @@
 import { firebaseConfig, firebaseReady } from './firebase-config.js';
 
+if (!document.querySelector('link[href="account-ui.css"]')) {
+  const accountStyles = document.createElement('link');
+  accountStyles.rel = 'stylesheet';
+  accountStyles.href = 'account-ui.css';
+  document.head.append(accountStyles);
+}
+
 const PAGE_ANIME = document.body.dataset.anime || 'naruto';
 const TOTAL_EPISODES = Number(document.body.dataset.totalEpisodes || 220);
 const PROGRESS_FIELDS = { naruto: 'watchedEpisodes', myHeroAcademia: 'myHeroWatchedEpisodes' };
 const progressField = PROGRESS_FIELDS[PAGE_ANIME] || 'watchedEpisodes';
 const XP_PER_EPISODE = 22;
 const DATA_VERSION = 1;
+const DEFAULT_AVATAR = 'Avatar/naruto-default-500x500.jpg';
 let services = null;
 let currentUser = null;
 let currentProfile = null;
 
 const $ = (selector) => document.querySelector(selector);
 const escapeHtml = (value = '') => String(value).replace(/[&<>'"]/g, (char) => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
-const levelFromXp = (xp) => Math.floor(Number(xp || 0) / 500) + 1;
+const xpForLevel = (level) => {
+  const n = Math.max(0, Number(level) - 1);
+  return Math.floor((50 * n ** 3 - 150 * n ** 2 + 400 * n) / 3);
+};
+const levelFromXp = (xp) => {
+  const total = Math.max(0, Number(xp || 0));
+  let level = 1;
+  while (xpForLevel(level + 1) <= total) level += 1;
+  return level;
+};
+const levelProgress = (xp) => {
+  const level = levelFromXp(xp), floor = xpForLevel(level), ceiling = xpForLevel(level + 1);
+  const current = Math.max(0, xp - floor), needed = Math.max(1, ceiling - floor);
+  return { level, current, needed, percent: Math.min(100, current / needed * 100) };
+};
 const friendlyError = (error) => {
   const code = error?.code || '';
   if (code.includes('invalid-credential')) return 'E-mail ou senha incorretos.';
@@ -46,7 +68,8 @@ async function handleAuthState(user) {
     nick: old.nick || user.displayName || (user.email || 'Ninja').split('@')[0],
     watchedEpisodes: migrated ? 0 : Math.min(220, Number(old.watchedEpisodes || 0)),
     myHeroWatchedEpisodes: migrated ? 0 : Math.min(170, Number(old.myHeroWatchedEpisodes || 0)),
-    xp: migrated ? 0 : Number(old.xp || 0), animeDataVersion: DATA_VERSION
+    xp: migrated ? 0 : Number(old.xp || 0), animeDataVersion: DATA_VERSION,
+    avatarPath: !old.avatarPath || old.avatarPath === 'lonermangalogo-v2.png' ? DEFAULT_AVATAR : old.avatarPath
   };
   currentProfile.xp = (currentProfile.watchedEpisodes + currentProfile.myHeroWatchedEpisodes) * XP_PER_EPISODE;
   currentProfile.level = levelFromXp(currentProfile.xp);
@@ -56,9 +79,9 @@ async function handleAuthState(user) {
 
 function renderAuth() {
   const area = $('#authArea'); if (!area) return;
-  area.innerHTML = currentUser
-    ? `<div class="user-menu"><a href="perfil.html">${escapeHtml(currentProfile?.nick || 'Perfil')}</a><button class="button ghost" id="logout">Sair</button></div>`
-    : '<button class="button ghost" data-open-auth>Entrar</button>';
+  if (!currentUser) { area.innerHTML = '<button class="button ghost" data-open-auth>Entrar</button>'; return; }
+  const xp = Number(currentProfile?.xp || 0), progress = levelProgress(xp);
+  area.innerHTML = `<a class="header-profile" href="perfil.html"><img src="${escapeHtml(currentProfile?.avatarPath || DEFAULT_AVATAR)}" width="40" height="40" alt="Avatar de ${escapeHtml(currentProfile?.nick || 'usuário')}"><span class="header-profile-info"><span><strong>${escapeHtml(currentProfile?.nick || 'Perfil')}</strong><b>Level ${progress.level}</b></span><span class="header-xp-track"><i style="width:${progress.percent}%"></i></span><small>${progress.current.toLocaleString('pt-BR')} / ${progress.needed.toLocaleString('pt-BR')} XP</small></span></a>`;
 }
 
 function openAuth() { const modal = $('#authModal'); if (modal) { modal.hidden = false; modal.querySelector('input')?.focus(); } }
@@ -107,7 +130,8 @@ function renderProfile() {
   const content = $('#profileContent'); if (!content) return;
   if (!currentUser) { content.innerHTML = '<p>Entre na sua conta para ver seu perfil.</p><a class="button primary" href="index.html">Entrar</a>'; return; }
   const naruto = Number(currentProfile?.watchedEpisodes || 0), myHero = Number(currentProfile?.myHeroWatchedEpisodes || 0), watched = naruto + myHero, xp = watched * XP_PER_EPISODE;
-  content.innerHTML = `<h2>${escapeHtml(currentProfile.nick)}</h2><p>${escapeHtml(currentProfile.email)}</p><div class="profile-stats"><div><small>Episódios assistidos</small><strong>${watched}</strong></div><div><small>XP de animes</small><strong>${xp.toLocaleString('pt-BR')}</strong></div><div><small>Level</small><strong>${levelFromXp(xp)}</strong></div></div><p><b>Naruto:</b> episódio ${naruto} de 220<br><b>My Hero Academia:</b> episódio ${myHero} de 170</p>`;
+  const progress = levelProgress(xp);
+  content.innerHTML = `<div class="profile-identity"><img src="${escapeHtml(currentProfile.avatarPath || DEFAULT_AVATAR)}" width="110" height="110" alt="Avatar de ${escapeHtml(currentProfile.nick)}"><div><h2>${escapeHtml(currentProfile.nick)}</h2><p>${escapeHtml(currentProfile.email)}</p><span class="profile-level">Level ${progress.level}</span></div></div><section class="profile-xp"><div><strong>Progresso para o level ${progress.level + 1}</strong><span>${progress.current.toLocaleString('pt-BR')} / ${progress.needed.toLocaleString('pt-BR')} XP</span></div><span class="profile-xp-track"><i style="width:${progress.percent}%"></i></span><small>Faltam ${(progress.needed - progress.current).toLocaleString('pt-BR')} XP para avançar.</small></section><div class="profile-stats"><div><small>Episódios assistidos</small><strong>${watched}</strong></div><div><small>XP total</small><strong>${xp.toLocaleString('pt-BR')}</strong></div><div><small>Level</small><strong>${progress.level}</strong></div></div><p><b>Naruto:</b> episódio ${naruto} de 220<br><b>My Hero Academia:</b> episódio ${myHero} de 170</p><button class="button ghost profile-logout" id="logout" type="button">Sair da conta</button>`;
 }
 
 document.addEventListener('click', async (event) => {
