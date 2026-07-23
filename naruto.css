@@ -1,0 +1,29 @@
+.anime-detail-hero {
+  background: radial-gradient(circle at 18% 50%, rgba(255,106,34,.17), transparent 32%), linear-gradient(180deg,#0c0e14,var(--bg));
+  border-bottom: 1px solid var(--line);
+}
+.anime-detail-inner {
+  max-width: 1100px;
+  margin: auto;
+  padding: 64px 24px;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 54px;
+  align-items: center;
+}
+.anime-detail-inner > img { width:100%; height:auto; border-radius:18px; box-shadow:0 24px 70px rgba(0,0,0,.5); }
+.anime-detail-inner h1 { font:700 clamp(52px,7vw,82px)/1 'Space Grotesk'; letter-spacing:-.05em; margin:12px 0 20px; }
+.anime-detail-inner p { max-width:680px; color:var(--muted); font-size:17px; }
+.back-link { display:block; color:var(--muted); font-size:13px; margin-bottom:36px; }
+.back-link:hover { color:var(--orange); }
+.detail-meta { display:flex; gap:38px; margin:30px 0; }
+.detail-meta span { display:flex; flex-direction:column; color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.1em; }
+.detail-meta strong { color:var(--text); font-size:18px; text-transform:none; letter-spacing:0; }
+@media (max-width:760px) {
+  .anime-detail-inner { grid-template-columns:105px 1fr; gap:18px; padding:34px 16px; align-items:start; }
+  .anime-detail-inner h1 { font-size:42px; margin:7px 0; }
+  .anime-detail-inner p { font-size:13px; }
+  .back-link { grid-column:1/-1; margin-bottom:10px; }
+  .detail-meta { gap:15px; flex-wrap:wrap; margin:18px 0; }
+  .detail-meta strong { font-size:14px; }
+}
