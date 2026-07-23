@@ -1,1 +1,0 @@
-{"name":"loner-manga-functions","private":true,"main":"index.js","engines":{"node":"20"},"scripts":{"catalog":"node scripts/build-catalog.mjs","test":"node --test test/*.test.js","deploy":"npm run catalog && firebase deploy --only functions"},"dependencies":{"firebase-admin":"^13.0.0","firebase-functions":"^6.3.0"},"devDependencies":{}}
