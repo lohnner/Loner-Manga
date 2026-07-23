@@ -12,6 +12,12 @@ if (!document.querySelector('link[href="global-nav.css"]')) {
   navStyles.href = 'global-nav.css';
   document.head.append(navStyles);
 }
+if (!document.querySelector('link[href="profile-ranking.css"]')) {
+  const profileRankingStyles = document.createElement('link');
+  profileRankingStyles.rel = 'stylesheet';
+  profileRankingStyles.href = 'profile-ranking.css';
+  document.head.append(profileRankingStyles);
+}
 
 const PAGE_ANIME = document.body.dataset.anime || 'naruto';
 const TOTAL_EPISODES = Number(document.body.dataset.totalEpisodes || 220);
@@ -23,9 +29,11 @@ const DEFAULT_AVATAR = 'Avatar/naruto-default-500x500.jpg';
 let services = null;
 let currentUser = null;
 let currentProfile = null;
+let rankingUsersByUid = new Map();
 
 const $ = (selector) => document.querySelector(selector);
 const escapeHtml = (value = '') => String(value).replace(/[&<>'"]/g, (char) => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
+document.addEventListener('error', (event) => { if (event.target instanceof HTMLImageElement && event.target.src !== new URL(DEFAULT_AVATAR, location.href).href) event.target.src = DEFAULT_AVATAR; }, true);
 const xpForLevel = (level) => {
   const n = Math.max(0, Number(level) - 1);
   return Math.floor((50 * n ** 3 - 150 * n ** 2 + 400 * n) / 3);
@@ -136,16 +144,18 @@ async function renderRanking() {
   const list = $('#rankingList'); if (!list || !services) return;
   try {
     const snapshot = await services.getDocs(services.collection(services.db, 'users'));
-    const users = snapshot.docs.map(d => d.data()).filter(u => u.animeDataVersion === DATA_VERSION).sort((a,b) => Number(b.xp||0)-Number(a.xp||0)).slice(0,100);
+    const users = snapshot.docs.map(d => ({...d.data(), uid:d.id})).filter(u => u.animeDataVersion === DATA_VERSION).sort((a,b) => Number(b.xp||0)-Number(a.xp||0)).slice(0,100);
+    rankingUsersByUid = new Map(users.map(user => [user.uid, user]));
     if (document.body.dataset.ranking === 'animes') {
       const animeRanking = [
         { title:'Naruto', href:'naruto.html', cover:'naruto-500x750.jpg', watched:users.reduce((sum,u)=>sum+Number(u.watchedEpisodes||0),0), total:220 },
         { title:'My Hero Academia', href:'my-hero-academia.html', cover:'my-hero-academia-500x750.jpg', watched:users.reduce((sum,u)=>sum+Number(u.myHeroWatchedEpisodes||0),0), total:170 }
       ].sort((a,b)=>b.watched-a.watched);
-      list.innerHTML = animeRanking.map((anime,i)=>`<a class="rank-row anime-rank-row" href="${anime.href}"><span class="rank-position">#${i+1}</span><img src="${anime.cover}" width="54" height="76" alt="${escapeHtml(anime.title)}"><div><strong>${escapeHtml(anime.title)}</strong><small>${anime.total} episódios disponíveis</small></div><b>${anime.watched.toLocaleString('pt-BR')} assistidos</b></a>`).join('');
+      list.classList.add('anime-ranking-grid');
+      list.innerHTML = animeRanking.map((anime,i)=>`<a class="anime-ranking-card" href="${anime.href}"><div class="anime-ranking-cover"><img src="${anime.cover}" width="500" height="750" alt="${escapeHtml(anime.title)}"><span>#${i+1}</span></div><div class="anime-ranking-info"><span class="tag">${i===0?'MAIS ASSISTIDO':'EM DESTAQUE'}</span><h2>${escapeHtml(anime.title)}</h2><p>${anime.total} episódios disponíveis</p><strong>${anime.watched.toLocaleString('pt-BR')} <small>episódios assistidos</small></strong></div></a>`).join('');
       return;
     }
-    list.innerHTML = users.length ? users.map((u,i) => `<div class="rank-row"><span class="rank-position">#${i+1}</span><div><strong>${escapeHtml(u.nick || 'Ninja Loner')}</strong><small>${Number(u.watchedEpisodes||0) + Number(u.myHeroWatchedEpisodes||0)} episódios assistidos</small></div><b>${Number(u.xp||0).toLocaleString('pt-BR')} XP</b></div>`).join('') : '<p>Ainda não há ninjas no ranking de animes.</p>';
+    list.innerHTML = users.length ? users.map((u,i) => `<button class="rank-row user-rank-row" type="button" data-public-profile="${escapeHtml(u.uid)}"><span class="rank-position">#${i+1}</span><img src="${escapeHtml(u.avatarPath || DEFAULT_AVATAR)}" width="52" height="52" alt="Avatar de ${escapeHtml(u.nick || 'Ninja Loner')}"><div><strong>${escapeHtml(u.nick || 'Ninja Loner')}</strong><small>Level ${levelFromXp(u.xp)} • ${Number(u.watchedEpisodes||0) + Number(u.myHeroWatchedEpisodes||0)} episódios assistidos</small></div><b>${Number(u.xp||0).toLocaleString('pt-BR')} XP</b></button>`).join('') : '<p>Ainda não há ninjas no ranking de usuários.</p>';
   } catch { list.innerHTML = '<p>Não foi possível carregar o ranking agora.</p>'; }
 }
 
@@ -154,7 +164,26 @@ function renderProfile() {
   if (!currentUser) { content.innerHTML = '<p>Entre na sua conta para ver seu perfil.</p><a class="button primary" href="index.html">Entrar</a>'; return; }
   const naruto = Number(currentProfile?.watchedEpisodes || 0), myHero = Number(currentProfile?.myHeroWatchedEpisodes || 0), watched = naruto + myHero, xp = watched * XP_PER_EPISODE;
   const progress = levelProgress(xp);
-  content.innerHTML = `<div class="profile-identity"><img src="${escapeHtml(currentProfile.avatarPath || DEFAULT_AVATAR)}" width="110" height="110" alt="Avatar de ${escapeHtml(currentProfile.nick)}"><div><h2>${escapeHtml(currentProfile.nick)}</h2><p>${escapeHtml(currentProfile.email)}</p><span class="profile-level">Level ${progress.level}</span></div></div><section class="profile-xp"><div><strong>Progresso para o level ${progress.level + 1}</strong><span>${progress.current.toLocaleString('pt-BR')} / ${progress.needed.toLocaleString('pt-BR')} XP</span></div><span class="profile-xp-track"><i style="width:${progress.percent}%"></i></span><small>Faltam ${(progress.needed - progress.current).toLocaleString('pt-BR')} XP para avançar.</small></section><div class="profile-stats"><div><small>Episódios assistidos</small><strong>${watched}</strong></div><div><small>XP total</small><strong>${xp.toLocaleString('pt-BR')}</strong></div><div><small>Level</small><strong>${progress.level}</strong></div></div><p><b>Naruto:</b> episódio ${naruto} de 220<br><b>My Hero Academia:</b> episódio ${myHero} de 170</p><button class="button ghost profile-logout" id="logout" type="button">Sair da conta</button>`;
+  content.innerHTML = `<div class="profile-identity"><img src="${escapeHtml(currentProfile.avatarPath || DEFAULT_AVATAR)}" width="110" height="110" alt="Avatar de ${escapeHtml(currentProfile.nick)}"><div><h2>${escapeHtml(currentProfile.nick)}</h2><p>${escapeHtml(currentProfile.email)}</p><span class="profile-level">Level ${progress.level}</span></div></div><section class="profile-xp"><div><strong>Progresso para o level ${progress.level + 1}</strong><span>${progress.current.toLocaleString('pt-BR')} / ${progress.needed.toLocaleString('pt-BR')} XP</span></div><span class="profile-xp-track"><i style="width:${progress.percent}%"></i></span><small>Faltam ${(progress.needed - progress.current).toLocaleString('pt-BR')} XP para avançar.</small></section><div class="profile-stats"><div><small>Episódios assistidos</small><strong>${watched}</strong></div><div><small>XP total</small><strong>${xp.toLocaleString('pt-BR')}</strong></div><div><small>Level</small><strong>${progress.level}</strong></div></div><section class="profile-animes"><h3>Animes adicionados</h3>${profileAnimeCards(currentProfile)}</section><button class="button ghost profile-logout" id="logout" type="button">Sair da conta</button>`;
+}
+
+function profileAnimeCards(profile = {}) {
+  const animes = [
+    {title:'Naruto',href:'naruto.html',cover:'naruto-500x750.jpg',watched:Number(profile.watchedEpisodes||0),total:220},
+    {title:'My Hero Academia',href:'my-hero-academia.html',cover:'my-hero-academia-500x750.jpg',watched:Number(profile.myHeroWatchedEpisodes||0),total:170}
+  ].filter(anime => anime.watched > 0);
+  if (!animes.length) return '<p class="empty-animes">Este usuário ainda não adicionou nenhum anime.</p>';
+  return `<div class="profile-anime-grid">${animes.map(anime=>`<a href="${anime.href}" class="profile-anime-card"><img src="${anime.cover}" width="90" height="135" alt="${escapeHtml(anime.title)}"><div><strong>${escapeHtml(anime.title)}</strong><span>Episódio ${anime.watched} de ${anime.total}</span><span class="mini-progress"><i style="width:${anime.watched/anime.total*100}%"></i></span><small>${(anime.watched*XP_PER_EPISODE).toLocaleString('pt-BR')} XP</small></div></a>`).join('')}</div>`;
+}
+
+function openPublicProfile(uid) {
+  const profile = rankingUsersByUid.get(uid); if (!profile) return;
+  document.querySelector('#publicProfileModal')?.remove();
+  const progress = levelProgress(Number(profile.xp||0));
+  const watched = Number(profile.watchedEpisodes||0) + Number(profile.myHeroWatchedEpisodes||0);
+  const modal = document.createElement('div'); modal.className='modal public-profile-modal'; modal.id='publicProfileModal';
+  modal.innerHTML = `<section class="modal-card public-profile-card" role="dialog" aria-modal="true" aria-labelledby="publicProfileTitle"><button class="modal-close" type="button" data-close-public-profile aria-label="Fechar">×</button><div class="profile-identity"><img src="${escapeHtml(profile.avatarPath||DEFAULT_AVATAR)}" width="110" height="110" alt="Avatar de ${escapeHtml(profile.nick||'Ninja Loner')}"><div><span class="eyebrow">PERFIL DO USUÁRIO</span><h2 id="publicProfileTitle">${escapeHtml(profile.nick||'Ninja Loner')}</h2><span class="profile-level">Level ${progress.level}</span></div></div><section class="profile-xp"><div><strong>Progresso de level</strong><span>${progress.current.toLocaleString('pt-BR')} / ${progress.needed.toLocaleString('pt-BR')} XP</span></div><span class="profile-xp-track"><i style="width:${progress.percent}%"></i></span></section><div class="profile-stats"><div><small>Episódios</small><strong>${watched}</strong></div><div><small>XP total</small><strong>${Number(profile.xp||0).toLocaleString('pt-BR')}</strong></div><div><small>Level</small><strong>${progress.level}</strong></div></div><section class="profile-animes"><h3>Animes adicionados</h3>${profileAnimeCards(profile)}</section></section>`;
+  document.body.append(modal);
 }
 
 document.addEventListener('click', async (event) => {
@@ -163,6 +192,8 @@ document.addEventListener('click', async (event) => {
   if (event.target.closest('#logout')) await services?.signOut(services.auth);
   if (event.target.closest('#addEpisode')) await saveProgress(Number(currentProfile?.[progressField] || 0) + 1);
   const episode = event.target.closest('.episode-item'); if (episode) await saveProgress(episode.dataset.episode);
+  const publicProfile = event.target.closest('[data-public-profile]'); if (publicProfile) openPublicProfile(publicProfile.dataset.publicProfile);
+  if (event.target.closest('[data-close-public-profile]') || event.target.id === 'publicProfileModal') document.querySelector('#publicProfileModal')?.remove();
 });
 
 $('#episodeInput')?.addEventListener('keydown', async (event) => { if (event.key === 'Enter') { event.preventDefault(); await saveProgress(event.currentTarget.value); } });
