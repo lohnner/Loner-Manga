@@ -19,7 +19,10 @@ service cloud.firestore {
         && request.resource.data.villager999WatchedEpisodes is int
         && request.resource.data.villager999WatchedEpisodes >= 0
         && request.resource.data.villager999WatchedEpisodes <= 12
-        && request.resource.data.xp == (request.resource.data.watchedEpisodes + request.resource.data.myHeroWatchedEpisodes + request.resource.data.villager999WatchedEpisodes) * 22;
+        && request.resource.data.mushokuTenseiWatchedEpisodes is int
+        && request.resource.data.mushokuTenseiWatchedEpisodes >= 0
+        && request.resource.data.mushokuTenseiWatchedEpisodes <= 11
+        && request.resource.data.xp == (request.resource.data.watchedEpisodes + request.resource.data.myHeroWatchedEpisodes + request.resource.data.villager999WatchedEpisodes + request.resource.data.mushokuTenseiWatchedEpisodes) * 22;
       allow delete: if false;
     }
   }
