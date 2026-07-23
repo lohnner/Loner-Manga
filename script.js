@@ -40,6 +40,11 @@ const PROGRESS_FIELDS = {
   myHeroSeason6: 'myHeroSeason6WatchedEpisodes', myHeroSeason7: 'myHeroSeason7WatchedEpisodes',
   myHeroFinalSeason: 'myHeroFinalSeasonWatchedEpisodes', myHeroMore: 'myHeroMoreWatchedEpisodes',
   kekkonYubiwa: 'kekkonYubiwaWatchedEpisodes', kekkonYubiwaSeason2: 'kekkonYubiwaSeason2WatchedEpisodes',
+  digimonAdventure: 'digimonAdventureWatchedEpisodes', digimonWarGame: 'digimonWarGameWatchedEpisodes',
+  digimonAdventure02: 'digimonAdventure02WatchedEpisodes', digimonDiablomon: 'digimonDiablomonWatchedEpisodes',
+  digimonTri1: 'digimonTri1WatchedEpisodes', digimonTri2: 'digimonTri2WatchedEpisodes', digimonTri3: 'digimonTri3WatchedEpisodes',
+  digimonTri4: 'digimonTri4WatchedEpisodes', digimonTri5: 'digimonTri5WatchedEpisodes', digimonTri6: 'digimonTri6WatchedEpisodes',
+  digimonMemorial: 'digimonMemorialWatchedEpisodes', digimonKizuna: 'digimonKizunaWatchedEpisodes', digimonBeginning: 'digimonBeginningWatchedEpisodes',
   mushokuTensei: 'mushokuTenseiWatchedEpisodes', mushokuTenseiPart2: 'mushokuTenseiPart2WatchedEpisodes',
   mushokuGuardianFitz: 'mushokuGuardianFitzWatchedEpisodes', mushokuSeason2: 'mushokuSeason2WatchedEpisodes',
   mushokuSeason2Part2: 'mushokuSeason2Part2WatchedEpisodes', mushokuSeason3: 'mushokuSeason3WatchedEpisodes'
@@ -92,6 +97,21 @@ const KEKKON_YUBIWA_SEQUENCE = [
   { key:'kekkonYubiwa', title:'Kekkon Yubiwa Monogatari', subtitle:'1ª temporada', href:'kekkon-yubiwa-monogatari.html', cover:'kekkon-yubiwa-monogatari-500x750.jpg', episodes:12, year:2024, status:'Completo', description:'Satou segue sua amiga de infância Hime até outro mundo e se torna o Rei dos Anéis, destinado a se casar com cinco princesas para enfrentar o Rei do Abismo.' },
   { key:'kekkonYubiwaSeason2', title:'Kekkon Yubiwa Monogatari II', subtitle:'2ª temporada', href:'kekkon-yubiwa-monogatari-season-2.html', cover:'kekkon-yubiwa-monogatari-season-2-500x750.jpg', episodes:13, year:2025, status:'Completo', description:'Satou, Hime e as Princesas dos Anéis continuam sua jornada para dominar o poder dos anéis e derrotar definitivamente o Rei do Abismo.' }
 ];
+const DIGIMON_SEQUENCE = [
+  { key:'digimonAdventure', title:'Digimon Adventure', subtitle:'Série original', href:'digimon-adventure.html', cover:'digimon-adventure-500x750.jpg', episodes:54, year:1999, status:'Completo', description:'Sete crianças são transportadas para o Mundo Digital, onde encontram seus parceiros Digimon e descobrem que foram escolhidas para proteger os dois mundos.' },
+  { key:'digimonWarGame', title:'Bokura no War Game!', subtitle:'Filme', href:'digimon-bokura-no-war-game.html', cover:'digimon-bokura-no-war-game-500x750.jpg', episodes:1, year:2000, status:'Filme', description:'Tai e Izzy enfrentam um Digimon que cresce dentro da internet e ameaça lançar um míssil nuclear.' },
+  { key:'digimonAdventure02', title:'Digimon Adventure 02', subtitle:'2ª série', href:'digimon-adventure-02.html', cover:'digimon-adventure-02-500x750.jpg', episodes:50, year:2000, status:'Completo', description:'Uma nova geração de Crianças Escolhidas entra no Mundo Digital para enfrentar o Imperador Digimon e libertar os Digimon.' },
+  { key:'digimonDiablomon', title:'Diablomon no Gyakushuu', subtitle:'Filme', href:'digimon-diablomon-no-gyakushuu.html', cover:'digimon-diablomon-no-gyakushuu-500x750.jpg', episodes:1, year:2001, status:'Filme', description:'Diaboromon retorna e obriga as duas gerações de Crianças Escolhidas a unirem forças em uma nova batalha.' },
+  { key:'digimonTri1', title:'Digimon Adventure tri. 1: Saikai', subtitle:'tri. • Filme 1', href:'digimon-tri-1-saikai.html', cover:'digimon-tri-1-saikai-500x750.jpg', episodes:1, year:2015, status:'Filme', description:'Anos depois, Tai reencontra Agumon quando Digimon infectados começam a surgir no mundo real.' },
+  { key:'digimonTri2', title:'Digimon Adventure tri. 2: Ketsui', subtitle:'tri. • Filme 2', href:'digimon-tri-2-ketsui.html', cover:'digimon-tri-2-ketsui-500x750.jpg', episodes:1, year:2016, status:'Filme', description:'As Crianças Escolhidas tentam retomar a rotina enquanto a infecção digital ameaça seus parceiros.' },
+  { key:'digimonTri3', title:'Digimon Adventure tri. 3: Kokuhaku', subtitle:'tri. • Filme 3', href:'digimon-tri-3-kokuhaku.html', cover:'digimon-tri-3-kokuhaku-500x750.jpg', episodes:1, year:2016, status:'Filme', description:'A infecção se agrava e uma decisão dolorosa pode ser a única maneira de salvar o Mundo Digital.' },
+  { key:'digimonTri4', title:'Digimon Adventure tri. 4: Soushitsu', subtitle:'tri. • Filme 4', href:'digimon-tri-4-soushitsu.html', cover:'digimon-tri-4-soushitsu-500x750.jpg', episodes:1, year:2017, status:'Filme', description:'Após o reinício do Mundo Digital, os parceiros Digimon perderam suas memórias e precisam reconstruir seus vínculos.' },
+  { key:'digimonTri5', title:'Digimon Adventure tri. 5: Kyousei', subtitle:'tri. • Filme 5', href:'digimon-tri-5-kyousei.html', cover:'digimon-tri-5-kyousei-500x750.jpg', episodes:1, year:2017, status:'Filme', description:'Meicoomon perde o controle e coloca os dois mundos em rota de colisão.' },
+  { key:'digimonTri6', title:'Digimon Adventure tri. 6: Bokura no Mirai', subtitle:'tri. • Filme 6', href:'digimon-tri-6-bokura-no-mirai.html', cover:'digimon-tri-6-bokura-no-mirai-500x750.jpg', episodes:1, year:2018, status:'Filme', description:'Na conclusão de tri., as Crianças Escolhidas lutam para salvar Meicoomon e decidir o futuro dos dois mundos.' },
+  { key:'digimonMemorial', title:'20th Memorial Story', subtitle:'Especial • 5 histórias', href:'digimon-20th-memorial-story.html', cover:'digimon-20th-memorial-story-500x750.jpg', episodes:5, year:2020, status:'Especial', description:'Cinco histórias curtas celebram os vinte anos de Digimon Adventure e acompanham momentos dos personagens já crescidos.' },
+  { key:'digimonKizuna', title:'Last Evolution Kizuna', subtitle:'Filme', href:'digimon-last-evolution-kizuna.html', cover:'digimon-last-evolution-kizuna-500x750.jpg', episodes:1, year:2020, status:'Filme', description:'Tai e Matt descobrem que crescer pode encerrar para sempre o vínculo com seus parceiros Digimon.' },
+  { key:'digimonBeginning', title:'Digimon Adventure 02: The Beginning', subtitle:'Filme', href:'digimon-adventure-02-the-beginning.html', cover:'digimon-adventure-02-the-beginning-500x750.jpg', episodes:1, year:2023, status:'Filme', description:'Davis e seus amigos conhecem Lui, que afirma ter sido a primeira Criança Escolhida, e investigam a origem dos vínculos com os Digimon.' }
+];
 let services = null;
 let currentUser = null;
 let currentProfile = null;
@@ -99,10 +119,13 @@ let rankingUsersByUid = new Map();
 
 const $ = (selector) => document.querySelector(selector);
 const escapeHtml = (value = '') => String(value).replace(/[&<>'"]/g, (char) => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
-const totalWatched = (profile = {}) => Object.values(PROGRESS_FIELDS).reduce((sum, field) => sum + Number(profile?.[field] || 0), 0);
-const mushokuWatched = (profile = {}) => MUSHOKU_SEQUENCE.reduce((sum, anime) => sum + Number(profile?.[PROGRESS_FIELDS[anime.key]] || 0), 0);
-const myHeroWatched = (profile = {}) => MY_HERO_SEQUENCE.reduce((sum, anime) => sum + Number(profile?.[PROGRESS_FIELDS[anime.key]] || 0), 0);
-const kekkonYubiwaWatched = (profile = {}) => KEKKON_YUBIWA_SEQUENCE.reduce((sum, anime) => sum + Number(profile?.[PROGRESS_FIELDS[anime.key]] || 0), 0);
+const profileProgress = (profile = {}, animeKey) => Number(profile?.animeProgress?.[animeKey] ?? profile?.[PROGRESS_FIELDS[animeKey]] ?? 0);
+const totalWatched = (profile = {}) => Object.keys(PROGRESS_FIELDS).reduce((sum, animeKey) => sum + profileProgress(profile, animeKey), 0);
+const sequenceWatched = (profile, sequence) => sequence.reduce((sum, anime) => sum + profileProgress(profile, anime.key), 0);
+const mushokuWatched = (profile = {}) => sequenceWatched(profile, MUSHOKU_SEQUENCE);
+const myHeroWatched = (profile = {}) => sequenceWatched(profile, MY_HERO_SEQUENCE);
+const kekkonYubiwaWatched = (profile = {}) => sequenceWatched(profile, KEKKON_YUBIWA_SEQUENCE);
+const digimonWatched = (profile = {}) => sequenceWatched(profile, DIGIMON_SEQUENCE);
 const distributeProgress = (total, capacities) => { let remaining=Math.max(0,Number(total||0)); return capacities.map(capacity=>{const value=Math.min(capacity,remaining); remaining-=value; return value;}); };
 document.addEventListener('error', (event) => { if (event.target instanceof HTMLImageElement && event.target.src !== new URL(DEFAULT_AVATAR, location.href).href) event.target.src = DEFAULT_AVATAR; }, true);
 const xpForLevel = (level) => {
@@ -133,7 +156,7 @@ function renderGlobalNavigation() {
   const nav = document.querySelector('.topbar nav');
   if (!nav) return;
   const page = window.location.pathname.split('/').pop() || 'index.html';
-  nav.innerHTML = `<a class="${page === 'index.html' ? 'active' : ''}" href="index.html">HOME</a><a class="${['animes.html','naruto.html','the-villager-of-level-999.html',...MUSHOKU_SEQUENCE.map(anime=>anime.href),...MY_HERO_SEQUENCE.map(anime=>anime.href),...KEKKON_YUBIWA_SEQUENCE.map(anime=>anime.href)].includes(page) ? 'active' : ''}" href="animes.html">ANIMES</a><span class="nav-dropdown"><a class="${['ranking.html','ranking-animes.html'].includes(page) ? 'active' : ''}" href="ranking.html" aria-haspopup="true">RANKING</a><span class="nav-dropdown-menu"><a href="ranking-animes.html">Ranking de Animes</a><a href="ranking.html">Ranking de Usuários</a></span></span>`;
+  nav.innerHTML = `<a class="${page === 'index.html' ? 'active' : ''}" href="index.html">HOME</a><a class="${['animes.html','naruto.html','the-villager-of-level-999.html',...MUSHOKU_SEQUENCE.map(anime=>anime.href),...MY_HERO_SEQUENCE.map(anime=>anime.href),...KEKKON_YUBIWA_SEQUENCE.map(anime=>anime.href),...DIGIMON_SEQUENCE.map(anime=>anime.href)].includes(page) ? 'active' : ''}" href="animes.html">ANIMES</a><span class="nav-dropdown"><a class="${['ranking.html','ranking-animes.html'].includes(page) ? 'active' : ''}" href="ranking.html" aria-haspopup="true">RANKING</a><span class="nav-dropdown-menu"><a href="ranking-animes.html">Ranking de Animes</a><a href="ranking.html">Ranking de Usuários</a></span></span>`;
 }
 
 renderGlobalNavigation();
@@ -185,9 +208,10 @@ async function handleAuthState(user) {
     xp: migrated ? 0 : Number(old.xp || 0), animeDataVersion: DATA_VERSION,
     avatarPath: !old.avatarPath || old.avatarPath === 'lonermangalogo-v2.png' ? DEFAULT_AVATAR : old.avatarPath
   };
+  currentProfile.animeProgress = Object.fromEntries(Object.entries(PROGRESS_FIELDS).map(([animeKey, legacyField]) => [animeKey, Math.max(0, Number(old.animeProgress?.[animeKey] ?? currentProfile[legacyField] ?? 0))]));
   currentProfile.xp = totalWatched(currentProfile) * XP_PER_EPISODE;
   currentProfile.level = levelFromXp(currentProfile.xp);
-  await services.setDoc(ref, { ...currentProfile, updatedAt: services.serverTimestamp() }, { merge: true });
+  await services.setDoc(ref, { ...currentProfile, animeProgress: currentProfile.animeProgress, updatedAt: services.serverTimestamp() }, { merge: true });
   renderAuth(); renderProgress(); renderProfile();
 }
 
@@ -205,18 +229,18 @@ function setStatus(selector, message, type = '') { const el = $(selector); if (e
 async function saveProgress(target) {
   if (!currentUser || !services) { openAuth(); setStatus('#progressStatus','Entre na sua conta para salvar seu progresso.'); return; }
   const watched = Math.max(0, Math.min(TOTAL_EPISODES, Number.parseInt(target, 10) || 0));
-  const updatedProgress = Object.fromEntries(Object.values(PROGRESS_FIELDS).map(field => [field, field===progressField ? watched : Number(currentProfile?.[field]||0)]));
-  const xp = Object.values(updatedProgress).reduce((sum,value)=>sum+value,0) * XP_PER_EPISODE;
+  const animeProgress = { ...(currentProfile?.animeProgress || {}), [PAGE_ANIME]: watched };
+  const xp = Object.values(animeProgress).reduce((sum,value)=>sum+Math.max(0,Number(value||0)),0) * XP_PER_EPISODE;
   const pageXp = watched * XP_PER_EPISODE;
   const ref = services.doc(services.db, 'users', currentUser.uid);
-  await services.setDoc(ref, { ...updatedProgress, xp, level: levelFromXp(xp), animeDataVersion: DATA_VERSION, updatedAt: services.serverTimestamp() }, { merge: true });
-  currentProfile = { ...currentProfile, ...updatedProgress, xp, level: levelFromXp(xp) };
+  await services.setDoc(ref, { animeProgress, xp, level: levelFromXp(xp), animeDataVersion: DATA_VERSION, updatedAt: services.serverTimestamp() }, { merge: true });
+  currentProfile = { ...currentProfile, animeProgress, xp, level: levelFromXp(xp) };
   renderProgress(); renderProfile(); renderAuth();
   setStatus('#progressStatus', `Progresso salvo: ${watched} episódios e ${pageXp.toLocaleString('pt-BR')} XP neste anime.`, 'ok');
 }
 
 function renderProgress() {
-  const watched = Number(currentProfile?.[progressField] || 0);
+  const watched = profileProgress(currentProfile, PAGE_ANIME);
   if ($('#watchedCount')) $('#watchedCount').textContent = watched;
   if ($('#xpTotal')) $('#xpTotal').textContent = `${(watched * XP_PER_EPISODE).toLocaleString('pt-BR')} XP`;
   if ($('#progressBar')) $('#progressBar').style.width = `${watched / TOTAL_EPISODES * 100}%`;
@@ -236,7 +260,8 @@ function renderVillagerCatalogCard() {
   const extraAnimes = [
     { search:'the villager of level 999 aldeao nivel 999', href:'the-villager-of-level-999.html', cover:'the-villager-of-level-999-500x750.jpg', title:'The Villager of Level 999', tag:'FANTASIA', episodes:12 },
     { search:'mushoku tensei jobless reincarnation isekai ittara honki dasu', href:'mushoku-tensei.html', cover:'mushoku-tensei-500x750.jpg', title:'Mushoku Tensei', tag:'ISEKAI', episodes:11 },
-    { search:'kekkon yubiwa monogatari tales of wedding rings casamento aneis', href:'kekkon-yubiwa-monogatari.html', cover:'kekkon-yubiwa-monogatari-500x750.jpg', title:'Kekkon Yubiwa Monogatari', tag:'FANTASIA', episodes:25 }
+    { search:'kekkon yubiwa monogatari tales of wedding rings casamento aneis', href:'kekkon-yubiwa-monogatari.html', cover:'kekkon-yubiwa-monogatari-500x750.jpg', title:'Kekkon Yubiwa Monogatari', tag:'FANTASIA', episodes:25 },
+    { search:'digimon adventure digital monsters', href:'digimon-adventure.html', cover:'digimon-adventure-500x750.jpg', title:'Digimon Adventure', tag:'MUNDO DIGITAL', episodes:119 }
   ];
   extraAnimes.forEach((anime) => {
     if (catalog.querySelector(`[data-anime-title="${anime.search}"]`)) return;
@@ -251,10 +276,10 @@ function renderVillagerCatalogCard() {
 
 function renderGeneratedAnimePage() {
   if (!document.body.dataset.generatedAnime) return;
-  const anime = [...MY_HERO_SEQUENCE,...MUSHOKU_SEQUENCE,...KEKKON_YUBIWA_SEQUENCE].find(item=>item.key===PAGE_ANIME);
+  const anime = [...MY_HERO_SEQUENCE,...MUSHOKU_SEQUENCE,...KEKKON_YUBIWA_SEQUENCE,...DIGIMON_SEQUENCE].find(item=>item.key===PAGE_ANIME);
   const main = document.querySelector('main');
   if (!anime || !main) return;
-  const sequence = PAGE_ANIME.startsWith('myHero') ? MY_HERO_SEQUENCE : PAGE_ANIME.startsWith('kekkon') ? KEKKON_YUBIWA_SEQUENCE : MUSHOKU_SEQUENCE;
+  const sequence = PAGE_ANIME.startsWith('myHero') ? MY_HERO_SEQUENCE : PAGE_ANIME.startsWith('kekkon') ? KEKKON_YUBIWA_SEQUENCE : PAGE_ANIME.startsWith('digimon') ? DIGIMON_SEQUENCE : MUSHOKU_SEQUENCE;
   const currentIndex = sequence.findIndex(item => item.key === PAGE_ANIME);
   const previous = sequence[currentIndex - 1];
   main.innerHTML = `<section class="anime-detail-hero hero-academia"><div class="anime-detail-inner"><img src="${anime.cover}" width="500" height="750" alt="Capa de ${escapeHtml(anime.title)}"><div><a class="back-link" href="${previous?.href||'my-hero-academia.html'}">← Voltar para ${escapeHtml(previous?.title||'My Hero Academia')}</a><span class="eyebrow">${escapeHtml(anime.subtitle.toUpperCase())} • ${anime.year}</span><h1>${escapeHtml(anime.title)}</h1><p>${escapeHtml(anime.description)}</p><div class="detail-meta"><span><strong>${anime.episodes}</strong>${anime.episodes===1?'Episódio':'Episódios'}</span><span><strong>22 XP</strong>Por episódio</span><span><strong>${escapeHtml(anime.status)}</strong>Status</span></div><a class="button primary" href="#progresso">Continuar assistindo</a></div></div></section><section class="section episodes-section" id="progresso"><div class="section-heading"><div><span class="eyebrow">${escapeHtml(anime.title.toUpperCase())} • ${anime.episodes} ${anime.episodes===1?'EPISÓDIO':'EPISÓDIOS'}</span><h2>Seu progresso</h2></div><div class="xp-pill"><strong id="xpTotal">0 XP</strong><small>22 XP por episódio</small></div></div><div class="progress-card"><div class="progress-summary"><div class="episode-number"><strong id="watchedCount">0</strong><span>/ ${anime.episodes} assistidos</span></div><div class="progress-track"><span id="progressBar"></span></div></div><div class="progress-actions"><button class="plus-button" id="addEpisode" type="button">+</button><label for="episodeInput">Ou digite até qual episódio assistiu</label><div class="episode-input"><input id="episodeInput" type="number" min="0" max="${anime.episodes}" placeholder="Ex.: ${Math.min(5,anime.episodes)}"><kbd>Enter</kbd></div></div><p class="status" id="progressStatus">Entre na sua conta para salvar seu progresso.</p></div></section>`;
@@ -274,13 +299,13 @@ function renderWatchOnline() {
 }
 
 function renderAnimeTimeline() {
-  const sequence = PAGE_ANIME.startsWith('mushoku') ? MUSHOKU_SEQUENCE : PAGE_ANIME.startsWith('myHero') ? MY_HERO_SEQUENCE : PAGE_ANIME.startsWith('kekkon') ? KEKKON_YUBIWA_SEQUENCE : null;
+  const sequence = PAGE_ANIME.startsWith('mushoku') ? MUSHOKU_SEQUENCE : PAGE_ANIME.startsWith('myHero') ? MY_HERO_SEQUENCE : PAGE_ANIME.startsWith('kekkon') ? KEKKON_YUBIWA_SEQUENCE : PAGE_ANIME.startsWith('digimon') ? DIGIMON_SEQUENCE : null;
   if (!sequence) return;
   document.querySelector('.sequence-section')?.remove();
   const progressSection = $('#progresso');
   if (!progressSection) return;
   const currentIndex = sequence.findIndex(anime => anime.key === PAGE_ANIME);
-  const franchiseTitle = sequence===MUSHOKU_SEQUENCE ? 'Mushoku Tensei' : sequence===MY_HERO_SEQUENCE ? 'My Hero Academia' : 'Kekkon Yubiwa Monogatari';
+  const franchiseTitle = sequence===MUSHOKU_SEQUENCE ? 'Mushoku Tensei' : sequence===MY_HERO_SEQUENCE ? 'My Hero Academia' : sequence===KEKKON_YUBIWA_SEQUENCE ? 'Kekkon Yubiwa Monogatari' : 'Digimon Adventure';
   const section = document.createElement('section');
   section.className = 'section sequence-section';
   section.innerHTML = `<div class="section-heading"><div><span class="eyebrow">ORDEM PARA ASSISTIR</span><h2>Jornada de ${franchiseTitle}</h2><p class="sequence-intro">Siga a história na ordem. A etapa aberta está destacada.</p></div></div><div class="sequence-timeline">${sequence.map((anime,index) => `<a class="sequence-step${index===currentIndex?' current':''}" href="${anime.href}"${index===currentIndex?' aria-current="page"':''}><span class="sequence-order">${index+1}</span><img src="${anime.cover}" width="500" height="750" alt="${escapeHtml(anime.title)}"><div><span class="sequence-subtitle">${escapeHtml(anime.subtitle)}</span><h3>${escapeHtml(anime.title)}</h3><small>${anime.episodes} ${anime.episodes===1?'episódio':'episódios'} • 22 XP por episódio</small>${index===currentIndex?'<strong>VOCÊ ESTÁ AQUI</strong>':index<currentIndex?'<b>← Etapa anterior</b>':'<b>Próxima sequência →</b>'}</div></a>`).join('')}</div>`;
@@ -311,11 +336,12 @@ async function renderRanking() {
     rankingUsersByUid = new Map(users.map(user => [user.uid, user]));
     if (document.body.dataset.ranking === 'animes') {
       const animeRanking = [
-        { title:'Naruto', href:'naruto.html', cover:'naruto-500x750.jpg', points:users.filter(u=>Number(u.watchedEpisodes||0)>=1).length, total:220 },
+        { title:'Naruto', href:'naruto.html', cover:'naruto-500x750.jpg', points:users.filter(u=>profileProgress(u,'naruto')>=1).length, total:220 },
         { title:'My Hero Academia', href:'my-hero-academia.html', cover:'my-hero-academia-500x750.jpg', points:users.filter(u=>myHeroWatched(u)>=1).length, total:171 }
-        ,{ title:'The Villager of Level 999', href:'the-villager-of-level-999.html', cover:'the-villager-of-level-999-500x750.jpg', points:users.filter(u=>Number(u.villager999WatchedEpisodes||0)>=1).length, total:12 }
+        ,{ title:'The Villager of Level 999', href:'the-villager-of-level-999.html', cover:'the-villager-of-level-999-500x750.jpg', points:users.filter(u=>profileProgress(u,'villager999')>=1).length, total:12 }
         ,{ title:'Mushoku Tensei', href:'mushoku-tensei.html', cover:'mushoku-tensei-500x750.jpg', points:users.filter(u=>mushokuWatched(u)>=1).length, total:62 }
         ,{ title:'Kekkon Yubiwa Monogatari', href:'kekkon-yubiwa-monogatari.html', cover:'kekkon-yubiwa-monogatari-500x750.jpg', points:users.filter(u=>kekkonYubiwaWatched(u)>=1).length, total:25 }
+        ,{ title:'Digimon Adventure', href:'digimon-adventure.html', cover:'digimon-adventure-500x750.jpg', points:users.filter(u=>digimonWatched(u)>=1).length, total:119 }
       ].sort((a,b)=>b.points-a.points || a.title.localeCompare(b.title));
       list.classList.add('anime-ranking-grid');
       list.innerHTML = animeRanking.map((anime,i)=>`<a class="anime-ranking-card" href="${anime.href}"><div class="anime-ranking-cover"><img src="${anime.cover}" width="500" height="750" alt="${escapeHtml(anime.title)}"><span>#${i+1}</span></div><div class="anime-ranking-info"><span class="tag">${i===0?'MAIS ADICIONADO':'EM DESTAQUE'}</span><h2>${escapeHtml(anime.title)}</h2><p>${anime.total} episódios disponíveis</p><strong>${anime.points.toLocaleString('pt-BR')} <small>${anime.points===1?'ponto':'pontos'} • usuários que começaram</small></strong></div></a>`).join('');
@@ -335,11 +361,12 @@ function renderProfile() {
 
 function profileAnimeCards(profile = {}) {
   const animes = [
-    {title:'Naruto',href:'naruto.html',cover:'naruto-500x750.jpg',watched:Number(profile.watchedEpisodes||0),total:220},
+    {title:'Naruto',href:'naruto.html',cover:'naruto-500x750.jpg',watched:profileProgress(profile,'naruto'),total:220},
     {title:'My Hero Academia',href:'my-hero-academia.html',cover:'my-hero-academia-500x750.jpg',watched:myHeroWatched(profile),total:171},
-    {title:'The Villager of Level 999',href:'the-villager-of-level-999.html',cover:'the-villager-of-level-999-500x750.jpg',watched:Number(profile.villager999WatchedEpisodes||0),total:12},
+    {title:'The Villager of Level 999',href:'the-villager-of-level-999.html',cover:'the-villager-of-level-999-500x750.jpg',watched:profileProgress(profile,'villager999'),total:12},
     {title:'Mushoku Tensei',href:'mushoku-tensei.html',cover:'mushoku-tensei-500x750.jpg',watched:mushokuWatched(profile),total:62},
-    {title:'Kekkon Yubiwa Monogatari',href:'kekkon-yubiwa-monogatari.html',cover:'kekkon-yubiwa-monogatari-500x750.jpg',watched:kekkonYubiwaWatched(profile),total:25}
+    {title:'Kekkon Yubiwa Monogatari',href:'kekkon-yubiwa-monogatari.html',cover:'kekkon-yubiwa-monogatari-500x750.jpg',watched:kekkonYubiwaWatched(profile),total:25},
+    {title:'Digimon Adventure',href:'digimon-adventure.html',cover:'digimon-adventure-500x750.jpg',watched:digimonWatched(profile),total:119}
   ].filter(anime => anime.watched > 0);
   if (!animes.length) return '<p class="empty-animes">Este usuário ainda não adicionou nenhum anime.</p>';
   return `<div class="profile-anime-grid">${animes.map(anime=>`<a href="${anime.href}" class="profile-anime-card"><img src="${anime.cover}" width="90" height="135" alt="${escapeHtml(anime.title)}"><div><strong>${escapeHtml(anime.title)}</strong><span>Episódio ${anime.watched} de ${anime.total}</span><span class="mini-progress"><i style="width:${anime.watched/anime.total*100}%"></i></span><small>${(anime.watched*XP_PER_EPISODE).toLocaleString('pt-BR')} XP</small></div></a>`).join('')}</div>`;
@@ -359,7 +386,7 @@ document.addEventListener('click', async (event) => {
   if (event.target.closest('[data-open-auth]')) openAuth();
   if (event.target.closest('[data-close-auth]') || event.target.id === 'authModal') closeAuth();
   if (event.target.closest('#logout')) await services?.signOut(services.auth);
-  if (event.target.closest('#addEpisode')) await saveProgress(Number(currentProfile?.[progressField] || 0) + 1);
+  if (event.target.closest('#addEpisode')) await saveProgress(profileProgress(currentProfile, PAGE_ANIME) + 1);
   const episode = event.target.closest('.episode-item'); if (episode) await saveProgress(episode.dataset.episode);
   const publicProfile = event.target.closest('[data-public-profile]'); if (publicProfile) openPublicProfile(publicProfile.dataset.publicProfile);
   if (event.target.closest('[data-close-public-profile]') || event.target.id === 'publicProfileModal') document.querySelector('#publicProfileModal')?.remove();

@@ -3,71 +3,21 @@ service cloud.firestore {
   match /databases/{database}/documents {
     function signedIn() { return request.auth != null; }
     function owner(uid) { return signedIn() && request.auth.uid == uid; }
+    function validAnimeProfile(uid) {
+      return request.resource.data.uid == uid
+        && request.resource.data.animeProgress is map
+        && request.resource.data.xp is int
+        && request.resource.data.xp >= 0
+        && request.resource.data.level is int
+        && request.resource.data.level >= 1;
+    }
 
     match /users/{uid} {
       allow read: if true;
-      allow create: if owner(uid) && request.resource.data.uid == uid;
+      allow create: if owner(uid) && validAnimeProfile(uid);
       allow update: if owner(uid)
-        && request.resource.data.uid == uid
         && resource.data.uid == uid
-        && request.resource.data.watchedEpisodes is int
-        && request.resource.data.watchedEpisodes >= 0
-        && request.resource.data.watchedEpisodes <= 220
-        && request.resource.data.myHeroWatchedEpisodes is int
-        && request.resource.data.myHeroWatchedEpisodes >= 0
-        && request.resource.data.myHeroWatchedEpisodes <= 13
-        && request.resource.data.myHeroSeason2WatchedEpisodes is int
-        && request.resource.data.myHeroSeason2WatchedEpisodes >= 0
-        && request.resource.data.myHeroSeason2WatchedEpisodes <= 25
-        && request.resource.data.myHeroSeason3WatchedEpisodes is int
-        && request.resource.data.myHeroSeason3WatchedEpisodes >= 0
-        && request.resource.data.myHeroSeason3WatchedEpisodes <= 25
-        && request.resource.data.myHeroSeason4WatchedEpisodes is int
-        && request.resource.data.myHeroSeason4WatchedEpisodes >= 0
-        && request.resource.data.myHeroSeason4WatchedEpisodes <= 25
-        && request.resource.data.myHeroSeason5WatchedEpisodes is int
-        && request.resource.data.myHeroSeason5WatchedEpisodes >= 0
-        && request.resource.data.myHeroSeason5WatchedEpisodes <= 25
-        && request.resource.data.myHeroSeason6WatchedEpisodes is int
-        && request.resource.data.myHeroSeason6WatchedEpisodes >= 0
-        && request.resource.data.myHeroSeason6WatchedEpisodes <= 25
-        && request.resource.data.myHeroSeason7WatchedEpisodes is int
-        && request.resource.data.myHeroSeason7WatchedEpisodes >= 0
-        && request.resource.data.myHeroSeason7WatchedEpisodes <= 21
-        && request.resource.data.myHeroFinalSeasonWatchedEpisodes is int
-        && request.resource.data.myHeroFinalSeasonWatchedEpisodes >= 0
-        && request.resource.data.myHeroFinalSeasonWatchedEpisodes <= 11
-        && request.resource.data.myHeroMoreWatchedEpisodes is int
-        && request.resource.data.myHeroMoreWatchedEpisodes >= 0
-        && request.resource.data.myHeroMoreWatchedEpisodes <= 1
-        && request.resource.data.kekkonYubiwaWatchedEpisodes is int
-        && request.resource.data.kekkonYubiwaWatchedEpisodes >= 0
-        && request.resource.data.kekkonYubiwaWatchedEpisodes <= 12
-        && request.resource.data.kekkonYubiwaSeason2WatchedEpisodes is int
-        && request.resource.data.kekkonYubiwaSeason2WatchedEpisodes >= 0
-        && request.resource.data.kekkonYubiwaSeason2WatchedEpisodes <= 13
-        && request.resource.data.villager999WatchedEpisodes is int
-        && request.resource.data.villager999WatchedEpisodes >= 0
-        && request.resource.data.villager999WatchedEpisodes <= 12
-        && request.resource.data.mushokuTenseiWatchedEpisodes is int
-        && request.resource.data.mushokuTenseiWatchedEpisodes >= 0
-        && request.resource.data.mushokuTenseiWatchedEpisodes <= 11
-        && request.resource.data.mushokuTenseiPart2WatchedEpisodes is int
-        && request.resource.data.mushokuTenseiPart2WatchedEpisodes >= 0
-        && request.resource.data.mushokuTenseiPart2WatchedEpisodes <= 12
-        && request.resource.data.mushokuGuardianFitzWatchedEpisodes is int
-        && request.resource.data.mushokuGuardianFitzWatchedEpisodes >= 0
-        && request.resource.data.mushokuGuardianFitzWatchedEpisodes <= 1
-        && request.resource.data.mushokuSeason2WatchedEpisodes is int
-        && request.resource.data.mushokuSeason2WatchedEpisodes >= 0
-        && request.resource.data.mushokuSeason2WatchedEpisodes <= 12
-        && request.resource.data.mushokuSeason2Part2WatchedEpisodes is int
-        && request.resource.data.mushokuSeason2Part2WatchedEpisodes >= 0
-        && request.resource.data.mushokuSeason2Part2WatchedEpisodes <= 12
-        && request.resource.data.mushokuSeason3WatchedEpisodes is int
-        && request.resource.data.mushokuSeason3WatchedEpisodes >= 0
-        && request.resource.data.mushokuSeason3WatchedEpisodes <= 14
-        && request.resource.data.xp == (request.resource.data.watchedEpisodes + request.resource.data.myHeroWatchedEpisodes + request.resource.data.myHeroSeason2WatchedEpisodes + request.resource.data.myHeroSeason3WatchedEpisodes + request.resource.data.myHeroSeason4WatchedEpisodes + request.resource.data.myHeroSeason5WatchedEpisodes + request.resource.data.myHeroSeason6WatchedEpisodes + request.resource.data.myHeroSeason7WatchedEpisodes + request.resource.data.myHeroFinalSeasonWatchedEpisodes + request.resource.data.myHeroMoreWatchedEpisodes + request.resource.data.kekkonYubiwaWatchedEpisodes + request.resource.data.kekkonYubiwaSeason2WatchedEpisodes + request.resource.data.villager999WatchedEpisodes + request.resource.data.mushokuTenseiWatchedEpisodes + request.resource.data.mushokuTenseiPart2WatchedEpisodes + request.resource.data.mushokuGuardianFitzWatchedEpisodes + request.resource.data.mushokuSeason2WatchedEpisodes + request.resource.data.mushokuSeason2Part2WatchedEpisodes + request.resource.data.mushokuSeason3WatchedEpisodes) * 22;
+        && validAnimeProfile(uid);
       allow delete: if false;
     }
   }
