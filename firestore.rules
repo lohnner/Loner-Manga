@@ -22,7 +22,10 @@ service cloud.firestore {
         && request.resource.data.mushokuTenseiWatchedEpisodes is int
         && request.resource.data.mushokuTenseiWatchedEpisodes >= 0
         && request.resource.data.mushokuTenseiWatchedEpisodes <= 11
-        && request.resource.data.xp == (request.resource.data.watchedEpisodes + request.resource.data.myHeroWatchedEpisodes + request.resource.data.villager999WatchedEpisodes + request.resource.data.mushokuTenseiWatchedEpisodes) * 22;
+        && request.resource.data.mushokuTenseiPart2WatchedEpisodes is int
+        && request.resource.data.mushokuTenseiPart2WatchedEpisodes >= 0
+        && request.resource.data.mushokuTenseiPart2WatchedEpisodes <= 12
+        && request.resource.data.xp == (request.resource.data.watchedEpisodes + request.resource.data.myHeroWatchedEpisodes + request.resource.data.villager999WatchedEpisodes + request.resource.data.mushokuTenseiWatchedEpisodes + request.resource.data.mushokuTenseiPart2WatchedEpisodes) * 22;
       allow delete: if false;
     }
   }

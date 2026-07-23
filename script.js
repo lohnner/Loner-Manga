@@ -33,7 +33,7 @@ if (!document.querySelector('link[href="watch-online.css"]')) {
 
 const PAGE_ANIME = document.body.dataset.anime || 'naruto';
 const TOTAL_EPISODES = Number(document.body.dataset.totalEpisodes || 220);
-const PROGRESS_FIELDS = { naruto: 'watchedEpisodes', myHeroAcademia: 'myHeroWatchedEpisodes', villager999: 'villager999WatchedEpisodes', mushokuTensei: 'mushokuTenseiWatchedEpisodes' };
+const PROGRESS_FIELDS = { naruto: 'watchedEpisodes', myHeroAcademia: 'myHeroWatchedEpisodes', villager999: 'villager999WatchedEpisodes', mushokuTensei: 'mushokuTenseiWatchedEpisodes', mushokuTenseiPart2: 'mushokuTenseiPart2WatchedEpisodes' };
 const progressField = PROGRESS_FIELDS[PAGE_ANIME] || 'watchedEpisodes';
 const XP_PER_EPISODE = 22;
 const DATA_VERSION = 1;
@@ -42,7 +42,8 @@ const WATCH_OPTIONS = {
   naruto: { title: 'Naruto', platform: 'Crunchyroll', url: 'https://www.crunchyroll.com/pt-pt/series/GY9PJ5KWR/naruto' },
   myHeroAcademia: { title: 'My Hero Academia', platform: 'Crunchyroll', url: 'https://www.crunchyroll.com/pt-br/series/G6NQ5DWZ6/my-hero-academia' },
   villager999: { title: 'The Villager of Level 999', platform: 'Crunchyroll', url: 'https://www.crunchyroll.com/pt-br/series/GT00371878/the-villager-of-level-999' },
-  mushokuTensei: { title: 'Mushoku Tensei: Jobless Reincarnation', platform: 'Crunchyroll', url: 'https://www.crunchyroll.com/pt-br/series/G24H1N3MP/mushoku-tensei-jobless-reincarnation' }
+  mushokuTensei: { title: 'Mushoku Tensei: Jobless Reincarnation', platform: 'Crunchyroll', url: 'https://www.crunchyroll.com/pt-br/series/G24H1N3MP/mushoku-tensei-jobless-reincarnation' },
+  mushokuTenseiPart2: { title: 'Mushoku Tensei: Parte 2', platform: 'Crunchyroll', url: 'https://www.crunchyroll.com/pt-br/series/G24H1N3MP/mushoku-tensei-jobless-reincarnation' }
 };
 let services = null;
 let currentUser = null;
@@ -80,7 +81,7 @@ function renderGlobalNavigation() {
   const nav = document.querySelector('.topbar nav');
   if (!nav) return;
   const page = window.location.pathname.split('/').pop() || 'index.html';
-  nav.innerHTML = `<a class="${page === 'index.html' ? 'active' : ''}" href="index.html">HOME</a><a class="${['animes.html','naruto.html','my-hero-academia.html','the-villager-of-level-999.html','mushoku-tensei.html'].includes(page) ? 'active' : ''}" href="animes.html">ANIMES</a><span class="nav-dropdown"><a class="${['ranking.html','ranking-animes.html'].includes(page) ? 'active' : ''}" href="ranking.html" aria-haspopup="true">RANKING</a><span class="nav-dropdown-menu"><a href="ranking-animes.html">Ranking de Animes</a><a href="ranking.html">Ranking de Usuários</a></span></span>`;
+  nav.innerHTML = `<a class="${page === 'index.html' ? 'active' : ''}" href="index.html">HOME</a><a class="${['animes.html','naruto.html','my-hero-academia.html','the-villager-of-level-999.html','mushoku-tensei.html','mushoku-tensei-part-2.html'].includes(page) ? 'active' : ''}" href="animes.html">ANIMES</a><span class="nav-dropdown"><a class="${['ranking.html','ranking-animes.html'].includes(page) ? 'active' : ''}" href="ranking.html" aria-haspopup="true">RANKING</a><span class="nav-dropdown-menu"><a href="ranking-animes.html">Ranking de Animes</a><a href="ranking.html">Ranking de Usuários</a></span></span>`;
 }
 
 renderGlobalNavigation();
@@ -111,10 +112,11 @@ async function handleAuthState(user) {
     myHeroWatchedEpisodes: migrated ? 0 : Math.min(170, Number(old.myHeroWatchedEpisodes || 0)),
     villager999WatchedEpisodes: migrated ? 0 : Math.min(12, Number(old.villager999WatchedEpisodes || 0)),
     mushokuTenseiWatchedEpisodes: migrated ? 0 : Math.min(11, Number(old.mushokuTenseiWatchedEpisodes || 0)),
+    mushokuTenseiPart2WatchedEpisodes: migrated ? 0 : Math.min(12, Number(old.mushokuTenseiPart2WatchedEpisodes || 0)),
     xp: migrated ? 0 : Number(old.xp || 0), animeDataVersion: DATA_VERSION,
     avatarPath: !old.avatarPath || old.avatarPath === 'lonermangalogo-v2.png' ? DEFAULT_AVATAR : old.avatarPath
   };
-  currentProfile.xp = (currentProfile.watchedEpisodes + currentProfile.myHeroWatchedEpisodes + currentProfile.villager999WatchedEpisodes + currentProfile.mushokuTenseiWatchedEpisodes) * XP_PER_EPISODE;
+  currentProfile.xp = (currentProfile.watchedEpisodes + currentProfile.myHeroWatchedEpisodes + currentProfile.villager999WatchedEpisodes + currentProfile.mushokuTenseiWatchedEpisodes + currentProfile.mushokuTenseiPart2WatchedEpisodes) * XP_PER_EPISODE;
   currentProfile.level = levelFromXp(currentProfile.xp);
   await services.setDoc(ref, { ...currentProfile, updatedAt: services.serverTimestamp() }, { merge: true });
   renderAuth(); renderProgress(); renderProfile();
@@ -138,11 +140,12 @@ async function saveProgress(target) {
   const myHeroWatched = progressField === 'myHeroWatchedEpisodes' ? watched : Number(currentProfile.myHeroWatchedEpisodes || 0);
   const villagerWatched = progressField === 'villager999WatchedEpisodes' ? watched : Number(currentProfile.villager999WatchedEpisodes || 0);
   const mushokuWatched = progressField === 'mushokuTenseiWatchedEpisodes' ? watched : Number(currentProfile.mushokuTenseiWatchedEpisodes || 0);
-  const xp = (narutoWatched + myHeroWatched + villagerWatched + mushokuWatched) * XP_PER_EPISODE;
+  const mushokuPart2Watched = progressField === 'mushokuTenseiPart2WatchedEpisodes' ? watched : Number(currentProfile.mushokuTenseiPart2WatchedEpisodes || 0);
+  const xp = (narutoWatched + myHeroWatched + villagerWatched + mushokuWatched + mushokuPart2Watched) * XP_PER_EPISODE;
   const pageXp = watched * XP_PER_EPISODE;
   const ref = services.doc(services.db, 'users', currentUser.uid);
-  await services.setDoc(ref, { watchedEpisodes: narutoWatched, myHeroWatchedEpisodes: myHeroWatched, villager999WatchedEpisodes: villagerWatched, mushokuTenseiWatchedEpisodes: mushokuWatched, [progressField]: watched, xp, level: levelFromXp(xp), animeDataVersion: DATA_VERSION, updatedAt: services.serverTimestamp() }, { merge: true });
-  currentProfile = { ...currentProfile, watchedEpisodes: narutoWatched, myHeroWatchedEpisodes: myHeroWatched, villager999WatchedEpisodes: villagerWatched, mushokuTenseiWatchedEpisodes: mushokuWatched, [progressField]: watched, xp, level: levelFromXp(xp) };
+  await services.setDoc(ref, { watchedEpisodes: narutoWatched, myHeroWatchedEpisodes: myHeroWatched, villager999WatchedEpisodes: villagerWatched, mushokuTenseiWatchedEpisodes: mushokuWatched, mushokuTenseiPart2WatchedEpisodes: mushokuPart2Watched, [progressField]: watched, xp, level: levelFromXp(xp), animeDataVersion: DATA_VERSION, updatedAt: services.serverTimestamp() }, { merge: true });
+  currentProfile = { ...currentProfile, watchedEpisodes: narutoWatched, myHeroWatchedEpisodes: myHeroWatched, villager999WatchedEpisodes: villagerWatched, mushokuTenseiWatchedEpisodes: mushokuWatched, mushokuTenseiPart2WatchedEpisodes: mushokuPart2Watched, [progressField]: watched, xp, level: levelFromXp(xp) };
   renderProgress(); renderProfile();
   setStatus('#progressStatus', `Progresso salvo: ${watched} episódios e ${pageXp.toLocaleString('pt-BR')} XP neste anime.`, 'ok');
 }
@@ -217,20 +220,20 @@ async function renderRanking() {
         { title:'Naruto', href:'naruto.html', cover:'naruto-500x750.jpg', points:users.filter(u=>Number(u.watchedEpisodes||0)>=1).length, total:220 },
         { title:'My Hero Academia', href:'my-hero-academia.html', cover:'my-hero-academia-500x750.jpg', points:users.filter(u=>Number(u.myHeroWatchedEpisodes||0)>=1).length, total:170 }
         ,{ title:'The Villager of Level 999', href:'the-villager-of-level-999.html', cover:'the-villager-of-level-999-500x750.jpg', points:users.filter(u=>Number(u.villager999WatchedEpisodes||0)>=1).length, total:12 }
-        ,{ title:'Mushoku Tensei', href:'mushoku-tensei.html', cover:'mushoku-tensei-500x750.jpg', points:users.filter(u=>Number(u.mushokuTenseiWatchedEpisodes||0)>=1).length, total:11 }
+        ,{ title:'Mushoku Tensei', href:'mushoku-tensei.html', cover:'mushoku-tensei-500x750.jpg', points:users.filter(u=>Number(u.mushokuTenseiWatchedEpisodes||0)>=1 || Number(u.mushokuTenseiPart2WatchedEpisodes||0)>=1).length, total:23 }
       ].sort((a,b)=>b.points-a.points || a.title.localeCompare(b.title));
       list.classList.add('anime-ranking-grid');
       list.innerHTML = animeRanking.map((anime,i)=>`<a class="anime-ranking-card" href="${anime.href}"><div class="anime-ranking-cover"><img src="${anime.cover}" width="500" height="750" alt="${escapeHtml(anime.title)}"><span>#${i+1}</span></div><div class="anime-ranking-info"><span class="tag">${i===0?'MAIS ADICIONADO':'EM DESTAQUE'}</span><h2>${escapeHtml(anime.title)}</h2><p>${anime.total} episódios disponíveis</p><strong>${anime.points.toLocaleString('pt-BR')} <small>${anime.points===1?'ponto':'pontos'} • usuários que começaram</small></strong></div></a>`).join('');
       return;
     }
-    list.innerHTML = users.length ? users.map((u,i) => `<button class="rank-row user-rank-row" type="button" data-public-profile="${escapeHtml(u.uid)}"><span class="rank-position">#${i+1}</span><img src="${escapeHtml(u.avatarPath || DEFAULT_AVATAR)}" width="52" height="52" alt="Avatar de ${escapeHtml(u.nick || 'Ninja Loner')}"><div><strong>${escapeHtml(u.nick || 'Ninja Loner')}</strong><small>Level ${levelFromXp(u.xp)} • ${Number(u.watchedEpisodes||0) + Number(u.myHeroWatchedEpisodes||0) + Number(u.villager999WatchedEpisodes||0) + Number(u.mushokuTenseiWatchedEpisodes||0)} episódios assistidos</small></div><b>${Number(u.xp||0).toLocaleString('pt-BR')} XP</b></button>`).join('') : '<p>Ainda não há ninjas no ranking de usuários.</p>';
+    list.innerHTML = users.length ? users.map((u,i) => `<button class="rank-row user-rank-row" type="button" data-public-profile="${escapeHtml(u.uid)}"><span class="rank-position">#${i+1}</span><img src="${escapeHtml(u.avatarPath || DEFAULT_AVATAR)}" width="52" height="52" alt="Avatar de ${escapeHtml(u.nick || 'Ninja Loner')}"><div><strong>${escapeHtml(u.nick || 'Ninja Loner')}</strong><small>Level ${levelFromXp(u.xp)} • ${Number(u.watchedEpisodes||0) + Number(u.myHeroWatchedEpisodes||0) + Number(u.villager999WatchedEpisodes||0) + Number(u.mushokuTenseiWatchedEpisodes||0) + Number(u.mushokuTenseiPart2WatchedEpisodes||0)} episódios assistidos</small></div><b>${Number(u.xp||0).toLocaleString('pt-BR')} XP</b></button>`).join('') : '<p>Ainda não há ninjas no ranking de usuários.</p>';
   } catch { list.innerHTML = '<p>Não foi possível carregar o ranking agora.</p>'; }
 }
 
 function renderProfile() {
   const content = $('#profileContent'); if (!content) return;
   if (!currentUser) { content.innerHTML = '<p>Entre na sua conta para ver seu perfil.</p><a class="button primary" href="index.html">Entrar</a>'; return; }
-  const naruto = Number(currentProfile?.watchedEpisodes || 0), myHero = Number(currentProfile?.myHeroWatchedEpisodes || 0), villager = Number(currentProfile?.villager999WatchedEpisodes || 0), mushoku = Number(currentProfile?.mushokuTenseiWatchedEpisodes || 0), watched = naruto + myHero + villager + mushoku, xp = watched * XP_PER_EPISODE;
+  const naruto = Number(currentProfile?.watchedEpisodes || 0), myHero = Number(currentProfile?.myHeroWatchedEpisodes || 0), villager = Number(currentProfile?.villager999WatchedEpisodes || 0), mushoku = Number(currentProfile?.mushokuTenseiWatchedEpisodes || 0), mushokuPart2 = Number(currentProfile?.mushokuTenseiPart2WatchedEpisodes || 0), watched = naruto + myHero + villager + mushoku + mushokuPart2, xp = watched * XP_PER_EPISODE;
   const progress = levelProgress(xp);
   content.innerHTML = `<div class="profile-identity"><img src="${escapeHtml(currentProfile.avatarPath || DEFAULT_AVATAR)}" width="110" height="110" alt="Avatar de ${escapeHtml(currentProfile.nick)}"><div><h2>${escapeHtml(currentProfile.nick)}</h2><p>${escapeHtml(currentProfile.email)}</p><span class="profile-level">Level ${progress.level}</span></div></div><section class="profile-xp"><div><strong>Progresso para o level ${progress.level + 1}</strong><span>${progress.current.toLocaleString('pt-BR')} / ${progress.needed.toLocaleString('pt-BR')} XP</span></div><span class="profile-xp-track"><i style="width:${progress.percent}%"></i></span><small>Faltam ${(progress.needed - progress.current).toLocaleString('pt-BR')} XP para avançar.</small></section><div class="profile-stats"><div><small>Episódios assistidos</small><strong>${watched}</strong></div><div><small>XP total</small><strong>${xp.toLocaleString('pt-BR')}</strong></div><div><small>Level</small><strong>${progress.level}</strong></div></div><section class="profile-animes"><h3>Animes adicionados</h3>${profileAnimeCards(currentProfile)}</section><button class="button ghost profile-logout" id="logout" type="button">Sair da conta</button>`;
 }
@@ -240,7 +243,7 @@ function profileAnimeCards(profile = {}) {
     {title:'Naruto',href:'naruto.html',cover:'naruto-500x750.jpg',watched:Number(profile.watchedEpisodes||0),total:220},
     {title:'My Hero Academia',href:'my-hero-academia.html',cover:'my-hero-academia-500x750.jpg',watched:Number(profile.myHeroWatchedEpisodes||0),total:170},
     {title:'The Villager of Level 999',href:'the-villager-of-level-999.html',cover:'the-villager-of-level-999-500x750.jpg',watched:Number(profile.villager999WatchedEpisodes||0),total:12},
-    {title:'Mushoku Tensei',href:'mushoku-tensei.html',cover:'mushoku-tensei-500x750.jpg',watched:Number(profile.mushokuTenseiWatchedEpisodes||0),total:11}
+    {title:'Mushoku Tensei',href:'mushoku-tensei.html',cover:'mushoku-tensei-500x750.jpg',watched:Number(profile.mushokuTenseiWatchedEpisodes||0)+Number(profile.mushokuTenseiPart2WatchedEpisodes||0),total:23}
   ].filter(anime => anime.watched > 0);
   if (!animes.length) return '<p class="empty-animes">Este usuário ainda não adicionou nenhum anime.</p>';
   return `<div class="profile-anime-grid">${animes.map(anime=>`<a href="${anime.href}" class="profile-anime-card"><img src="${anime.cover}" width="90" height="135" alt="${escapeHtml(anime.title)}"><div><strong>${escapeHtml(anime.title)}</strong><span>Episódio ${anime.watched} de ${anime.total}</span><span class="mini-progress"><i style="width:${anime.watched/anime.total*100}%"></i></span><small>${(anime.watched*XP_PER_EPISODE).toLocaleString('pt-BR')} XP</small></div></a>`).join('')}</div>`;
@@ -250,7 +253,7 @@ function openPublicProfile(uid) {
   const profile = rankingUsersByUid.get(uid); if (!profile) return;
   document.querySelector('#publicProfileModal')?.remove();
   const progress = levelProgress(Number(profile.xp||0));
-  const watched = Number(profile.watchedEpisodes||0) + Number(profile.myHeroWatchedEpisodes||0) + Number(profile.villager999WatchedEpisodes||0) + Number(profile.mushokuTenseiWatchedEpisodes||0);
+  const watched = Number(profile.watchedEpisodes||0) + Number(profile.myHeroWatchedEpisodes||0) + Number(profile.villager999WatchedEpisodes||0) + Number(profile.mushokuTenseiWatchedEpisodes||0) + Number(profile.mushokuTenseiPart2WatchedEpisodes||0);
   const modal = document.createElement('div'); modal.className='modal public-profile-modal'; modal.id='publicProfileModal';
   modal.innerHTML = `<section class="modal-card public-profile-card" role="dialog" aria-modal="true" aria-labelledby="publicProfileTitle"><button class="modal-close" type="button" data-close-public-profile aria-label="Fechar">×</button><div class="profile-identity"><img src="${escapeHtml(profile.avatarPath||DEFAULT_AVATAR)}" width="110" height="110" alt="Avatar de ${escapeHtml(profile.nick||'Ninja Loner')}"><div><span class="eyebrow">PERFIL DO USUÁRIO</span><h2 id="publicProfileTitle">${escapeHtml(profile.nick||'Ninja Loner')}</h2><span class="profile-level">Level ${progress.level}</span></div></div><section class="profile-xp"><div><strong>Progresso de level</strong><span>${progress.current.toLocaleString('pt-BR')} / ${progress.needed.toLocaleString('pt-BR')} XP</span></div><span class="profile-xp-track"><i style="width:${progress.percent}%"></i></span></section><div class="profile-stats"><div><small>Episódios</small><strong>${watched}</strong></div><div><small>XP total</small><strong>${Number(profile.xp||0).toLocaleString('pt-BR')}</strong></div><div><small>Level</small><strong>${progress.level}</strong></div></div><section class="profile-animes"><h3>Animes adicionados</h3>${profileAnimeCards(profile)}</section></section>`;
   document.body.append(modal);

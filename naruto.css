@@ -33,6 +33,16 @@
 .catalog-card div { padding:17px; }
 .catalog-card h2 { margin:5px 0; font:700 21px 'Space Grotesk'; }
 .catalog-card p,.catalog-empty { color:var(--muted); font-size:12px; }
+.sequence-section { padding-top:18px; }
+.sequence-card { display:grid; grid-template-columns:190px 1fr; gap:30px; max-width:760px; overflow:hidden; border:1px solid var(--line); border-radius:18px; background:linear-gradient(120deg,var(--panel),#18140f); transition:transform .2s,border-color .2s; }
+.sequence-card:hover { transform:translateY(-4px); border-color:var(--orange); }
+.sequence-card img { width:100%; height:auto; aspect-ratio:2/3; object-fit:cover; display:block; }
+.sequence-card > div { align-self:center; padding:24px 28px 24px 0; }
+.sequence-card h2 { margin:8px 0 12px; font:700 30px 'Space Grotesk'; }
+.sequence-card p { color:var(--muted); font-size:14px; }
+.sequence-card strong { display:block; margin-top:18px; color:var(--orange); }
+.sequence-label { color:var(--orange); font-size:11px; font-weight:900; letter-spacing:.15em; }
+.sequence-meta { color:#d4d7dd; font-size:12px; font-weight:700; }
 @media (max-width:760px) {
   .anime-detail-inner { grid-template-columns:105px 1fr; gap:18px; padding:34px 16px; align-items:start; }
   .anime-detail-inner h1 { font-size:42px; margin:7px 0; }
@@ -44,4 +54,8 @@
   .anime-catalog { grid-template-columns:repeat(2,1fr); gap:12px; }
   .catalog-card div { padding:12px; }
   .catalog-card h2 { font-size:17px; }
+  .sequence-card { grid-template-columns:110px 1fr; gap:16px; }
+  .sequence-card > div { padding:14px 14px 14px 0; }
+  .sequence-card h2 { font-size:20px; }
+  .sequence-card p { display:none; }
 }
