@@ -39,6 +39,7 @@ const PROGRESS_FIELDS = {
   myHeroSeason4: 'myHeroSeason4WatchedEpisodes', myHeroSeason5: 'myHeroSeason5WatchedEpisodes',
   myHeroSeason6: 'myHeroSeason6WatchedEpisodes', myHeroSeason7: 'myHeroSeason7WatchedEpisodes',
   myHeroFinalSeason: 'myHeroFinalSeasonWatchedEpisodes', myHeroMore: 'myHeroMoreWatchedEpisodes',
+  kekkonYubiwa: 'kekkonYubiwaWatchedEpisodes', kekkonYubiwaSeason2: 'kekkonYubiwaSeason2WatchedEpisodes',
   mushokuTensei: 'mushokuTenseiWatchedEpisodes', mushokuTenseiPart2: 'mushokuTenseiPart2WatchedEpisodes',
   mushokuGuardianFitz: 'mushokuGuardianFitzWatchedEpisodes', mushokuSeason2: 'mushokuSeason2WatchedEpisodes',
   mushokuSeason2Part2: 'mushokuSeason2Part2WatchedEpisodes', mushokuSeason3: 'mushokuSeason3WatchedEpisodes'
@@ -58,6 +59,8 @@ const WATCH_OPTIONS = {
   myHeroSeason7: { title: 'My Hero Academia: 7ª Temporada', platform: 'Crunchyroll', url: 'https://www.crunchyroll.com/pt-br/series/G6NQ5DWZ6/my-hero-academia' },
   myHeroFinalSeason: { title: 'My Hero Academia: Temporada Final', platform: 'Crunchyroll', url: 'https://www.crunchyroll.com/pt-br/series/G6NQ5DWZ6/my-hero-academia' },
   myHeroMore: { title: 'My Hero Academia: More', platform: 'Crunchyroll', url: 'https://www.crunchyroll.com/pt-br/series/G6NQ5DWZ6/my-hero-academia' },
+  kekkonYubiwa: { title: 'Kekkon Yubiwa Monogatari', platform: 'Meus Animes', url: 'https://meusanimes.blog/a/kekkon-yubiwa-monogatari-dublado/' },
+  kekkonYubiwaSeason2: { title: 'Kekkon Yubiwa Monogatari II', platform: 'Meus Animes', url: 'https://meusanimes.blog/a/kekkon-yubiwa-monogatari-dublado/' },
   villager999: { title: 'The Villager of Level 999', platform: 'Crunchyroll', url: 'https://www.crunchyroll.com/pt-br/series/GT00371878/the-villager-of-level-999' },
   mushokuTensei: { title: 'Mushoku Tensei: Jobless Reincarnation', platform: 'Crunchyroll', url: 'https://www.crunchyroll.com/pt-br/series/G24H1N3MP/mushoku-tensei-jobless-reincarnation' },
   mushokuTenseiPart2: { title: 'Mushoku Tensei: Parte 2', platform: 'Crunchyroll', url: 'https://www.crunchyroll.com/pt-br/series/G24H1N3MP/mushoku-tensei-jobless-reincarnation' },
@@ -85,6 +88,10 @@ const MY_HERO_SEQUENCE = [
   { key:'myHeroFinalSeason', title:'My Hero Academia: Temporada Final', subtitle:'8ª e última temporada', href:'my-hero-academia-final-season.html', cover:'my-hero-academia-final-season-500x750.jpg', episodes:11, year:2025, status:'Completo', description:'A batalha final chega ao clímax e define o destino de Deku, All Might, Shigaraki e de toda a sociedade de heróis.' },
   { key:'myHeroMore', title:'My Hero Academia: More', subtitle:'Episódio especial', href:'my-hero-academia-more.html', cover:'my-hero-academia-more-500x750.jpg', episodes:1, year:2026, status:'Especial', description:'Um episódio especial que retorna ao universo de My Hero Academia após a conclusão da temporada final.' }
 ];
+const KEKKON_YUBIWA_SEQUENCE = [
+  { key:'kekkonYubiwa', title:'Kekkon Yubiwa Monogatari', subtitle:'1ª temporada', href:'kekkon-yubiwa-monogatari.html', cover:'kekkon-yubiwa-monogatari-500x750.jpg', episodes:12, year:2024, status:'Completo', description:'Satou segue sua amiga de infância Hime até outro mundo e se torna o Rei dos Anéis, destinado a se casar com cinco princesas para enfrentar o Rei do Abismo.' },
+  { key:'kekkonYubiwaSeason2', title:'Kekkon Yubiwa Monogatari II', subtitle:'2ª temporada', href:'kekkon-yubiwa-monogatari-season-2.html', cover:'kekkon-yubiwa-monogatari-season-2-500x750.jpg', episodes:13, year:2025, status:'Completo', description:'Satou, Hime e as Princesas dos Anéis continuam sua jornada para dominar o poder dos anéis e derrotar definitivamente o Rei do Abismo.' }
+];
 let services = null;
 let currentUser = null;
 let currentProfile = null;
@@ -95,6 +102,7 @@ const escapeHtml = (value = '') => String(value).replace(/[&<>'"]/g, (char) => (
 const totalWatched = (profile = {}) => Object.values(PROGRESS_FIELDS).reduce((sum, field) => sum + Number(profile?.[field] || 0), 0);
 const mushokuWatched = (profile = {}) => MUSHOKU_SEQUENCE.reduce((sum, anime) => sum + Number(profile?.[PROGRESS_FIELDS[anime.key]] || 0), 0);
 const myHeroWatched = (profile = {}) => MY_HERO_SEQUENCE.reduce((sum, anime) => sum + Number(profile?.[PROGRESS_FIELDS[anime.key]] || 0), 0);
+const kekkonYubiwaWatched = (profile = {}) => KEKKON_YUBIWA_SEQUENCE.reduce((sum, anime) => sum + Number(profile?.[PROGRESS_FIELDS[anime.key]] || 0), 0);
 const distributeProgress = (total, capacities) => { let remaining=Math.max(0,Number(total||0)); return capacities.map(capacity=>{const value=Math.min(capacity,remaining); remaining-=value; return value;}); };
 document.addEventListener('error', (event) => { if (event.target instanceof HTMLImageElement && event.target.src !== new URL(DEFAULT_AVATAR, location.href).href) event.target.src = DEFAULT_AVATAR; }, true);
 const xpForLevel = (level) => {
@@ -125,7 +133,7 @@ function renderGlobalNavigation() {
   const nav = document.querySelector('.topbar nav');
   if (!nav) return;
   const page = window.location.pathname.split('/').pop() || 'index.html';
-  nav.innerHTML = `<a class="${page === 'index.html' ? 'active' : ''}" href="index.html">HOME</a><a class="${['animes.html','naruto.html','the-villager-of-level-999.html',...MUSHOKU_SEQUENCE.map(anime=>anime.href),...MY_HERO_SEQUENCE.map(anime=>anime.href)].includes(page) ? 'active' : ''}" href="animes.html">ANIMES</a><span class="nav-dropdown"><a class="${['ranking.html','ranking-animes.html'].includes(page) ? 'active' : ''}" href="ranking.html" aria-haspopup="true">RANKING</a><span class="nav-dropdown-menu"><a href="ranking-animes.html">Ranking de Animes</a><a href="ranking.html">Ranking de Usuários</a></span></span>`;
+  nav.innerHTML = `<a class="${page === 'index.html' ? 'active' : ''}" href="index.html">HOME</a><a class="${['animes.html','naruto.html','the-villager-of-level-999.html',...MUSHOKU_SEQUENCE.map(anime=>anime.href),...MY_HERO_SEQUENCE.map(anime=>anime.href),...KEKKON_YUBIWA_SEQUENCE.map(anime=>anime.href)].includes(page) ? 'active' : ''}" href="animes.html">ANIMES</a><span class="nav-dropdown"><a class="${['ranking.html','ranking-animes.html'].includes(page) ? 'active' : ''}" href="ranking.html" aria-haspopup="true">RANKING</a><span class="nav-dropdown-menu"><a href="ranking-animes.html">Ranking de Animes</a><a href="ranking.html">Ranking de Usuários</a></span></span>`;
 }
 
 renderGlobalNavigation();
@@ -165,6 +173,8 @@ async function handleAuthState(user) {
     myHeroSeason7WatchedEpisodes: migrated ? 0 : hasMyHeroSequence ? Math.min(21,Number(old.myHeroSeason7WatchedEpisodes||0)) : legacyMyHero[6],
     myHeroFinalSeasonWatchedEpisodes: migrated ? 0 : hasMyHeroSequence ? Math.min(11,Number(old.myHeroFinalSeasonWatchedEpisodes||0)) : legacyMyHero[7],
     myHeroMoreWatchedEpisodes: migrated ? 0 : Math.min(1,Number(old.myHeroMoreWatchedEpisodes||0)),
+    kekkonYubiwaWatchedEpisodes: migrated ? 0 : Math.min(12, Number(old.kekkonYubiwaWatchedEpisodes || 0)),
+    kekkonYubiwaSeason2WatchedEpisodes: migrated ? 0 : Math.min(13, Number(old.kekkonYubiwaSeason2WatchedEpisodes || 0)),
     villager999WatchedEpisodes: migrated ? 0 : Math.min(12, Number(old.villager999WatchedEpisodes || 0)),
     mushokuTenseiWatchedEpisodes: migrated ? 0 : Math.min(11, Number(old.mushokuTenseiWatchedEpisodes || 0)),
     mushokuTenseiPart2WatchedEpisodes: migrated ? 0 : Math.min(12, Number(old.mushokuTenseiPart2WatchedEpisodes || 0)),
@@ -225,7 +235,8 @@ function renderVillagerCatalogCard() {
   if (!catalog) return;
   const extraAnimes = [
     { search:'the villager of level 999 aldeao nivel 999', href:'the-villager-of-level-999.html', cover:'the-villager-of-level-999-500x750.jpg', title:'The Villager of Level 999', tag:'FANTASIA', episodes:12 },
-    { search:'mushoku tensei jobless reincarnation isekai ittara honki dasu', href:'mushoku-tensei.html', cover:'mushoku-tensei-500x750.jpg', title:'Mushoku Tensei', tag:'ISEKAI', episodes:11 }
+    { search:'mushoku tensei jobless reincarnation isekai ittara honki dasu', href:'mushoku-tensei.html', cover:'mushoku-tensei-500x750.jpg', title:'Mushoku Tensei', tag:'ISEKAI', episodes:11 },
+    { search:'kekkon yubiwa monogatari tales of wedding rings casamento aneis', href:'kekkon-yubiwa-monogatari.html', cover:'kekkon-yubiwa-monogatari-500x750.jpg', title:'Kekkon Yubiwa Monogatari', tag:'FANTASIA', episodes:25 }
   ];
   extraAnimes.forEach((anime) => {
     if (catalog.querySelector(`[data-anime-title="${anime.search}"]`)) return;
@@ -240,10 +251,10 @@ function renderVillagerCatalogCard() {
 
 function renderGeneratedAnimePage() {
   if (!document.body.dataset.generatedAnime) return;
-  const anime = [...MY_HERO_SEQUENCE,...MUSHOKU_SEQUENCE].find(item=>item.key===PAGE_ANIME);
+  const anime = [...MY_HERO_SEQUENCE,...MUSHOKU_SEQUENCE,...KEKKON_YUBIWA_SEQUENCE].find(item=>item.key===PAGE_ANIME);
   const main = document.querySelector('main');
   if (!anime || !main) return;
-  const sequence = PAGE_ANIME.startsWith('myHero') ? MY_HERO_SEQUENCE : MUSHOKU_SEQUENCE;
+  const sequence = PAGE_ANIME.startsWith('myHero') ? MY_HERO_SEQUENCE : PAGE_ANIME.startsWith('kekkon') ? KEKKON_YUBIWA_SEQUENCE : MUSHOKU_SEQUENCE;
   const currentIndex = sequence.findIndex(item => item.key === PAGE_ANIME);
   const previous = sequence[currentIndex - 1];
   main.innerHTML = `<section class="anime-detail-hero hero-academia"><div class="anime-detail-inner"><img src="${anime.cover}" width="500" height="750" alt="Capa de ${escapeHtml(anime.title)}"><div><a class="back-link" href="${previous?.href||'my-hero-academia.html'}">← Voltar para ${escapeHtml(previous?.title||'My Hero Academia')}</a><span class="eyebrow">${escapeHtml(anime.subtitle.toUpperCase())} • ${anime.year}</span><h1>${escapeHtml(anime.title)}</h1><p>${escapeHtml(anime.description)}</p><div class="detail-meta"><span><strong>${anime.episodes}</strong>${anime.episodes===1?'Episódio':'Episódios'}</span><span><strong>22 XP</strong>Por episódio</span><span><strong>${escapeHtml(anime.status)}</strong>Status</span></div><a class="button primary" href="#progresso">Continuar assistindo</a></div></div></section><section class="section episodes-section" id="progresso"><div class="section-heading"><div><span class="eyebrow">${escapeHtml(anime.title.toUpperCase())} • ${anime.episodes} ${anime.episodes===1?'EPISÓDIO':'EPISÓDIOS'}</span><h2>Seu progresso</h2></div><div class="xp-pill"><strong id="xpTotal">0 XP</strong><small>22 XP por episódio</small></div></div><div class="progress-card"><div class="progress-summary"><div class="episode-number"><strong id="watchedCount">0</strong><span>/ ${anime.episodes} assistidos</span></div><div class="progress-track"><span id="progressBar"></span></div></div><div class="progress-actions"><button class="plus-button" id="addEpisode" type="button">+</button><label for="episodeInput">Ou digite até qual episódio assistiu</label><div class="episode-input"><input id="episodeInput" type="number" min="0" max="${anime.episodes}" placeholder="Ex.: ${Math.min(5,anime.episodes)}"><kbd>Enter</kbd></div></div><p class="status" id="progressStatus">Entre na sua conta para salvar seu progresso.</p></div></section>`;
@@ -263,13 +274,13 @@ function renderWatchOnline() {
 }
 
 function renderAnimeTimeline() {
-  const sequence = PAGE_ANIME.startsWith('mushoku') ? MUSHOKU_SEQUENCE : PAGE_ANIME.startsWith('myHero') ? MY_HERO_SEQUENCE : null;
+  const sequence = PAGE_ANIME.startsWith('mushoku') ? MUSHOKU_SEQUENCE : PAGE_ANIME.startsWith('myHero') ? MY_HERO_SEQUENCE : PAGE_ANIME.startsWith('kekkon') ? KEKKON_YUBIWA_SEQUENCE : null;
   if (!sequence) return;
   document.querySelector('.sequence-section')?.remove();
   const progressSection = $('#progresso');
   if (!progressSection) return;
   const currentIndex = sequence.findIndex(anime => anime.key === PAGE_ANIME);
-  const franchiseTitle = sequence===MUSHOKU_SEQUENCE ? 'Mushoku Tensei' : 'My Hero Academia';
+  const franchiseTitle = sequence===MUSHOKU_SEQUENCE ? 'Mushoku Tensei' : sequence===MY_HERO_SEQUENCE ? 'My Hero Academia' : 'Kekkon Yubiwa Monogatari';
   const section = document.createElement('section');
   section.className = 'section sequence-section';
   section.innerHTML = `<div class="section-heading"><div><span class="eyebrow">ORDEM PARA ASSISTIR</span><h2>Jornada de ${franchiseTitle}</h2><p class="sequence-intro">Siga a história na ordem. A etapa aberta está destacada.</p></div></div><div class="sequence-timeline">${sequence.map((anime,index) => `<a class="sequence-step${index===currentIndex?' current':''}" href="${anime.href}"${index===currentIndex?' aria-current="page"':''}><span class="sequence-order">${index+1}</span><img src="${anime.cover}" width="500" height="750" alt="${escapeHtml(anime.title)}"><div><span class="sequence-subtitle">${escapeHtml(anime.subtitle)}</span><h3>${escapeHtml(anime.title)}</h3><small>${anime.episodes} ${anime.episodes===1?'episódio':'episódios'} • 22 XP por episódio</small>${index===currentIndex?'<strong>VOCÊ ESTÁ AQUI</strong>':index<currentIndex?'<b>← Etapa anterior</b>':'<b>Próxima sequência →</b>'}</div></a>`).join('')}</div>`;
@@ -304,6 +315,7 @@ async function renderRanking() {
         { title:'My Hero Academia', href:'my-hero-academia.html', cover:'my-hero-academia-500x750.jpg', points:users.filter(u=>myHeroWatched(u)>=1).length, total:171 }
         ,{ title:'The Villager of Level 999', href:'the-villager-of-level-999.html', cover:'the-villager-of-level-999-500x750.jpg', points:users.filter(u=>Number(u.villager999WatchedEpisodes||0)>=1).length, total:12 }
         ,{ title:'Mushoku Tensei', href:'mushoku-tensei.html', cover:'mushoku-tensei-500x750.jpg', points:users.filter(u=>mushokuWatched(u)>=1).length, total:62 }
+        ,{ title:'Kekkon Yubiwa Monogatari', href:'kekkon-yubiwa-monogatari.html', cover:'kekkon-yubiwa-monogatari-500x750.jpg', points:users.filter(u=>kekkonYubiwaWatched(u)>=1).length, total:25 }
       ].sort((a,b)=>b.points-a.points || a.title.localeCompare(b.title));
       list.classList.add('anime-ranking-grid');
       list.innerHTML = animeRanking.map((anime,i)=>`<a class="anime-ranking-card" href="${anime.href}"><div class="anime-ranking-cover"><img src="${anime.cover}" width="500" height="750" alt="${escapeHtml(anime.title)}"><span>#${i+1}</span></div><div class="anime-ranking-info"><span class="tag">${i===0?'MAIS ADICIONADO':'EM DESTAQUE'}</span><h2>${escapeHtml(anime.title)}</h2><p>${anime.total} episódios disponíveis</p><strong>${anime.points.toLocaleString('pt-BR')} <small>${anime.points===1?'ponto':'pontos'} • usuários que começaram</small></strong></div></a>`).join('');
@@ -326,7 +338,8 @@ function profileAnimeCards(profile = {}) {
     {title:'Naruto',href:'naruto.html',cover:'naruto-500x750.jpg',watched:Number(profile.watchedEpisodes||0),total:220},
     {title:'My Hero Academia',href:'my-hero-academia.html',cover:'my-hero-academia-500x750.jpg',watched:myHeroWatched(profile),total:171},
     {title:'The Villager of Level 999',href:'the-villager-of-level-999.html',cover:'the-villager-of-level-999-500x750.jpg',watched:Number(profile.villager999WatchedEpisodes||0),total:12},
-    {title:'Mushoku Tensei',href:'mushoku-tensei.html',cover:'mushoku-tensei-500x750.jpg',watched:mushokuWatched(profile),total:62}
+    {title:'Mushoku Tensei',href:'mushoku-tensei.html',cover:'mushoku-tensei-500x750.jpg',watched:mushokuWatched(profile),total:62},
+    {title:'Kekkon Yubiwa Monogatari',href:'kekkon-yubiwa-monogatari.html',cover:'kekkon-yubiwa-monogatari-500x750.jpg',watched:kekkonYubiwaWatched(profile),total:25}
   ].filter(anime => anime.watched > 0);
   if (!animes.length) return '<p class="empty-animes">Este usuário ainda não adicionou nenhum anime.</p>';
   return `<div class="profile-anime-grid">${animes.map(anime=>`<a href="${anime.href}" class="profile-anime-card"><img src="${anime.cover}" width="90" height="135" alt="${escapeHtml(anime.title)}"><div><strong>${escapeHtml(anime.title)}</strong><span>Episódio ${anime.watched} de ${anime.total}</span><span class="mini-progress"><i style="width:${anime.watched/anime.total*100}%"></i></span><small>${(anime.watched*XP_PER_EPISODE).toLocaleString('pt-BR')} XP</small></div></a>`).join('')}</div>`;
