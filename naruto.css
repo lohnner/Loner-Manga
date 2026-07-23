@@ -35,7 +35,7 @@
 .catalog-card p,.catalog-empty { color:var(--muted); font-size:12px; }
 .sequence-section { max-width:1380px; padding-top:18px; }
 .sequence-intro { margin:4px 0 0; color:var(--muted); }
-.sequence-timeline { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; }
+.sequence-timeline { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:14px; }
 .sequence-step { position:relative; overflow:hidden; border:1px solid var(--line); border-radius:16px; background:var(--panel); transition:transform .2s,border-color .2s,box-shadow .2s; }
 .sequence-step:hover { transform:translateY(-4px); border-color:var(--orange); }
 .sequence-step.current { border:2px solid var(--orange); box-shadow:0 0 0 4px rgba(255,106,34,.12),0 18px 45px rgba(0,0,0,.3); }
