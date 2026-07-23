@@ -6,6 +6,12 @@ if (!document.querySelector('link[href="account-ui.css"]')) {
   accountStyles.href = 'account-ui.css';
   document.head.append(accountStyles);
 }
+if (!document.querySelector('link[href="global-nav.css"]')) {
+  const navStyles = document.createElement('link');
+  navStyles.rel = 'stylesheet';
+  navStyles.href = 'global-nav.css';
+  document.head.append(navStyles);
+}
 
 const PAGE_ANIME = document.body.dataset.anime || 'naruto';
 const TOTAL_EPISODES = Number(document.body.dataset.totalEpisodes || 220);
@@ -43,6 +49,15 @@ const friendlyError = (error) => {
   if (code.includes('popup-closed')) return 'A janela de login foi fechada.';
   return 'Não foi possível concluir. Tente novamente.';
 };
+
+function renderGlobalNavigation() {
+  const nav = document.querySelector('.topbar nav');
+  if (!nav) return;
+  const page = window.location.pathname.split('/').pop() || 'index.html';
+  nav.innerHTML = `<a class="${page === 'index.html' ? 'active' : ''}" href="index.html">HOME</a><a class="${['animes.html','naruto.html','my-hero-academia.html'].includes(page) ? 'active' : ''}" href="animes.html">ANIMES</a><span class="nav-dropdown"><a class="${['ranking.html','ranking-animes.html'].includes(page) ? 'active' : ''}" href="ranking.html" aria-haspopup="true">RANKING</a><span class="nav-dropdown-menu"><a href="ranking-animes.html">Ranking de Animes</a><a href="ranking.html">Ranking de Usuários</a></span></span>`;
+}
+
+renderGlobalNavigation();
 
 async function initFirebase() {
   if (!firebaseReady) return;
@@ -122,6 +137,14 @@ async function renderRanking() {
   try {
     const snapshot = await services.getDocs(services.collection(services.db, 'users'));
     const users = snapshot.docs.map(d => d.data()).filter(u => u.animeDataVersion === DATA_VERSION).sort((a,b) => Number(b.xp||0)-Number(a.xp||0)).slice(0,100);
+    if (document.body.dataset.ranking === 'animes') {
+      const animeRanking = [
+        { title:'Naruto', href:'naruto.html', cover:'naruto-500x750.jpg', watched:users.reduce((sum,u)=>sum+Number(u.watchedEpisodes||0),0), total:220 },
+        { title:'My Hero Academia', href:'my-hero-academia.html', cover:'my-hero-academia-500x750.jpg', watched:users.reduce((sum,u)=>sum+Number(u.myHeroWatchedEpisodes||0),0), total:170 }
+      ].sort((a,b)=>b.watched-a.watched);
+      list.innerHTML = animeRanking.map((anime,i)=>`<a class="rank-row anime-rank-row" href="${anime.href}"><span class="rank-position">#${i+1}</span><img src="${anime.cover}" width="54" height="76" alt="${escapeHtml(anime.title)}"><div><strong>${escapeHtml(anime.title)}</strong><small>${anime.total} episódios disponíveis</small></div><b>${anime.watched.toLocaleString('pt-BR')} assistidos</b></a>`).join('');
+      return;
+    }
     list.innerHTML = users.length ? users.map((u,i) => `<div class="rank-row"><span class="rank-position">#${i+1}</span><div><strong>${escapeHtml(u.nick || 'Ninja Loner')}</strong><small>${Number(u.watchedEpisodes||0) + Number(u.myHeroWatchedEpisodes||0)} episódios assistidos</small></div><b>${Number(u.xp||0).toLocaleString('pt-BR')} XP</b></div>`).join('') : '<p>Ainda não há ninjas no ranking de animes.</p>';
   } catch { list.innerHTML = '<p>Não foi possível carregar o ranking agora.</p>'; }
 }
