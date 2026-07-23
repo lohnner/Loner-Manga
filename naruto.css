@@ -19,6 +19,20 @@
 .detail-meta { display:flex; gap:38px; margin:30px 0; }
 .detail-meta span { display:flex; flex-direction:column; color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.1em; }
 .detail-meta strong { color:var(--text); font-size:18px; text-transform:none; letter-spacing:0; }
+.hero-academia { background:radial-gradient(circle at 18% 50%,rgba(255,210,35,.18),transparent 34%),linear-gradient(180deg,#10130c,var(--bg)); }
+.catalog-page { max-width:1200px; min-height:78vh; margin:auto; padding:74px 24px; }
+.catalog-heading h1 { font:700 clamp(44px,6vw,70px)/1 'Space Grotesk'; letter-spacing:-.045em; margin:10px 0; }
+.catalog-heading p { color:var(--muted); }
+.catalog-search { max-width:620px; height:54px; margin:30px 0 38px; display:flex; align-items:center; gap:12px; padding:0 18px; border:1px solid var(--line); border-radius:14px; background:var(--panel); }
+.catalog-search span { color:var(--orange); font-size:25px; }
+.catalog-search input { width:100%; border:0; outline:0; background:transparent; color:var(--text); font-size:16px; }
+.anime-catalog { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+.catalog-card { overflow:hidden; border:1px solid var(--line); border-radius:16px; background:var(--panel); transition:transform .2s,border-color .2s; }
+.catalog-card:hover { transform:translateY(-5px); border-color:var(--orange); }
+.catalog-card img { width:100%; aspect-ratio:2/3; height:auto; object-fit:cover; display:block; }
+.catalog-card div { padding:17px; }
+.catalog-card h2 { margin:5px 0; font:700 21px 'Space Grotesk'; }
+.catalog-card p,.catalog-empty { color:var(--muted); font-size:12px; }
 @media (max-width:760px) {
   .anime-detail-inner { grid-template-columns:105px 1fr; gap:18px; padding:34px 16px; align-items:start; }
   .anime-detail-inner h1 { font-size:42px; margin:7px 0; }
@@ -26,4 +40,8 @@
   .back-link { grid-column:1/-1; margin-bottom:10px; }
   .detail-meta { gap:15px; flex-wrap:wrap; margin:18px 0; }
   .detail-meta strong { font-size:14px; }
+  .catalog-page { padding:45px 16px; }
+  .anime-catalog { grid-template-columns:repeat(2,1fr); gap:12px; }
+  .catalog-card div { padding:12px; }
+  .catalog-card h2 { font-size:17px; }
 }

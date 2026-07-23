@@ -1,6 +1,9 @@
 import { firebaseConfig, firebaseReady } from './firebase-config.js';
 
-const TOTAL_EPISODES = 220;
+const PAGE_ANIME = document.body.dataset.anime || 'naruto';
+const TOTAL_EPISODES = Number(document.body.dataset.totalEpisodes || 220);
+const PROGRESS_FIELDS = { naruto: 'watchedEpisodes', myHeroAcademia: 'myHeroWatchedEpisodes' };
+const progressField = PROGRESS_FIELDS[PAGE_ANIME] || 'watchedEpisodes';
 const XP_PER_EPISODE = 22;
 const DATA_VERSION = 1;
 let services = null;
@@ -41,10 +44,11 @@ async function handleAuthState(user) {
   currentProfile = {
     ...old, uid: user.uid, email: user.email || old.email || '',
     nick: old.nick || user.displayName || (user.email || 'Ninja').split('@')[0],
-    watchedEpisodes: migrated ? 0 : Math.min(TOTAL_EPISODES, Number(old.watchedEpisodes || 0)),
+    watchedEpisodes: migrated ? 0 : Math.min(220, Number(old.watchedEpisodes || 0)),
+    myHeroWatchedEpisodes: migrated ? 0 : Math.min(170, Number(old.myHeroWatchedEpisodes || 0)),
     xp: migrated ? 0 : Number(old.xp || 0), animeDataVersion: DATA_VERSION
   };
-  currentProfile.xp = currentProfile.watchedEpisodes * XP_PER_EPISODE;
+  currentProfile.xp = (currentProfile.watchedEpisodes + currentProfile.myHeroWatchedEpisodes) * XP_PER_EPISODE;
   currentProfile.level = levelFromXp(currentProfile.xp);
   await services.setDoc(ref, { ...currentProfile, updatedAt: services.serverTimestamp() }, { merge: true });
   renderAuth(); renderProgress(); renderProfile();
@@ -64,16 +68,19 @@ function setStatus(selector, message, type = '') { const el = $(selector); if (e
 async function saveProgress(target) {
   if (!currentUser || !services) { openAuth(); setStatus('#progressStatus','Entre na sua conta para salvar seu progresso.'); return; }
   const watched = Math.max(0, Math.min(TOTAL_EPISODES, Number.parseInt(target, 10) || 0));
-  const xp = watched * XP_PER_EPISODE;
+  const narutoWatched = progressField === 'watchedEpisodes' ? watched : Number(currentProfile.watchedEpisodes || 0);
+  const myHeroWatched = progressField === 'myHeroWatchedEpisodes' ? watched : Number(currentProfile.myHeroWatchedEpisodes || 0);
+  const xp = (narutoWatched + myHeroWatched) * XP_PER_EPISODE;
+  const pageXp = watched * XP_PER_EPISODE;
   const ref = services.doc(services.db, 'users', currentUser.uid);
-  await services.setDoc(ref, { watchedEpisodes: watched, xp, level: levelFromXp(xp), animeDataVersion: DATA_VERSION, updatedAt: services.serverTimestamp() }, { merge: true });
-  currentProfile = { ...currentProfile, watchedEpisodes: watched, xp, level: levelFromXp(xp) };
+  await services.setDoc(ref, { watchedEpisodes: narutoWatched, myHeroWatchedEpisodes: myHeroWatched, [progressField]: watched, xp, level: levelFromXp(xp), animeDataVersion: DATA_VERSION, updatedAt: services.serverTimestamp() }, { merge: true });
+  currentProfile = { ...currentProfile, watchedEpisodes: narutoWatched, myHeroWatchedEpisodes: myHeroWatched, [progressField]: watched, xp, level: levelFromXp(xp) };
   renderProgress(); renderProfile();
-  setStatus('#progressStatus', `Progresso salvo: ${watched} episódios e ${xp.toLocaleString('pt-BR')} XP.`, 'ok');
+  setStatus('#progressStatus', `Progresso salvo: ${watched} episódios e ${pageXp.toLocaleString('pt-BR')} XP neste anime.`, 'ok');
 }
 
 function renderProgress() {
-  const watched = Number(currentProfile?.watchedEpisodes || 0);
+  const watched = Number(currentProfile?.[progressField] || 0);
   if ($('#watchedCount')) $('#watchedCount').textContent = watched;
   if ($('#xpTotal')) $('#xpTotal').textContent = `${(watched * XP_PER_EPISODE).toLocaleString('pt-BR')} XP`;
   if ($('#progressBar')) $('#progressBar').style.width = `${watched / TOTAL_EPISODES * 100}%`;
@@ -92,27 +99,28 @@ async function renderRanking() {
   try {
     const snapshot = await services.getDocs(services.collection(services.db, 'users'));
     const users = snapshot.docs.map(d => d.data()).filter(u => u.animeDataVersion === DATA_VERSION).sort((a,b) => Number(b.xp||0)-Number(a.xp||0)).slice(0,100);
-    list.innerHTML = users.length ? users.map((u,i) => `<div class="rank-row"><span class="rank-position">#${i+1}</span><div><strong>${escapeHtml(u.nick || 'Ninja Loner')}</strong><small>${Number(u.watchedEpisodes||0)} episódios assistidos</small></div><b>${Number(u.xp||0).toLocaleString('pt-BR')} XP</b></div>`).join('') : '<p>Ainda não há ninjas no ranking de animes.</p>';
+    list.innerHTML = users.length ? users.map((u,i) => `<div class="rank-row"><span class="rank-position">#${i+1}</span><div><strong>${escapeHtml(u.nick || 'Ninja Loner')}</strong><small>${Number(u.watchedEpisodes||0) + Number(u.myHeroWatchedEpisodes||0)} episódios assistidos</small></div><b>${Number(u.xp||0).toLocaleString('pt-BR')} XP</b></div>`).join('') : '<p>Ainda não há ninjas no ranking de animes.</p>';
   } catch { list.innerHTML = '<p>Não foi possível carregar o ranking agora.</p>'; }
 }
 
 function renderProfile() {
   const content = $('#profileContent'); if (!content) return;
   if (!currentUser) { content.innerHTML = '<p>Entre na sua conta para ver seu perfil.</p><a class="button primary" href="index.html">Entrar</a>'; return; }
-  const watched = Number(currentProfile?.watchedEpisodes || 0), xp = watched * XP_PER_EPISODE;
-  content.innerHTML = `<h2>${escapeHtml(currentProfile.nick)}</h2><p>${escapeHtml(currentProfile.email)}</p><div class="profile-stats"><div><small>Episódios assistidos</small><strong>${watched}</strong></div><div><small>XP de animes</small><strong>${xp.toLocaleString('pt-BR')}</strong></div><div><small>Level</small><strong>${levelFromXp(xp)}</strong></div></div><p>Anime atual: <b>Naruto</b> • episódio ${watched} de ${TOTAL_EPISODES}</p>`;
+  const naruto = Number(currentProfile?.watchedEpisodes || 0), myHero = Number(currentProfile?.myHeroWatchedEpisodes || 0), watched = naruto + myHero, xp = watched * XP_PER_EPISODE;
+  content.innerHTML = `<h2>${escapeHtml(currentProfile.nick)}</h2><p>${escapeHtml(currentProfile.email)}</p><div class="profile-stats"><div><small>Episódios assistidos</small><strong>${watched}</strong></div><div><small>XP de animes</small><strong>${xp.toLocaleString('pt-BR')}</strong></div><div><small>Level</small><strong>${levelFromXp(xp)}</strong></div></div><p><b>Naruto:</b> episódio ${naruto} de 220<br><b>My Hero Academia:</b> episódio ${myHero} de 170</p>`;
 }
 
 document.addEventListener('click', async (event) => {
   if (event.target.closest('[data-open-auth]')) openAuth();
   if (event.target.closest('[data-close-auth]') || event.target.id === 'authModal') closeAuth();
   if (event.target.closest('#logout')) await services?.signOut(services.auth);
-  if (event.target.closest('#addEpisode')) await saveProgress(Number(currentProfile?.watchedEpisodes || 0) + 1);
+  if (event.target.closest('#addEpisode')) await saveProgress(Number(currentProfile?.[progressField] || 0) + 1);
   const episode = event.target.closest('.episode-item'); if (episode) await saveProgress(episode.dataset.episode);
 });
 
 $('#episodeInput')?.addEventListener('keydown', async (event) => { if (event.key === 'Enter') { event.preventDefault(); await saveProgress(event.currentTarget.value); } });
 $('#episodeSearch')?.addEventListener('input', (event) => { const query = event.currentTarget.value.trim(); document.querySelectorAll('.episode-item').forEach(item => item.hidden = query && !item.dataset.episode.includes(query)); });
+$('#animeSearch')?.addEventListener('input', (event) => { const query = event.currentTarget.value.trim().toLowerCase(); let visible = 0; document.querySelectorAll('[data-anime-title]').forEach(card => { card.hidden = query && !card.dataset.animeTitle.includes(query); if (!card.hidden) visible += 1; }); if ($('#catalogEmpty')) $('#catalogEmpty').hidden = visible > 0; });
 $('#toggleAuth')?.addEventListener('click', () => { const login=$('#loginForm'), register=$('#registerForm'), registering=register.hidden; login.hidden=registering; register.hidden=!registering; $('#authTitle').textContent=registering?'Criar conta':'Bem-vindo'; $('#toggleAuth').textContent=registering?'Já tenho uma conta':'Ainda não tenho conta'; });
 $('#loginForm')?.addEventListener('submit', async (event) => { event.preventDefault(); const data=new FormData(event.currentTarget); try { setStatus('#authStatus','Entrando...'); await services.signInWithEmailAndPassword(services.auth,data.get('email'),data.get('password')); closeAuth(); } catch(error) { setStatus('#authStatus',friendlyError(error),'error'); } });
 $('#registerForm')?.addEventListener('submit', async (event) => { event.preventDefault(); const data=new FormData(event.currentTarget); if(data.get('password')!==data.get('confirm')) return setStatus('#authStatus','As senhas não coincidem.','error'); try { setStatus('#authStatus','Criando conta...'); await services.createUserWithEmailAndPassword(services.auth,data.get('email'),data.get('password')); closeAuth(); } catch(error) { setStatus('#authStatus',friendlyError(error),'error'); } });

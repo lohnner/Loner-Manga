@@ -12,10 +12,10 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="naruto.css">
 </head>
-<body>
+<body data-anime="naruto" data-total-episodes="220">
   <header class="topbar">
     <a class="brand" href="index.html"><span class="brand-mark">AL</span><span><strong>Animes Loner</strong><small>Acervo de animes</small></span></a>
-    <nav><a href="index.html">Home</a><a class="active" href="naruto.html">Naruto</a><a href="ranking.html">Ranking</a></nav>
+    <nav><a href="index.html">Home</a><a href="animes.html">Animes</a><a href="ranking.html">Ranking</a></nav>
     <div id="authArea"><button class="button ghost" data-open-auth>Entrar</button></div>
   </header>
 
@@ -34,8 +34,6 @@
         <div class="progress-actions"><button class="plus-button" id="addEpisode" type="button" aria-label="Adicionar um episódio assistido">+</button><label for="episodeInput">Ou digite até qual episódio assistiu</label><div class="episode-input"><input id="episodeInput" type="number" min="0" max="220" inputmode="numeric" placeholder="Ex.: 45"><kbd>Enter</kbd></div></div>
         <p class="status" id="progressStatus">Entre na sua conta para salvar seu progresso.</p>
       </div>
-      <div class="episode-toolbar"><h3>Todos os episódios</h3><input id="episodeSearch" type="search" placeholder="Buscar episódio" aria-label="Buscar episódio"></div>
-      <div class="episode-grid" id="episodeGrid"></div>
     </section>
   </main>
 
