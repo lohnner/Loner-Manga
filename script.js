@@ -35,6 +35,10 @@ const PAGE_ANIME = document.body.dataset.anime || 'naruto';
 const TOTAL_EPISODES = Number(document.body.dataset.totalEpisodes || 220);
 const PROGRESS_FIELDS = {
   naruto: 'watchedEpisodes', myHeroAcademia: 'myHeroWatchedEpisodes', villager999: 'villager999WatchedEpisodes',
+  myHeroSeason2: 'myHeroSeason2WatchedEpisodes', myHeroSeason3: 'myHeroSeason3WatchedEpisodes',
+  myHeroSeason4: 'myHeroSeason4WatchedEpisodes', myHeroSeason5: 'myHeroSeason5WatchedEpisodes',
+  myHeroSeason6: 'myHeroSeason6WatchedEpisodes', myHeroSeason7: 'myHeroSeason7WatchedEpisodes',
+  myHeroFinalSeason: 'myHeroFinalSeasonWatchedEpisodes', myHeroMore: 'myHeroMoreWatchedEpisodes',
   mushokuTensei: 'mushokuTenseiWatchedEpisodes', mushokuTenseiPart2: 'mushokuTenseiPart2WatchedEpisodes',
   mushokuGuardianFitz: 'mushokuGuardianFitzWatchedEpisodes', mushokuSeason2: 'mushokuSeason2WatchedEpisodes',
   mushokuSeason2Part2: 'mushokuSeason2Part2WatchedEpisodes', mushokuSeason3: 'mushokuSeason3WatchedEpisodes'
@@ -46,6 +50,14 @@ const DEFAULT_AVATAR = 'Avatar/naruto-default-500x500.jpg';
 const WATCH_OPTIONS = {
   naruto: { title: 'Naruto', platform: 'Crunchyroll', url: 'https://www.crunchyroll.com/pt-pt/series/GY9PJ5KWR/naruto' },
   myHeroAcademia: { title: 'My Hero Academia', platform: 'Crunchyroll', url: 'https://www.crunchyroll.com/pt-br/series/G6NQ5DWZ6/my-hero-academia' },
+  myHeroSeason2: { title: 'My Hero Academia: 2ª Temporada', platform: 'Crunchyroll', url: 'https://www.crunchyroll.com/pt-br/series/G6NQ5DWZ6/my-hero-academia' },
+  myHeroSeason3: { title: 'My Hero Academia: 3ª Temporada', platform: 'Crunchyroll', url: 'https://www.crunchyroll.com/pt-br/series/G6NQ5DWZ6/my-hero-academia' },
+  myHeroSeason4: { title: 'My Hero Academia: 4ª Temporada', platform: 'Crunchyroll', url: 'https://www.crunchyroll.com/pt-br/series/G6NQ5DWZ6/my-hero-academia' },
+  myHeroSeason5: { title: 'My Hero Academia: 5ª Temporada', platform: 'Crunchyroll', url: 'https://www.crunchyroll.com/pt-br/series/G6NQ5DWZ6/my-hero-academia' },
+  myHeroSeason6: { title: 'My Hero Academia: 6ª Temporada', platform: 'Crunchyroll', url: 'https://www.crunchyroll.com/pt-br/series/G6NQ5DWZ6/my-hero-academia' },
+  myHeroSeason7: { title: 'My Hero Academia: 7ª Temporada', platform: 'Crunchyroll', url: 'https://www.crunchyroll.com/pt-br/series/G6NQ5DWZ6/my-hero-academia' },
+  myHeroFinalSeason: { title: 'My Hero Academia: Temporada Final', platform: 'Crunchyroll', url: 'https://www.crunchyroll.com/pt-br/series/G6NQ5DWZ6/my-hero-academia' },
+  myHeroMore: { title: 'My Hero Academia: More', platform: 'Crunchyroll', url: 'https://www.crunchyroll.com/pt-br/series/G6NQ5DWZ6/my-hero-academia' },
   villager999: { title: 'The Villager of Level 999', platform: 'Crunchyroll', url: 'https://www.crunchyroll.com/pt-br/series/GT00371878/the-villager-of-level-999' },
   mushokuTensei: { title: 'Mushoku Tensei: Jobless Reincarnation', platform: 'Crunchyroll', url: 'https://www.crunchyroll.com/pt-br/series/G24H1N3MP/mushoku-tensei-jobless-reincarnation' },
   mushokuTenseiPart2: { title: 'Mushoku Tensei: Parte 2', platform: 'Crunchyroll', url: 'https://www.crunchyroll.com/pt-br/series/G24H1N3MP/mushoku-tensei-jobless-reincarnation' },
@@ -62,6 +74,17 @@ const MUSHOKU_SEQUENCE = [
   { key:'mushokuSeason2Part2', title:'Mushoku Tensei II: Parte 2', subtitle:'2ª temporada • Parte 2', href:'mushoku-tensei-season-2-part-2.html', cover:'mushoku-tensei-season-2-part-2-500x750.jpg', episodes:12 },
   { key:'mushokuSeason3', title:'Mushoku Tensei III', subtitle:'3ª temporada', href:'mushoku-tensei-season-3.html', cover:'mushoku-tensei-season-3-500x750.jpg', episodes:14 }
 ];
+const MY_HERO_SEQUENCE = [
+  { key:'myHeroAcademia', title:'My Hero Academia', subtitle:'1ª temporada', href:'my-hero-academia.html', cover:'my-hero-academia-500x750.jpg', episodes:13, year:2016, status:'Completo', description:'Izuku Midoriya nasce sem poderes, mas recebe de All Might a oportunidade de herdar o One For All e ingressar na U.A. para se tornar um grande herói.' },
+  { key:'myHeroSeason2', title:'My Hero Academia: 2ª Temporada', subtitle:'2ª temporada', href:'my-hero-academia-season-2.html', cover:'my-hero-academia-season-2-500x750.jpg', episodes:25, year:2017, status:'Completo', description:'O Festival Esportivo da U.A. coloca Deku e seus colegas diante de novos rivais, estágios profissionais e desafios que testam seus ideais de heroísmo.' },
+  { key:'myHeroSeason3', title:'My Hero Academia: 3ª Temporada', subtitle:'3ª temporada', href:'my-hero-academia-season-3.html', cover:'my-hero-academia-season-3-500x750.jpg', episodes:25, year:2018, status:'Completo', description:'Durante o treinamento de verão, a Liga dos Vilões ataca os alunos da U.A., levando heróis e estudantes a uma batalha decisiva.' },
+  { key:'myHeroSeason4', title:'My Hero Academia: 4ª Temporada', subtitle:'4ª temporada', href:'my-hero-academia-season-4.html', cover:'my-hero-academia-season-4-500x750.jpg', episodes:25, year:2019, status:'Completo', description:'Deku inicia seu estágio com Sir Nighteye e enfrenta Overhaul em uma missão perigosa para proteger a pequena Eri.' },
+  { key:'myHeroSeason5', title:'My Hero Academia: 5ª Temporada', subtitle:'5ª temporada', href:'my-hero-academia-season-5.html', cover:'my-hero-academia-season-5-500x750.jpg', episodes:25, year:2021, status:'Completo', description:'As turmas 1-A e 1-B se enfrentam em um treinamento conjunto enquanto o poder de Deku começa a revelar novas habilidades.' },
+  { key:'myHeroSeason6', title:'My Hero Academia: 6ª Temporada', subtitle:'6ª temporada', href:'my-hero-academia-season-6.html', cover:'my-hero-academia-season-6-500x750.jpg', episodes:25, year:2022, status:'Completo', description:'A guerra contra a Frente de Libertação Paranormal começa, colocando heróis e vilões em seu confronto mais devastador.' },
+  { key:'myHeroSeason7', title:'My Hero Academia: 7ª Temporada', subtitle:'7ª temporada', href:'my-hero-academia-season-7.html', cover:'my-hero-academia-season-7-500x750.jpg', episodes:21, year:2024, status:'Completo', description:'Com a sociedade em crise, Deku e seus aliados se preparam para a batalha final contra Shigaraki e All For One.' },
+  { key:'myHeroFinalSeason', title:'My Hero Academia: Temporada Final', subtitle:'8ª e última temporada', href:'my-hero-academia-final-season.html', cover:'my-hero-academia-final-season-500x750.jpg', episodes:11, year:2025, status:'Completo', description:'A batalha final chega ao clímax e define o destino de Deku, All Might, Shigaraki e de toda a sociedade de heróis.' },
+  { key:'myHeroMore', title:'My Hero Academia: More', subtitle:'Episódio especial', href:'my-hero-academia-more.html', cover:'my-hero-academia-more-500x750.jpg', episodes:1, year:2026, status:'Especial', description:'Um episódio especial que retorna ao universo de My Hero Academia após a conclusão da temporada final.' }
+];
 let services = null;
 let currentUser = null;
 let currentProfile = null;
@@ -71,6 +94,8 @@ const $ = (selector) => document.querySelector(selector);
 const escapeHtml = (value = '') => String(value).replace(/[&<>'"]/g, (char) => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
 const totalWatched = (profile = {}) => Object.values(PROGRESS_FIELDS).reduce((sum, field) => sum + Number(profile?.[field] || 0), 0);
 const mushokuWatched = (profile = {}) => MUSHOKU_SEQUENCE.reduce((sum, anime) => sum + Number(profile?.[PROGRESS_FIELDS[anime.key]] || 0), 0);
+const myHeroWatched = (profile = {}) => MY_HERO_SEQUENCE.reduce((sum, anime) => sum + Number(profile?.[PROGRESS_FIELDS[anime.key]] || 0), 0);
+const distributeProgress = (total, capacities) => { let remaining=Math.max(0,Number(total||0)); return capacities.map(capacity=>{const value=Math.min(capacity,remaining); remaining-=value; return value;}); };
 document.addEventListener('error', (event) => { if (event.target instanceof HTMLImageElement && event.target.src !== new URL(DEFAULT_AVATAR, location.href).href) event.target.src = DEFAULT_AVATAR; }, true);
 const xpForLevel = (level) => {
   const n = Math.max(0, Number(level) - 1);
@@ -100,7 +125,7 @@ function renderGlobalNavigation() {
   const nav = document.querySelector('.topbar nav');
   if (!nav) return;
   const page = window.location.pathname.split('/').pop() || 'index.html';
-  nav.innerHTML = `<a class="${page === 'index.html' ? 'active' : ''}" href="index.html">HOME</a><a class="${['animes.html','naruto.html','my-hero-academia.html','the-villager-of-level-999.html',...MUSHOKU_SEQUENCE.map(anime=>anime.href)].includes(page) ? 'active' : ''}" href="animes.html">ANIMES</a><span class="nav-dropdown"><a class="${['ranking.html','ranking-animes.html'].includes(page) ? 'active' : ''}" href="ranking.html" aria-haspopup="true">RANKING</a><span class="nav-dropdown-menu"><a href="ranking-animes.html">Ranking de Animes</a><a href="ranking.html">Ranking de Usuários</a></span></span>`;
+  nav.innerHTML = `<a class="${page === 'index.html' ? 'active' : ''}" href="index.html">HOME</a><a class="${['animes.html','naruto.html','the-villager-of-level-999.html',...MUSHOKU_SEQUENCE.map(anime=>anime.href),...MY_HERO_SEQUENCE.map(anime=>anime.href)].includes(page) ? 'active' : ''}" href="animes.html">ANIMES</a><span class="nav-dropdown"><a class="${['ranking.html','ranking-animes.html'].includes(page) ? 'active' : ''}" href="ranking.html" aria-haspopup="true">RANKING</a><span class="nav-dropdown-menu"><a href="ranking-animes.html">Ranking de Animes</a><a href="ranking.html">Ranking de Usuários</a></span></span>`;
 }
 
 renderGlobalNavigation();
@@ -124,11 +149,22 @@ async function handleAuthState(user) {
   const snapshot = await services.getDoc(ref);
   const old = snapshot.exists() ? snapshot.data() : {};
   const migrated = old.animeDataVersion !== DATA_VERSION;
+  const myHeroExtraFields = MY_HERO_SEQUENCE.slice(1).map(anime => PROGRESS_FIELDS[anime.key]);
+  const hasMyHeroSequence = myHeroExtraFields.some(field => old[field] !== undefined);
+  const legacyMyHero = distributeProgress(Math.min(170,Number(old.myHeroWatchedEpisodes||0)), MY_HERO_SEQUENCE.slice(0,8).map(anime=>anime.episodes));
   currentProfile = {
     ...old, uid: user.uid, email: user.email || old.email || '',
     nick: old.nick || user.displayName || (user.email || 'Ninja').split('@')[0],
     watchedEpisodes: migrated ? 0 : Math.min(220, Number(old.watchedEpisodes || 0)),
-    myHeroWatchedEpisodes: migrated ? 0 : Math.min(170, Number(old.myHeroWatchedEpisodes || 0)),
+    myHeroWatchedEpisodes: migrated ? 0 : hasMyHeroSequence ? Math.min(13, Number(old.myHeroWatchedEpisodes || 0)) : legacyMyHero[0],
+    myHeroSeason2WatchedEpisodes: migrated ? 0 : hasMyHeroSequence ? Math.min(25,Number(old.myHeroSeason2WatchedEpisodes||0)) : legacyMyHero[1],
+    myHeroSeason3WatchedEpisodes: migrated ? 0 : hasMyHeroSequence ? Math.min(25,Number(old.myHeroSeason3WatchedEpisodes||0)) : legacyMyHero[2],
+    myHeroSeason4WatchedEpisodes: migrated ? 0 : hasMyHeroSequence ? Math.min(25,Number(old.myHeroSeason4WatchedEpisodes||0)) : legacyMyHero[3],
+    myHeroSeason5WatchedEpisodes: migrated ? 0 : hasMyHeroSequence ? Math.min(25,Number(old.myHeroSeason5WatchedEpisodes||0)) : legacyMyHero[4],
+    myHeroSeason6WatchedEpisodes: migrated ? 0 : hasMyHeroSequence ? Math.min(25,Number(old.myHeroSeason6WatchedEpisodes||0)) : legacyMyHero[5],
+    myHeroSeason7WatchedEpisodes: migrated ? 0 : hasMyHeroSequence ? Math.min(21,Number(old.myHeroSeason7WatchedEpisodes||0)) : legacyMyHero[6],
+    myHeroFinalSeasonWatchedEpisodes: migrated ? 0 : hasMyHeroSequence ? Math.min(11,Number(old.myHeroFinalSeasonWatchedEpisodes||0)) : legacyMyHero[7],
+    myHeroMoreWatchedEpisodes: migrated ? 0 : Math.min(1,Number(old.myHeroMoreWatchedEpisodes||0)),
     villager999WatchedEpisodes: migrated ? 0 : Math.min(12, Number(old.villager999WatchedEpisodes || 0)),
     mushokuTenseiWatchedEpisodes: migrated ? 0 : Math.min(11, Number(old.mushokuTenseiWatchedEpisodes || 0)),
     mushokuTenseiPart2WatchedEpisodes: migrated ? 0 : Math.min(12, Number(old.mushokuTenseiPart2WatchedEpisodes || 0)),
@@ -159,20 +195,12 @@ function setStatus(selector, message, type = '') { const el = $(selector); if (e
 async function saveProgress(target) {
   if (!currentUser || !services) { openAuth(); setStatus('#progressStatus','Entre na sua conta para salvar seu progresso.'); return; }
   const watched = Math.max(0, Math.min(TOTAL_EPISODES, Number.parseInt(target, 10) || 0));
-  const narutoWatched = progressField === 'watchedEpisodes' ? watched : Number(currentProfile.watchedEpisodes || 0);
-  const myHeroWatched = progressField === 'myHeroWatchedEpisodes' ? watched : Number(currentProfile.myHeroWatchedEpisodes || 0);
-  const villagerWatched = progressField === 'villager999WatchedEpisodes' ? watched : Number(currentProfile.villager999WatchedEpisodes || 0);
-  const mushokuWatched = progressField === 'mushokuTenseiWatchedEpisodes' ? watched : Number(currentProfile.mushokuTenseiWatchedEpisodes || 0);
-  const mushokuPart2Watched = progressField === 'mushokuTenseiPart2WatchedEpisodes' ? watched : Number(currentProfile.mushokuTenseiPart2WatchedEpisodes || 0);
-  const guardianFitzWatched = progressField === 'mushokuGuardianFitzWatchedEpisodes' ? watched : Number(currentProfile.mushokuGuardianFitzWatchedEpisodes || 0);
-  const season2Watched = progressField === 'mushokuSeason2WatchedEpisodes' ? watched : Number(currentProfile.mushokuSeason2WatchedEpisodes || 0);
-  const season2Part2Watched = progressField === 'mushokuSeason2Part2WatchedEpisodes' ? watched : Number(currentProfile.mushokuSeason2Part2WatchedEpisodes || 0);
-  const season3Watched = progressField === 'mushokuSeason3WatchedEpisodes' ? watched : Number(currentProfile.mushokuSeason3WatchedEpisodes || 0);
-  const xp = (narutoWatched + myHeroWatched + villagerWatched + mushokuWatched + mushokuPart2Watched + guardianFitzWatched + season2Watched + season2Part2Watched + season3Watched) * XP_PER_EPISODE;
+  const updatedProgress = Object.fromEntries(Object.values(PROGRESS_FIELDS).map(field => [field, field===progressField ? watched : Number(currentProfile?.[field]||0)]));
+  const xp = Object.values(updatedProgress).reduce((sum,value)=>sum+value,0) * XP_PER_EPISODE;
   const pageXp = watched * XP_PER_EPISODE;
   const ref = services.doc(services.db, 'users', currentUser.uid);
-  await services.setDoc(ref, { watchedEpisodes: narutoWatched, myHeroWatchedEpisodes: myHeroWatched, villager999WatchedEpisodes: villagerWatched, mushokuTenseiWatchedEpisodes: mushokuWatched, mushokuTenseiPart2WatchedEpisodes: mushokuPart2Watched, mushokuGuardianFitzWatchedEpisodes: guardianFitzWatched, mushokuSeason2WatchedEpisodes: season2Watched, mushokuSeason2Part2WatchedEpisodes: season2Part2Watched, mushokuSeason3WatchedEpisodes: season3Watched, [progressField]: watched, xp, level: levelFromXp(xp), animeDataVersion: DATA_VERSION, updatedAt: services.serverTimestamp() }, { merge: true });
-  currentProfile = { ...currentProfile, watchedEpisodes: narutoWatched, myHeroWatchedEpisodes: myHeroWatched, villager999WatchedEpisodes: villagerWatched, mushokuTenseiWatchedEpisodes: mushokuWatched, mushokuTenseiPart2WatchedEpisodes: mushokuPart2Watched, mushokuGuardianFitzWatchedEpisodes: guardianFitzWatched, mushokuSeason2WatchedEpisodes: season2Watched, mushokuSeason2Part2WatchedEpisodes: season2Part2Watched, mushokuSeason3WatchedEpisodes: season3Watched, [progressField]: watched, xp, level: levelFromXp(xp) };
+  await services.setDoc(ref, { ...updatedProgress, xp, level: levelFromXp(xp), animeDataVersion: DATA_VERSION, updatedAt: services.serverTimestamp() }, { merge: true });
+  currentProfile = { ...currentProfile, ...updatedProgress, xp, level: levelFromXp(xp) };
   renderProgress(); renderProfile(); renderAuth();
   setStatus('#progressStatus', `Progresso salvo: ${watched} episódios e ${pageXp.toLocaleString('pt-BR')} XP neste anime.`, 'ok');
 }
@@ -210,6 +238,18 @@ function renderVillagerCatalogCard() {
   });
 }
 
+function renderGeneratedAnimePage() {
+  if (!document.body.dataset.generatedAnime) return;
+  const anime = [...MY_HERO_SEQUENCE,...MUSHOKU_SEQUENCE].find(item=>item.key===PAGE_ANIME);
+  const main = document.querySelector('main');
+  if (!anime || !main) return;
+  const sequence = PAGE_ANIME.startsWith('myHero') ? MY_HERO_SEQUENCE : MUSHOKU_SEQUENCE;
+  const currentIndex = sequence.findIndex(item => item.key === PAGE_ANIME);
+  const previous = sequence[currentIndex - 1];
+  main.innerHTML = `<section class="anime-detail-hero hero-academia"><div class="anime-detail-inner"><img src="${anime.cover}" width="500" height="750" alt="Capa de ${escapeHtml(anime.title)}"><div><a class="back-link" href="${previous?.href||'my-hero-academia.html'}">← Voltar para ${escapeHtml(previous?.title||'My Hero Academia')}</a><span class="eyebrow">${escapeHtml(anime.subtitle.toUpperCase())} • ${anime.year}</span><h1>${escapeHtml(anime.title)}</h1><p>${escapeHtml(anime.description)}</p><div class="detail-meta"><span><strong>${anime.episodes}</strong>${anime.episodes===1?'Episódio':'Episódios'}</span><span><strong>22 XP</strong>Por episódio</span><span><strong>${escapeHtml(anime.status)}</strong>Status</span></div><a class="button primary" href="#progresso">Continuar assistindo</a></div></div></section><section class="section episodes-section" id="progresso"><div class="section-heading"><div><span class="eyebrow">${escapeHtml(anime.title.toUpperCase())} • ${anime.episodes} ${anime.episodes===1?'EPISÓDIO':'EPISÓDIOS'}</span><h2>Seu progresso</h2></div><div class="xp-pill"><strong id="xpTotal">0 XP</strong><small>22 XP por episódio</small></div></div><div class="progress-card"><div class="progress-summary"><div class="episode-number"><strong id="watchedCount">0</strong><span>/ ${anime.episodes} assistidos</span></div><div class="progress-track"><span id="progressBar"></span></div></div><div class="progress-actions"><button class="plus-button" id="addEpisode" type="button">+</button><label for="episodeInput">Ou digite até qual episódio assistiu</label><div class="episode-input"><input id="episodeInput" type="number" min="0" max="${anime.episodes}" placeholder="Ex.: ${Math.min(5,anime.episodes)}"><kbd>Enter</kbd></div></div><p class="status" id="progressStatus">Entre na sua conta para salvar seu progresso.</p></div></section>`;
+  if (!$('#authModal')) document.body.insertAdjacentHTML('beforeend', `<div class="modal" id="authModal" hidden><div class="modal-card"><button class="modal-close" type="button" data-close-auth>×</button><h2 id="authTitle">Bem-vindo</h2><p>Entre para salvar episódios e ganhar XP.</p><form id="loginForm"><label>E-mail<input name="email" type="email" required></label><label>Senha<input name="password" type="password" minlength="6" required></label><button class="button primary">Entrar</button></form><form id="registerForm" hidden><label>E-mail<input name="email" type="email" required></label><label>Senha<input name="password" type="password" minlength="6" required></label><label>Confirmar senha<input name="confirm" type="password" minlength="6" required></label><button class="button primary">Criar conta</button></form><button class="button google" id="googleLogin" type="button">Continuar com Google</button><button class="text-button" id="toggleAuth" type="button">Ainda não tenho conta</button><p class="status" id="authStatus"></p></div></div>`);
+}
+
 function renderWatchOnline() {
   const option = WATCH_OPTIONS[PAGE_ANIME];
   const heroActions = document.querySelector('.anime-detail-inner > div');
@@ -222,15 +262,17 @@ function renderWatchOnline() {
   heroActions.append(button);
 }
 
-function renderMushokuTimeline() {
-  if (!PAGE_ANIME.startsWith('mushoku')) return;
+function renderAnimeTimeline() {
+  const sequence = PAGE_ANIME.startsWith('mushoku') ? MUSHOKU_SEQUENCE : PAGE_ANIME.startsWith('myHero') ? MY_HERO_SEQUENCE : null;
+  if (!sequence) return;
   document.querySelector('.sequence-section')?.remove();
   const progressSection = $('#progresso');
   if (!progressSection) return;
-  const currentIndex = MUSHOKU_SEQUENCE.findIndex(anime => anime.key === PAGE_ANIME);
+  const currentIndex = sequence.findIndex(anime => anime.key === PAGE_ANIME);
+  const franchiseTitle = sequence===MUSHOKU_SEQUENCE ? 'Mushoku Tensei' : 'My Hero Academia';
   const section = document.createElement('section');
   section.className = 'section sequence-section';
-  section.innerHTML = `<div class="section-heading"><div><span class="eyebrow">ORDEM PARA ASSISTIR</span><h2>Jornada de Mushoku Tensei</h2><p class="sequence-intro">Siga a história na ordem. A etapa aberta está destacada.</p></div></div><div class="sequence-timeline">${MUSHOKU_SEQUENCE.map((anime,index) => `<a class="sequence-step${index===currentIndex?' current':''}" href="${anime.href}"${index===currentIndex?' aria-current="page"':''}><span class="sequence-order">${index+1}</span><img src="${anime.cover}" width="500" height="750" alt="${escapeHtml(anime.title)}"><div><span class="sequence-subtitle">${escapeHtml(anime.subtitle)}</span><h3>${escapeHtml(anime.title)}</h3><small>${anime.episodes} ${anime.episodes===1?'episódio':'episódios'} • 22 XP por episódio</small>${index===currentIndex?'<strong>VOCÊ ESTÁ AQUI</strong>':index<currentIndex?'<b>← Etapa anterior</b>':'<b>Próxima sequência →</b>'}</div></a>`).join('')}</div>`;
+  section.innerHTML = `<div class="section-heading"><div><span class="eyebrow">ORDEM PARA ASSISTIR</span><h2>Jornada de ${franchiseTitle}</h2><p class="sequence-intro">Siga a história na ordem. A etapa aberta está destacada.</p></div></div><div class="sequence-timeline">${sequence.map((anime,index) => `<a class="sequence-step${index===currentIndex?' current':''}" href="${anime.href}"${index===currentIndex?' aria-current="page"':''}><span class="sequence-order">${index+1}</span><img src="${anime.cover}" width="500" height="750" alt="${escapeHtml(anime.title)}"><div><span class="sequence-subtitle">${escapeHtml(anime.subtitle)}</span><h3>${escapeHtml(anime.title)}</h3><small>${anime.episodes} ${anime.episodes===1?'episódio':'episódios'} • 22 XP por episódio</small>${index===currentIndex?'<strong>VOCÊ ESTÁ AQUI</strong>':index<currentIndex?'<b>← Etapa anterior</b>':'<b>Próxima sequência →</b>'}</div></a>`).join('')}</div>`;
   progressSection.insertAdjacentElement('afterend', section);
 }
 
@@ -245,9 +287,10 @@ function openWatchOnline() {
   document.body.append(modal);
 }
 
+renderGeneratedAnimePage();
 renderVillagerCatalogCard();
 renderWatchOnline();
-renderMushokuTimeline();
+renderAnimeTimeline();
 
 async function renderRanking() {
   const list = $('#rankingList'); if (!list || !services) return;
@@ -258,7 +301,7 @@ async function renderRanking() {
     if (document.body.dataset.ranking === 'animes') {
       const animeRanking = [
         { title:'Naruto', href:'naruto.html', cover:'naruto-500x750.jpg', points:users.filter(u=>Number(u.watchedEpisodes||0)>=1).length, total:220 },
-        { title:'My Hero Academia', href:'my-hero-academia.html', cover:'my-hero-academia-500x750.jpg', points:users.filter(u=>Number(u.myHeroWatchedEpisodes||0)>=1).length, total:170 }
+        { title:'My Hero Academia', href:'my-hero-academia.html', cover:'my-hero-academia-500x750.jpg', points:users.filter(u=>myHeroWatched(u)>=1).length, total:171 }
         ,{ title:'The Villager of Level 999', href:'the-villager-of-level-999.html', cover:'the-villager-of-level-999-500x750.jpg', points:users.filter(u=>Number(u.villager999WatchedEpisodes||0)>=1).length, total:12 }
         ,{ title:'Mushoku Tensei', href:'mushoku-tensei.html', cover:'mushoku-tensei-500x750.jpg', points:users.filter(u=>mushokuWatched(u)>=1).length, total:62 }
       ].sort((a,b)=>b.points-a.points || a.title.localeCompare(b.title));
@@ -281,7 +324,7 @@ function renderProfile() {
 function profileAnimeCards(profile = {}) {
   const animes = [
     {title:'Naruto',href:'naruto.html',cover:'naruto-500x750.jpg',watched:Number(profile.watchedEpisodes||0),total:220},
-    {title:'My Hero Academia',href:'my-hero-academia.html',cover:'my-hero-academia-500x750.jpg',watched:Number(profile.myHeroWatchedEpisodes||0),total:170},
+    {title:'My Hero Academia',href:'my-hero-academia.html',cover:'my-hero-academia-500x750.jpg',watched:myHeroWatched(profile),total:171},
     {title:'The Villager of Level 999',href:'the-villager-of-level-999.html',cover:'the-villager-of-level-999-500x750.jpg',watched:Number(profile.villager999WatchedEpisodes||0),total:12},
     {title:'Mushoku Tensei',href:'mushoku-tensei.html',cover:'mushoku-tensei-500x750.jpg',watched:mushokuWatched(profile),total:62}
   ].filter(anime => anime.watched > 0);

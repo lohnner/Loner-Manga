@@ -15,7 +15,31 @@ service cloud.firestore {
         && request.resource.data.watchedEpisodes <= 220
         && request.resource.data.myHeroWatchedEpisodes is int
         && request.resource.data.myHeroWatchedEpisodes >= 0
-        && request.resource.data.myHeroWatchedEpisodes <= 170
+        && request.resource.data.myHeroWatchedEpisodes <= 13
+        && request.resource.data.myHeroSeason2WatchedEpisodes is int
+        && request.resource.data.myHeroSeason2WatchedEpisodes >= 0
+        && request.resource.data.myHeroSeason2WatchedEpisodes <= 25
+        && request.resource.data.myHeroSeason3WatchedEpisodes is int
+        && request.resource.data.myHeroSeason3WatchedEpisodes >= 0
+        && request.resource.data.myHeroSeason3WatchedEpisodes <= 25
+        && request.resource.data.myHeroSeason4WatchedEpisodes is int
+        && request.resource.data.myHeroSeason4WatchedEpisodes >= 0
+        && request.resource.data.myHeroSeason4WatchedEpisodes <= 25
+        && request.resource.data.myHeroSeason5WatchedEpisodes is int
+        && request.resource.data.myHeroSeason5WatchedEpisodes >= 0
+        && request.resource.data.myHeroSeason5WatchedEpisodes <= 25
+        && request.resource.data.myHeroSeason6WatchedEpisodes is int
+        && request.resource.data.myHeroSeason6WatchedEpisodes >= 0
+        && request.resource.data.myHeroSeason6WatchedEpisodes <= 25
+        && request.resource.data.myHeroSeason7WatchedEpisodes is int
+        && request.resource.data.myHeroSeason7WatchedEpisodes >= 0
+        && request.resource.data.myHeroSeason7WatchedEpisodes <= 21
+        && request.resource.data.myHeroFinalSeasonWatchedEpisodes is int
+        && request.resource.data.myHeroFinalSeasonWatchedEpisodes >= 0
+        && request.resource.data.myHeroFinalSeasonWatchedEpisodes <= 11
+        && request.resource.data.myHeroMoreWatchedEpisodes is int
+        && request.resource.data.myHeroMoreWatchedEpisodes >= 0
+        && request.resource.data.myHeroMoreWatchedEpisodes <= 1
         && request.resource.data.villager999WatchedEpisodes is int
         && request.resource.data.villager999WatchedEpisodes >= 0
         && request.resource.data.villager999WatchedEpisodes <= 12
@@ -37,7 +61,7 @@ service cloud.firestore {
         && request.resource.data.mushokuSeason3WatchedEpisodes is int
         && request.resource.data.mushokuSeason3WatchedEpisodes >= 0
         && request.resource.data.mushokuSeason3WatchedEpisodes <= 14
-        && request.resource.data.xp == (request.resource.data.watchedEpisodes + request.resource.data.myHeroWatchedEpisodes + request.resource.data.villager999WatchedEpisodes + request.resource.data.mushokuTenseiWatchedEpisodes + request.resource.data.mushokuTenseiPart2WatchedEpisodes + request.resource.data.mushokuGuardianFitzWatchedEpisodes + request.resource.data.mushokuSeason2WatchedEpisodes + request.resource.data.mushokuSeason2Part2WatchedEpisodes + request.resource.data.mushokuSeason3WatchedEpisodes) * 22;
+        && request.resource.data.xp == (request.resource.data.watchedEpisodes + request.resource.data.myHeroWatchedEpisodes + request.resource.data.myHeroSeason2WatchedEpisodes + request.resource.data.myHeroSeason3WatchedEpisodes + request.resource.data.myHeroSeason4WatchedEpisodes + request.resource.data.myHeroSeason5WatchedEpisodes + request.resource.data.myHeroSeason6WatchedEpisodes + request.resource.data.myHeroSeason7WatchedEpisodes + request.resource.data.myHeroFinalSeasonWatchedEpisodes + request.resource.data.myHeroMoreWatchedEpisodes + request.resource.data.villager999WatchedEpisodes + request.resource.data.mushokuTenseiWatchedEpisodes + request.resource.data.mushokuTenseiPart2WatchedEpisodes + request.resource.data.mushokuGuardianFitzWatchedEpisodes + request.resource.data.mushokuSeason2WatchedEpisodes + request.resource.data.mushokuSeason2Part2WatchedEpisodes + request.resource.data.mushokuSeason3WatchedEpisodes) * 22;
       allow delete: if false;
     }
   }
