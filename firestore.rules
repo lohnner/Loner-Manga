@@ -25,7 +25,19 @@ service cloud.firestore {
         && request.resource.data.mushokuTenseiPart2WatchedEpisodes is int
         && request.resource.data.mushokuTenseiPart2WatchedEpisodes >= 0
         && request.resource.data.mushokuTenseiPart2WatchedEpisodes <= 12
-        && request.resource.data.xp == (request.resource.data.watchedEpisodes + request.resource.data.myHeroWatchedEpisodes + request.resource.data.villager999WatchedEpisodes + request.resource.data.mushokuTenseiWatchedEpisodes + request.resource.data.mushokuTenseiPart2WatchedEpisodes) * 22;
+        && request.resource.data.mushokuGuardianFitzWatchedEpisodes is int
+        && request.resource.data.mushokuGuardianFitzWatchedEpisodes >= 0
+        && request.resource.data.mushokuGuardianFitzWatchedEpisodes <= 1
+        && request.resource.data.mushokuSeason2WatchedEpisodes is int
+        && request.resource.data.mushokuSeason2WatchedEpisodes >= 0
+        && request.resource.data.mushokuSeason2WatchedEpisodes <= 12
+        && request.resource.data.mushokuSeason2Part2WatchedEpisodes is int
+        && request.resource.data.mushokuSeason2Part2WatchedEpisodes >= 0
+        && request.resource.data.mushokuSeason2Part2WatchedEpisodes <= 12
+        && request.resource.data.mushokuSeason3WatchedEpisodes is int
+        && request.resource.data.mushokuSeason3WatchedEpisodes >= 0
+        && request.resource.data.mushokuSeason3WatchedEpisodes <= 14
+        && request.resource.data.xp == (request.resource.data.watchedEpisodes + request.resource.data.myHeroWatchedEpisodes + request.resource.data.villager999WatchedEpisodes + request.resource.data.mushokuTenseiWatchedEpisodes + request.resource.data.mushokuTenseiPart2WatchedEpisodes + request.resource.data.mushokuGuardianFitzWatchedEpisodes + request.resource.data.mushokuSeason2WatchedEpisodes + request.resource.data.mushokuSeason2Part2WatchedEpisodes + request.resource.data.mushokuSeason3WatchedEpisodes) * 22;
       allow delete: if false;
     }
   }
