@@ -169,7 +169,7 @@ function renderGlobalNavigation() {
   const nav = document.querySelector('.topbar nav');
   if (!nav) return;
   const page = window.location.pathname.split('/').pop() || 'index.html';
-  nav.innerHTML = `<a class="${page === 'index.html' ? 'active' : ''}" href="index.html">HOME</a><a class="${['animes.html','naruto.html','the-villager-of-level-999.html',...MUSHOKU_SEQUENCE.map(anime=>anime.href),...MY_HERO_SEQUENCE.map(anime=>anime.href),...KEKKON_YUBIWA_SEQUENCE.map(anime=>anime.href),...DIGIMON_SEQUENCE.map(anime=>anime.href),...X_MEN_EVOLUTION_SEQUENCE.map(anime=>anime.href)].includes(page) ? 'active' : ''}" href="animes.html">ANIMES</a><span class="nav-dropdown"><a class="${['ranking.html','ranking-animes.html'].includes(page) ? 'active' : ''}" href="ranking.html" aria-haspopup="true">RANKING</a><span class="nav-dropdown-menu"><a href="ranking-animes.html">Ranking de Animes</a><a href="ranking.html">Ranking de Usuários</a></span></span><a class="${page === 'loner.html' ? 'active' : ''}" href="loner.html">LONER</a>`;
+  nav.innerHTML = `<a class="${page === 'index.html' ? 'active' : ''}" href="index.html">HOME</a><a class="${['animes.html','naruto.html','the-villager-of-level-999.html',...MUSHOKU_SEQUENCE.map(anime=>anime.href),...MY_HERO_SEQUENCE.map(anime=>anime.href),...KEKKON_YUBIWA_SEQUENCE.map(anime=>anime.href),...DIGIMON_SEQUENCE.map(anime=>anime.href),...X_MEN_EVOLUTION_SEQUENCE.map(anime=>anime.href)].includes(page) ? 'active' : ''}" href="animes.html">ANIMES</a><span class="nav-dropdown"><a class="${['ranking.html','ranking-animes.html'].includes(page) ? 'active' : ''}" href="ranking.html" aria-haspopup="true">RANKING</a><span class="nav-dropdown-menu"><a href="ranking-animes.html">Ranking de Animes</a><a href="ranking.html">Ranking de Usuários</a></span></span>`;
 }
 
 renderGlobalNavigation();
@@ -188,7 +188,7 @@ async function initFirebase() {
 
 async function handleAuthState(user) {
   currentUser = user;
-  if (!user) { currentProfile = null; renderAuth(); renderProgress(); renderProfile(); document.dispatchEvent(new CustomEvent('loner-auth-changed',{detail:{uid:'guest'}})); return; }
+  if (!user) { currentProfile = null; renderAuth(); renderProgress(); renderProfile(); return; }
   const ref = services.doc(services.db, 'users', user.uid);
   const snapshot = await services.getDoc(ref);
   const old = snapshot.exists() ? snapshot.data() : {};
@@ -226,7 +226,6 @@ async function handleAuthState(user) {
   currentProfile.level = levelFromXp(currentProfile.xp);
   await services.setDoc(ref, { ...currentProfile, animeProgress: currentProfile.animeProgress, updatedAt: services.serverTimestamp() }, { merge: true });
   renderAuth(); renderProgress(); renderProfile();
-  document.dispatchEvent(new CustomEvent('loner-auth-changed',{detail:{uid:user.uid}}));
 }
 
 function renderAuth() {
