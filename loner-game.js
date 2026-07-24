@@ -51,7 +51,7 @@ function albumSlotMarkup(card) {
   return `<article class="album-slot waiting ${available?'available':''}"><span class="slot-number">${card.id}</span><div class="slot-mark">${available?'✓':'?'}</div><strong>${card.name}</strong><small>${card.label}</small>${available?`<button type="button" data-paste-card="${card.id}">Colar figurinha</button>`:'<em>Não encontrada</em>'}</article>`;
 }
 function renderAlbum(cards) {
-  const perPage=3,perSpread=perPage*2,totalPages=Math.ceil(cards.length/perPage),totalSpreads=Math.ceil(totalPages/2);
+  const perPage=9,perSpread=perPage*2,totalPages=Math.ceil(cards.length/perPage),totalSpreads=Math.ceil(totalPages/2);
   albumSpread=Math.min(albumSpread,totalSpreads-1);
   const start=albumSpread*perSpread,left=cards.slice(start,start+perPage),right=cards.slice(start+perPage,start+perSpread);
   while(left.length<perPage)left.push(null);
@@ -87,11 +87,12 @@ function pasteCard(cardId) {
   render();
 }
 function turnAlbum(direction) {
-  const cards=allCards(),totalSpreads=Math.ceil(Math.ceil(cards.length/3)/2),next=albumSpread+direction;
+  const cards=allCards(),totalSpreads=Math.ceil(Math.ceil(cards.length/9)/2),next=albumSpread+direction;
   if(next<0||next>=totalSpreads)return;
   const book=$('#albumBook');
   book.classList.add(direction>0?'turning-next':'turning-previous');
-  setTimeout(()=>{albumSpread=next;renderAlbum(cards);book.classList.remove('turning-next','turning-previous');},220);
+  setTimeout(()=>{albumSpread=next;renderAlbum(cards);},340);
+  setTimeout(()=>book.classList.remove('turning-next','turning-previous'),700);
 }
 function sellCard(cardId) {
   const card=allCards().find(item=>item.id===cardId);
@@ -122,5 +123,9 @@ document.addEventListener('click',event=>{
 });
 $('#previousAlbumPage').addEventListener('click',()=>turnAlbum(-1));
 $('#nextAlbumPage').addEventListener('click',()=>turnAlbum(1));
+$('#openAlbum').addEventListener('click',()=>{
+  $('#albumCover').classList.add('opening');
+  setTimeout(()=>{$('#albumCover').hidden=true;$('#albumPages').hidden=false;$('#albumPages').classList.add('opened');},620);
+});
 document.addEventListener('loner-auth-changed',event=>{playerId=event.detail?.uid||'guest';state=loadState();render();});
 render();updateClock();setInterval(updateClock,1000);
