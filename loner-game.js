@@ -127,5 +127,13 @@ $('#openAlbum').addEventListener('click',()=>{
   $('#albumCover').classList.add('opening');
   setTimeout(()=>{$('#albumCover').hidden=true;$('#albumPages').hidden=false;$('#albumPages').classList.add('opened');},620);
 });
+document.addEventListener('keydown',event=>{
+  const typing=['INPUT','TEXTAREA','SELECT'].includes(event.target.tagName)||event.target.isContentEditable;
+  const albumVisible=!document.querySelector('[data-game-panel="albums"]').hidden&&!$('#albumPages').hidden;
+  const bookTurning=$('#albumBook').classList.contains('turning-next')||$('#albumBook').classList.contains('turning-previous');
+  if(typing||!albumVisible||bookTurning||event.repeat)return;
+  if(event.key.toLowerCase()==='a'){event.preventDefault();turnAlbum(-1);}
+  if(event.key.toLowerCase()==='d'){event.preventDefault();turnAlbum(1);}
+});
 document.addEventListener('loner-auth-changed',event=>{playerId=event.detail?.uid||'guest';state=loadState();render();});
 render();updateClock();setInterval(updateClock,1000);
