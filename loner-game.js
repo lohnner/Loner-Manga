@@ -28,22 +28,43 @@ const CHARACTERS = [
   { id:'tempestade', name:'Tempestade', image:'loner-assets/cards/Tempestade.png' },
   { id:'tocha-humana', name:'Tocha Humana', image:'loner-assets/cards/Tocha Humana.png' }
 ];
-const DEFAULT_STATE = { lm:200, freeHour:'', premiumHour:'', premiumBought:0, collection:{} };
+const DEFAULT_STATE = { lm:200, freeHour:'', premiumHour:'', premiumBought:0, collection:{}, album:{} };
 let playerId = 'guest';
 let state = loadState();
 
 const $ = selector => document.querySelector(selector);
 const storageKey = () => `animes-loner-game-v1:${playerId}`;
-function loadState() { try { return {...DEFAULT_STATE,...JSON.parse(localStorage.getItem(storageKey())||'{}')}; } catch { return {...DEFAULT_STATE}; } }
+function loadState() { try { const saved={...DEFAULT_STATE,...JSON.parse(localStorage.getItem(storageKey())||'{}')}; saved.collection=saved.collection||{}; saved.album=saved.album||{}; Object.keys(saved.collection).forEach(id=>{if(saved.collection[id]>0)saved.album[id]=true;}); return saved; } catch { return {...DEFAULT_STATE,collection:{},album:{}}; } }
 function saveState() { localStorage.setItem(storageKey(),JSON.stringify(state)); }
 function brasiliaParts(date=new Date()) { return Object.fromEntries(new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'}).formatToParts(date).filter(p=>p.type!=='literal').map(p=>[p.type,p.value])); }
 function hourKey() { const p=brasiliaParts(); return `${p.year}-${p.month}-${p.day}-${p.hour}`; }
 function syncHour() { const key=hourKey(); if(state.premiumHour!==key){state.premiumHour=key;state.premiumBought=0;} saveState(); }
 function chooseRarity(premium=false) { const roll=Math.random()*100; return roll<(premium?10:5)?'shiny':roll<(premium?45:30)?'rare':'common'; }
-function drawCards(amount,premium=false) { return Array.from({length:amount},()=>{const character=CHARACTERS[Math.floor(Math.random()*CHARACTERS.length)];const rarity=chooseRarity(premium);const id=`${character.id}-${rarity}`;state.collection[id]=(state.collection[id]||0)+1;return {...character,...RARITIES[rarity],rarity,id};}); }
-function cardMarkup(card,count=0,reveal=false) { return `<article class="sticker ${card.className}${reveal?' revealed':''}"><div class="sticker-shine"></div><span class="rarity-name">${card.label}</span><img src="${card.image}" alt="${card.name} — ${card.label}"><div class="sticker-info"><strong>${card.name}</strong><span>${card.label}</span><small>Valor ${card.value} LM</small></div>${count?`<b class="card-count">×${count}</b>`:''}</article>`; }
+function drawCards(amount,premium=false) { return Array.from({length:amount},()=>{const character=CHARACTERS[Math.floor(Math.random()*CHARACTERS.length)];const rarity=chooseRarity(premium);const id=`${character.id}-${rarity}`;state.collection[id]=(state.collection[id]||0)+1;state.album[id]=true;return {...character,...RARITIES[rarity],rarity,id};}); }
+function cardMarkup(card,count=0,reveal=false,inventory=false) { return `<article class="sticker ${card.className}${reveal?' revealed':''}${inventory?' inventory-sticker':''}"><div class="sticker-shine"></div><span class="rarity-name">${card.label}</span><img src="${card.image}" alt="${card.name} — ${card.label}"><div class="sticker-info"><strong>${card.name}</strong><span>${card.label}</span><small>Valor ${card.value} LM</small>${inventory?`<button class="sell-sticker" type="button" data-sell-card="${card.id}">Vender 1 por ${card.value} LM</button>`:''}</div>${count?`<b class="card-count">×${count}</b>`:''}</article>`; }
 function allCards() { return CHARACTERS.flatMap(character=>Object.entries(RARITIES).map(([rarity,data])=>({...character,...data,rarity,id:`${character.id}-${rarity}`}))); }
-function renderCollection() { const cards=allCards(); $('#stickerGrid').innerHTML=cards.map(card=>state.collection[card.id]?cardMarkup(card,state.collection[card.id]):`<article class="sticker locked ${card.className}"><div class="locked-symbol">?</div><strong>${card.name}</strong><span>${card.label}</span></article>`).join(''); const owned=cards.filter(c=>state.collection[c.id]); $('#uniqueCount').textContent=owned.length; $('#totalStyles').textContent=cards.length; $('#collectionValue').textContent=`${cards.reduce((sum,c)=>sum+(state.collection[c.id]||0)*c.value,0)} LM`; }
+function renderCollection() {
+  const cards=allCards();
+  const inventoryCards=cards.filter(card=>(state.collection[card.id]||0)>0);
+  const albumCards=cards.filter(card=>state.album[card.id]);
+  $('#inventoryGrid').innerHTML=inventoryCards.map(card=>cardMarkup(card,state.collection[card.id],false,true)).join('');
+  $('#inventoryEmpty').hidden=inventoryCards.length>0;
+  $('#stickerGrid').innerHTML=cards.map(card=>state.album[card.id]?cardMarkup(card):`<article class="sticker locked ${card.className}"><div class="locked-symbol">?</div><strong>${card.name}</strong><span>${card.label}</span></article>`).join('');
+  $('#inventoryUnits').textContent=cards.reduce((sum,card)=>sum+(state.collection[card.id]||0),0);
+  $('#uniqueCount').textContent=albumCards.length;
+  $('#totalStyles').textContent=cards.length;
+  $('#collectionValue').textContent=`${cards.reduce((sum,card)=>sum+(state.collection[card.id]||0)*card.value,0)} LM`;
+  $('#albumProgress').style.width=`${(albumCards.length/cards.length)*100}%`;
+}
+function sellCard(cardId) {
+  const card=allCards().find(item=>item.id===cardId);
+  if(!card||(state.collection[cardId]||0)<1)return;
+  state.collection[cardId]-=1;
+  if(state.collection[cardId]===0)delete state.collection[cardId];
+  state.lm+=card.value;
+  saveState();
+  render();
+}
 function render() { syncHour(); const key=hourKey(),freeAvailable=state.freeHour!==key,premiumLeft=3-state.premiumBought; $('#lmBalance').textContent=state.lm; $('#openFreePack').disabled=!freeAvailable; $('#openFreePack').textContent=freeAvailable?'Abrir grátis':'Já coletado'; $('#freePackStatus').textContent=freeAvailable?'Disponível agora':'Volta na próxima hora'; $('#openPremiumPack').disabled=premiumLeft<=0||state.lm<20; $('#premiumPackStatus').textContent=`${premiumLeft} ${premiumLeft===1?'compra disponível':'compras disponíveis'} nesta hora`; $('#resetNotice').classList.toggle('available',freeAvailable); $('#resetNotice strong').textContent=freeAvailable?'Pacote grátis disponível!':'Pacote grátis já coletado'; renderCollection(); }
 function openPack(type) { syncHour(); const key=hourKey(),premium=type==='premium'; if(!premium&&state.freeHour===key)return; if(premium&&(state.premiumBought>=3||state.lm<20))return; if(premium){state.lm-=20;state.premiumBought+=1;}else state.freeHour=key; const cards=drawCards(premium?5:3,premium);saveState();render();$('#revealGrid').innerHTML=cards.map(card=>cardMarkup(card,0,true)).join('');$('#packOpening').hidden=false; }
 function updateClock(){const p=brasiliaParts();const remaining=(59-Number(p.minute))*60+(60-Number(p.second));const mm=String(Math.floor(remaining/60)).padStart(2,'0'),ss=String(remaining%60).padStart(2,'0');$('#resetTimer').textContent=`Próximo reset em ${mm}:${ss}`;$('#brasiliaClock').textContent=`Brasília · ${p.hour}:${p.minute}:${p.second}`;if(remaining>=3598)render();}
@@ -51,5 +72,14 @@ function updateClock(){const p=brasiliaParts();const remaining=(59-Number(p.minu
 $('#openFreePack').addEventListener('click',()=>openPack('free'));
 $('#openPremiumPack').addEventListener('click',()=>openPack('premium'));
 $('#closePack').addEventListener('click',()=>{$('#packOpening').hidden=true;});
+document.addEventListener('click',event=>{
+  const tab=event.target.closest('[data-game-tab]');
+  if(tab){
+    document.querySelectorAll('[data-game-tab]').forEach(button=>button.classList.toggle('active',button===tab));
+    document.querySelectorAll('[data-game-panel]').forEach(panel=>{panel.hidden=panel.dataset.gamePanel!==tab.dataset.gameTab;});
+  }
+  const sellButton=event.target.closest('[data-sell-card]');
+  if(sellButton)sellCard(sellButton.dataset.sellCard);
+});
 document.addEventListener('loner-auth-changed',event=>{playerId=event.detail?.uid||'guest';state=loadState();render();});
 render();updateClock();setInterval(updateClock,1000);
